@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 656 409" style="enable-background:new 0 0 656 409;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#000F32;}
+</style>
+<title>ICONOS BARRA</title>
+<g>
+	<g>
+		<path class="st0" d="M637.4,409H170.6c-10.3,0-18.6-8.3-18.6-18.6V18.6C152,8.3,160.3,0,170.6,0h466.8C647.7,0,656,8.3,656,18.6
+			v371.8C656,400.6,647.7,409,637.4,409z M170.6,16c-1.4,0-2.6,1.2-2.6,2.6v371.8c0,1.4,1.2,2.6,2.6,2.6h466.8
+			c1.4,0,2.6-1.2,2.6-2.6V18.6c0-1.4-1.2-2.6-2.6-2.6H170.6z"/>
+	</g>
+	<g>
+		<rect x="160" y="87" class="st0" width="488" height="16"/>
+	</g>
+	<g>
+		<path class="st0" d="M395.2,317H228.8c-9.3,0-16.8-7.5-16.8-16.8V167.8c0-9.3,7.5-16.8,16.8-16.8h166.4c9.3,0,16.8,7.5,16.8,16.8
+			v132.4C412,309.4,404.5,317,395.2,317z M228.8,167c-0.5,0-0.8,0.4-0.8,0.8v132.4c0,0.5,0.4,0.8,0.8,0.8h166.4
+			c0.5,0,0.8-0.4,0.8-0.8V167.8c0-0.5-0.4-0.8-0.8-0.8H228.8z"/>
+	</g>
+	<g>
+		<path class="st0" d="M580,409H475c-9.4,0-17-7.6-17-17v-224c0-9.4,7.6-17,17-17h105c9.4,0,17,7.6,17,17v224
+			C597,401.3,589.4,409,580,409z M475,167c-0.5,0-1,0.4-1,1v224c0,0.5,0.4,1,1,1h105c0.5,0,1-0.4,1-1v-224c0-0.5-0.4-1-1-1H475z"/>
+	</g>
+	<g>
+		<rect x="119" y="32.3" class="st0" width="41" height="10"/>
+	</g>
+	<g>
+		<rect x="119" y="89.9" class="st0" width="41" height="10"/>
+	</g>
+	<g>
+		<path class="st1" d="M127,130H0V3h127V130z M16,114h95V19H16V114z"/>
+	</g>
+	<g>
+		<rect x="23.9" y="54" class="st1" width="79.2" height="25"/>
+	</g>
+	<g>
+		<rect x="51" y="26.9" class="st1" width="25" height="79.2"/>
+	</g>
+</g>
+</svg>

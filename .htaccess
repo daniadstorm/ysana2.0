@@ -1,0 +1,67 @@
+#Web guia
+#https://www.bonaval.com/kb/sistemas-operativos/linux-sistemas-operativos/ejemplos-de-htaccess-que-todo-webmaster-deberia-conocer
+
+Allow from all
+Header set Access-Control-Allow-Origin: *
+Options All -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteBase /ysana/
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+#DirectoryIndex index.php
+#RewriteRule ^(.*)$ index.php?idioma_seleccionado=$1 [L]
+#RewriteRule ^(.{0})$ es [R=301,L]
+
+#RewriteRule ^([a-zA-Z_-]+)/fichaproducto/([a-zA-Z_-]+)$ ficha-producto.php?idioma_seleccionado=$1&id=$2 [L]
+#RewriteRule ^productos_ysana/(.*)$ prueba.php?producto=$1 [L]
+
+RewriteCond %{REQUEST_URI} /+[^.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+
+RewriteRule ^productos_ysana/$ productos.php [L]
+RewriteRule ^productos_ysana/(.*)$ ficha-producto.php?producto=$1 [L]
+
+RewriteRule ^sala_prensa/$ prensa.php [L]
+
+RewriteRule ^login/$ login.php [L]
+RewriteRule ^registro/$ registro.php [L]
+RewriteRule ^forgot-password/$ forgot-password.php [L]
+
+#RewriteRule ^directo_farmacia/carrito/$ directo_farmacia/carrito.php [L]
+#RewriteRule ^experiencia/carrito/$ experiencia/carrito.php [L]
+RewriteRule ^carrito/$ carrito.php [L]
+RewriteRule ^carrito/datos/$ carrito-datos.php [L]
+
+RewriteRule ^clubysana/$ clubysana/index.php [L]
+RewriteRule ^clubysana/registro/$ clubysana/registro.php [L]
+RewriteRule ^clubysana/areapersonal/$ clubysana/areapersonal.php [L]
+RewriteRule ^clubysana/areapersonal/neurologia/$ clubysana/neurologia.php [L]
+RewriteRule ^clubysana/areapersonal/neurologia/(.*)/$ clubysana/articulo.php?id=$1 [L]
+
+RewriteRule ^quien-es-ysana-vida-sana/$ quienes-somos.php [L]
+
+RewriteRule ^directo_farmacia/producto/(.*)/$ directo_farmacia/producto.php?id=$1 [L]
+RewriteRule ^directo_farmacia/(.*)/$ directo_farmacia/index.php?categoria=$1 [L]
+RewriteRule ^experiencia/(.*)/$ experiencia/producto.php?id=$1 [L]
+
+
+RewriteRule ^accept-cookies-policy/$ accept_cookies_policy.php [L]
+RewriteRule ^como-configurar-cookies/$ como-configurar-cookies.php [L]
+
+RewriteRule ^politica-cookies/$ politica-cookies.php [L]
+RewriteRule ^aviso-legal/$ aviso-legal.php [L]
+RewriteRule ^politica-privacidad/$ aviso-legal.php [L]
+RewriteRule ^politica-ventas/$ politica-ventas.php [L]
+
+RewriteRule ^bono/$ bono.php [L]
+
+RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://ysana.es/$1 [R,L]
+#RewriteRule ^(.*)$ https://adstorm.es/ysana/$1 [R,L]
+
+ErrorDocument 404 "Ups, 404"
+
+</IfModule>

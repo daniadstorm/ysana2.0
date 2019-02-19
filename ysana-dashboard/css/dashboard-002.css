@@ -1,0 +1,151 @@
+@font-face { font-family: 'Gotham-Medium'; src: url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Medium.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Medium.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Medium.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Medium.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Medium.svg#Gotham-Medium') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Gotham-Bold'; src: url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Bold.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Bold.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Bold.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Bold.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Bold.svg#Gotham-Bold') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Gotham-Light'; src: url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Light.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Light.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Light.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Light.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/Gotham-Light.svg#Gotham-Light') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'GothamNarrow-Book'; src: url('https://ysana.es/ysana-dashboard/css/webfont/GothamNarrow-Book.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/GothamNarrow-Book.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/GothamNarrow-Book.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/GothamNarrow-Book.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/GothamNarrow-Book.svg#GothamNarrow-Book') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'TradeGothicLTStd-Bd2'; src: url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Bd2.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Bd2.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Bd2.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Bd2.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Bd2.svg#TradeGothicLTStd-Bd2') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'TradeGothicLTStd-BdCn20'; src: url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-BdCn20.eot?#iefix')
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-BdCn20.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-BdCn20.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-BdCn20.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-BdCn20.svg#TradeGothicLTStd-BdCn20') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'TradeGothicLTStd-Light'; src: url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Light.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Light.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Light.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Light.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd-Light.svg#TradeGothicLTStd-Light') 
+    format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'TradeGothicLTStd'; src: url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd.eot?#iefix') 
+    format('embedded-opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd.otf') 
+    format('opentype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd.woff') 
+    format('woff'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd.ttf') 
+    format('truetype'), url('https://ysana.es/ysana-dashboard/css/webfont/TradeGothicLTStd.svg#TradeGothicLTStd') 
+    format('svg'); font-weight: normal; font-style: normal; }
+/*globales --------------------------------------------------------------------*/
+html, body { margin:0;padding:0;height:100%;overflow-y:hidden; }
+body { font-size:60%;background-color:#e6e6e6;z-index:1;font-family: 'Gotham-Medium'; }
+/* ------------------------------------ */
+a:link { text-decoration: none;color:#000; }
+a:visited { text-decoration: none;color:#000; }
+a:hover { text-decoration: none;color:#000; }
+a:active { text-decoration: none;color:#000; }
+a img { border:none; text-decoration: none; }
+/* ------------------------------------ */
+h1 { font-family:'Gotham-Light';max-width:100%;text-align:center;color:#000;font-weight:normal;font-size:3.4em;margin:0;line-height:1.4em; }
+h2 { max-width:100%;text-align:center;color:#fff;font-weight:normal;font-size:4em;margin:0;line-height:1.2em; }
+h3 { max-width:100%;text-align:center;color:#fff;font-weight:normal;font-size:2.6em;margin:0;line-height:1.1em; }
+p { font-size:2.2em;margin:0;padding:0;padding-top:0.6em;font-weight:normal;display:block; }
+/* ------------------------------------ */
+#main-container { max-width:100%;margin-left:auto;margin-right:auto;height:96.5%; }
+.responsive-seccion { margin:0em 2em;height:100%; }
+/*globales --------------------------------------------------------------------*/
+
+/* login / form -------------------------------------------------------------- */
+.campo { margin:1em 0.5em 0 1em; }
+.campo_intermedio { margin:1em 0.5em 0 0.5em; }
+.campo_final { margin:1em 1em 0 0.5em; }
+input[type="text"], input[type="number"], input[type="password"], textarea, select { display:block;border:0;color:#000;line-height:2em;padding:0;font-size:2.4em;width:100%;
+    text-indent:1em; }
+select {  }
+textarea {  }
+/* login / form -------------------------------------------------------------- */
+
+/* ysana-dashboard------------------------------------------------------------ */
+.ysana-dashboard-ttl { /*padding-top:1em;*/height:13%;margin-top:2%; }
+.ysana-dashboard-ttl img { max-width:15em; }
+.ysana-dashboard-holder { /*margin-top:6em;*/height:80%; }
+
+.last-update { font-size:1.4em;line-height:4em;font-family:'Gotham-Light'; }
+.last-update-date { font-family:'Gotham-Bold'; }
+
+.ysana-dashboard-element { width:24.6%;float:left;color:#fff;height:100%;/*position:relative;*/ }
+.ysana-dashboard-element img { width:5.5em;margin-top:-3em;margin-left:auto;margin-right:auto;box-shadow: 0.3em 0.3em 0.4em rgba(0, 0, 0, 0.5); }
+
+.ysana-dashboard-tw-holder { margin-right:0.5%;background-color:#43C6FA; }
+.ysana-dashboard-fb-holder { margin-right:0.5%;background-color:#25529C; }
+.ysana-dashboard-ig-holder { margin-right:0.5%;background:linear-gradient(to right, #FBED39, #FF5380, #0024FD); }
+.ysana-dashboard-web-holder {  }
+.ysana-dashboard-web-home-bg { background-color:#00ADC9; }
+.ysana-dashboard-web-adelgaysana-bg { background-color:#752995; }
+
+
+.ysana-dashboard-tw-icon, .ysana-dashboard-fb-icon, .ysana-dashboard-ig-icon, .ysana-dashboard-web-icon { text-align:center; }
+
+.ysana-dashboard-tw-icon img { background-color:#43C6FA; }
+.ysana-dashboard-fb-icon img { background-color:#25529C; }
+.ysana-dashboard-ig-icon img { background:linear-gradient(to right, #FBED39, #FF5380, #0024FD); }
+
+.ysana-dashboard-element-ttl { text-align:center;font-family:'Gotham-Light';font-size:2em;margin:1em 2em 0.5em 2em; }
+.ysana-dashboard-element-body { text-align:center; }
+
+#twitter-widget-0 {height:100% !important;}
+.ysana-dashboard-element-footer{ overflow: hidden; text-align: center; }
+.ysana-dashboard-element-footer iframe{ width: 100%; height: 100%; }
+
+
+.ysana-dashboard-element-footer { background-color:#e6e6e6;height:67.5%;
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75); }
+.ysana-dashboard-element-lbl { font-size:1.2em;margin-top:4.4em;text-align:left;margin-left:3em; }
+.ysana-dashboard-element-contador { font-family:'Gotham-Bold';font-size:6.5em;font-weight:bold; }
+
+.ysana-dashboard-sep { background-color:#fff;height:0.1em;margin:1.5em 2em 0 2em; }
+.ysana-dashboard-lim { background-color:#e6e6e6;height:1em;margin-top:1em; }
+/* ysana --------------------------------------------------------------- */
+
+@media only screen and (min-width: 300px) and (max-width:992px) {
+    html, body { margin:0;padding:0;height:100%;overflow:scroll;-webkit-overflow-scrolling:touch; }
+    body { font-size:44%; }
+    .last-update { line-height:2em; }
+    .ysana-dashboard-element { width:100%;margin:0;margin-top:5em; }
+    .ysana-dashboard-fb-holder { margin-top:5em; }
+    .ysana-dashboard-web-holder { margin-top:5em; }
+    .ysana-dashboard-element-footer { height:71%; }
+    .ysana-dashboard-ttl img { max-width:100%; }
+    .ysana-dashboard-ig-holder{ margin-top: 13em !important; }
+    
+} 
+
+@media only screen and (min-width: 993px) and (max-width:1200px) {
+    body { font-size:52%;overflow:scroll;-webkit-overflow-scrolling:touch; }
+    .ysana-dashboard-element-footer { height:67.3%; }
+} 
+
+@media only screen and (min-width: 1201px) and (max-width:1366px) {
+    body { font-size:52%; }
+    .ysana-dashboard-element-footer { height:65.7%; }
+}
+
+@media only screen and (min-width: 1367px) and (max-width:1600px) {
+    body { font-size:56%; }
+    .ysana-dashboard-element-footer { height:67%; }
+}
+
+@media only screen and (min-width: 1601px) and (max-width:1920px) {
+    body { font-size:60%; }
+    .ysana-dashboard-element-footer { height:67.5%; }
+}
