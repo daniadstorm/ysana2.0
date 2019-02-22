@@ -1,13 +1,12 @@
 <?php
 $arr_idioma = array(
-    'spa' => 'SPA',
-    'eng' => 'ENG'
+    'spa' => '<img src="'.$ruta_inicio.'img/esp-idioma.png" width="16px">',
+    'eng' => '<img src="'.$ruta_inicio.'img/eng-idioma.png" width="16px">'
 );
 $urlYsana=false;
 if($_SERVER["REQUEST_URI"]=="/ysana/clubysana/"){
     $urlYsana=true;
 }
-
 ?>
 <header id="panelTop" class="w-100">
     <div class="container-fluid">

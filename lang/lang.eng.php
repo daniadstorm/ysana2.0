@@ -10,6 +10,7 @@ $lng['ttl_idioma'] = 'Language';
 
 //panel_top_________________________________________________________________________________________
 $lng['panel_top'][0] = 'Welcome to Ysana® Healthy Lifestyle';
+//$lng['panel_top'][0] = 'Bienvenido a Ysana® Vida Sana';
 $lng['panel_top'][1] = 'Log in';
 $lng['panel_top'][2] = 'Create your account';
 $lng['panel_top'][3] = 'Welcome to Ysana® Club';
@@ -22,6 +23,7 @@ $lng['navbar_inicio'][0] = 'Products';
 $lng['navbar_inicio'][1] = 'Experience Shop';
 $lng['navbar_inicio'][2] = 'Straight to your pharmacy';
 $lng['navbar_inicio'][3] = 'Contact';
+//$lng['navbar_inicio'][4] = 'Bienvenido a Ysana® Vida Sana';
 $lng['navbar_inicio'][4] = 'Welcome to Ysana® Healthy Lifestyle';
 $lng['navbar_inicio'][5] = 'Find your Ysana® product';
 //navbar_inicio_____________________________________________________________________________________
@@ -29,7 +31,7 @@ $lng['navbar_inicio'][5] = 'Find your Ysana® product';
 //breadcrumb________________________________________________________________________________________
 $lng['breadcrumb'][0] = 'Straight to your pharmacy';
 $lng['breadcrumb'][1] = 'Experience Shop';
-$lng['breadcrumb'][2] = 'Ysana Club';
+$lng['breadcrumb'][2] = 'Club Ysana';
 $lng['breadcrumb'][3] = 'Your Personal Area';
 $lng['breadcrumb'][4] = 'Your Experiencie';
 //breadcrumb________________________________________________________________________________________
@@ -100,17 +102,17 @@ $lng['index'][14] = 'Address';
 $lng['index'][15] = 'ZIP Code';
 $lng['index'][16] = 'Phone';
 $lng['index'][17] = 'Your question';
-$lng['index'][18] = 'Asimismo y de acuerdo con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, en su artículo 21, solicitamos también su consentimiento expreso para enviarle publicidad de nuestros productos o promociones que consideremos puedan ser de su interés, por medios electrónicos.';
-$lng['index'][19] = 'He leído y acepto recibir publicidad o información promocional de PHARMALINK SL.';
-$lng['index'][20] = 'He leído y no acepto recibir publicidad o información promocional de PHARMALINK SL.';
-$lng['index'][21] = 'Le informamos que podrá revocar en cualquier momento el consentimiento prestado a la recepción de comunicaciones comerciales enviando un e-mail a la dirección de correo electrónico: info@ysana.es .';
+$lng['index'][18] = 'Also, and in accordance with the provisions of Law 34/2002, of July 11, Services of the Information Society and Electronic Commerce, in article 21, we also request your express consent to send advertising of our products or promotions that we consider may be of your interest, by electronic means.';
+$lng['index'][19] = 'I have read and I accept receiving advertisement and promotional information from Pharmalink.';
+$lng['index'][20] = 'I have read and I DO NOT accept receiving advertisement and promotional information from Pharmalink.';
+$lng['index'][21] = 'We inform you that you can revoke at any time the consent given to the receipt of commercial communications by sending an e-mail to the email address: info@ysana.es.';
 //index.php_____________________________________________________________________________________
 
 //clubysana.php_________________________________________________________________________________
 $lng['clubysana']['ttl'] = 'SOON IN YSANA<sup>®</sup>';
 $lng['clubysana']['txt'] = 'Very soon we will launch Club Ysana for all those people who want to practice caring and feel good.<br>The first online community where you can share your concerns, as well as get personalized advice from pharmacists and professional coaches.';
 $lng['clubysana'][0] = 'We will launch soon the Club Ysana for all of you out there wanting to feel good and looking for useful self-care tips. The first online community where you&#39;ll be able to share your concerns, in addition to obtaining personalized advice from pharmacists and professional coaches.';
-$lng['clubysana'][1] = 'Join the Ysana Club®';
+$lng['clubysana'][1] = 'Join the Club Ysana®';
 $lng['clubysana'][2] = 'See more';
 $lng['clubysana'][3] = 'Your personal information';
 $lng['clubysana'][4] = 'Get a diagnosis of sleep habits now. Welcome to the Eficaps experience';
@@ -120,7 +122,7 @@ $lng['clubysana'][7] = 'Your Personal Area';
 $lng['clubysana'][8] = 'Your Experience';
 $lng['clubysana'][9] = 'Sleep';
 $lng['clubysana'][10] = 'Soon Available';
-$lng['clubysana'][11] = 'JOIN THE YSANA CLUB®';
+$lng['clubysana'][11] = 'JOIN THE Club Ysana®';
 //clubysana.php_________________________________________________________________________________
 
 //productos.php_____________________________________________________________________________________
@@ -148,7 +150,7 @@ $lng['productos_ysana'][3] = 'way you will have a complete experience and discov
 $lng['productos_ysana'][4] = 'Uses';
 $lng['productos_ysana'][5] = 'Supplementary Information';
 $lng['productos_ysana'][6] = 'Rating';
-$lng['productos_ysana'][7] = 'Buy now';
+$lng['productos_ysana'][7] = 'Choose your Pharmacy';
 $lng['productos_ysana'][8] = 'Add to Cart';
 $lng['productos_ysana'][9] = 'Amount';
 $lng['productos_ysana'][10] = 'In stock';
@@ -178,11 +180,11 @@ $lng['footer'][7] = 'News';
 $lng['footer'][8] = 'Videos';
 $lng['footer'][9] = 'Graphics';
 $lng['footer'][10] = 'Policies';
-$lng['footer'][11] = 'Legal warning';
+$lng['footer'][11] = 'Legal Notice';
 $lng['footer'][12] = 'Privacy Policy';
 $lng['footer'][13] = 'Cookies policy';
 $lng['footer'][14] = 'Online Shop Policy';
-$lng['footer'][15] = 'Ysana Club';
+$lng['footer'][15] = 'Club Ysana';
 $lng['footer'][16] = 'Products';
 //legal---------------------------------------------
 //cookies accept--
@@ -298,7 +300,8 @@ $lng['footer'][114] = 'Con envío del formulario de recogida de datos usted acep
 
 //experiencia/index.php_____________________________________________________________________________________
 $lng['experiencia-index']['img'][0] = 'cabecera-EXPERIENCE-adelgaysana-forte_ENG.png';
-$lng['experiencia-index'][0] = 'Very soon';
+$lng['experiencia-index'][0] = 'Buy now';
+$lng['directo-farmacia'][0] = 'Order Now';
 $lng['experiencia-index'][1] = 'Log in';
 $lng['experiencia-index'][2] = 'Create account';
 $lng['experiencia-index'][3] = 'Experiences packs';
@@ -826,7 +829,7 @@ $productos_ysana_df = array(
                     ),
                     array(
                         'etiqueta' => 'p',
-                        'contenido' => 'Does your routine affect your sleep cycle? Sign up to Ysana Club and find out now by completing our free sleeping habits quiz. You\'ll receive personal advice from qualified Neuropsychologists for your day-to-day life that will help you sleep better!'
+                        'contenido' => 'Does your routine affect your sleep cycle? Sign up to Club Ysana and find out now by completing our free sleeping habits quiz. You\'ll receive personal advice from qualified Neuropsychologists for your day-to-day life that will help you sleep better!'
                     ),
 					array(
                         'etiqueta' => 'p',
@@ -1776,7 +1779,7 @@ $productos_ysana_experiencia = array(
                     ),
 					array(
                         'etiqueta' => 'p',
-                        'contenido' => 'Does your routine affect your sleep cycle? Sign up to Ysana Club and find out now by completing our free sleeping habits quiz. You\'ll receive personal advice from qualified Neuropsychologists for your day-to-day life that will help you sleep better!'
+                        'contenido' => 'Does your routine affect your sleep cycle? Sign up to Club Ysana and find out now by completing our free sleeping habits quiz. You\'ll receive personal advice from qualified Neuropsychologists for your day-to-day life that will help you sleep better!'
                     ),
 					array(
                         'etiqueta' => 'p',
@@ -1950,7 +1953,7 @@ $productos_ysana_experiencia = array(
                     ),
 					array(
                         'etiqueta' => 'p',
-                        'contenido' => 'Does your routine affect your sleep cycle? Sign up to Ysana Club and find out now by completing our free sleeping habits quiz. You\'ll receive personal advice from qualified Neuropsychologists for your day-to-day life that will help you sleep better!'
+                        'contenido' => 'Does your routine affect your sleep cycle? Sign up to Club Ysana and find out now by completing our free sleeping habits quiz. You\'ll receive personal advice from qualified Neuropsychologists for your day-to-day life that will help you sleep better!'
                     ),
 					array(
                         'etiqueta' => 'p',

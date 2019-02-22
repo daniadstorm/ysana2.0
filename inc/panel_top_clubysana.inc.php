@@ -1,7 +1,7 @@
 <?php
 $arr_idioma = array(
-    'spa' => 'SPA',
-    'eng' => 'ENG'
+    'spa' => '<img src="'.$ruta_inicio.'img/esp-idioma.png" width="16px">',
+    'eng' => '<img src="'.$ruta_inicio.'img/eng-idioma.png" width="16px">'
 );
 ?>
 <header id="panelTopcy" class="w-100">

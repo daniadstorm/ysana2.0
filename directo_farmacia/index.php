@@ -44,7 +44,7 @@ if($rgaa){
                         </div>
                         <div class="boton">
                         <a href="'.$ruta_inicio.'directo_farmacia/producto/'.$frgaa['urlseo'].'">
-                            <button type="button" class="btn btn-comprar btn-sm">'.$lng['experiencia-index'][0].'</button>
+                            <button type="button" class="btn btn-comprar btn-sm">'.$lng['directo-farmacia'][0].'</button>
                         </a>    
                         </div>
                     </header>

@@ -70,7 +70,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     for($i=0;$i<$qtt_prod;$i++){
                                         if($productos_ysana[0]['productos_categoria'][$i]['activo']==1){
                                             echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <a href="'.$ruta_inicio.'productos_ysana/'.$productos_ysana[0]['productos_categoria'][$i]['url-seo'].'">
+                                            <a href="'.$ruta_inicio.$productos_ysana[0]['productos_categoria'][$i]['url-seo'].'">
                                                 <div class="producto">
                                                     <div class="img">
                                                         <img class="img-categ img-fluid" src="'.$ruta_inicio.'img/productos/'.$productos_ysana[0]['productos_categoria'][$i]['img'].'.png">
@@ -123,7 +123,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     for($i=0;$i<$qtt_prod;$i++){
                                         if($productos_ysana[1]['productos_categoria'][$i]['activo']==1){
                                             echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <a href="'.$ruta_inicio.'productos_ysana/'.$productos_ysana[1]['productos_categoria'][$i]['url-seo'].'">
+                                            <a href="'.$ruta_inicio.$productos_ysana[1]['productos_categoria'][$i]['url-seo'].'">
                                                 <div class="producto">
                                                     <div class="img">
                                                         <img class="img-categ img-fluid" src="'.$ruta_inicio.'img/productos/'.$productos_ysana[1]['productos_categoria'][$i]['img'].'.png">
@@ -164,7 +164,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     for($i=0;$i<$qtt_prod;$i++){
                                         if($productos_ysana[2]['productos_categoria'][$i]['activo']==1){
                                             echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <a href="'.$ruta_inicio.'productos_ysana/'.$productos_ysana[2]['productos_categoria'][$i]['url-seo'].'">
+                                            <a href="'.$ruta_inicio.$productos_ysana[2]['productos_categoria'][$i]['url-seo'].'">
                                                 <div class="producto">
                                                     <div class="img">
                                                         <img class="img-categ img-fluid" src="'.$ruta_inicio.'img/productos/'.$productos_ysana[2]['productos_categoria'][$i]['img'].'.png">
@@ -205,7 +205,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     for($i=0;$i<$qtt_prod;$i++){
                                         if($productos_ysana[3]['productos_categoria'][$i]['activo']==1){
                                             echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <a href="'.$ruta_inicio.'productos_ysana/'.$productos_ysana[3]['productos_categoria'][$i]['url-seo'].'">
+                                            <a href="'.$ruta_inicio.$productos_ysana[3]['productos_categoria'][$i]['url-seo'].'">
                                                 <div class="producto">
                                                     <div class="img">
                                                         <img class="img-categ img-fluid" src="'.$ruta_inicio.'img/productos/'.$productos_ysana[3]['productos_categoria'][$i]['img'].'.png">
@@ -246,7 +246,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     for($i=0;$i<$qtt_prod;$i++){
                                         if($productos_ysana[4]['productos_categoria'][$i]['activo']==1){
                                             echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <a href="'.$ruta_inicio.'productos_ysana/'.$productos_ysana[4]['productos_categoria'][$i]['url-seo'].'">
+                                            <a href="'.$ruta_inicio.$productos_ysana[4]['productos_categoria'][$i]['url-seo'].'">
                                                 <div class="producto">
                                                     <div class="img">
                                                         <img class="img-categ img-fluid" src="'.$ruta_inicio.'img/productos/'.$productos_ysana[4]['productos_categoria'][$i]['img'].'.png">
@@ -287,7 +287,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     for($i=0;$i<$qtt_prod;$i++){
                                         if($productos_ysana[5]['productos_categoria'][$i]['activo']==1){
                                             echo '<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <a href="'.$ruta_inicio.'productos_ysana/'.$productos_ysana[5]['productos_categoria'][$i]['url-seo'].'">
+                                            <a href="'.$ruta_inicio.$productos_ysana[5]['productos_categoria'][$i]['url-seo'].'">
                                                 <div class="producto">
                                                     <div class="img">
                                                         <img class="img-categ img-fluid" src="'.$ruta_inicio.'img/productos/'.$productos_ysana[5]['productos_categoria'][$i]['img'].'.png">

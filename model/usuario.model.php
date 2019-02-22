@@ -212,6 +212,28 @@ class usuarioModel extends Model {
 
     function get_combo_idioma($arr, $id, $selected=false, $class=false, $onChange=false) {
         $o  = '';
+        $o2 = '';
+        $o3 = '';
+        $o .= '<div class="dropdown">
+        <button class="dropdown-toggle" type="button" id="'.$id.'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ';
+        if ($class) $o .= ' class ="'.$class.'" ';
+        (!$onChange) ? $o .= '>' : $o .= 'onchange="this.form.submit()">';
+        
+
+        foreach ($arr as $key => $val){
+            $o2 .= '<button class="dropdown-item" type="submit" name="'.$id.'" class="'.(($selected == $key) ? 'selected ' : 'no-selected').'" value="'.$key.'">'.$val.'</button>';
+            $o3 .= (($selected == $key) ? $val : '');
+        }
+        //foreach ($arr as $key => $val) $o2 .= '<button class="dropdown-item" type="submit" name="'.$id.'" class="'.(($selected == $key) ? 'selected ' : 'no-selected').'" value="'.$key.'">'.$val.'</button>';
+
+        $o .= $o3;
+        $o .= '</button><div class="dropdown-menu" aria-labelledby="'.$id.'">';
+        $o .= $o2.'</div></div>';
+        return $o;
+    }
+
+    /* function get_combo_idioma($arr, $id, $selected=false, $class=false, $onChange=false) {
+        $o  = '';
         $o .= '<select id="'.$id.'" name="'.$id.'" class="" ';
         if ($class) $o .= ' class ="'.$class.'" ';
         (!$onChange) ? $o .= '>' : $o .= 'onchange="this.form.submit()">';
@@ -219,7 +241,7 @@ class usuarioModel extends Model {
         foreach ($arr as $key => $val) $o .= '<option '.(($selected == $key) ? ' selected="selected" ' : '').' value="'.$key.'">'.$val.'</option>';
         $o .= '</select>';
         return $o;
-    }
+    } */
 
     function get_combo_array($arr, $id, $selected=false, $class=false, $onChange=false) {
         $o  = '';
@@ -501,7 +523,7 @@ class usuarioModel extends Model {
         $mail->Port = 587; // Puerto 
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
-        $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
+        $mail->AddAddress("info@ysana.es"); // Esta es la dirección a donde enviamos 
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
         $mail->Body = utf8_encode($op); // Mensaje a enviar.

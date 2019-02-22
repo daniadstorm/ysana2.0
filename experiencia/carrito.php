@@ -7,14 +7,41 @@ $sM = load_model('seo');
 
 $id_usuario = '';
 $carrito_compra = array('123','1234');
-
+$outcarrito = '';
+$sumaTotal = 0;
+$qttCarrito = 0;
+$unidades = 0;
 //GET__________________________________________________________________________
 (isset($_GET['id_articulo'])) ? $id_articulo=$_GET['id_articulo'] : '';
 
 //GET__________________________________________________________________________
 
 //LISTADO______________________________________________________________________
-
+if($id_usuario>0){
+    $rgcc = $cM->get_carrito($id_usuario, $_SESSION['lang']);
+    if($rgcc){
+        while($frgcc = $rgcc->fetch_assoc()){
+            $outcarrito .= '<li class="d-flex align-items-center">
+            <img src="'.$ruta_inicio.'img/productos/';
+            if($frgcc["img_portada"]!=""){
+                $outcarrito .= $frgcc["img_portada"];
+            }else{
+                $outcarrito .= $frgcc["img"];
+            }
+            $outcarrito .= '" class="img-prod" alt="">
+            <div class="d-flex flex-column justify-content-between">
+                <p class="m-0 fs-8rem">'.$frgcc["nombre"].'</p>
+                <p class="m-0 text-muted fs-8rem">'.$lng['experiencia-carrito'][10].' '.$frgcc["cantidad"].'</p>
+                <span class="precio">'.$frgcc["precio"].' €</span>
+            </div>
+            </li>
+            <hr>';
+            $sumaTotal+=($frgcc["precio"]*$frgcc["cantidad"]);
+            $qttCarrito++;
+            $unidades+=$frgcc['cantidad'];
+        }
+    }
+}
 //LISTADO______________________________________________________________________
 include_once('../inc/cabecera.inc.php'); //cargando cabecera 
 echo $sM->add_cabecera($lng['header'][0]);
@@ -33,7 +60,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                 <div class="col-12 col-md-12 col-lg-8 my-4">
                     <div class="carrito p-3">
                         <h1 class="h3 m-b-1">
-                            <strong>(2)</strong>
+                            <strong><?php echo $unidades; ?></strong>
                             <?php echo $lng['experiencia-carrito'][0]; ?>
                             <strong> <?php echo $lng['experiencia-carrito'][1]; ?></strong>
                         </h1>

@@ -37,7 +37,7 @@ if($id_usuario>0){
 ?>
 <div id="navbar_inicio">
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <nav class="navbar navbar-expand-xl navbar-light px-0">
             <a class="navbar-brand" href="<?php echo $ruta_inicio; ?>">
                 <img src="<?php echo $ruta_inicio; ?>img/svg/ysanacolor.svg" height="44px" alt="">
             </a>

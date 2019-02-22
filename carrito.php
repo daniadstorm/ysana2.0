@@ -15,8 +15,10 @@ $qttCarrito = 1;
 $sumaTotal = 0;
 $valid=true;
 $iva = 0.21;
-
-
+$outcarrito = '';
+$sumaTotal = 0;
+$qttCarrito = 0;
+$unidades = 0;
 //GET__________________________________________________________________________
 if(isset($_POST['btnPedido']) && isset($_GET['opc'])){
     $valid=false;
@@ -93,6 +95,31 @@ if($id_usuario>0){
         header('Location: '.$ruta_inicio.'carrito/datos/');
     }
 }
+if($id_usuario>0){
+    $rgcc = $cM->get_carrito($id_usuario, $_SESSION['lang']);
+    if($rgcc){
+        while($frgcc = $rgcc->fetch_assoc()){
+            $outcarrito .= '<li class="d-flex align-items-center">
+            <img src="'.$ruta_inicio.'img/productos/';
+            if($frgcc["img_portada"]!=""){
+                $outcarrito .= $frgcc["img_portada"];
+            }else{
+                $outcarrito .= $frgcc["img"];
+            }
+            $outcarrito .= '" class="img-prod" alt="">
+            <div class="d-flex flex-column justify-content-between">
+                <p class="m-0 fs-8rem">'.$frgcc["nombre"].'</p>
+                <p class="m-0 text-muted fs-8rem">'.$lng['experiencia-carrito'][10].' '.$frgcc["cantidad"].'</p>
+                <span class="precio">'.$frgcc["precio"].' €</span>
+            </div>
+            </li>
+            <hr>';
+            $sumaTotal+=($frgcc["precio"]*$frgcc["cantidad"]);
+            $qttCarrito++;
+            $unidades+=$frgcc['cantidad'];
+        }
+    }
+}
 //LISTADO______________________________________________________________________
 include_once('inc/cabecera.inc.php'); //cargando cabecera
 echo $sM->add_cabecera($lng['header'][0]);
@@ -120,13 +147,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                         ?>
                         </div>
                         <h1 class="h3 m-b-1">
-                            <strong>(<?php
-                            if($qttCarrito==0){
-                                echo '0';
-                            }else{
-                                echo $qttCarrito-1;
-                            }
-                            ?>)</strong>
+                            <strong>(<?php echo $unidades; ?>)</strong>
                             <?php echo $lng['experiencia-carrito'][0]; ?>
                             <strong> <?php echo $lng['experiencia-carrito'][1]; ?></strong>
                         </h1>
@@ -148,7 +169,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-4 my-4">
+                <!-- <div class="col-12 col-md-12 col-lg-4 my-4">
                     <div class="info-pago">
                         <div class="ticket-resumen">
                             <div class="ticket-pago">
@@ -178,25 +199,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                             <button type="submit" name="btnPedido" class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light"><?php echo $lng['experiencia-carrito'][8]; ?></button>
                         </form>
                     </div>
-                    <!-- <div class="lista-top">
-                        <div class="lista">
-                            <div class="ticket-pago_desglose">
-                                <div class="ticket-pago_articulos">
-
-                                </div>
-                                <div class="ticket-pago_total">
-                                    <strong class="w-100">
-                                        TOTAL
-                                        <span class="pull-xs-right">149,99 €</span>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                        <form action="">
-                            <button type="submit" class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light">REALIZAR PEDIDO</button>
-                        </form>
-                    </div> -->
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

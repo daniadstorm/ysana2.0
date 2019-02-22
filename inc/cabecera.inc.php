@@ -44,9 +44,9 @@ $meta_kw = '';
 <!-- <title><?php echo $title; ?></title> -->
 
 <!-- </head> -->
-<pre class="position-fixed" style="z-index: 100000; background-color: rgba(255, 255, 255, 0.5);">
+<pre class="position-fixed" style="z-index: 0; background-color: rgba(255, 255, 255, 0.5);">
 <?php
-print_r($_REQUEST);
-print_r($_SESSION);
+/* print_r($_REQUEST);
+print_r($_SESSION); */
 ?>
 </pre>

@@ -85,6 +85,12 @@ class articulosModel extends Model {
         return $this->execute_query($q);
     }
 
+    function buscar_farmacia($str){
+        $q  = ' SELECT * FROM adst_adelgaysana_farmacias ';
+        $q .= ' WHERE codigopostal_farmacia LIKE "%'.$str.'%"';
+        return $this->execute_query($q);
+    }
+
     /* USO */
     function existeuso($id_articulo){
         $q = ' SELECT * FROM '.$this->pre.'usoarticulos ';
@@ -113,6 +119,12 @@ class articulosModel extends Model {
         return $this->execute_query($q);
     }
     /* USO */
+    function update_precio($id_articulo, $precio){
+        $q = ' UPDATE '.$this->pre.'articulos SET ';
+        $q .= ' precio="'.$precio.'" ';
+        $q .= ' WHERE id_articulo="'.$id_articulo.'" ';
+        return $this->execute_query($q);
+    }
     /* INFO */
     function existeinfo($id_articulo){
         $q = ' SELECT * FROM '.$this->pre.'informacionarticulo ';

@@ -298,7 +298,8 @@ $lng['footer'][114] = 'Con envío del formulario de recogida de datos usted acep
 
 //experiencia/index.php_____________________________________________________________________________________
 $lng['experiencia-index']['img'][0] = 'cabecera-experiencias-adelgaysana-forte.png';
-$lng['experiencia-index'][0] = 'Pídelo ahora';
+$lng['experiencia-index'][0] = 'Comprar ahora';
+$lng['directo-farmacia'][0] = 'Pídelo ahora';
 $lng['experiencia-index'][1] = 'Iniciar Sesión';
 $lng['experiencia-index'][2] = 'Crear cuenta';
 $lng['experiencia-index'][3] = 'Packs experiencias';
@@ -330,6 +331,7 @@ $lng['directo-index'][1] = 'Autocuidado';
 $lng['directo-index'][2] = 'Senior';
 $lng['directo-index'][3] = 'Respira';
 $lng['directo-index'][4] = 'Infantil';
+
 //directo_farmacia/index.php__________________________________________________________________________________
 
 //quienes-somos.php___________________________________________________________________________________________
@@ -382,7 +384,7 @@ $productos_ysana = array(
         'productos_categoria' => array(
             array(
                 'nombre' => 'Eficaps® Sueño',
-                'url-seo' => 'eficaps-sueño',
+                'url-seo' => 'directo_farmacia/producto/eficaps-sueño',
                 'h1' => '¡LA CÁPSULA INTELIGENTE QUE TE AYUDA A CONCILIAR EL SUEÑO!',
                 'descripcion' => 'Gracias a su tecnología de disolución controlada, Eficaps® Sueño, libera sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.
                 Esta extraordinaria innovación permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada según su absorción en nuestro organismo y momento de máximo aprovechamiento.
@@ -435,7 +437,7 @@ $productos_ysana = array(
         'productos_categoria' => array(
             array(
                 'nombre' => 'Y·Woman Menopausia',
-                'url-seo' => 'ywoman_menopausia',
+                'url-seo' => 'directo_farmacia/producto/ywoman-menopausia',
                 'h1' => 'Y·WOMAN MENOPAUSIA AYUDA A ALIVIAR LOS SÍNTOMAS DE LA MENOPAUSIA Y A SENTIRTE MEJOR',
                 'descripcion' => 'Con la ayuda de Y-woman menopausia alivias los síntomas diurnos y nocturnos de la menopausia. Además, con su efecto 24h durante el día calma los sofocos, la sudoración y la irritabilidad a la vez que regula el desequilibrio hormonal causado por la menopausia. Durante la noche, su contenido en Pasiflora contribuye a disminuir el nerviosismo y el insomnio. 
                 El principio activo estrella de la fórmula natural de Y-woman menopausia es el extracto de lúpulo Lifenol® cuyos estudios clínicos revelan resultados innovadores en el tratamiento del desequilibrio hormonal. Gracias a Y-woman menopausia regula tu cuerpo las 24 horas y ¡siéntete cómoda durante todo el día!',
@@ -451,7 +453,7 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'adelgaYsana Forte',
-                'url-seo' => 'adelgaysana_forte',
+                'url-seo' => 'directo_farmacia/producto/adelgaysana-forte',
                 'h1' => '¡CUIDA TU SILUETA Y ALCANZA TU PESO DESEADO BENEFICIANDO A TU ORGANISMO!',
                 'descripcion' => 'AdelgaYsana Forte es un complemento alimenticio con extractos de plantas naturales que ayuda a perder peso, eliminar líquidos y toxinas en tan sólo 20 días.
                 Su plan de doble acción combina dos fórmulas: 10 viales rojos para ayudar al metabolismo de las grasas por su contenido en café verde y garcinia cambogia y 10 viales verdes con extracto de cola de caballo, una planta utilizada tradicionalmente para depurar el organismo gracias a sus propiedades diuréticas.
@@ -504,7 +506,7 @@ $productos_ysana = array(
         'productos_categoria' => array(
             array(
                 'nombre' => 'Y·Wellness Articular',
-                'url-seo' => 'articular',
+                'url-seo' => 'directo_farmacia/producto/articular',
                 'h1' => '¡PROTEGE TUS ARTICULACIONES GRACIAS A SU DOBLE EFECTO REGENERADOR y ANTIINFLAMATORIO!',
                 'descripcion' => 'Cuida naturalmente la salud de tus articulaciones con el doble efecto de y·wellness articular.  Refuerza el alivio de los síntomas del dolor articular gracias a su potente efecto antiinflamatorio. Sin embargo, y·wellness articular, va más allá previniendo la degeneración del cartílago gracias a su alta concentración en Ovomet®. Siente cómo disminuye la inflamación y rigidez, aumentando la flexibilidad de las articulaciones.
                 El Ovomet®,io activo de y·wellness articular, es un ingrediente natural rico en proteínas y nutrientes esenciales que se obtienen de la membrana de huevo, que destaca por su alto contenido en colágeno. cuatro efectos en un solo ingrediente antiinflamatorio, analgésic, regenerador  del cartílago y protector del tendón.',
@@ -520,7 +522,7 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Y·Wellness Colesterol',
-                'url-seo' => 'colesterol',
+                'url-seo' => 'directo_farmacia/producto/colesterol',
                 'h1' => '¡REGULA TU COLESTEROL MIENTRAS TE CUIDAS POR DENTRO!',
                 'descripcion' => 'Los principios de extractos naturales de y·wellness Colesterol contribuyen a regular los niveles de colesterol manteniendo las concentraciones normales en sangre. Mantén el colesterol a raya cuidando tu organismo con y·wellness Colesterol.
                 La Monacolina K, principio activo en la levadura de arroz rojo, es el ingrediente principal de y·wellness Colesterol. Estudios demuestran sus propiedades y beneficios actuando directamente sobre la regulación interna del colesterol por parte del hígado. Además, en Ysana® le hemos añadido Coenzima Q10 protector cardiovascular y Silimarina para proteger tu hígado.',
@@ -551,7 +553,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -565,7 +567,7 @@ $productos_ysana = array(
         'productos_categoria' => array(
             array(
                 'nombre' => 'Free Nose® Aspirador Nasal Pediátrico + 4 recambios',
-                'url-seo' => 'freenose_aspirador_nasal_pediatrico_4_recambios',
+                'url-seo' => 'directo_farmacia/producto/freenose_aspirador_nasal_pediatrico_4_recambios',
                 'h1' => 'ELIMINA LA MUCOSIDAD DE FORMA SUAVE Y SEGURA PARA EL BEBÉ.',
                 'descripcion' => 'El aspirador anatómico Free Nose® ha sido diseñado para facilitar la higiene diaria de las cavidades nasales del bebé. Es fácil de usar, higiénico y seguro, debido a su diseño único de puntas extra suaves. Además te permite controlar la fuerza de succión requerida cada vez. 
                 En Ysana® sabemos que prevenir es la mejor forma de curar por eso te ayudamos a mantener higienizada la nariz de tu bebé reduciendo el riesgo de infecciones y resfriados. ¡Un bebé sano, son unos padres y unos abuelos felices!',
@@ -588,7 +590,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -603,7 +605,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -611,7 +613,7 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Agua de Mar Descongestionante 30ml',
-                'url-seo' => 'freenose_agua_mar_descongestion_30ml',
+                'url-seo' => 'freenose-descongestionate-agua-mar-hypertonica-30ml',
                 'h1' => 'LIMPIA, DESCONGESTIONA E HIDRATA TU NARIZ',
                 'descripcion' => 'Free Nose® Agua de mar Hipertónica limpia en profundidad las fosas nasales, las descongestiona y las hidrata. Además, el efecto osmosis reduce la inflamación de la mucosa, así disminuyes el uso de fármacos descongestionantes.
                 El agua de mar de Free Nose® se obtiene directamente de la Bahía de Cancale en la Bretaña, área conocida por la calidad y pureza de sus aguas. 
@@ -620,7 +622,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -628,7 +630,7 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Agua de Mar Descongestionante con Aloe vera y Menta 30ml',
-                'url-seo' => 'freenose_agua_mar_descongestion_aloe_vera_30ml',
+                'url-seo' => 'directo_farmacia/producto/freenose-descongestionate-agua-mar-hypertonica-30ml',
                 'h1' => '',
                 'descripcion' => '',
                 'img' => 'ysana-free-nose-spray-nasal-descongestionante',
@@ -643,7 +645,7 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Spray Nasal Própolis +1',
-                'url-seo' => 'freenose_spray_nasal_propolis_1',
+                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-1-año',
                 'h1' => 'PROTEGE TU NARIZ Y ACTÚA CONTRA LOS PROCESOS INFECCIOSOS',
                 'descripcion' => 'Free Nose® Propolis está indicado para niños a partir de 1 año de edad. Nuestro spray nasal con esencias naturales de tomillo está indicado para hidratar, calmar y proteger el conducto nasal de forma natural. Su formulación a base de solución salina con própolis y extracto de tomillo combina dos ingredientes naturales ampliamente conocidos por sus propiedades beneficiosas. 
                 Un estudio clínico encargado por Ysana® arrojó resultados positivos con respecto a una reducción significativa de los síntomas de la rinitis en niños. El tratamiento de Free Nose®  Própolis +1 aplicado a niños con rinitis infecciosa aguda y con síntomas de resfriado común fue seguro reduciendo desde el primer día la intensidad de los síntomas nasales, y la obstrucción por secreción nasal desde el segundo día de aplicación. (Estudio disponible en http://free-nose.com/)',
@@ -659,7 +661,7 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Spray Nasal Própolis +12',
-                'url-seo' => 'freenose_spray_nasal_propolis_12',
+                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-12-años',
                 'h1' => 'ALIVIA LOS SÍNTOMAS DE LA SECRECIÓN Y CONGESTIÓN NASAL',
                 'descripcion' => 'Free Nose®  Propolis+12 descongestiona el conducto nasal y actúa contra los procesos infecciosos. Hidratando, calmando y protegiendo el conducto nasal de forma natural gracias al própolis y al extracto de tomillo y eucaliptus.
                 El propolis es usado por las abejas para mantener sana la colmena y reducir el crecimiento microbiano en sus paredes, sus propiedades antisépticas, antibacterianas, antimicrobianas, antiinflamatorias y anestésicas están demostradas por estudios científicos.
@@ -705,7 +707,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -723,7 +725,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -740,7 +742,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -755,7 +757,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -770,7 +772,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -785,7 +787,7 @@ $productos_ysana = array(
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
+                'activo' => DESACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''

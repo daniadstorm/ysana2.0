@@ -70,7 +70,7 @@ if(isset($_POST['btnCesta']) && $id_usuario>0){
     if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
         $cM->sumarArticulo($id_usuario, $_POST['id_articulo']);
     }else if(isset($_POST['btnCesta']) && isset($_POST['cantidad_productos'])){
-        $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], ($_POST['cantidad_productos'])+1);
+        $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], ($_POST['cantidad_productos'])+1, "exp");
     }
 }else if(isset($_POST['btnCesta']) && $id_usuario==0){
     header('Location: '.$ruta_inicio.'login');
@@ -145,7 +145,12 @@ if($id_producto!=''){
         array_push($cantidad_productos, ($i+1));
     }
 }
-
+if(isset($_POST['update_precio'])){
+    $rup = $aM->update_precio($id_articulo, $_POST['update_precio']);
+    if($rup){
+        header("Refresh:0");
+    }
+}
 
 //COMPROBACION_________________________________________________________________
 $new_url = '';
@@ -262,9 +267,15 @@ echo $sM->add_cabecera($lng['header'][0]);
                         </div>
                         <?php if($stock>0){ ?>
                         <div class="compra col-md-6 col-lg-3 text-center" style="border-left: 1px solid #bbbbbb;">
+                            <?php if(isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario']==10){ ?>
+                                <form method="post">
+                                    <input type="number" name="update_precio" step="0.01" value="<?php echo $precio; ?>" class="form-control mb-2">
+                                </form>
+                            <?php }else{ ?>
                             <h1 class="display-4 mt-3">
                                 <?php echo $precio.' €'; ?>
                             </h1>
+                            <?php } ?>
                             <!-- <p>información adicional</p> -->
                             <form action="" method="post">
                                 <button class="btn btn-lg btn-color-5 mb-2 w-100"><?php echo $lng['productos_ysana'][7]; ?></button>
@@ -275,6 +286,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     <?php echo $iM->get_select("cantidad_productos", 0, $cantidad_productos,''); ?>
                                 </div>
                             </form>
+                            <?php if(isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario']==10){ ?>
                             <form method="post">
                                 <!-- ZOHO -->
                                 <?php echo $iM->get_input_hidden('id_producto', $id_producto); ?>
@@ -288,6 +300,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                 <?php echo $iM->get_input_hidden('tipo_tienda', 'experiencia'); ?>
                                 <?php echo '<button type="submit" name="enviarazoho" class="btn btn-block btn-outline-info">Enviar a Zoho</button>'; ?>
                             </form>
+                            <?php } ?>
                         </div>
                         <?php }else{ ?>
                         <div class="compra col-md-6 col-lg-3 text-center" style="border-left: 1px solid #bbbbbb;">

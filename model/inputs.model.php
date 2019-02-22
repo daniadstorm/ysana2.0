@@ -33,7 +33,7 @@ class inputsModel extends Model {
         
         $o  = '<div class="'.$classdiv.'">';
         if (strlen($lbl) > 0) $o .= '<label>'.$lbl.'</label>';
-        $o .=   '<input type="text" '.$aux_required.' id="'.$id.'" name="'.$id.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" pattern="'.$aux_pattern.'" title="'.$err_desc.'" '.$str_tmp.'>';
+        $o .=   '<input type="text" id="'.$id.'" name="'.$id.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" pattern="'.$aux_pattern.'" '.$aux_required.' title="'.$err_desc.'" '.$str_tmp.'>';
         $o .= '</div>';
             
         return $o;

@@ -2,9 +2,9 @@
 
 class carritoModel extends Model {
     
-    function add_articulo_carrito($id_usuario, $id_articulo, $cantidad) {
-        $q  = ' INSERT INTO '.$this->pre.'carrito_compra (id_usuario, id_articulo, cantidad) VALUES ';
-        $q .= ' ("'.$id_usuario.'", "'.$id_articulo.'", "'.$cantidad.'")';
+    function add_articulo_carrito($id_usuario, $id_articulo, $cantidad, $tipo_tienda) {
+        $q  = ' INSERT INTO '.$this->pre.'carrito_compra (id_usuario, id_articulo, cantidad, tipo_tienda) VALUES ';
+        $q .= ' ("'.$id_usuario.'", "'.$id_articulo.'", "'.$cantidad.'", "'.$tipo_tienda.'")';
         return $this->execute_query($q);
     }
 
