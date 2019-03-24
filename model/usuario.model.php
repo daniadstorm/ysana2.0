@@ -23,7 +23,7 @@ class usuarioModel extends Model {
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, count($params));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $params_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         //enviar post
         $result = curl_exec($ch);
         //cerrar conexión
@@ -47,6 +47,12 @@ class usuarioModel extends Model {
     function add_usuario($nombre_usuario, $apellidos_usuario, $email_usuario, $genero, $password_usuario) {
         $q = ' INSERT INTO '.$this->pre.'usuarios (nombre_usuario, apellidos_usuario, email_usuario, genero, password_usuario) ';
         $q .= ' VALUES ("'.$nombre_usuario.'","'.$apellidos_usuario.'","'.$email_usuario.'","'.$genero.'","'.$password_usuario.'")';
+        return $this->execute_query($q);
+    }
+
+    function get_mail_user($id_usuario){
+        $q = ' SELECT * FROM '.$this->pre.'usuarios ';
+        $q .= ' WHERE id_usuario = "'.$id_usuario.'"';
         return $this->execute_query($q);
     }
 
@@ -115,8 +121,8 @@ class usuarioModel extends Model {
 
     function updatemail($id_estado, $id_lang, $asunto, $cuerpo){
         $q = ' UPDATE '.$this->pre.'mail SET ';
-        $q .= ' asunto="'.$asunto.'", ';
-        $q .= ' cuerpo="'.$cuerpo.'" ';
+        $q .= ' asunto="'.$this->escstr($asunto).'", ';
+        $q .= ' cuerpo="'.$this->escstr($cuerpo).'" ';
         $q .= ' WHERE id_estado="'.$id_estado.'" ';
         $q .= ' AND id_lang="'.$id_lang.'" ';
         return $this->execute_query($q);
@@ -138,6 +144,21 @@ class usuarioModel extends Model {
         /* $r = $this->execute_query($q);
         if ($r) return $r->num_rows;
             else return false; */
+    }
+
+    function get_dardebaja_randomkey($randomkey){
+        $q = ' SELECT u.* FROM '.$this->pre.'usuarios u ';
+        $q .= ' WHERE u.randomkey="'.$randomkey.'"';
+        $r = $this->execute_query($q);
+        if ($r) return $r->num_rows;
+            else return false;
+    }
+
+    function delete_user($randomkey){
+        $q = ' UPDATE '.$this->pre.'usuarios SET ';
+        $q .= ' deleted=1 ';
+        $q .= ' WHERE randomkey="'.$randomkey.'" ';
+        return $this->execute_query($q);
     }
 
     function get_usuarios($pag, $regs_x_pag, $arr_filtro_ps=false) {
@@ -163,7 +184,6 @@ class usuarioModel extends Model {
         $q .= ' INNER JOIN '.$this->pre.'usuarios u ';
         $q .= ' ON u.id_usuario=p.id_usuario ';
         $q .= ' WHERE p.id_pedido='.$id_pedido.' ';
-        echo $q;
         return $this->execute_query($q);
     }
 
@@ -190,7 +210,7 @@ class usuarioModel extends Model {
         $q  = ' SELECT u.* FROM '.$this->pre.'usuarios u ';
         $q .= ' WHERE u.email_usuario = "'.$nombre_usuario.'" ';
         $q .= ' AND u.password_usuario = "'.$contrasenya_usuario.'" ';
-        $q .= ' AND u.deleted = 0 ';
+        /* $q .= ' AND u.deleted = 0 '; */
         return $this->execute_query($q);
     }
 
@@ -362,22 +382,29 @@ class usuarioModel extends Model {
         return $this->execute_query($q);
     }
     
-    function login_usuario($nombre_usuario, $contrasenya_usuario) {
+    function login_usuario($nombre_usuario, $contrasenya_usuario, $msg, $msg2) {
         $return = true;
         
         $r = $this->get_user_login($nombre_usuario, $contrasenya_usuario); //verificar que el usuario existe en BD
         if ($r) { 
             $found = false;
             while ($f = $r->fetch_assoc()) {
-                $found = true;
-                $_SESSION['id_usuario'] = $f['id_usuario'];
-                $_SESSION['nombre_usuario'] = $f['nombre_usuario'];
-                $_SESSION['apellidos_usuario'] = $f['apellidos_usuario'];
-                $_SESSION['email_usuario'] = $f['email_usuario'];
-                $_SESSION['id_tipo_usuario'] = $f['id_tipo_usuario'];
+                if($f['deleted']==0){
+                    $found = true;
+                    $_SESSION['id_usuario'] = $f['id_usuario'];
+                    $_SESSION['nombre_usuario'] = $f['nombre_usuario'];
+                    $_SESSION['apellidos_usuario'] = $f['apellidos_usuario'];
+                    $_SESSION['email_usuario'] = $f['email_usuario'];
+                    $_SESSION['id_tipo_usuario'] = $f['id_tipo_usuario'];
+                }else $found = "debaja";
             }
-            if (!$found) $return = '<div class="error_alert">Usuario o contraseña incorrecto</div>';
-        } else $return = '<div class="error_alert">Usuario o contraseña incorrecto</div>';
+            if($found=="debaja"){
+                $return = '<div class="error_alert">'.$msg.'</div>';
+            }else{
+                $return = '<div class="error_alert">'.$msg2.'</div>';
+            }
+            /* if (!$found) $return = '<div class="error_alert">'.$msg.'</div>'; */
+        } else $return = '<div class="error_alert">'.$msg2.'</div>';
         
         return $return;
     }
@@ -412,18 +439,19 @@ class usuarioModel extends Model {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
         $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
         $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
         $mail->Password = "Taz78446"; // La contraseña
         $mail->Port = 587; // Puerto 
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
-        $mail->AddAddress($email); // Esta es la dirección a donde enviamos 
+        $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
+        $mail->AddCC("info@ysana.es"); //CCopia
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = utf8_encode('Titulo'); // Este es el titulo del email. 
         $mail->Body = utf8_encode($contenido); // Mensaje a enviar.
-        $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
+        //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
         $exito = $mail->Send(); // Envía el correo.
 
         return $exito;
@@ -516,40 +544,78 @@ class usuarioModel extends Model {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
         $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
         $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
         $mail->Password = "Taz78446"; // La contraseña
         $mail->Port = 587; // Puerto 
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
-        $mail->AddAddress("info@ysana.es"); // Esta es la dirección a donde enviamos 
+        $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
+        $mail->AddCC("info@ysana.es"); //CCopia
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
         $mail->Body = utf8_encode($op); // Mensaje a enviar.
-        $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
+        //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
         $exito = $mail->Send(); // Envía el correo.
 
         return $exito;
     }
 
-    function user_nuevousuario_mail($email, $ruta_inicio, $id_lang){
+    function user_pedido_mail_df($id_usuario, $id_lang){
+        $cM = load_model('carrito');
         $cuerpoMail = '';
         $asuntoMail = '';
-        $rgm = $this->getmail(1, $id_lang);
-        if($rgm){
-            while($frgm = $rgm->fetch_assoc()){
-                $cuerpoMail = $frgm['cuerpo'];
-                $asuntoMail = $frgm['asunto'];
+        $nombertienda = '';
+        $direccionfarmacia = '';
+        $codigopostalfarmacia = '';
+        $poblacionfarmacia = '';
+        $provincia = '';
+        
+        $rgdp = $cM->get_cesta_df($id_usuario, $id_lang);
+        $outart = '';
+        if($rgdp){
+            while($frgdp = $rgdp->fetch_assoc()){
+                $nombertienda = utf8_encode($frgdp['nombrecompleto_farmacia']);
+                $direccionfarmacia = utf8_encode($frgdp['direccion_farmacia']);
+                $codigopostalfarmacia = utf8_encode($frgdp['codigopostal_farmacia']);
+                $poblacionfarmacia = utf8_encode($frgdp['poblacion_farmacia']);
+                $provincia = utf8_encode($frgdp['provincia_farmacia']);
+                $outart .= '<tr><td>'.utf8_encode($frgdp['nombre']).'</td><td>'.utf8_encode($frgdp['cantidad']).'</td><td>'.utf8_encode($frgdp['precio']).'</td><td>'.($frgdp['cantidad']*$frgdp['precio']).'</td></tr>';
             }
         }
+        $cuerpoMail = '
+        <table style="width:100%;">
+            <tr>
+                <th>Nombre tienda</th><th>Direccion farmacia</th><th>Codigo postal</th><th>Poblacion</th><th>Provincia</th>
+            </tr>
+            <tr>
+                <td>'.$nombertienda.'</td><td>'.$direccionfarmacia.'</td><td>'.$codigopostalfarmacia.'</td><td>'.$poblacionfarmacia.'</td><td>'.$provincia.'</td>
+            </tr>
+        </table>
+        <br><br>
+        <table style="width:100%;">
+            <tr>
+                <th>Nombre Articulo</th><th>Unidades</th><th>Precio</th><th>Total</th>
+            </tr>
+            '.$outart.'
+        </table>';
+        $asuntoMail = 'Nuevo Pedido - Farmacia:'.$nombertienda;
+        //$cuerpoMail = str_replace("[nombre_usuario]", $nombre_usuario, $cuerpoMail);
         $op = '<!DOCTYPE html>
-        <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8""></head>
+        <head><meta http-equiv="Content-Type" content="text/html; charset="UTF-8"></head>
         <html>
         <body>
-            <div style="display: block; margin: 0 auto; max-width: 750px;">
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+        </style>
+            <div style="display: block; margin: 0 auto; max-width: 1600px;">
                 <div style="background-color: #00ABC8;">
-                    <img src="'.$ruta_inicio.'img/svg/ysanablanco.svg" height="88px" style="display: block; margin: 0 auto; padding-top: 12px; padding-bottom: 12px;">
+                    <img src="https://adstorm.es/ysana/img/svg/ysanablanco.svg" height="88px" style="display: block; margin: 0 auto; padding-top: 12px; padding-bottom: 12px;">
                 </div>
                 <div style="background-color: #FFF; padding-top: 8px; padding-bottom: 8px;">';
         $op .= $cuerpoMail;
@@ -571,7 +637,63 @@ class usuarioModel extends Model {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
+        $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
+        $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
+        $mail->Password = "Taz78446"; // La contraseña
+        $mail->Port = 587; // Puerto 
+        $mail->From = "info@ysana.es"; // Mismo mail que username
+        $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
+        $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
+        $mail->AddCC("info@ysana.es"); //CCopia
+        $mail->IsHTML(true); // El correo se envía como HTML 
+        $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
+        $mail->Body = utf8_encode($op); // Mensaje a enviar.
+        //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
+        $exito = $mail->Send(); // Envía el correo.
+
+        return $exito;
+    }
+
+    function user_nuevousuario_mail($email, $ruta_inicio, $id_lang){
+        $cuerpoMail = '';
+        $asuntoMail = '';
+        $rgm = $this->getmail(1, $id_lang);
+        if($rgm){
+            while($frgm = $rgm->fetch_assoc()){
+                $cuerpoMail = $frgm['cuerpo'];
+                $asuntoMail = $frgm['asunto'];
+            }
+        }
+        $op = utf8_encode('<!DOCTYPE html>
+        <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8""></head>
+        <html>
+        <body>
+            <div style="display: block; margin: 0 auto; max-width: 750px;">
+                <div style="background-color: #00ABC8;">
+                    <img src="'.$ruta_inicio.'img/svg/ysanablanco.svg" height="88px" style="display: block; margin: 0 auto; padding-top: 12px; padding-bottom: 12px;">
+                </div>
+                <div style="background-color: #FFF; padding-top: 8px; padding-bottom: 8px;">');
+        $op .= utf8_encode($cuerpoMail);
+        $op .= utf8_encode('</div>        
+                <div style="padding-top: 8px; padding-bottom: 8px; background-color: #F1F1F1;">
+                    <div style="margin-left: auto;display: table;">
+                        <a href="https://www.facebook.com/YSanaVidaSana/"><img src="https://img.icons8.com/material-rounded/24/000000/facebook.png" width="32px"></a>
+                        <a href="https://twitter.com/Ysana_Vida_Sana"><img src="https://img.icons8.com/material-rounded/24/000000/twitter.png" width="32px"></a>
+                        <a href="https://www.instagram.com/ysanavidasana/"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" width="32px"></a>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>');
+
+        require("phpmailer/class.phpmailer.php");
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->CharSet = "UTF-8";
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
+        //$mail->SMTPDebug = 2;
         $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
         $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
         $mail->Password = "Taz78446"; // La contraseña
@@ -582,15 +704,22 @@ class usuarioModel extends Model {
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
         $mail->Body = utf8_encode($op); // Mensaje a enviar.
-        $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
+        //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
         $exito = $mail->Send(); // Envía el correo.
 
         return $exito;
     }
 
+    function get_name_by_email($email){
+        $q = ' SELECT * FROM '.$this->pre.'usuarios u ';
+        $q .= ' WHERE u.email_usuario="'.$email.'" ';
+        return $this->execute_query($q);
+    }
+
     function user_forgotpass_mail($email, $randomkey, $ruta_inicio, $id_lang){
         $cuerpoMail = '';
         $asuntoMail = '';
+        $nombre_usuario = '';
         $rgm = $this->getmail(0, $id_lang);
         if($rgm){
             while($frgm = $rgm->fetch_assoc()){
@@ -598,6 +727,13 @@ class usuarioModel extends Model {
                 $asuntoMail = $frgm['asunto'];
             }
         }
+        $rgnbe = $this->get_name_by_email($email);
+        if($rgnbe){
+            while($frgnbe = $rgnbe->fetch_assoc()){
+                $nombre_usuario = $frgnbe['nombre_usuario'];
+            }
+        }
+        $cuerpoMail = str_replace("[nombre_usuario]", $nombre_usuario, $cuerpoMail);
         $op = '<!DOCTYPE html>
         <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8""></head>
         <html>
@@ -627,7 +763,72 @@ class usuarioModel extends Model {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
-        $mail->SMTPDebug = 2;
+        //$mail->SMTPDebug = 2;
+        $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
+        $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
+        $mail->Password = "Taz78446"; // La contraseña
+        $mail->Port = 587; // Puerto 
+        $mail->From = "info@ysana.es"; // Mismo mail que username
+        $mail->FromName = "Ysana"; //Nombre a mostrar del remitente. 
+        $mail->AddAddress($email); // Esta es la dirección a donde enviamos 
+        $mail->IsHTML(true); // El correo se envía como HTML 
+        $mail->Subject = $asuntoMail; // Este es el titulo del email. 
+        $mail->Body = $op; // Mensaje a enviar.
+        //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
+        $exito = $mail->Send(); // Envía el correo.
+
+        return $exito;
+    }
+
+
+    function user_unsuscribe_mail($email, $randomkey, $ruta_inicio, $id_lang){
+        $cuerpoMail = '';
+        $asuntoMail = '';
+        $nombre_usuario = '';
+        $rgm = $this->getmail(3, $id_lang);
+        if($rgm){
+            while($frgm = $rgm->fetch_assoc()){
+                $cuerpoMail = $frgm['cuerpo'];
+                $asuntoMail = $frgm['asunto'];
+            }
+        }
+        $rgnbe = $this->get_name_by_email($email);
+        if($rgnbe){
+            while($frgnbe = $rgnbe->fetch_assoc()){
+                $nombre_usuario = $frgnbe['nombre_usuario'];
+            }
+        }
+        $cuerpoMail = str_replace("[nombre_usuario]", $nombre_usuario, $cuerpoMail);
+        $op = '<!DOCTYPE html>
+        <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8""></head>
+        <html>
+        <body>
+            <div style="display: block; margin: 0 auto; max-width: 750px;">
+                <div style="background-color: #00ABC8;">
+                    <img src="'.$ruta_inicio.'img/svg/ysanablanco.svg" height="88px" style="display: block; margin: 0 auto; padding-top: 12px; padding-bottom: 12px;">
+                </div>
+                <div style="background-color: #FFF; padding-top: 8px; padding-bottom: 8px;">';
+        $op .= $cuerpoMail;
+        $op .= '<a href="'.$ruta_inicio.'unsubscribe/?randomkey='.$randomkey.'" target="_blank"><button>Darme de baja</button></a>
+                </div>        
+                <div style="padding-top: 8px; padding-bottom: 8px; background-color: #F1F1F1;">
+                    <div style="margin-left: auto;display: table;">
+                        <a href="https://www.facebook.com/YSanaVidaSana/"><img src="https://img.icons8.com/material-rounded/24/000000/facebook.png" width="32px"></a>
+                        <a href="https://twitter.com/Ysana_Vida_Sana"><img src="https://img.icons8.com/material-rounded/24/000000/twitter.png" width="32px"></a>
+                        <a href="https://www.instagram.com/ysanavidasana/"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" width="32px"></a>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>';
+
+        require("phpmailer/class.phpmailer.php");
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->CharSet = "UTF-8";
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
+        //$mail->SMTPDebug = 2;
         $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
         $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
         $mail->Password = "Taz78446"; // La contraseña

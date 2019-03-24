@@ -17,7 +17,8 @@ $precioEnvio = 0;
 $carrito_compra = array('123','1234');
 $orgcc = '';
 $qttCarrito = 1;
-$sumaTotal = 0;
+$sumaTotalexp = 0;
+$ivatotal = 0;
 //datos
 $id_carrito=0;
 $predeterminada = false;
@@ -91,7 +92,7 @@ if($id_usuario>0){
     $rgd = $cM->get_direcciones($id_usuario, 1);
     if($rgd){
         while($frgd = $rgd->fetch_assoc()){
-            $old .= '<div class="green-bg my-2 p-3">';
+            $old .= '<div class="direccion-envio green-bg my-2 p-3">';
             $old .= '<p class="my-0">'.$frgd['nombre'].' '.$frgd['apellidos'].'</p>';
             $old .= '<p class="my-0">'.$frgd['direccion'].'</p>';
             //$old .= '<p class="my-0">'.$frgd['codigo_postal'].'</p>';
@@ -163,34 +164,36 @@ if($id_usuario>0){
     $rgcc = $cM->get_carrito($id_usuario,$_SESSION['lang']);
     if($rgcc){
         while($frgcc = $rgcc->fetch_assoc()){
-            $oca .= '<div class="articulos-enviar-item">
-            <img src="'.$ruta_inicio.'img/productos/';
-            if($frgcc["img_portada"]!=""){
-                $oca .= $frgcc["img_portada"];
-            }else{
-                $oca .= $frgcc["img"];
+            if($frgcc['tipo_tienda']=="exp"){
+                $oca .= '<div class="articulos-enviar-item">
+                <img src="'.$ruta_inicio.'img/productos/';
+                if($frgcc["img_portada"]!=""){
+                    $oca .= $frgcc["img_portada"];
+                }else{
+                    $oca .= $frgcc["img"];
+                }
+                $oca .= '" alt="">
+                <div class="articulos-enviar-texto-info">
+                    '.$frgcc['nombre'].'
+                        <div class="stock">
+                            '.$lng['experiencia-carrito'][11].': '.$frgcc['cantidad'].'
+                            <br>
+                            '.$lng['experiencia-carrito'][15].': ';
+                if($frgcc['stock']>=$frgcc['cantidad']){
+                    $oca .= '<span class="positive-emp">'.$lng['productos_ysana'][10].'</span>';
+                }else{
+                    $oca .= '<span class="negative-emp">'.$lng['productos_ysana'][11].'</span>';
+                }
+                $oca .= '</div>
+                </div>
+                </div>';
+                $sumaTotalexp+=($frgcc["precio"]*$frgcc["cantidad"]);
+                $ivatotal+=round($sumaTotalexp*$frgcc["iva"],2);
             }
-            $oca .= '" alt="">
-            <div class="articulos-enviar-texto-info">
-                '.$frgcc['nombre'].'
-                    <div class="stock">
-                        '.$lng['experiencia-carrito'][11].': '.$frgcc['cantidad'].'
-                        <br>
-                        '.$lng['experiencia-carrito'][15].': ';
-            if($frgcc['stock']>=$frgcc['cantidad']){
-                $oca .= '<span class="positive-emp">'.$lng['productos_ysana'][10].'</span>';
-            }else{
-                $oca .= '<span class="negative-emp">'.$lng['productos_ysana'][11].'</span>';
-            }
-            $oca .= '</div>
-            </div>
-        </div>';
-        $sumaTotal+=($frgcc["precio"]*$frgcc["cantidad"]);
         }
     }
 }
-if(isset($_POST['btnPedido']) && $sumaTotal>0){
-
+if(isset($_POST['btnPedido']) && $sumaTotalexp>0){
     $rap = $cM->add_pedido($id_usuario, $nombre, $apellidos, $direccion, $cp, $poblacion, $movil);
     if($rap){
         $aux_id_factura = $cM->get_insert_id();
@@ -204,7 +207,7 @@ if(isset($_POST['btnPedido']) && $sumaTotal>0){
     $Ds_Merchant_MerchantCode = DS_MERCHANT_CODE;
     $Ds_Merchant_Terminal = DS_MERCHANT_TERMINAL;
     $Ds_Merchant_TransactionType = DS_AUTORIZACION;
-    $Ds_Merchant_Amount = $cM->get_gateway_format($sumaTotal+$precioEnvio);
+    $Ds_Merchant_Amount = $cM->get_gateway_format($sumaTotalexp+$precioEnvio);
     $DS_Merchant_Currency = DS_EURO;
     $Ds_Merchant_Order = $aux_id_factura; //$aux_id_factura;
     $Ds_Merchant_MerchantURL = DS_MERCHANT_URL;
@@ -229,8 +232,6 @@ if(isset($_POST['btnPedido']) && $sumaTotal>0){
     $Ds_params = $apiRedsys->createMerchantParameters();
     $Ds_signature = $apiRedsys->createMerchantSignature($Ds_KEY);
     //CONFIGURAR DATOS TPV -------------------------------------
-/*     echo $aux_id_factura.'<br>';
-    echo $sumaTotal+$precioEnvio.'<br>'; */
     $cargar=true;
 }
 //LISTADO______________________________________________________________________
@@ -259,6 +260,11 @@ echo $sM->add_cabecera($lng['header'][0]);
         <div class="container carrito-datos">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-8 my-4">
+                    <div id="mensajeenvio" class="d-none">
+                        <div class="mb-3">
+                            <?php echo $hM->get_alert_danger($lng['experiencia-carrito'][20]); ?>
+                        </div>
+                    </div>
                     <?php
                         if($str_error){
                             echo $hM->get_alert_danger($str_error);
@@ -307,6 +313,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                             </div>
                         </div>
                     </div>
+                    
                     <div class="articulos-enviar">
                         <div class="articulos-enviar-title"><?php echo $lng['forms'][41]; ?></div>
                         <div class="articulos-enviar-list-items">
@@ -338,14 +345,14 @@ echo $sM->add_cabecera($lng['header'][0]);
                                 <form action="" method="post">
                                     <div class="modal-body">
                                         <?php
-                                                echo $iM->get_input_hidden('id_carrito', $id_carrito);
-                                                echo $iM->get_input_text('nombre_usuario', $nombre, 'form-control', '', $lng['forms'][4]);
-                                                echo $iM->get_input_text('apellidos_usuario', $apellidos, 'form-control', '', $lng['forms'][5]);
-                                                echo $iM->get_input_text('direccion_usuario', $direccion, 'form-control', '', $lng['forms'][31]);
-                                                echo $iM->get_input_text('cp_usuario', $cp, 'form-control', '', $lng['forms'][32]);
-                                                echo $iM->get_input_text('poblacion_usuario', $poblacion, 'form-control', '', $lng['forms'][33]);
-                                                echo $iM->get_input_text('movil_usuario', $movil, 'form-control', '', $lng['forms'][34]);
-                                            ?>
+                                            echo $iM->get_input_hidden('id_carrito', $id_carrito);
+                                            echo $iM->get_input_text('nombre_usuario', $nombre, 'form-control', '', $lng['forms'][4]);
+                                            echo $iM->get_input_text('apellidos_usuario', $apellidos, 'form-control', '', $lng['forms'][5]);
+                                            echo $iM->get_input_text('direccion_usuario', $direccion, 'form-control', '', $lng['forms'][31]);
+                                            echo $iM->get_input_text('cp_usuario', $cp, 'form-control', '', $lng['forms'][32]);
+                                            echo $iM->get_input_text('poblacion_usuario', $poblacion, 'form-control', '', $lng['forms'][33]);
+                                            echo $iM->get_input_text('movil_usuario', $movil, 'form-control', '', $lng['forms'][34]);
+                                        ?>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lng['forms'][36]; ?></button>
@@ -369,9 +376,9 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     <div class="ticket-pago_articulos">
                                         <div class="d-flex flex-column">
                                             <strong class="w-100">
-                                                <span>IVA (21%)</span>
+                                                <span>IVA</span>
                                                 <span data-precio-total class="pull-xs-right">
-                                                    <?php echo round($sumaTotal*IVA_GENERAL,2); ?> €</span>
+                                                    <?php echo $ivatotal; ?> €</span>
                                             </strong>
                                             <strong class="w-100">
                                                 <span><?php echo $lng['experiencia-carrito'][13]; ?></span>
@@ -386,15 +393,14 @@ echo $sM->add_cabecera($lng['header'][0]);
                                         <strong class="w-100">
                                             <?php echo $lng['experiencia-carrito'][7]; ?>
                                             <span data-precio-total class="pull-xs-right">
-                                                <?php echo ($sumaTotal+$precioEnvio); ?> €</span>
+                                                <?php echo ($sumaTotalexp+$precioEnvio); ?> €</span>
                                         </strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <form method="post" action="">
-                            <button id="btnPagar" type="submit" name="btnPedido" <?php echo (!$precioEnvio) ?
-                                'disabled' : '' ; ?> class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light">
+                            <button id="btnPagar" type="submit" name="btnPedido" <?php //echo (!$precioEnvio) ? 'disabled' : '' ; ?> class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light">
                                 <?php echo $lng['experiencia-carrito'][9]; ?></button>
                         </form>
                     </div>
@@ -422,6 +428,16 @@ echo $sM->add_cabecera($lng['header'][0]);
         </script>';
         }
     ?>
+    <script>
+        $("#btnPagar").on('click', function(e){
+            if($('.direccion-envio').length==0){
+                e.preventDefault();
+                $("#mensajeenvio").addClass("d-block");
+            }else{
+                $("#mensajeenvio").addClass("d-none");
+            }
+        });
+    </script>
     <?php include_once('inc/footer.inc.php'); ?>
 </body>
 

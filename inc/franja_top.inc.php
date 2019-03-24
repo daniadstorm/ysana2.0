@@ -1,8 +1,12 @@
 <?php
 $html_mmnu = '';
 $arr_mmnu = array(
-    1 => array('txt'=>'Inicio admin', 'url'=>'inicio-administrador.php'),
-    2 => array('txt'=>'Mails', 'url'=>'mails.php')
+    1 => array('txt'=>'Inicio admin', 'url'=>'admin.php'),
+    2 => array('txt'=>'Mails', 'url'=>'mails.php'),
+    3 => array('txt'=>'Ver Productos', 'url'=>'ver-productos.php'),
+    4 => array('txt'=>'Añadir productos', 'url'=>'admin-productos.php'),
+    5 => array('txt'=>'Farmacias', 'url'=>'importar-farmacias.php'),
+    6 => array('txt'=>'Club Ysana', 'url'=>'admin-clubysana.php')
 );
 
 foreach ($arr_mmnu as $k => $v) {
@@ -29,11 +33,6 @@ foreach ($arr_mmnu as $k => $v) {
 //POST__________________________________________________________________________
 
 //ACCIONES______________________________________________________________________
-if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= USER) { //seguridad;
-    
-} else {
-    
-}
 //ACCIONES______________________________________________________________________
 
 ?>

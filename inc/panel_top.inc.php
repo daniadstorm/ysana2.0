@@ -8,69 +8,44 @@ if($_SERVER["REQUEST_URI"]=="/ysana/clubysana/"){
     $urlYsana=true;
 }
 ?>
-<header id="panelTop" class="w-100">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-6">
-                <div class="d-none d-sm-block">
-                    <p class="m-0 text-light bienvenido">
-                        <?php echo $lng['panel_top'][0]; ?>
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="d-none d-sm-block">
-                    <div class="botones">
-                        <div class="d-flex justify-content-end">
-                            <?php if(!isset($_SESSION['id_usuario'])){ ?>
-                            <a href="<?php echo $ruta_inicio;?>login<?php echo ($urlYsana) ? '?cy':''; ?>" class="bienvenido">
-                                <?php echo $lng['panel_top'][1]; ?>
-                            </a>
-                            <span class="vl"></span>
-                            <a href="<?php echo $ruta_inicio; echo ($urlYsana) ? 'clubysana/registro':'registro'; ?>" class="bienvenido">
-                                <?php echo $lng['panel_top'][2]; ?>
-                            </a>
-                            <span class="vl"></span>
-                            <?php }else{ ?>
-                                <a href="<?php echo $ruta_inicio;?>login?unlogin" class="bienvenido"><?php echo $lng['panel_top'][4]; ?></a>
-                                <span class="vl"></span>
-                            <?php } ?>
-                            <form action="" method="post">
-                                <?php echo $uM->get_combo_idioma($arr_idioma, 'idioma_seleccionado', $lang, '', true); ?>
-                            </form>
-                            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <?php echo $lng['panel_top'][5]; ?>
-                                    </div>
-                                </div>
-                            </div>
+
+<div class="navbar-ad">
+    <div id="panel-top" class="max-ysana mt-2">
+        <div class="ttl">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link bienvenidoysana" href="#">Bienvenido a Ysana Vida Sana</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="top-menu">
+            <div class="d-none d-md-block">
+                <ul class="nav">
+                    <li class="nav-item no-drop">
+                        <div class="rrss-top">
+                            <img src="<?php echo $ruta_inicio; ?>img/redes/8.svg" class="mx-1" width="24px" alt="">
+                            <img src="<?php echo $ruta_inicio; ?>img/redes/7.svg" class="mx-1" width="24px" alt="">
+                            <img src="<?php echo $ruta_inicio; ?>img/redes/1.svg" class="mx-1" width="24px" alt="">
+                            <img src="<?php echo $ruta_inicio; ?>img/redes/2.svg" class="mx-1" width="24px" alt="">
                         </div>
-                    </div>
-                </div>
-                <div class="d-block d-sm-none">
-                    <div class="botones">
-                        <div class="d-flex justify-content-start">
-                            <?php if(!isset($_SESSION['id_usuario'])){ ?>
-                            <a href="<?php echo $ruta_inicio;?>login<?php echo ($urlYsana) ? '?cy':''; ?>">
-                                <?php echo $lng['panel_top'][1]; ?>
-                            </a>
-                            <span class="vl"></span>
-                            <a href="<?php echo $ruta_inicio; echo ($urlYsana) ? 'clubysana/registro':'registro'; ?>">
-                                <?php echo $lng['panel_top'][2]; ?>
-                            </a>
-                            <span class="vl"></span>
-                            <?php }else{ ?>
-                                <a href="<?php echo $ruta_inicio;?>login?unlogin" class="bienvenido"><?php echo $lng['panel_top'][4]; ?></a>
-                                <span class="vl"></span>
-                            <?php } ?>
-                            <form action="" method="post">
-                                <?php echo $uM->get_combo_idioma($arr_idioma, 'idioma_seleccionado', $lang, '', true); ?>
-                            </form>
+                    </li>
+                    <li class="nav-item no-drop">
+                        <a class="nav-link" href="#">Acceder</a>
+                    </li>
+                    <li class="nav-item no-drop">
+                        <a class="nav-link" href="#">Date de alta</a>
+                    </li>
+                    <li id="dropdown-idioma" class="nav-item dropdown dropleft">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SP</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</header>
+</div>

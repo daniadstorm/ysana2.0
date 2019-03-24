@@ -8,7 +8,7 @@ $farmM = load_model('farmacias');
 $sM = load_model('seo');
 
 $frm_buscar = '';
-$lista_farmacias = $farmM->get_farmacias($ruta_inicio);
+//$lista_farmacias = $farmM->get_farmacias($ruta_inicio);
 /*
 $lista_farmacias = array(
     array('nombre'=>'FARMACIA BERNA QUILES','calle'=>'Carrer Teniente Coronel Chapuli, 1'),

@@ -19,14 +19,14 @@ $out = '';
 //GET__________________________________________________________________________
 
 //LISTADO______________________________________________________________________
-$rgaa = $aM->get_all_articulos($categoria, $_SESSION['lang'], 2);
+$rgaa = $aM->get_all_articulos($categoria, $_SESSION['id_lang'], 2);
 if($rgaa){
     while($frgaa = $rgaa->fetch_assoc()){
         $out .= '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
         <article class="tarjeta-articulo">
             <div class="tarjeta-articulo_elementos-basicos">
                 <div class="tarjeta-articulo_foto">
-                    <img src="'.$ruta_inicio.'img/productos/'.$frgaa['img'].'.png" alt="" class="img-fluid">
+                    <img src="'.$ruta_inicio.'img/productos/'.$frgaa['img'].'" alt="" class="img-fluid">
                 </div>
                 <div class="tarjeta-articulo_adicional d-flex flex-column">
                     <header class="tarjeta-articulo_info">
@@ -35,13 +35,13 @@ if($rgaa){
                         <h3 class="precio">'.$frgaa['precio'].'€</h3>
                     </header>
                     <header class="tarjeta-articulo_extras">
-                        <div class="puntuacion">
+                        <!--<div class="puntuacion">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
-                        </div>
+                        </div>-->
                         <div class="boton">
                         <a href="'.$ruta_inicio.'directo_farmacia/producto/'.$frgaa['urlseo'].'">
                             <button type="button" class="btn btn-comprar btn-sm">'.$lng['directo-farmacia'][0].'</button>
@@ -115,7 +115,8 @@ echo $sM->add_cabecera($lng['header'][0]);
                 <li class="breadcrumb-item">
                     <a href="<?php echo $ruta_inicio; ?>">Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page"><?php echo $lng['breadcrumb'][0]; ?></li>
+                <li class="breadcrumb-item" aria-current="page"><?php echo $lng['breadcrumb'][0]; ?></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo ucwords($categoria); ?></li>
             </ol>
         </nav>
     </div>
@@ -128,18 +129,18 @@ echo $sM->add_cabecera($lng['header'][0]);
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $ruta_inicio; ?>directo_farmacia/mujer/"><?php echo $lng['directo-index'][0]; ?></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="<?php echo $ruta_inicio; ?>directo_farmacia/autocuidado/"><?php echo $lng['directo-index'][1]; ?></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $ruta_inicio; ?>directo_farmacia/senior/"><?php echo $lng['directo-index'][2]; ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $ruta_inicio; ?>directo_farmacia/respira/"><?php echo $lng['directo-index'][3]; ?></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="<?php echo $ruta_inicio; ?>directo_farmacia/infantil/"><?php echo $lng['directo-index'][4]; ?></a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

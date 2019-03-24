@@ -4,6 +4,11 @@ $meta_lang = $lang;
 $meta_desc = '';
 $meta_kw = '';
 ?>
+
+    
+</body>
+</html>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html class="ag-toolbar" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,7 +19,8 @@ $meta_kw = '';
 <!-- <meta name="description" content="<?php echo $meta_desc; ?>" />
 <meta name="keywords" content="<?php echo $meta_kw; ?>" /> -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500" rel="stylesheet">
 <link rel="shortcut icon" href="<?php echo $ruta_archivos; ?>img/favicon/favicon.ico" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"/>
 <link type="text/css" href="<?php echo $ruta_archivos; ?>css/fileinput.min.css" media="all" rel="stylesheet" />
@@ -41,12 +47,3 @@ $meta_kw = '';
 <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 <!-- wysiwyg -->
-<!-- <title><?php echo $title; ?></title> -->
-
-<!-- </head> -->
-<pre class="position-fixed" style="z-index: 0; background-color: rgba(255, 255, 255, 0.5);">
-<?php
-/* print_r($_REQUEST);
-print_r($_SESSION); */
-?>
-</pre>

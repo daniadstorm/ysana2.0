@@ -68,7 +68,7 @@ if(isset($_POST['enviarazoho'])){
 
 if(isset($_POST['btnCesta']) && $id_usuario>0){
     if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
-        $cM->sumarArticulo($id_usuario, $_POST['id_articulo']);
+        $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], ($_POST['cantidad_productos'])+1);
     }else if(isset($_POST['btnCesta']) && isset($_POST['cantidad_productos'])){
         $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], ($_POST['cantidad_productos'])+1, "exp");
     }
@@ -123,7 +123,7 @@ if($id_producto!=''){
             $stock=$frgia['stock'];
             $precio=$frgia['precio'];
             $id_articulo=$frgia['id_articulo'];
-            array_push($imgs_producto, $frgia['img_portada']);
+            array_push($imgs_producto, $frgia['img']);
         }
         if(count($imgs_producto)>0){
             $imgPortada = $imgs_producto[0];
@@ -243,7 +243,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                             <p class="mb-2">
                                 <?php echo $descripcion; ?>
                             </p>
-                            <p class="mb-1 text-color-3">
+                            <!-- <p class="mb-1 text-color-3">
                                 <?php echo ($stock>0) ? $lng['productos_ysana'][10]:$lng['productos_ysana'][11]; ?>
                             </p>
                             <p class="mb-1 text-color-1">
@@ -263,7 +263,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                 <img src="https://png.icons8.com/color/50/f39c12/gmail.png" height="30px" class="mr-2">
                                 <img src="https://png.icons8.com/color/50/f39c12/facebook.png" height="30px" class="mr-2">
                                 <img src="https://png.icons8.com/color/50/f39c12/twitter.png" height="30px" class="mr-2">
-                            </div>
+                            </div> -->
                         </div>
                         <?php if($stock>0){ ?>
                         <div class="compra col-md-6 col-lg-3 text-center" style="border-left: 1px solid #bbbbbb;">
@@ -278,9 +278,9 @@ echo $sM->add_cabecera($lng['header'][0]);
                             <?php } ?>
                             <!-- <p>información adicional</p> -->
                             <form action="" method="post">
-                                <button class="btn btn-lg btn-color-5 mb-2 w-100"><?php echo $lng['productos_ysana'][7]; ?></button>
+                                <!-- <a href="<?php echo $ruta_inicio; ?>carrito"><input type="button" class="btn btn-lg btn-color-5 mb-2 w-100" value="<?php echo $lng['experiencia-index'][0]; ?>"></a> -->
                                 <?php echo $iM->get_input_hidden('id_articulo', $id_articulo); ?>
-                                <button class="btn btn-lg btn-cesta mb-2 w-100" name="btnCesta"><?php echo $lng['productos_ysana'][8]; ?></button>
+                                <button class="btn btn-lg btn-color-5 mb-2 w-100" name="btnCesta"><?php echo $lng['productos_ysana'][8]; ?></button>
                                 <div class="caja d-flex">
                                     <label class="mr-3"><?php echo $lng['productos_ysana'][9]; ?></label>
                                     <?php echo $iM->get_select("cantidad_productos", 0, $cantidad_productos,''); ?>
@@ -296,7 +296,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                 <?php echo $iM->get_input_hidden('precio', $precio); ?>
                                 <?php //echo $iM->get_input_hidden('usosEditor', $usosEditor); ?>
                                 <?php //echo $iM->get_input_hidden('infoEditor', $infoEditor); ?>
-                                <?php echo $iM->get_input_hidden('imagen', 'https://ysana.es/img/productos/'.$imgPortada); ?>
+                                <?php echo $iM->get_input_hidden('imagen', $ruta_inicio.'img/productos/'.$imgPortada); ?>
                                 <?php echo $iM->get_input_hidden('tipo_tienda', 'experiencia'); ?>
                                 <?php echo '<button type="submit" name="enviarazoho" class="btn btn-block btn-outline-info">Enviar a Zoho</button>'; ?>
                             </form>
@@ -374,7 +374,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     <!-- bg-grayopacity-ysana -->
                                     <div class="no-blur-consejo">
                                         <div class="nb-pers">
-                                            <h1><?php echo $lng['productos_ysana'][19]; ?></h1>
+                                            <h1><?php echo $lng['productos_ysana'][23]; ?></h1>
                                         </div>
                                     </div>
                                     <div class="blur-consejos no_seleccion">
@@ -414,7 +414,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                                     <div class="mt-3">
                                     <div class="no-blur-consejo">
                                         <div class="nb-pers">
-                                            <h1><?php echo $lng['productos_ysana'][22]; ?></h1>
+                                            <h1><?php echo $lng['productos_ysana'][24]; ?></h1>
                                         </div>
                                     </div>
                                         <h5 class="o-50">

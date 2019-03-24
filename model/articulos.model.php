@@ -5,7 +5,7 @@ class articulosModel extends Model {
     public $dir = 'imgart/';
     public $max_imagenes_articulo = 5;
     
-    function add_articulo($nombre_articulo,$referencia_articulo,$referencia_proveedor_articulo,$descripcion_articulo,$activado_articulo, $visible_en_tienda_articulo,
+    /* function add_articulo($nombre_articulo,$referencia_articulo,$referencia_proveedor_articulo,$descripcion_articulo,$activado_articulo, $visible_en_tienda_articulo,
         $precio_coste_articulo,$coste_externo_portes_articulo,$PVP_final_articulo,$margen_articulo,$inicio_descuento_articulo,$fin_descuento_articulo,
         $descuento_porcentaje_articulo,$descuento_euros_articulo,$cantidad_articulo, $almacen_articulo) {
         
@@ -17,7 +17,7 @@ class articulosModel extends Model {
         $q .= ' "' . $PVP_final_articulo . '", "' . $margen_articulo . '","' . $cantidad_articulo . '", "' .$inicio_descuento_articulo. '", "' .$fin_descuento_articulo. '", ';
         $q .= ' "' .$descuento_porcentaje_articulo. '", "'.$descuento_euros_articulo.'","' . $almacen_articulo . '")';
         return $this->execute_query($q);
-    }
+    } */
 
     function add_articulo_etiquetas($id_articulo, $id_etiqueta) {
         $q  = ' INSERT INTO '.$this->pre.'articulo_etiquetas (id_articulo, id_etiqueta) VALUES ';
@@ -85,9 +85,22 @@ class articulosModel extends Model {
         return $this->execute_query($q);
     }
 
+    function get_cat_articulo($id_articulo){
+        $q = ' SELECT * FROM '.$this->pre.'categorias c ';
+        $q .= ' INNER JOIN '.$this->pre.'categorias_articulo ca ';
+        $q .= ' on c.id_categoria=ca.id_categoria ';
+        $q .= ' WHERE ca.id_articulo="'.$id_articulo.'"';
+        $r = $this->execute_query($q);
+        if($r){
+            while ($f = $r->fetch_assoc()) {
+                return $f['id_categoria'];
+            }
+        }else return false;
+    }
+
     function buscar_farmacia($str){
         $q  = ' SELECT * FROM adst_adelgaysana_farmacias ';
-        $q .= ' WHERE codigopostal_farmacia LIKE "%'.$str.'%"';
+        $q .= ' WHERE codigopostal_farmacia LIKE "%'.$str.'%" OR nombrecompleto_farmacia LIKE "%'.$str.'%" ORDER BY codigopostal_farmacia DESC';
         return $this->execute_query($q);
     }
 
@@ -102,7 +115,7 @@ class articulosModel extends Model {
 
     function addusos($id_articulo, $contenido){
         $q  = ' INSERT INTO '.$this->pre.'usoarticulos (id_articulo, contenido) VALUES ';
-        $q .= ' ("'.$id_articulo.'", "'.$contenido.'")';
+        $q .= ' ("'.$id_articulo.'", "'.$this->escstr($contenido).'")';
         return $this->execute_query($q);
     }
 
@@ -114,7 +127,7 @@ class articulosModel extends Model {
 
     function updateusos($id_articulo, $contenido){
         $q = ' UPDATE '.$this->pre.'usoarticulos SET ';
-        $q .= ' contenido="'.$contenido.'" ';
+        $q .= ' contenido="'.$this->escstr($contenido).'" ';
         $q .= ' WHERE id_articulo="'.$id_articulo.'" ';
         return $this->execute_query($q);
     }
@@ -136,7 +149,7 @@ class articulosModel extends Model {
 
     function addinfo($id_articulo, $contenido){
         $q  = ' INSERT INTO '.$this->pre.'informacionarticulo (id_articulo, contenido) VALUES ';
-        $q .= ' ("'.$id_articulo.'", "'.$contenido.'")';
+        $q .= ' ("'.$id_articulo.'", "'.$this->escstr($contenido).'")';
         return $this->execute_query($q);
     }
 
@@ -146,32 +159,116 @@ class articulosModel extends Model {
         return $this->execute_query($q);
     }
 
+    function get_categorias_idlang($id_lang){
+        $q  = ' SELECT * FROM '.$this->pre.'categorias c ';
+        //$q  .= ' INNER JOIN '.$this->pre.'categorias_articulo ca ';
+        //$q  .= ' ON c.id_categoria=ca.id_categoria ';
+        $q .= ' WHERE c.lang="'.$id_lang.'"';
+        return $this->execute_query($q);
+    }
+
+    function get_articulos_xcat($id_cat, $id_lang, $visible=1){
+        $q = ' SELECT al.nombre, al.descripcion, al.img FROM '.$this->pre.'categorias_articulo ca ';
+        $q .= ' INNER JOIN '.$this->pre.'articulos_lang al ';
+        $q .= ' ON ca.id_articulo=al.id_articulo ';
+        $q .= ' WHERE ca.id_categoria="'.$id_cat.'" AND al.id_lang="'.$id_lang.'" AND al.visible='.$visible.' ';
+        return $this->execute_query($q);
+    }
+
     function updateinfo($id_articulo, $contenido){
         $q = ' UPDATE '.$this->pre.'informacionarticulo SET ';
-        $q .= ' contenido="'.$contenido.'" ';
+        $q .= ' contenido="'.$this->escstr($contenido).'" ';
         $q .= ' WHERE id_articulo="'.$id_articulo.'" ';
         return $this->execute_query($q);
     }
+
+    function add_articulo($stock, $precio, $activo, $tipo_tienda, $iva){
+        $q  = ' INSERT INTO '.$this->pre.'articulos (deleted, stock, precio, activo, tipo_producto, tipo_tienda, iva) VALUES ';
+        $q .= ' (0, "'.$stock.'", "'.$precio.'", "'.$activo.'", 1, "'.$tipo_tienda.'", "'.$iva.'")';
+        return $this->execute_query($q);
+    }
+
+    function update_articulo($id_articulo, $stock, $precio, $activo, $tipo_tienda, $iva){
+        $q = ' UPDATE '.$this->pre.'articulos SET ';
+        $q .= ' stock="'.$stock.'", ';
+        $q .= ' precio="'.$precio.'", ';
+        $q .= ' activo="'.$activo.'", ';
+        $q .= ' iva="'.$iva.'", ';
+        $q .= ' tipo_tienda="'.$tipo_tienda.'" ';
+        $q .= ' WHERE id_articulo="'.$id_articulo.'" ';
+        return $this->execute_query($q);
+    }
+
+    function add_articulo_lang($id_articulo, $urlseo, $id_lang, $nombre, $descripcion, $h1, $img, $visible){
+        $q  = ' INSERT INTO '.$this->pre.'articulos_lang (id_articulo, urlseo, id_lang, nombre, descripcion, h1, img, visible) VALUES ';
+        $q .= ' ('.$id_articulo.', "'.$urlseo.'", "'.$id_lang.'", "'.$nombre.'", "'.$descripcion.'", "'.$h1.'", "'.$img.'", "'.$visible.'")';
+        return $this->execute_query($q);
+    }
+
+    function get_img_lang($id_articulo, $id_lang){
+        $q  = ' SELECT img FROM '.$this->pre.'articulos_lang ';
+        $q .= ' WHERE id_articulo="'.$id_articulo.'"';
+        $q .= ' AND id_lang="'.$id_lang.'"';
+        return $this->execute_query($q);
+    }
+
+    function update_img_lang($id_articulo, $id_lang){
+        $q = ' UPDATE '.$this->pre.'articulos_lang SET ';
+        $q .= ' img=NULL ';
+        $q .= ' WHERE id_articulo="'.$id_articulo.'" ';
+        $q .= ' AND id_lang="'.$id_lang.'" ';
+        return $this->execute_query($q);
+    }
+
+    function update_articulo_lang($id_articulo, $urlseo, $id_lang, $nombre, $descripcion, $h1, $img=''){
+        $q = ' UPDATE '.$this->pre.'articulos_lang SET ';
+        $q .= ' urlseo="'.$urlseo.'", ';
+        $q .= ' nombre="'.$nombre.'", ';
+        $q .= ' descripcion="'.$descripcion.'", ';
+        if($img!=''){
+            $q .= ' img="'.$img.'", ';
+        }
+        $q .= ' h1="'.$h1.'" ';
+        $q .= ' WHERE id_articulo="'.$id_articulo.'" ';
+        $q .= ' AND id_lang="'.$id_lang.'" ';
+        return $this->execute_query($q);
+    }
+
+    function add_articulo_cat($id_categoria, $id_articulo){
+        $q  = ' INSERT INTO '.$this->pre.'categorias_articulo (id_categoria, id_articulo) VALUES ';
+        $q .= ' ("'.$id_categoria.'", "'.$id_articulo.'")';
+        return $this->execute_query($q);
+    }
+
+    function get_categorias($lang){
+        $q = ' SELECT * FROM '.$this->pre.'categorias c ';
+        $q .= ' WHERE c.lang="'.$lang.'" ';
+        return $this->execute_query($q);
+    }
     /* INFO */
-    function get_all_articulos($categoria, $lang, $tipo_tienda=1){
+    function get_all_articulos($categoria=false, $lang=false, $tipo_tienda=0, $id_articulo=false, $activo=true){
         $q = ' SELECT DISTINCT a.*,al.* FROM '.$this->pre.'articulos a ';
         $q .= ' INNER JOIN '.$this->pre.'articulos_lang al ';
         $q .= ' ON a.id_articulo=al.id_articulo ';
 
-        $q .= ' INNER JOIN '.$this->pre.'categorias_articulo ca ';
-        $q .= ' ON a.id_articulo=ca.id_articulo ';
+        if($categoria!=false){
+            $q .= ' INNER JOIN '.$this->pre.'categorias_articulo ca ';
+            $q .= ' ON a.id_articulo=ca.id_articulo ';
+            $q .= ' INNER JOIN '.$this->pre.'categorias c ';
+            $q .= ' ON c.id_categoria=ca.id_categoria ';
+        }
 
-        $q .= ' INNER JOIN '.$this->pre.'categorias c ';
-        $q .= ' ON c.id_categoria=ca.id_categoria ';
-
-        $q .= ' INNER JOIN '.$this->pre.'lang as l';
-        $q .= ' on al.id_lang=l.id_lang';
+        if($lang!=false){
+            $q .= ' INNER JOIN '.$this->pre.'lang as l ';
+            $q .= ' on al.id_lang=l.id_lang ';
+        }
 
         $q .= ' WHERE a.deleted=0 ';
-        $q .= ' AND a.activo=1 ';
-        $q .= ' AND a.tipo_tienda = '.$tipo_tienda.' ';
-        $q .= ' AND c.nombre_categoria = "'.$categoria.'" ';
-        $q .= ' AND l.code="'.$lang.'"';
+        if($activo==true) $q .= ' AND a.activo=1 ';
+        if($tipo_tienda!=0) $q .= ' AND a.tipo_tienda = '.$tipo_tienda.' ';
+        if($categoria!=false) $q .= ' AND c.nombre_categoria="'.$categoria.'" ';
+        if($lang!=false) $q .= ' AND al.id_lang='.$lang.' ';
+        if($id_articulo!=false) $q .= ' AND a.id_articulo='.$id_articulo.' ';
         return $this->execute_query($q);
     }
 
@@ -342,7 +439,7 @@ class articulosModel extends Model {
     }
     
     
-    function update_articulo($id_articulo, $nombre_articulo, $referencia_articulo,$referencia_proveedor_articulo,$descripcion_articulo,$activado_articulo,
+    /* function update_articulo($id_articulo, $nombre_articulo, $referencia_articulo,$referencia_proveedor_articulo,$descripcion_articulo,$activado_articulo,
         $visible_en_tienda_articulo,$precio_coste_articulo,$coste_externo_portes_articulo,$PVP_final_articulo,$margen_articulo,$inicio_descuento_articulo,
         $fin_descuento_articulo,$descuento_porcentaje_articulo,$descuento_euros_articulo,$cantidad_articulo, $almacen_articulo){
         
@@ -365,7 +462,7 @@ class articulosModel extends Model {
         $q .=   ' almacen_articulo = ' . $almacen_articulo . ' ';
         $q .= ' WHERE id_articulo = ' . $id_articulo . ';';
         return $this->execute_query($q);
-    }
+    } */
     
     function get_combo_almacenes($id, $val, $class=false, $lbl=false, $onChange=false, $multiple=false) {
         $iM = load_model('inputs');

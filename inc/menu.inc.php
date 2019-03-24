@@ -1,20 +1,45 @@
-<?php
-/*
-$op_menu_front = '';
-$menu_nombre_archivo = 'buscar-articulos.php';
-
-$arr_opt_menu_front = array(
-    array('link'=>$ruta_inicio.$menu_nombre_archivo.'?filtro_categoria=CONSUMIBLES', 'text'=>'Consumibles'),
-    array('link'=>$ruta_inicio.$menu_nombre_archivo.'?filtro_categoria=ELECTRO-HOGAR', 'text'=>'Electro-Hogar')
-    //array('link'=>$ruta_inicio.$menu_nombre_archivo.'?filtro_categoria=PAPELERIA', 'text'=>'Papeler&iacute;a')
-    //array('link'=>$ruta_inicio.$menu_nombre_archivo.'?filtro_categoria=ARCHIVO Y CLASIFICACION', 'text'=>'Archivo y clasificaci&oacute;n')
+<?php 
+$url = $_SERVER['REQUEST_URI'];
+$outMenu = '';
+$arrMenu = array(
+    1 => array(
+        1 => array( 'txt'=>'Inicio', 'url'=>'' ),
+        2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
+        3 => array( 'txt'=>'Experiencias', 'url'=>'experiencias' ),
+        4 => array( 'txt'=>'Farmacias', 'url'=>'#' ),
+        5 => array( 'txt'=>'Club Ysana', 'url'=>'#' ),
+        6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
+    ),
+    2 => array(
+        1 => array( 'txt'=>'Inicio', 'url'=>'' ),
+        2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
+        3 => array( 'txt'=>'Experiencias', 'url'=>'#' ),
+        4 => array( 'txt'=>'Farmacias', 'url'=>'#' ),
+        5 => array( 'txt'=>'Club Ysana', 'url'=>'#' ),
+        6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
+    )
 );
-
-foreach ($arr_opt_menu_front as $row_opt_menu_front) {
-    $op_menu_front .= '<a href="'.$row_opt_menu_front['link'].'">'.$row_opt_menu_front['text'].'</a>';
+foreach ($arrMenu[$_SESSION['id_lang']] as $key => $value) {
+    $url_format = '/ysana/'.$value['url'].'/';
+    $url_format = str_replace('//', '/', $url_format);
+    $outMenu .= '<li class="nav-item '.($url_format==$url ? 'active' : '').'"><a class="nav-link" href="'.$ruta_inicio.$value['url'].'">'.$value['txt'].'</a></li>';
 }
-*/
 ?>
-<div id="responsive_main_menu">
-    <div style="clear:both;"></div>
-</div>
+
+<header id="menu-top" class="max-ysana">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="<?php echo $ruta_inicio; ?>img/logos/ysanacolor.svg" width="128px" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <?php echo $outMenu; ?>
+            </ul>
+        </div>
+    </nav>
+</header>

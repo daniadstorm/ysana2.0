@@ -11,7 +11,7 @@ include_once('inc/cabecera.inc.php'); //cargando cabecera
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>aaa</h1>
+                <h1>Panel admin</h1>
             </div>
         </div>
     </div>

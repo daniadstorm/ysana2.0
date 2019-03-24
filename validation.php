@@ -161,7 +161,9 @@ if (isset($_REQUEST['result'])) {
     } else if ($_REQUEST['result'] == 'ko') {
         header('Location: '.$ruta_inicio.'checkout.php?transaccion_denegada=true'); //enviar a la pantalla de bookings con error
         exit();
-    } else { header('Location: '.$ruta_inicio.'index.php'); exit(); }
+    } else {
+        header('Location: '.$ruta_inicio.'index.php'); exit();
+    }
 }
 
 
@@ -169,7 +171,7 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
     $factura = preg_replace('/^0+/', '', $_REQUEST['factura']); 
     $rsepbf = $uM->set_estado_pedido_by_factura($_REQUEST['factura'], 1);
     if($rsepbf){
-        $rgc = $cM->get_carrito($_SESSION['id_usuario'], $_SESSION['lang']);
+        $rgc = $cM->get_carrito($_SESSION['id_usuario'], $_SESSION['lang'], "exp");
         if($rgc){
             while($frgc = $rgc->fetch_assoc()){
                 $cM->add_detallepedidos($_REQUEST['factura'], $frgc['cantidad'], $frgc['precio'], $frgc['nombre']);
@@ -192,11 +194,18 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
                 echo '<pre>';
                 print_r($frgpd);
                 echo '</pre>';
+                $id_correo_usuario = '';
+                $rgmu = $uM->get_mail_user($_SESSION['id_usuario']);
+                if($rgmu){
+                    while($frgmu = $rgmu->fetch_assoc()){
+                        $id_correo_usuario = $frgmu['email_usuario'];
+                    }
+                }
                 $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/pedido/record/add/', array(
                     'authtoken' => AUTHTOKEN,
                     'scope' => SCOPE,
                     'id_pedido' => $_REQUEST['factura'],
-                    'id_usuario' => $_SESSION['id_usuario'],
+                    'id_usuario' => $id_correo_usuario,
                     'nombre' => $frgpd['nombre'],
                     'apellidos' => $frgpd['apellidos'],
                     'direccion' => $frgpd['direccion'],
@@ -209,7 +218,7 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
             }
         }
         $uM->user_pedido_mail($factura);
-        $rcc = $cM->clear_carrito($_SESSION['id_usuario']);
+        $rcc = $cM->clear_carrito($_SESSION['id_usuario'], "exp");
         //enviar mail
         if($rcc){
             echo 'ok';
@@ -226,7 +235,7 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
     exit(); */
     
     function enviar_factura($email, $numpedido){
-        $op = '<div class="container">
+        $op = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head><div class="container">
         <div class="logo">
             <img src="https://ysana.es/img/svg/ysanacolor.svg" class="img-logo" alt="Ysana">
         </div>
@@ -433,8 +442,7 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
                         margin-bottom: .25rem;
                     }
                 }
-        </style>
-        </div>';
+        </style></div></html>';
 
         $asunto = 'Ysana - Pedido #'+$numpedido;
         $mail_admin = 'info@ysana.es';
@@ -456,8 +464,6 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
         echo 'Result: '.$result_mail_send.'<hr>';
         return $result_mail_send;
     }
-    enviar_factura("dani.martinez@adstorm.es", "35173");
-    enviar_factura("dmartinezh97@gmail.com", "35173");
 }
 
 ?>

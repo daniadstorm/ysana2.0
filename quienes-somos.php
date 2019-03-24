@@ -33,7 +33,7 @@ echo $sM->add_cabecera($lng['header'][0]);
     <?php include_once('inc/panel_top.inc.php'); ?>
     <?php include_once('inc/navbar_inicio.inc.php'); ?>
 
-    <div class="jumbotronquienessomos jumbotronpersonalizado"></div>
+    <div class="jumbotronquienessomos_<?php echo $_SESSION['id_lang']; ?> jumbotronpersonalizado"></div>
     <div class="bg-color-6">
         <div class="container-fluid">
             <nav class="navqs">

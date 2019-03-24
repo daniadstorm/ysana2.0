@@ -2,7 +2,6 @@
 include_once('config/config.inc.php'); //cargando archivo de configuracion
 
 $uM = load_model('usuario'); //uM userModel
-$hM = load_model('html');
 $iM = load_model('inputs');
 $sM = load_model('seo');
 $frm_nombre = '';
@@ -27,208 +26,99 @@ $arr_opt_accept_advertising = array(
 
 //POST__________________________________________________________________________
 
-include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
 ?>
 
-<script type="text/javascript">
-
-</script>
-
 <body>
-    <?php include_once('inc/panel_top.inc.php'); ?>
-    <?php include_once('inc/navbar_inicio.inc.php'); ?>
-
-    <?php //include_once('inc/footer.inc.php'); ?>
-    <main id="content" role="main">
-        <div class="contenedor">
-        <!-- <div class="jumbotronysana"></div> -->
-        <div class="position-relative">
-            <div class="videoysana">
-                <video class="video-inline" autoplay loop muted src="<?php echo $ruta_inicio; ?>img/nature2.mp4"></video>
-            </div>
-        </div>
-        </div>
-        <div class="contquiensomos">
-            <div class="container">
-                <div id="quiensomos" class="d-flex flex-column align-items-center">
-                    <div class="titulo my-5">
-                        <h2><?php echo $lng['index'][0]; ?></h2>
-                    </div>
-                    <div class="separadorqs"></div>
-                    <img src="<?php echo $ruta_inicio; ?>img/home/1.png" alt="" class="img-botella">
-                    <img src="<?php echo $ruta_inicio; ?>img/home/6.png" alt="" class="img-hoja1">
-                    <img src="<?php echo $ruta_inicio; ?>img/home/5.png" alt="" class="img-botella2">
-                    <div class="info qs bg-white">
-                        <div class="contenido pb-3">
-                            <p><?php echo $lng['index'][1]; ?></p>
-                            <p><a href="<?php echo $ruta_inicio; ?>quien-es-ysana-vida-sana"><button type="button" class="btn btn-sm btn-leer-mas mt-1"><?php echo $lng['clubysana'][2]; ?></button></a></p>
-                            <img src="<?php echo $ruta_inicio; ?>img/home/3.png" alt="" class="img-fruta">
-                            <img src="<?php echo $ruta_inicio; ?>img/home/4.png" alt="" class="img-hoja2">
-                            <img src="<?php echo $ruta_inicio; ?>img/home/7.png" alt="" class="img-botella3">
-                        </div>
-                    </div>
-                    <div class="separadorqs"></div>
-                </div>
-            </div>
-        </div>
-        <div class="clubysana">
-            <a href="<?php echo $ruta_inicio; ?>clubysana">
-            <div class="info-homee d-flex justify-content-center align-items-center h-100">
-                <img class="img-ysanaclub img-fluid" src="<?php echo $ruta_inicio; ?>img/<?php echo $lng['index']['img'][0]; ?>" alt="">
-                <!-- <div class="contenido m-3"> -->
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus. Aenean
-                        efficitur nisi at fringilla molestie. Nunc varius, ipsum a iaculis interdum, sem dui blandit ligula,
-                        vitae egestas arcu tortor finibus lectus.</p> -->
-                <!-- </div> -->
-            </div></a>
-        </div>
-        <div class="container">
-            <div class="novedades text-center">
-                <div class="titulo my-5">
-                    <h2><?php echo $lng['index'][2]; ?></h2>
-                </div>
-            </div>
+    <div id="menu-sticky">
+        <?php include_once('inc/panel_top.inc.php'); //panel superior ?>
+        <?php include_once('inc/menu.inc.php'); //menu superior ?>
+    </div>
+    <div class="parallax parallax-home1"></div>
+    <div class="texto-subhome">
+        <h1>La fórmula del éxito: ejercicio, comida sana e Ysana</h1>
+    </div>
+    <div class="parallax parallax-home2">
+        <div id="paneles" class="max-ysana">
             <div class="row">
-                <div class="col-md-12 col-lg-6">
-                    <div class="d-flex flex-column align-items-center justify-content-center mb-3">
-                        <div class="adelgaysana">
-                            <div class="img">
-                                <div class="d-none d-sm-block">
-                                    <div class="info">
-                                        <h1><?php echo $lng['index'][3]; ?></h1>
-                                        <p><?php echo $lng['index'][4]; ?></p>
-                                        <a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-2"><?php echo $lng['clubysana'][2]; ?></button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-block d-sm-none">
-                            <div class="infoxs">
-                                <h1><?php echo $lng['index'][5]; ?></h1>
-                                <p class="m-0"><?php echo $lng['index'][6]; ?></p>
-                            </div>
-                        </div>
+                <div class="col-12 col-md-6 panel panel-izq">
+                    <div class="p-3">
+                        <h1>¿Qué es Ysana Vida Sana?</h1>
+                        <p>Ysana® es una marca dedicada al bienestar de las personas. Nuestro equipo profesional y dinámico está comprometido con la innovación constante para incorporar extractos naturales a productos que ayuden a las personas a mantener un estilo de vida saludable.</p>
+                        <a href="#" class="btn btn-bg-color-2">Nuestros productos</a>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6">
-                    <div class="d-flex flex-column align-items-center justify-content-center mb-3">
-                        <div class="freenose">
-                            <div class="img">
-                                <div class="d-none d-sm-block">
-                                    <div class="info">
-                                        <h1><?php echo $lng['index'][3]; ?></h1>
-                                        <p><?php echo $lng['index'][4]; ?></p>
-                                        <a href="#"><button type="button" class="btn btn-sm btn-leer-mas mt-2"><?php echo $lng['clubysana'][2]; ?></button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-block d-sm-none">
-                            <div class="infoxs">
-                                <h1><?php echo $lng['index'][5]; ?></h1>
-                                <p class="m-0"><?php echo $lng['index'][6]; ?></p>
-                            </div>
-                        </div>
+                <div class="col-12 col-md-6 panel panel-der">
+                    <div id="polaroid">
+                        <div class="polaroid polzi-1"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-1" alt=""></div>
+                        <div class="polaroid polzi-2"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-2" alt=""></div>
+                        <div class="polaroid polzi-3"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-3" alt=""></div>
+                        <div class="polaroid polzi-4"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-4" alt=""></div>
+                        <div class="polaroid polzi-5"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-5" alt=""></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg-contacto position-relative">
-            <div class="footer-modificado">
+    </div>
+    <div class="texto-subpolaroid">
+        <h1>Conoce más de ysana</h1>
+        <a href="#" class="btn btn-bg-color-white">Ir a Corporate</a>
+    </div>
+    <div class="parallax parallax-home3">
+        <div id="redes-sociales">
+            <h1>Redes sociales</h1>
+            <p>Síguenos en nuestras redes sociales para estar al día de todas las novedades, recetas healthy, promociones y concursos.</p>
+            <div class="img-redes">
+                <img src="<?php echo $ruta_inicio; ?>img/redes/3.svg" class="mx-1" width="40px" alt="">
+                <img src="<?php echo $ruta_inicio; ?>img/redes/4.svg" class="mx-1" width="40px" alt="">
+                <img src="<?php echo $ruta_inicio; ?>img/redes/5.svg" class="mx-1" width="40px" alt="">
+                <img src="<?php echo $ruta_inicio; ?>img/redes/6.svg" class="mx-1" width="40px" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="parallax parallax-home4">
+        <div id="paneles-clubysana" class="max-ysana">
+            <div class="panel panel-izq">
+                <div class="logo-ysana">
+                    <img src="<?php echo $ruta_inicio; ?>img/logos/clubysana.svg" width="192px" alt="">
 
-            </div>
-            <div class="container contacto">
-                <div class="d-flex justify-content-end align-items-center position-relative">
-                    <div class="titulo position-absolute">
-                        <h1><?php echo $lng['index'][7]; ?></h1>
-                        <h1><?php echo $lng['index'][8]; ?></h1>
-                    </div>
-                    <div class="frmcontacto">
-                        <form id="form-contacto">
-                            <div class="titulo mb-3">
-                                <div class="d-flex justify-content-center">
-                                    <h2><?php echo $lng['index'][7]; ?> <?php echo $lng['index'][8]; ?></h2>
-                                </div>
-                            </div>
-                            <?php echo $iM->get_input_text($frm_nombre, $frm_nombre, $class='form-control border-frm-contact', $lbl='', $lng['index'][12]); ?>
-                            <?php echo $iM->get_input_text($frm_email, $frm_email, $class='form-control border-frm-contact', $lbl='', $lng['index'][13]); ?>
-                            <?php echo $iM->get_input_text($frm_direccion, $frm_direccion, $class='form-control border-frm-contact', $lbl='', $lng['index'][14]); ?>
-                            <div class="">
-                                <div class="row">
-                                    <?php echo $iM->get_input_text($frm_cp, $frm_cp, $class='form-control border-frm-contact', $lbl='', $lng['index'][15],'',false,false,false,'col-md-6 mb-3'); ?>
-                                    <?php echo $iM->get_input_text($frm_tel, $frm_tel, $class='form-control border-frm-contact', $lbl='', $lng['index'][16],'',false,false,false,'col-md-6 mb-3'); ?>
-                                </div>
-                            </div>
-                            <?php echo $iM->get_input_textarea($frm_pregunta, $frm_pregunta, $class='form-control border-frm-contact', $lbl='', $lng['index'][17]); ?>
-                            <p><?php echo $lng['index'][9]; ?></p>
-                            <div class="row align-items-center justify-content-center">
-                                <div class="col-md-12">
-                                    <div class="form-check pl-0 mb-2 d-flex align-items-center">
-                                        <!-- <input class="form-check-input" type="checkbox" id="autoSizingCheck"> -->
-                                        <div class="roundedOne">
-                                            <input type="checkbox" id="roundedOne" name="terminos_condiciones" required />
-                                            <label for="roundedOne"></label>
-                                        </div>
-                                        <div>
-                                            <p class="form-check-label ml-2" for="autoSizingCheck">
-                                                <?php echo $lng['index'][10]; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-12">
-                                    <div>
-                                        <p>
-                                            <?php echo $lng['index'][18]; ?>
-                                        </p>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <?php echo $iM->get_input_radio($frm_accept_advertising, $frm_accept_advertising, $arr_opt_accept_advertising, '', '', false, true); ?>
-                                    </div>
-                                    <div>
-                                        <p>
-                                            <?php echo $lng['index'][21]; ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <button type="submit" target="_blank" action="mailto:lalvarado@pharmalink.es" class="btn btn-primary btn-lg w-100 border-frm-contact btn-color-6"><?php echo $lng['index'][11]; ?></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
+                <p>Únete ahora al Club Ysana y enlaza con la vida sana. La primera comunidad online orientada al autocuidado y los hábitos de vida saludables, donde podrás compartir tus inquietudes, obtener consejos personalizados de farmacéuticos y coachs profesionales, obtener premios, acceder a muestras de producto en primicia, compartir experiencias y, por supuesto, mejorar tus hábitos de vida de manera constante.</p>
+                <a href="#" class="btn btn-bg-color-3">Nuestros productos</a>
             </div>
         </div>
-        <?php include_once('inc/footer.inc.php'); ?>
-    </main>
+    </div>
+    <div class="parallax parallax-home5">
+        <div id="form-contacto" class="max-ysana">
+            <div class="row w-100 align-items-center">
+                <div class="col-12 col-md-6 contacto-1">
+                    <h1>Contacta con Ysana</h1>
+                    <p>Si deseas más información sobre nuestro laboratorio o gama de productos naturales para el autocuidado, no dudes en contactarnos.</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/logos/skyline.svg" class="" alt="">
+                </div>
+                <form method="post" class="col-12 col-md-6 contacto-2">
+                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Nombre y Apellidos', '', '', '', '', false, 'form-group', false); ?>
+                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'E-mail', '', '', '', '', false, 'form-group', false); ?>
+                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Dirección', '', '', '', '', false, 'form-group', false); ?>
+                    <div class="form-row">
+                        <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'CP', '', '', '', '', false, 'form-group col-6', false); ?>
+                        <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Telf', '', '', '', '', false, 'form-group col-6', false); ?>
+                    </div>
+                    <?php echo $iM->get_input_textarea('frm_pregunta', '', 'form-control', 'Tu pregunta', '', 10, 500, true, false, 5, 'form-group') ?>
+                    <div class="d-flex justify-content-end">
+                        <button id="btnEnviar" type="submit" class="btn btn-bg-color-3">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <?php include_once('inc/footer.inc.php'); //panel superior ?>
 </body>
+
+
 <script>
-    $('a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-    if(location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) {
-            return false;
-          } else {
-            $target.attr('tabindex','-1');
-            $target.focus();
-          };
-        });
-      }
-    }
-  });
+    $("#polaroid").on('click', '.pol', function(){
+        console.log(this);
+    });
 </script>
 </html>

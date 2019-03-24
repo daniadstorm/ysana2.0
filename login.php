@@ -27,7 +27,7 @@ if (isset($_POST['nombre_usuario'])) { //si viene de submit de login
     $nombre_usuario = $_POST['nombre_usuario'];
     $contrasenya_usuario = $_POST['contrasenya_usuario'];
     
-    $result_login = $uM->login_usuario($nombre_usuario, $contrasenya_usuario);
+    $result_login = $uM->login_usuario($nombre_usuario, $contrasenya_usuario, $lng['index'][22], $lng['index'][23]);
     if (strlen($result_login) > 1) {
         $str_errores = $result_login;
     }
@@ -44,7 +44,7 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
             exit();
         break;
         case ADMIN:
-            header('Location: '.$ruta_inicio.'inicio-administrador.php');
+            header('Location: '.$ruta_inicio.'admin.php');
             exit();
         break;
     }

@@ -9,7 +9,8 @@ $uM->control_sesion($ruta_inicio, ADMIN);
 $arr_filtro = array(//Estados
     0 => "Recuperar contraseña",
     1 => "Nuevo usuario",
-    2 => "Nuevo pedido"
+    2 => "Nuevo pedido",
+    3 => "Dar de baja"
 );
 $arr_lang = array(
     1 => 'spa',

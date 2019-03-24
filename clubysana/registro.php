@@ -32,7 +32,7 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
             exit();
         break;
         case ADMIN:
-            header('Location: '.$ruta_inicio.'inicio-administrador.php');
+            header('Location: '.$ruta_inicio.'admin.php');
             exit();
         break;
     }

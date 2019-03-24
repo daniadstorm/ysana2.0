@@ -19,7 +19,7 @@ if($id_usuario>0){
                 $outcarrito .= $frgcc["img"];
             }
             $outcarrito .= '" class="img-prod" alt="">
-            <div class="d-flex flex-column justify-content-between">
+            <div class="d-flex flex-column justify-content-between align-items-start">
                 <p class="m-0 fs-8rem">'.$frgcc["nombre"].'</p>
                 <p class="m-0 text-muted fs-8rem">'.$lng['experiencia-carrito'][10].' '.$frgcc["cantidad"].'</p>
                 <span class="precio">'.$frgcc["precio"].' €</span>
@@ -68,33 +68,33 @@ if($id_usuario>0){
                     <li class="nav-item <?php echo ($activePage=='') ? 'active':''; ?> text-right">
                         <a class="nav-link" href="<?php echo $ruta_inicio; ?>#form-contacto"><?php echo $lng['navbar_inicio'][3]; ?></a>
                     </li>
-                    <li>
                     <li class="nav-item text-right">
                         <form id="frmbuscar" class="form-inline-block mt-2 my-lg-0 ml-auto">
                             <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="">
                             <img name="search" src="https://png.icons8.com/ios/64/000000/search.png">
                         </form>
                     </li>
-                    <a href="<?php echo $ruta_inicio; ?>carrito">
-                        <div class="carrito-img p-2">
-                            <img src="<?php echo $ruta_inicio; ?>img/carritoazul.svg" width="32px" class="">
-                            <label class="num"><?php echo $unidades; ?></label>
-                            <ul id="carrito-flotante" class="p-2">
-                                <?php echo $outcarrito; ?>
+                    <li class="nav-item text-right">
+                        <a href="<?php echo $ruta_inicio; ?>carrito">
+                            <div class="carrito-img p-2">
+                                <img src="<?php echo $ruta_inicio; ?>img/carritoazul.svg" width="32px" class="">
+                                <label class="num"><?php echo $unidades; ?></label>
+                                <ul id="carrito-flotante" class="p-2">
+                                    <?php echo $outcarrito; ?>
 
-                                <li class="unit">
-                                    <p class="p-3 mb-2">(<?php echo $unidades; ?>) <?php echo $lng['experiencia-carrito'][11]; ?>
-                                        <span class="pull-xs-right"><?php echo $sumaTotal; ?>€</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <form action="<?php echo $ruta_inicio; ?>carrito/">
-                                        <button class="btn btn-lg btn-block bg-blue-ysana text-light"><?php echo $lng['experiencia-carrito'][12]; ?></button>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
+                                    <li class="unit">
+                                        <p class="d-flex justify-content-between p-3 mb-2">(<?php echo $unidades; ?>) <?php echo $lng['experiencia-carrito'][11]; ?>
+                                            <span class="pull-xs-right"><?php echo $sumaTotal; ?>€</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <form action="<?php echo $ruta_inicio; ?>carrito/">
+                                            <button class="btn btn-lg btn-block bg-blue-ysana text-light"><?php echo $lng['experiencia-carrito'][12]; ?></button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
                     </li>
 <!--                     <li class="nav-item d-block d-sm-none text-right">
                         <p class="m-0 bienvenidosx"><?php echo $lng['navbar_inicio'][4]; ?></p>

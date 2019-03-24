@@ -5,6 +5,7 @@ $uM = load_model('usuario'); //uM userModel
 $hM = load_model('html');
 $iM = load_model('inputs');
 $sM = load_model('seo');
+$cyM = load_model('clubysana');
 
 $id_usuario = (isset($_SESSION['id_usuario'])) ? $_SESSION['id_usuario'] : '';
 $nombre_usuario = '';
@@ -18,17 +19,31 @@ $arr_genero = array(
     'F' => $lng['forms'][7],
     'M' => $lng['forms'][8]
 );
-
+$outCat = '';
+$id_exp = '';
 //GET___________________________________________________________________________
 
 //GET___________________________________________________________________________
 
 //POST__________________________________________________________________________
+if(isset($_POST['dardeBaja'])){
+    $raru = $uM->add_randomkey_usuario($_POST['email_usuario'], 24);
+    if($raru){
+        $rufm = $uM->user_unsuscribe_mail($_POST['email_usuario'], $raru, $ruta_inicio, $_SESSION['id_lang']);
+        if($rufm){
+            $str_info = $lng['clubysana'][12];
+        }else{
+            //echo 'Todo mal';
+        }
+    }else{
+        $str_errores = $lng['forms'][18];
+    }
+}
 if(isset($_POST['id_usuario'])){
     $ruu = $uM->update_usuario($id_usuario, $_POST['nombre_usuario'], $_POST['apellidos_usuario'], $_POST['genero']);
     if($ruu){
         $str_info = 'Datos actualizados';
-        $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/usuarios/record/add/', array(
+        $rapz = $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/usuarios/record/add/', array(
             'authtoken' => AUTHTOKEN,
             'scope' => SCOPE,
             'id_usuario' => $_POST['email_usuario'],
@@ -60,6 +75,38 @@ if($id_usuario>0){
 if (!isset($_SESSION['id_tipo_usuario'])) { //si hay login
     header('Location: '.$ruta_inicio);
     exit();
+}
+$rge = $cyM->get_experiencias($_SESSION['id_lang']);
+if($rge){
+    while($frge = $rge->fetch_assoc()){
+        $outCat .= '<div class="cont">
+        <a data-toggle="collapse" href="#subcat-'.$frge['id_experiencia'].'" role="button" aria-expanded="false" aria-controls="subcat-'.$frge['id_experiencia'].'">
+            <img src="'.$ruta_inicio.'img/clubysana/'.$frge['imagen'].'" alt="">
+            <h2>'.$frge['titulo'].'</h2>
+        </a>
+        <div class="collapse" id="subcat-'.$frge['id_experiencia'].'">
+        <div class="card card-body">';
+        $rgeui = $cyM->get_experiencia_urlseo_idlang($frge['urlseo'], $_SESSION['id_lang']);
+        if($rgeui){
+            while($frgeui = $rgeui->fetch_assoc()){
+                $id_exp = $frgeui['id_experiencia'];
+            }
+        }
+        if($id_exp!=''){
+            $rgdeii = $cyM->get_datos_experiencias_idexp_idlang($id_exp, $_SESSION['id_lang']);
+            if($rgdeii){
+                while($frgdeii = $rgdeii->fetch_assoc()){
+                    $outCat .= '<div class="cont-2">
+                    <a href="'.$ruta_inicio.'clubysana/areapersonal/'.$frge['urlseo'].'/'.$frgdeii['urlseo'].'">
+                        <img src="'.$ruta_inicio.'img/clubysana/'.$frgdeii['imagen'].'" alt="">
+                        <p>'.$frgdeii['titulo'].'</p></a></div>';
+                }
+            }
+        }else{
+            echo 'ID_EXP está vacio';
+        }
+        $outCat .= '</div></div></div>';
+    }
 }
 //CONTROL__________________________________________________________________________
 
@@ -123,6 +170,10 @@ echo $sM->add_cabecera($lng['header'][0]);
                             ?>
                             
                         </form>
+                        <form action="" method="post">
+                            <?php echo $iM->get_input_hidden('email_usuario', $email_usuario); ?>
+                            <?php echo '<button type="submit" name="dardeBaja" class="dardeBaja">'.$lng['forms'][43].'</button>'; ?>
+                        </form>
                     </div>
                     <div class="sueno">
                         <a target="_blank" href="https://survey.zohopublic.eu/zs/fbB8dr">
@@ -149,24 +200,7 @@ echo $sM->add_cabecera($lng['header'][0]);
                 </div>
                 <div class="container-fluid">
                     <div class="tuexperiencia py-5">
-                        <div class="cont">
-                            <a href="<?php echo $ruta_inicio; ?>clubysana/areapersonal/neurologia">
-                                <img src="<?php echo $ruta_inicio; ?>img/club-ysana-pictograma-usuario-mental.png" alt="">
-                                <h2><?php echo $lng['clubysana'][6]; ?></h2>
-                            </a>
-                        </div>
-                        <!-- <div class="cont">
-                            <a href="#2">
-                                <img src="<?php echo $ruta_inicio; ?>img/club-ysana-pictograma-usuario-mujer.png" alt="">
-                                <h2>Club Ysana® 360 MUJER</h2>
-                            </a>
-                        </div>
-                        <div class="cont">
-                            <a href="#3">
-                                <img src="<?php echo $ruta_inicio; ?>img/club-ysana-pictograma-usuario-vias altas.png" alt="">
-                                <h2>Club Ysana® 360 VIAS ALTAS</h2>
-                            </a>
-                        </div> -->
+                        <?php echo $outCat; ?>
                     </div>
                 </div>
             </div>

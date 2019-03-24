@@ -7,6 +7,7 @@ Options All -Indexes
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
+
 #RewriteBase /ysana/
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
@@ -21,7 +22,8 @@ RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{REQUEST_URI} /+[^.]+$
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 
-RewriteRule ^productos_ysana/$ productos.php [L]
+RewriteRule ^sobre-ysana/$ sobreysana.php [L]
+RewriteRule ^productos-ysana/$ productos.php [L]
 RewriteRule ^productos_ysana/(.*)$ ficha-producto.php?producto=$1 [L]
 
 RewriteRule ^sala_prensa/$ prensa.php [L]
@@ -29,6 +31,7 @@ RewriteRule ^sala_prensa/$ prensa.php [L]
 RewriteRule ^login/$ login.php [L]
 RewriteRule ^registro/$ registro.php [L]
 RewriteRule ^forgot-password/$ forgot-password.php [L]
+RewriteRule ^unsubscribe/$ dar-de-baja.php [L]
 
 #RewriteRule ^directo_farmacia/carrito/$ directo_farmacia/carrito.php [L]
 #RewriteRule ^experiencia/carrito/$ experiencia/carrito.php [L]
@@ -38,8 +41,9 @@ RewriteRule ^carrito/datos/$ carrito-datos.php [L]
 RewriteRule ^clubysana/$ clubysana/index.php [L]
 RewriteRule ^clubysana/registro/$ clubysana/registro.php [L]
 RewriteRule ^clubysana/areapersonal/$ clubysana/areapersonal.php [L]
-RewriteRule ^clubysana/areapersonal/neurologia/$ clubysana/neurologia.php [L]
-RewriteRule ^clubysana/areapersonal/neurologia/(.*)/$ clubysana/articulo.php?id=$1 [L]
+#RewriteRule ^clubysana/areapersonal/neurologia/$ clubysana/neurologia.php [L]
+RewriteRule ^clubysana/areapersonal/(.*)/(.*)/$ clubysana/articulo.php?id_cat=$1&id_sub=$2 [L]
+#RewriteRule ^clubysana/areapersonal/(.*)/$ clubysana/subcategoria.php?id=$1 [L]
 
 RewriteRule ^quien-es-ysana-vida-sana/$ quienes-somos.php [L]
 
@@ -59,8 +63,11 @@ RewriteRule ^politica-ventas/$ politica-ventas.php [L]
 RewriteRule ^bono/$ bono.php [L]
 
 RewriteCond %{SERVER_PORT} 80
-#RewriteRule ^(.*)$ https://ysana.es/$1 [R,L]
-#RewriteRule ^(.*)$ https://adstorm.es/ysana/$1 [R,L]
+
+#Descomentar en servidor
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#Descomentar en servidor
 
 ErrorDocument 404 "Ups, 404"
 

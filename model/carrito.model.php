@@ -9,14 +9,27 @@ class carritoModel extends Model {
     }
 
     function add_direccion_envio($id_usuario, $nombre, $apellidos, $direccion, $cp, $poblacion, $movil){
-        $q  = ' INSERT INTO '.$this->pre.'carrito_datos (id_usuario, nombre, apellidos, direccion, codigo_postal, poblacion, movil) VALUES ';
-        $q .= ' ("'.$id_usuario.'", "'.$nombre.'", "'.$apellidos.'", "'.$direccion.'", "'.$cp.'", "'.$poblacion.'", "'.$movil.'")';
+        $q  = ' INSERT INTO '.$this->pre.'carrito_datos (id_usuario, predeterminada, nombre, apellidos, direccion, codigo_postal, poblacion, movil) VALUES ';
+        $q .= ' ("'.$id_usuario.'", 1, "'.$nombre.'", "'.$apellidos.'", "'.$direccion.'", "'.$cp.'", "'.$poblacion.'", "'.$movil.'")';
         return $this->execute_query($q);
     }
 
     function add_pedido($id_usuario, $nombre, $apellidos, $direccion, $codigo_postal, $poblacion, $movil){
         $q  = ' INSERT INTO '.$this->pre.'pedidos (id_usuario, nombre, apellidos, direccion, codigo_postal, poblacion, movil) VALUES ';
         $q .= ' ('.$id_usuario.', "'.$nombre.'", "'.$apellidos.'", "'.$direccion.'", "'.$codigo_postal.'", "'.$poblacion.'", "'.$movil.'")';
+        return $this->execute_query($q);
+    }
+
+    function add_pedido_df($id_farmacia, $id_usuario, $timecesta, $fechadia, $estado="pendiente"){
+        $q  = ' INSERT INTO '.$this->pre.'cesta_df (id_farmacia, id_usuario, timecesta, fechadia, estado) VALUES ';
+        $q .= ' ('.$id_farmacia.', "'.$id_usuario.'", "'.$timecesta.'", "'.$fechadia.'", "'.$estado.'")';
+        return $this->execute_query($q);
+    }
+
+    function update_pedido_df($id_usuario, $estado){
+        $q = ' UPDATE ' . $this->pre . 'carrito_compra SET ';
+        $q .= ' estado = "'.$estado.'" ';
+        $q .= ' WHERE id_usuario = '.$id_usuario.' and tipo_tienda="df" ';
         return $this->execute_query($q);
     }
 
@@ -27,9 +40,9 @@ class carritoModel extends Model {
         return $this->execute_query($q);
     }
 
-    function clear_carrito($id_usuario){
+    function clear_carrito($id_usuario, $tipo){
         $q = ' DELETE FROM ' . $this->pre . 'carrito_compra ';
-        $q .= ' WHERE id_usuario = '.$id_usuario.' ';
+        $q .= ' WHERE id_usuario = '.$id_usuario.' AND tipo_tienda = "'.$tipo.'"';
         return $this->execute_query($q);
     }
 
@@ -72,12 +85,15 @@ class carritoModel extends Model {
         return $this->execute_query($q);
     }
 
-    function get_carrito($id_usuario, $lang) {
-        $q  = ' SELECT cc.id_articulo,a.precio,a.stock,al.urlseo,al.nombre,cc.cantidad,al.img_portada,CONCAT(al.img,".png") as img FROM '.$this->pre.'carrito_compra as cc INNER JOIN ';
+    function get_carrito($id_usuario, $lang, $tipo_tienda=false) {
+        $q  = ' SELECT a.iva,cc.tipo_tienda,cc.id_articulo,a.precio,a.stock,al.urlseo,al.nombre,cc.cantidad,al.img_portada,al.img as img FROM '.$this->pre.'carrito_compra as cc INNER JOIN ';
         $q .= ' '.$this->pre.'articulos_lang as al ON cc.id_articulo=al.id_articulo INNER JOIN ';
         $q .= ' '.$this->pre.'articulos as a ON al.id_articulo=a.id_articulo INNER JOIN ';
         $q .= ' '.$this->pre.'lang as l ON al.id_lang=l.id_lang ';
-        $q .= ' WHERE al.visible=1 AND cc.id_usuario='.$id_usuario.' and l.code="'.$lang.'" ';
+        $q .= ' WHERE cc.id_usuario='.$id_usuario.' and l.code="'.$lang.'" and cc.estado="" ';
+        if($tipo_tienda!=false){
+            $q .= ' and cc.tipo_tienda="'.$tipo_tienda.'" ';
+        }
         return $this->execute_query($q);
     }
 
@@ -93,10 +109,23 @@ class carritoModel extends Model {
         return $this->execute_query($q);
     }
 
+    function get_cesta_df($id_usuario, $lang){
+        $q = ' SELECT * FROM '.$this->pre.'cesta_df cdf ';
+        $q .= ' INNER JOIN adst_adelgaysana_farmacias f ON cdf.id_farmacia=f.id_farmacia ';
+        $q .= ' INNER JOIN '.$this->pre.'usuarios u ON u.id_usuario=cdf.id_usuario ';
+        $q .= ' INNER JOIN '.$this->pre.'carrito_compra cc ON cc.id_usuario=cdf.id_usuario ';
+        $q .= ' INNER JOIN '.$this->pre.'articulos_lang al ON al.id_articulo=cc.id_articulo ';
+        $q .= ' INNER JOIN '.$this->pre.'articulos a ON al.id_articulo=a.id_articulo ';
+        $q .= ' WHERE cdf.id_usuario='.$id_usuario.' ';
+        $q .= ' AND cc.tipo_tienda="df" AND cc.estado="" AND al.id_lang="'.$lang.'" ';
+        $q .= ' AND cdf.fecha_registro=(SELECT MAX(fecha_registro) from '.$this->pre.'cesta_df) ';
+        return $this->execute_query($q);
+    }
+
     function get_articulo_carrito($id_usuario, $id_articulo){
         $q = ' SELECT * FROM '.$this->pre.'carrito_compra ca ';
         $q .= ' WHERE ca.id_usuario='.$id_usuario.' ';
-        $q .= ' AND ca.id_articulo='.$id_articulo.' ';
+        $q .= ' AND ca.id_articulo='.$id_articulo.' AND ca.estado<>"pendiente" ';
         $r = $this->execute_query($q);
         if ($r) return $r->num_rows;
             else return false;
@@ -122,9 +151,9 @@ class carritoModel extends Model {
         return $this->execute_query($q);
     }
 
-    function sumarArticulo($id_usuario, $id_articulo){
+    function sumarArticulo($id_usuario, $id_articulo, $cantidad=1){
         $q = ' UPDATE ' . $this->pre . 'carrito_compra SET ';
-        $q .= ' cantidad=cantidad+1 ';
+        $q .= ' cantidad=cantidad+'.$cantidad.' ';
         $q .= ' WHERE id_usuario = '.$id_usuario.' ';
         $q .= ' AND id_articulo = '.$id_articulo.' ';
         return $this->execute_query($q);
@@ -356,7 +385,7 @@ class carritoModel extends Model {
     </div>';
 
         $asunto = 'Ysana - Pedido #'+$numpedido;
-        $mail_admin = 'info@ysana.es';
+        $mail_admin = 'dani.martinez@adstorm.es';
 
         $headers   = array();
         $headers[] = "MIME-Version: 1.0";

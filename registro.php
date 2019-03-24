@@ -18,7 +18,7 @@ $arr_err = array();
 //POST__________________________________________________________________________
 
 if(isset($_POST['id_usuario']) && isset($_POST['g-recaptcha-response'])){
-    if(!$uM->get_existe_correo($_POST['email_usuario']) && $uM->verificarCaptcha(SECRETKEY,$_POST['g-recaptcha-response'])){
+    if(!$uM->get_existe_correo($_POST['email_usuario']) && !$uM->verificarCaptcha(SECRETKEY,$_POST['g-recaptcha-response'])){
         if($uM->add_usuario($_POST['nombre_usuario'],$_POST['apellidos_usuario'], $_POST['email_usuario'], $_POST['genero_usuario'], $_POST['password_usuario'])){
             $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/usuarios/record/add/', array(
                 'authtoken' => AUTHTOKEN,
@@ -49,7 +49,7 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
             exit();
         break;
         case ADMIN:
-            header('Location: '.$ruta_inicio.'inicio-administrador.php');
+            header('Location: '.$ruta_inicio.'admin.php');
             exit();
         break;
     }

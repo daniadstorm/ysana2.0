@@ -14,14 +14,14 @@ $out = '';
 //GET__________________________________________________________________________
 
 //LISTADO______________________________________________________________________
-$rgaa = $aM->get_all_articulos("Packs experiencias", $_SESSION['lang'], 1);
+$rgaa = $aM->get_all_articulos("Packs experiencias", $_SESSION['id_lang'], 1);
 if($rgaa){
     while($frgaa = $rgaa->fetch_assoc()){
         $out .= '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 article-block">
         <article class="tarjeta-articulo">
             <div class="tarjeta-articulo_elementos-basicos">
                 <div class="tarjeta-articulo_foto">
-                    <img src="'.$ruta_inicio.'img/productosexp/'.$frgaa['img_portada'].'" alt="" class="img-fluid">
+                    <img src="'.$ruta_inicio.'img/productos/'.$frgaa['img'].'" alt="" class="img-fluid">
                 </div>
                 <div class="tarjeta-articulo_adicional d-flex flex-column">
                     <header class="tarjeta-articulo_info">
@@ -30,13 +30,13 @@ if($rgaa){
                         <h3 class="precio">'.$frgaa['precio'].'€</h3>
                     </header>
                     <header class="tarjeta-articulo_extras">
-                        <div class="puntuacion">
+                        <!--<div class="puntuacion">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
                             <img class="img-start" src="'.$ruta_archivos.'img/star-color.png">
-                        </div>
+                        </div>-->
                         <div class="boton">
                         <a href="'.$frgaa['urlseo'].'">
                             <button type="button" class="btn btn-comprar btn-sm">'.$lng['experiencia-index'][0].'</button>
@@ -78,7 +78,8 @@ echo $sM->add_cabecera($lng['header'][0]);
                 <li class="breadcrumb-item">
                     <a href="<?php echo $ruta_inicio; ?>">Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page"><?php echo $lng['breadcrumb'][1]; ?></li>
+                <li class="breadcrumb-item" aria-current="page"><?php echo $lng['breadcrumb'][1]; ?></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo $lng['experiencia-index'][3]; ?></li>
             </ol>
         </nav>
     </div>
@@ -181,7 +182,6 @@ echo $sM->add_cabecera($lng['header'][0]);
                 }
                 $cat_count++;
             } */
-           
             ?>
         </div>
     </div>
@@ -200,32 +200,32 @@ echo $sM->add_cabecera($lng['header'][0]);
                 <img src="<?php echo $ruta_inicio; ?>img/sub-footer/4.svg" alt="">
             </div>
         </div> -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
                     <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/1.svg" height="44">
-                    <!-- <label>Sin gastos de envio</label> -->
+                    <label>Sin gastos de envio</label>
                 </div>
             </div>
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
                     <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/2.svg" height="44">
-                    <!-- <label>Sin gastos de envio</label> -->
+                    <label>Sin gastos de envio</label>
                 </div>
             </div>
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
                     <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/3.svg" height="44">
-                    <!-- <label>Sin gastos de envio</label> -->
+                    <label>Sin gastos de envio</label>
                 </div>
             </div>
             <div class="col-6 col-md-3 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center">
                     <img class="img-footer2" src="<?php echo $ruta_inicio; ?>img/sub-footer/4.svg" height="44">
-                    <!-- <label>Sin gastos de envio</label> -->
+                    <label>Sin gastos de envio</label>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <?php include_once('../inc/footer.inc.php'); ?>
 </body>

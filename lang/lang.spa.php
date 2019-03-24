@@ -78,10 +78,11 @@ $lng['forms'][39] = 'Seleccionar otra dirección';
 $lng['forms'][40] = '+ Añadir dirección de envío';
 $lng['forms'][41] = 'Envío de 1 artículo(s)';
 $lng['forms'][42] = 'Darme de alta';
+$lng['forms'][43] = 'Darme de baja';
 //forms_____________________________________________________________________________________________
 
 //index.php_____________________________________________________________________________________
-$lng['index']['img'][0] = 'home-clubysana.svg';
+$lng['index']['img'][0] = 'home-clubysana1.svg';
 $lng['index'][0] = '¿Quién es Ysana® Vida Sana?';
 $lng['index'][1] = 'Ysana® es una marca del laboratorio Pharmalink dedicada al bienestar de las personas. Nuestro equipo profesional y dinámico está comprometido con la innovación constante para incorporar extractos naturales a productos que ayuden a las personas a mantener un estilo de vida saludable.';
 $lng['index'][2] = 'Novedades';
@@ -104,6 +105,8 @@ $lng['index'][18] = 'Asimismo y de acuerdo con lo establecido en la Ley 34/2002,
 $lng['index'][19] = 'He leído y acepto recibir publicidad o información promocional de PHARMALINK SL.';
 $lng['index'][20] = 'He leído y no acepto recibir publicidad o información promocional de PHARMALINK SL.';
 $lng['index'][21] = 'Le informamos que podrá revocar en cualquier momento el consentimiento prestado a la recepción de comunicaciones comerciales enviando un e-mail a la dirección de correo electrónico: info@ysana.es .';
+$lng['index'][22] = 'Este usuario ha sido dado de baja';
+$lng['index'][23] = 'Usuario o contraseña incorrecto';
 //index.php_____________________________________________________________________________________
 
 //clubysana.php_________________________________________________________________________________
@@ -121,6 +124,7 @@ $lng['clubysana'][8] = 'Tu Experiencia';
 $lng['clubysana'][9] = 'Sueño';
 $lng['clubysana'][10] = 'Pronto Disponible';
 $lng['clubysana'][11] = 'UNIRME AL CLUB YSANA®';
+$lng['clubysana'][12] = 'Correo para dar de baja enviado';
 //clubysana.php_________________________________________________________________________________
 
 //productos.php_____________________________________________________________________________________
@@ -164,6 +168,9 @@ $lng['productos_ysana'][19] = 'Para poder ver este contenido debes de loguearte 
 $lng['productos_ysana'][20] = 'Consejo Farmacéutico';
 $lng['productos_ysana'][21] = 'Preguntas';
 $lng['productos_ysana'][22] = 'Para poder ver este contenido debes de loguearte en ClubYsana';
+$lng['productos_ysana'][23] = 'Comentarios de los Coach del Club Ysana disponibles próximamente';
+$lng['productos_ysana'][24] = 'Las valoraciones de productos Ysana® disponibles próximamente';
+
 //productos_ysana___________________________________________________________________________________
 
 //footer.php_____________________________________________________________________________________
@@ -322,6 +329,20 @@ $lng['experiencia-carrito'][12] = 'Realizar Pedido';
 $lng['experiencia-carrito'][13] = 'Gastos de envío';
 $lng['experiencia-carrito'][14] = 'Incluidos';
 $lng['experiencia-carrito'][15] = 'Disponibilidad';
+$lng['experiencia-carrito'][16] = 'de Experiencias';
+$lng['experiencia-carrito'][17] = 'de Directo a Farmacia';
+$lng['experiencia-carrito'][18] = 'Nombre de la Farmacia';
+$lng['experiencia-carrito'][19] = '¿Cuándo te gustaría recoger tu orden?';
+$lng['experiencia-carrito'][20] = 'Falta seleccionar una dirección de envío';
+$lng['experiencia-carrito'][21] = 'Horario';
+$lng['experiencia-carrito'][22] = 'Mañana';
+$lng['experiencia-carrito'][23] = 'Fecha';
+$lng['experiencia-carrito'][24] = 'Realizar pedido';
+$lng['experiencia-carrito'][25] = '*Recuerda que habitualmente las farmacias cierran a la hora del almuerzo';
+$lng['experiencia-carrito'][26] = 'Pedido realizado con éxito';
+$lng['experiencia-carrito'][27] = 'Cancelar';
+$lng['experiencia-carrito'][28] = 'Tarde';
+
 //experiencia/carrito.php_____________________________________________________________________________________
 
 //directo_farmacia/index.php__________________________________________________________________________________
@@ -356,6 +377,7 @@ $lng['quienes-somos'][16] = 'Ysana® Vida Sana es una marca avalada por la caden
 
 //articulo sueno______________________________________________________________________________________________
 $lng['articulo-sueno'][0] = 'Recomendaciones generales sobre hábitos de sueño saludables';
+//$lng['articulo-sueno'][0] = 'Pedir diagnóstico del sueño gratis ahora';
 $lng['articulo-sueno'][1] = 'Evitar dormir siesta';
 $lng['articulo-sueno'][2] = 'En caso de dificultades en la conciliación del sueño o de presentar sueño fraccionado, o bien limitarla a 20-30 minutos tras la comida.';
 $lng['articulo-sueno'][3] = 'Horas de sueño';
@@ -389,7 +411,7 @@ $productos_ysana = array(
                 'descripcion' => 'Gracias a su tecnología de disolución controlada, Eficaps® Sueño, libera sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.
                 Esta extraordinaria innovación permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada según su absorción en nuestro organismo y momento de máximo aprovechamiento.
                 Eficaps® Es el primer complemento alimenticio que concentra varios nutrientes en una sola cápsula. Con una única toma administra Melatonina, GABA, Valeriana y Pasiflora en el tiempo y momentos óptimos. Esta formulación además, simula el proceso natural de segregación de melatonina en el cerebro eliminado el efecto rebote habitual en otros productos para el sueño. ',
-                'img' => 'eficaps-sueno-caja-detalle-flor-capsula',
+                'img' => 'eficapssueno',
                 'cabecera' => 'eficaps.mp4',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -441,7 +463,7 @@ $productos_ysana = array(
                 'h1' => 'Y·WOMAN MENOPAUSIA AYUDA A ALIVIAR LOS SÍNTOMAS DE LA MENOPAUSIA Y A SENTIRTE MEJOR',
                 'descripcion' => 'Con la ayuda de Y-woman menopausia alivias los síntomas diurnos y nocturnos de la menopausia. Además, con su efecto 24h durante el día calma los sofocos, la sudoración y la irritabilidad a la vez que regula el desequilibrio hormonal causado por la menopausia. Durante la noche, su contenido en Pasiflora contribuye a disminuir el nerviosismo y el insomnio. 
                 El principio activo estrella de la fórmula natural de Y-woman menopausia es el extracto de lúpulo Lifenol® cuyos estudios clínicos revelan resultados innovadores en el tratamiento del desequilibrio hormonal. Gracias a Y-woman menopausia regula tu cuerpo las 24 horas y ¡siéntete cómoda durante todo el día!',
-                'img' => 'ysana-ywonan-menopausia-capsulas-efecto-24h',
+                'img' => 'ymenopausia',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -458,7 +480,7 @@ $productos_ysana = array(
                 'descripcion' => 'AdelgaYsana Forte es un complemento alimenticio con extractos de plantas naturales que ayuda a perder peso, eliminar líquidos y toxinas en tan sólo 20 días.
                 Su plan de doble acción combina dos fórmulas: 10 viales rojos para ayudar al metabolismo de las grasas por su contenido en café verde y garcinia cambogia y 10 viales verdes con extracto de cola de caballo, una planta utilizada tradicionalmente para depurar el organismo gracias a sus propiedades diuréticas.
                 adelgaYsana Forte es tu aliado ideal ya que contribuye al metabolismo de las gracias y a la eliminación de líquidos. El café verde sido relacionado directamente como un potenciador de la pérdida de peso, duplicando la pérdida de masa corporal y ayudando a perder grasa conservando el músculo. ¡Ayuda a tu silueta con adelgaYsana!',
-                'img' => 'ysana-adelgaysana-forte-ingredientes-naturales-garcinia-cola-de-caballo-cafe-verde',
+                'img' => 'Adelgaysana',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -519,14 +541,14 @@ $productos_ysana = array(
                     'experiencia' => '',
                     'farmacia' => ''
                 )
-            ),
+            )/*,
             array(
                 'nombre' => 'Y·Wellness Colesterol',
                 'url-seo' => 'directo_farmacia/producto/colesterol',
                 'h1' => '¡REGULA TU COLESTEROL MIENTRAS TE CUIDAS POR DENTRO!',
                 'descripcion' => 'Los principios de extractos naturales de y·wellness Colesterol contribuyen a regular los niveles de colesterol manteniendo las concentraciones normales en sangre. Mantén el colesterol a raya cuidando tu organismo con y·wellness Colesterol.
                 La Monacolina K, principio activo en la levadura de arroz rojo, es el ingrediente principal de y·wellness Colesterol. Estudios demuestran sus propiedades y beneficios actuando directamente sobre la regulación interna del colesterol por parte del hígado. Además, en Ysana® le hemos añadido Coenzima Q10 protector cardiovascular y Silimarina para proteger tu hígado.',
-                'img' => 'ysana-reduce-colesterol',
+                'img' => 'ycolesterol',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -535,7 +557,7 @@ $productos_ysana = array(
                     'experiencia' => '',
                     'farmacia' => ''
                 )
-            )
+            )*/
         )
     ),
     array(
@@ -544,16 +566,32 @@ $productos_ysana = array(
         'productos_categoria' => array(
             array(
                 'nombre' => 'Bemory®',
-                'url-seo' => 'bemory_senior',
+                'url-seo' => 'directo_farmacia/producto/bemory-senior',
                 'h1' => 'MEJORA LA CONCENTRACIÓN, LA MEMORIA Y EL APRENDIZAJE.',
                 'descripcion' => 'Bemory® Senior colabora en evitar el deterioro cognitivo que se produce con el envejecimiento y refuerza la memoria, la atención y la velocidad de procesamiento de la información (VPI).
                 Este complemento alimenticio, fácil de tomar gracias a su formato vial líquido monodosis, está especialmente recomendado en períodos de estrés mental o actividad intensa, cuando necesitamos  mantener un alto nivel de concentración o reforzar la memoria y el aprendizaje.
                 ¡Toma Bemory® cada día e incentiva tu actividad mental!',
-                'img' => 'ysana-bemory-memoria',
+                'img' => 'Bememory',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
+                'activo' => ACTIVADO,
+                'url-tienda' => array(
+                    'experiencia' => '',
+                    'farmacia' => ''
+                )
+            ),
+            array(
+                'nombre' => 'Y·Wellness Colesterol',
+                'url-seo' => 'directo_farmacia/producto/colesterol',
+                'h1' => '¡REGULA TU COLESTEROL MIENTRAS TE CUIDAS POR DENTRO!',
+                'descripcion' => 'Los principios de extractos naturales de y·wellness Colesterol contribuyen a regular los niveles de colesterol manteniendo las concentraciones normales en sangre. Mantén el colesterol a raya cuidando tu organismo con y·wellness Colesterol.
+                La Monacolina K, principio activo en la levadura de arroz rojo, es el ingrediente principal de y·wellness Colesterol. Estudios demuestran sus propiedades y beneficios actuando directamente sobre la regulación interna del colesterol por parte del hígado. Además, en Ysana® le hemos añadido Coenzima Q10 protector cardiovascular y Silimarina para proteger tu hígado.',
+                'img' => 'ycolesterol',
+                'cabecera' => '',
+                'tipo_producto' => NORMAL,
+                'tipo_tienda' => DIRECTO,
+                'activo' => ACTIVADO,
                 'url-tienda' => array(
                     'experiencia' => '',
                     'farmacia' => ''
@@ -567,11 +605,11 @@ $productos_ysana = array(
         'productos_categoria' => array(
             array(
                 'nombre' => 'Free Nose® Aspirador Nasal Pediátrico + 4 recambios',
-                'url-seo' => 'directo_farmacia/producto/freenose_aspirador_nasal_pediatrico_4_recambios',
+                'url-seo' => 'directo_farmacia/producto/freenose-agua-mar-isotonica-120ml',
                 'h1' => 'ELIMINA LA MUCOSIDAD DE FORMA SUAVE Y SEGURA PARA EL BEBÉ.',
                 'descripcion' => 'El aspirador anatómico Free Nose® ha sido diseñado para facilitar la higiene diaria de las cavidades nasales del bebé. Es fácil de usar, higiénico y seguro, debido a su diseño único de puntas extra suaves. Además te permite controlar la fuerza de succión requerida cada vez. 
                 En Ysana® sabemos que prevenir es la mejor forma de curar por eso te ayudamos a mantener higienizada la nariz de tu bebé reduciendo el riesgo de infecciones y resfriados. ¡Un bebé sano, son unos padres y unos abuelos felices!',
-                'img' => 'ysana-free-nose-spray-nasal-isotonica-pedriatico-120ml-botella-spray',
+                'img' => 'isotonic120',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -601,7 +639,7 @@ $productos_ysana = array(
                 'url-seo' => 'freenose_agua_mar_isotonica_pediatrico_30ml',
                 'h1' => '',
                 'descripcion' => '',
-                'img' => 'ysana-free-nose-spray-nasal-descongestionante',
+                'img' => 'hypertonic',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -613,12 +651,12 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Agua de Mar Descongestionante 30ml',
-                'url-seo' => 'freenose-descongestionate-agua-mar-hypertonica-30ml',
+                'url-seo' => 'directo_farmacia/producto/freenose-agua-mar-hypertonica-30ml/',
                 'h1' => 'LIMPIA, DESCONGESTIONA E HIDRATA TU NARIZ',
                 'descripcion' => 'Free Nose® Agua de mar Hipertónica limpia en profundidad las fosas nasales, las descongestiona y las hidrata. Además, el efecto osmosis reduce la inflamación de la mucosa, así disminuyes el uso de fármacos descongestionantes.
                 El agua de mar de Free Nose® se obtiene directamente de la Bahía de Cancale en la Bretaña, área conocida por la calidad y pureza de sus aguas. 
                 Mantén limpia tu nariz con Free Nose® agua de mar hipertónica y ayuda a tu cuerpo a luchar contra los microbios producidos por los resfriados e infecciones nasales.',
-                'img' => 'ysana-free-nose-spray-nasal-descongestionante',
+                'img' => 'hypertonic',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -630,10 +668,10 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Agua de Mar Descongestionante con Aloe vera y Menta 30ml',
-                'url-seo' => 'directo_farmacia/producto/freenose-descongestionate-agua-mar-hypertonica-30ml',
+                'url-seo' => 'directo_farmacia/producto/freenose-agua-mar-hypertonica-30ml',
                 'h1' => '',
                 'descripcion' => '',
-                'img' => 'ysana-free-nose-spray-nasal-descongestionante',
+                'img' => 'hypertonic',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -645,11 +683,11 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Spray Nasal Própolis +1',
-                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-1-año',
+                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-1',
                 'h1' => 'PROTEGE TU NARIZ Y ACTÚA CONTRA LOS PROCESOS INFECCIOSOS',
                 'descripcion' => 'Free Nose® Propolis está indicado para niños a partir de 1 año de edad. Nuestro spray nasal con esencias naturales de tomillo está indicado para hidratar, calmar y proteger el conducto nasal de forma natural. Su formulación a base de solución salina con própolis y extracto de tomillo combina dos ingredientes naturales ampliamente conocidos por sus propiedades beneficiosas. 
                 Un estudio clínico encargado por Ysana® arrojó resultados positivos con respecto a una reducción significativa de los síntomas de la rinitis en niños. El tratamiento de Free Nose®  Própolis +1 aplicado a niños con rinitis infecciosa aguda y con síntomas de resfriado común fue seguro reduciendo desde el primer día la intensidad de los síntomas nasales, y la obstrucción por secreción nasal desde el segundo día de aplicación. (Estudio disponible en http://free-nose.com/)',
-                'img' => 'ysana-free-nose-spray-nasal-propolis-+1-caja',
+                'img' => 'propolis1',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -661,12 +699,12 @@ $productos_ysana = array(
             ),
             array(
                 'nombre' => 'Free Nose® Spray Nasal Própolis +12',
-                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-12-años',
+                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-12',
                 'h1' => 'ALIVIA LOS SÍNTOMAS DE LA SECRECIÓN Y CONGESTIÓN NASAL',
                 'descripcion' => 'Free Nose®  Propolis+12 descongestiona el conducto nasal y actúa contra los procesos infecciosos. Hidratando, calmando y protegiendo el conducto nasal de forma natural gracias al própolis y al extracto de tomillo y eucaliptus.
                 El propolis es usado por las abejas para mantener sana la colmena y reducir el crecimiento microbiano en sus paredes, sus propiedades antisépticas, antibacterianas, antimicrobianas, antiinflamatorias y anestésicas están demostradas por estudios científicos.
                 Por otro lado, los extractos de tomillo y eucalipto aportan a Free Nose® Propolis +12 propiedades antibióticas, expectorantes y balsámicas, combinando con la hidratación profunda aportada por el agua de mar isotónica.',
-                'img' => 'ysana-free-nose-spray-nasal-propolis-+12',
+                'img' => 'propolis12',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -703,7 +741,7 @@ $productos_ysana = array(
                 'h1' => 'REFUERZA LA CONCENTRACIÓN  Y ESTIMULA LA MEMORIA DE TUS HIJOS',
                 'descripcion' => 'Bemory® Kids es un complemento alimenticio que ayuda a estimular la actividad cerebral, la concentración y el aprendizaje de los niños.
                 Gracias a sus componentes específico como el DHA, Bemory® Kids está especialmente recomendado para los períodos más exigentes de concentración y memoria. Al estar endulzado con sucralosa, no sólo cuida de los más pequeños, si no que también tiene un rico sabor dulce y por su formato de viales líquidos individuales estarán encantados de tomarlo cada día.',
-                'img' => 'ysana-bemory-memoria-kids-pack',
+                'img' => 'Bememory-kids-pack',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -768,7 +806,7 @@ $productos_ysana = array(
                 'url-seo' => 'freenose_spray_nasal_propolis_1',
                 'h1' => '',
                 'descripcion' => '',
-                'img' => 'ysana-free-nose-spray-nasal-propolis-+1-caja',
+                'img' => 'propolis1',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -783,7 +821,7 @@ $productos_ysana = array(
                 'url-seo' => 'freenose_spray_nasal_propolis_12',
                 'h1' => '',
                 'descripcion' => '',
-                'img' => 'ysana-free-nose-spray-nasal-propolis-+12',
+                'img' => 'propolis12',
                 'cabecera' => '',
                 'tipo_producto' => NORMAL,
                 'tipo_tienda' => DIRECTO,
@@ -980,7 +1018,7 @@ $productos_ysana_df = array(
                 'nombre' => 'adelgaYsana Forte',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'adelgaysana-forte',
-                'img-portada' => 'ysana-adelgaysana-forte-ingredientes-naturales-garcinia-cola-de-caballo-cafe-verde.png',
+                'img-portada' => 'Adelgaysana.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
@@ -1048,7 +1086,7 @@ $productos_ysana_df = array(
                 'nombre' => 'Y·Wellness Colesterol',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'ywellness-colesterol',
-                'img-portada' => 'ysana-reduce-colesterol.png',
+                'img-portada' => 'ycolesterol.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
@@ -1186,7 +1224,7 @@ $productos_ysana_df = array(
                 'nombre' => 'Bemory® Senior',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'bemory-senior',
-                'img-portada' => 'ysana-bemory-memoria.png',
+                'img-portada' => 'Bememory.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
@@ -1249,7 +1287,7 @@ $productos_ysana_df = array(
                 'nombre' => 'Free Nose® Agua de Mar Descongestionante 30ml',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'freenose-agua-de-mar-hipertonica',
-                'img-portada' => 'ysana-free-nose-spray-nasal-descongestionante-spraynasal.png',
+                'img-portada' => 'hypertonic-spraynasal.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
@@ -1314,7 +1352,7 @@ $productos_ysana_df = array(
                 'nombre' => 'Free Nose® Spray Nasal própolis +1',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'freenose-spray-nasal-propolis-mas1',
-                'img-portada' => 'ysana-free-nose-spray-nasal-propolis-+1-caja.png',
+                'img-portada' => 'propolis1.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
@@ -1487,7 +1525,7 @@ $productos_ysana_df = array(
                 'nombre' => 'Free Nose® Spray Nasal Própolis +12',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'freenose-spray-nasal-propolis-mas12',
-                'img-portada' => 'ysana-free-nose-spray-nasal-propolis-+12-pack.png',
+                'img-portada' => 'propolis12-pack.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
@@ -1547,7 +1585,7 @@ $productos_ysana_df = array(
                 'nombre' => 'Bemory® Kids',
                 'descripcion' => 'Descripcion producto',
                 'url-seo' => 'bemory-kids',
-                'img-portada' => 'ysana-bemory-memoria-kids.png',
+                'img-portada' => 'Bememory-kids.png',
                 'stock' => 2,
                 'precio' => '0.00',
                 'usos' => array(
