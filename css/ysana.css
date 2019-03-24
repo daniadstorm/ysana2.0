@@ -849,7 +849,6 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 
 
 
-
 @media (max-width: 462px){
     .timeline{
         flex-direction: column;
