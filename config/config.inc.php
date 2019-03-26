@@ -22,8 +22,8 @@ $document_root = $_SERVER['DOCUMENT_ROOT'].'/ysana/';
 /* CONSTANTES */
 //-------------------------------------------------------------------------------------
 define('DOCUMENT_ROOT', $document_root);
-define('ADMIN', 10);
-define('USER', 0);
+define('ADMIN', 1);
+define('USER', 10);
 define('IVA_GENERAL', 0.21);
 define('REQ_FIELD', 'campo_requerido');
 define('EMPTY_DATE', '1970-01-01');

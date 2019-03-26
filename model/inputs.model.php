@@ -25,7 +25,7 @@ class inputsModel extends Model {
             $aux_pattern .= '.{0}|';
             $aux_required = '';
         }
-        if(strpos($id, 'contrasenya')!==false){
+        if(strpos($id, 'contrasenya')!==false || strpos($id, 'password')!==false){
             $type = 'password';
         }
         $aux_pattern.= '.{';

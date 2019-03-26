@@ -5,11 +5,14 @@ $uM = load_model('usuario'); //uM userModel
 $fM = load_model('form');
 $sM = load_model('seo');
 $hM = load_model('html');
+$iM = load_model('inputs');
 
 $nombre_usuario = '';
 $contrasenya_usuario = '';
 $captcha = false;
 $arr_err = array();
+$clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
+
 
 //GET___________________________________________________________________________
 
@@ -55,23 +58,62 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
     }
 }
 //CONTROL_______________________________________________________________________
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
 
-include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]); 
 ?>
-<script type="text/javascript"></script>
 <body>
-    <?php include_once('inc/panel_top.inc.php'); ?>
-    <?php include_once('inc/navbar_inicio.inc.php'); ?>
+    <div id="menu-sticky">
+        <?php include_once('inc/panel_top.inc.php'); //panel superior ?>
+        <?php include_once('inc/menu.inc.php'); //menu superior ?>
+    </div>
+    <div class="max-ysana w-100">
+        <div class="login-responsive">
+            <div class="wrapper">
+                <h1 class="titulo<?php echo $clubysana; ?>">Registrate en Ysana</h1>
+                <?php if(isset($str_errores) && $str_errores) echo $hM->get_alert($str_errores,"alert-danger"); ?>
+                <form method="post" class="form-row">
+                    <?php echo $iM->get_input_hidden('authtoken', AUTHTOKEN); ?>
+                    <?php echo $iM->get_input_hidden('scope', SCOPE); ?>
+                    <?php echo $iM->get_input_hidden('id_usuario', 0); ?>
+                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('apellidos_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('email_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', 'Confirmar Password', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo '<input hidden type="text" name="cy" value="'.$clubysana.'">'; ?>
+                    <input id="button_enviar" name="button_enviar" type="submit" class="btn btn-bg-color-2 btn-bg-color-2<?php echo $clubysana; ?>" value="Iniciar Sesión" disabled>
+                </form>
+            </div>
+            <div class="footer">
+                <p>¿Nuevo en Ysana? <a href="<?php echo $ruta_inicio; ?>registro">Regístrate ahora »</a></p>
+                <p>¿Has olvidado tu contraseña? <a href="<?php echo $ruta_inicio; ?>forgot-password">Recuperar contraseña »</a></p>
+            </div>
+        </div>
+    </div>    
+    <?php include_once('inc/footer.inc.php'); //panel superior ?>
+</body>
+<script>
+    $(document).ready(function(){
+        $('input').keyup(function(event){
+            var password_usuario = document.getElementsByName('password_usuario')[0].value;
+            var password_usuario1 = document.getElementsByName('password_usuario')[1].value;
+            if(password_usuario==password_usuario1 && password_usuario!=''){
+                $('#button_enviar').prop("disabled", false);
+            }else{
+                $('#button_enviar').prop("disabled", true);
+            }
+        });
+    });
+</script>
+</html>
+
+
+<!-- <body>
+    <?php //include_once('inc/panel_top.inc.php'); ?>
+    <?php //include_once('inc/navbar_inicio.inc.php'); ?>
     <div class="ysana-login">
         <div class="ysana-login-sub">
-            <div class="logo mt-5 mb-5">
-                <img src="<?php echo $ruta_inicio;?>img/svg/ysanacolor.svg" class="img-responsive" alt="">
-            </div>
-            <?php
-            if(isset($str_errores) && $str_errores){
-                echo $hM->get_alert($str_errores,"alert-danger");
-            } ?>
+            
             <form method="post" class="inputs">
                 <input name="authtoken" value="<?php echo AUTHTOKEN; ?>" hidden>
                 <input name="scope" value="<?php echo SCOPE; ?>" hidden>
@@ -105,4 +147,4 @@ echo $sM->add_cabecera($lng['header'][0]);
     </div>
     <?php include_once('inc/footer.inc.php'); ?>
 </body>
-</html>
+</html> -->

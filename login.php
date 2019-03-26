@@ -11,14 +11,11 @@ $nombre_usuario = '';
 $contrasenya_usuario = '';
 
 $arr_err = array();
-$cy=false;
+$clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
 
 //GET___________________________________________________________________________
 if (isset($_GET['unlogin'])) {
     $uM->unlogin_usuario();
-}
-if (isset($_GET['cy'])){
-    $cy=true;
 }
 //GET___________________________________________________________________________
 
@@ -37,18 +34,7 @@ if (isset($_POST['nombre_usuario'])) { //si viene de submit de login
 /* echo '<pre>'.print_r($_POST).'</pre>'; */
 //CONTROL_______________________________________________________________________
 if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
-    switch ($_SESSION['id_tipo_usuario']) {
-        default:
-        case USER:
-            if(isset($_POST['cy'])) header('Location: '.$ruta_inicio.'clubysana');
-            else header('Location: '.$ruta_inicio);
-            exit();
-        break;
-        case ADMIN:
-            header('Location: '.$ruta_inicio.'admin.php');
-            exit();
-        break;
-    }
+    header('Location: '.$ruta_inicio);
 }
 //CONTROL_______________________________________________________________________
 
@@ -63,12 +49,13 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
     <div class="max-ysana w-100">
         <div class="login-responsive">
             <div class="wrapper">
-                <h1 class="titulo">Inicia sesión en Ysana</h1>
+                <h1 class="titulo<?php echo $clubysana; ?>">Inicia sesión en Ysana</h1>
                 <?php if(isset($str_errores) && $str_errores) echo $hM->get_alert($str_errores,"alert-danger"); ?>
                 <form method="post" class="form-row">
                     <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-6', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo $iM->get_input_text('contrasenya_usuario', '', 'form-control col-12 col-md-6', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>
-                    <input type="submit" class="btn btn-bg-color-2" value="Iniciar Sesión">
+                    <?php echo '<input hidden type="text" name="cy" value="'.$clubysana.'">'; ?>
+                    <input type="submit" class="btn btn-bg-color-2 btn-bg-color-2<?php echo $clubysana; ?>" value="Iniciar Sesión">
                 </form>
             </div>
             <div class="footer">

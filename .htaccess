@@ -24,12 +24,13 @@ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 
 RewriteRule ^sobre-ysana/$ sobreysana.php [L]
 RewriteRule ^productos-ysana/$ productos.php [L]
-RewriteRule ^productos_ysana/(.*)$ ficha-producto.php?producto=$1 [L]
+RewriteRule ^admin/$ admin.php [L]
 
-RewriteRule ^sala_prensa/$ prensa.php [L]
 
 RewriteRule ^login/$ login.php [L]
+RewriteRule ^clubysana/login/$ login.php?clubysana=cy [L]
 RewriteRule ^registro/$ registro.php [L]
+RewriteRule ^clubysana/registro/$ registro.php?clubysana=cy [L]
 RewriteRule ^forgot-password/$ forgot-password.php [L]
 RewriteRule ^unsubscribe/$ dar-de-baja.php [L]
 
@@ -38,11 +39,11 @@ RewriteRule ^unsubscribe/$ dar-de-baja.php [L]
 RewriteRule ^carrito/$ carrito.php [L]
 RewriteRule ^carrito/datos/$ carrito-datos.php [L]
 
-RewriteRule ^clubysana/$ clubysana/index.php [L]
-RewriteRule ^clubysana/registro/$ clubysana/registro.php [L]
-RewriteRule ^clubysana/areapersonal/$ clubysana/areapersonal.php [L]
+RewriteRule ^clubysana/$ clubysana.php?clubysana=cy [L]
+#RewriteRule ^clubysana/registro/$ clubysana/registro.php [L]
+#RewriteRule ^clubysana/areapersonal/$ clubysana/areapersonal.php [L]
 #RewriteRule ^clubysana/areapersonal/neurologia/$ clubysana/neurologia.php [L]
-RewriteRule ^clubysana/areapersonal/(.*)/(.*)/$ clubysana/articulo.php?id_cat=$1&id_sub=$2 [L]
+#RewriteRule ^clubysana/areapersonal/(.*)/(.*)/$ clubysana/articulo.php?id_cat=$1&id_sub=$2 [L]
 #RewriteRule ^clubysana/areapersonal/(.*)/$ clubysana/subcategoria.php?id=$1 [L]
 
 RewriteRule ^quien-es-ysana-vida-sana/$ quienes-somos.php [L]
