@@ -127,15 +127,15 @@ echo '</pre>'; */
             });
         });
         function slide(){
-            $('.wrapper1').css("background-image", "url('"+imgs[i]+"')");
-            $('.wrapper2').css("background-image", "url('"+imgs[i]+"')");
+            $('.wrapper1').css("background-image", "url('../"+imgs[i]+"')");
+            $('.wrapper2').css("background-image", "url('../"+imgs[i]+"')");
             i++;
             if(i === imgs.length) i = 0;
         }
 
         function cambiarImgSlider(img, clase){
-            $('.wrapper1').css("background-image", "url('"+img+"')");
-            $('.wrapper2').css("background-image", "url('"+img+"')");
+            $('.wrapper1').css("background-image", "url('../"+img+"')");
+            $('.wrapper2').css("background-image", "url('../"+img+"')");
             $('.slider-redonda').removeClass("active");
             $('.'+clase).addClass("active");
             /* console.log($('.'+clase)); */

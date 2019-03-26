@@ -5,16 +5,16 @@ $arrMenu = array(
     1 => array(
         1 => array( 'txt'=>'Inicio', 'url'=>'' ),
         2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
-        3 => array( 'txt'=>'Experiencias', 'url'=>'experiencias' ),
-        4 => array( 'txt'=>'Farmacias', 'url'=>'#' ),
+        3 => array( 'txt'=>'Experiencias', 'url'=>'experiencia' ),
+        4 => array( 'txt'=>'Farmacias', 'url'=>'directo-farmacia' ),
         5 => array( 'txt'=>'Club Ysana', 'url'=>'#' ),
         6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
     ),
     2 => array(
         1 => array( 'txt'=>'Inicio', 'url'=>'' ),
         2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
-        3 => array( 'txt'=>'Experiencias', 'url'=>'#' ),
-        4 => array( 'txt'=>'Farmacias', 'url'=>'#' ),
+        3 => array( 'txt'=>'Experiencias', 'url'=>'experiencia' ),
+        4 => array( 'txt'=>'Farmacias', 'url'=>'directo-farmacia' ),
         5 => array( 'txt'=>'Club Ysana', 'url'=>'#' ),
         6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
     )
@@ -28,7 +28,7 @@ foreach ($arrMenu[$_SESSION['id_lang']] as $key => $value) {
 
 <header id="menu-top" class="max-ysana">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo $ruta_inicio; ?>">
             <img src="<?php echo $ruta_inicio; ?>img/logos/ysanacolor.svg" width="128px" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

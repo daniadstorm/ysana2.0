@@ -163,15 +163,17 @@ class articulosModel extends Model {
         $q  = ' SELECT * FROM '.$this->pre.'categorias c ';
         //$q  .= ' INNER JOIN '.$this->pre.'categorias_articulo ca ';
         //$q  .= ' ON c.id_categoria=ca.id_categoria ';
-        $q .= ' WHERE c.lang="'.$id_lang.'"';
+        $q .= ' WHERE c.lang="'.$id_lang.'" AND c.nombre_categoria<>"Packs experiencias" ';
         return $this->execute_query($q);
     }
 
     function get_articulos_xcat($id_cat, $id_lang, $visible=1){
-        $q = ' SELECT al.nombre, al.descripcion, al.img FROM '.$this->pre.'categorias_articulo ca ';
+        $q = ' SELECT al.nombre, al.urlseo, al.descripcion, al.img FROM '.$this->pre.'categorias_articulo ca ';
         $q .= ' INNER JOIN '.$this->pre.'articulos_lang al ';
+        $q .= ' INNER JOIN '.$this->pre.'articulos a ';
         $q .= ' ON ca.id_articulo=al.id_articulo ';
-        $q .= ' WHERE ca.id_categoria="'.$id_cat.'" AND al.id_lang="'.$id_lang.'" AND al.visible='.$visible.' ';
+        $q .= ' AND a.id_articulo=al.id_articulo ';
+        $q .= ' WHERE ca.id_categoria="'.$id_cat.'" AND a.activo=1 AND al.id_lang="'.$id_lang.'" AND al.visible='.$visible.' ';
         return $this->execute_query($q);
     }
 
@@ -243,6 +245,11 @@ class articulosModel extends Model {
     function get_categorias($lang){
         $q = ' SELECT * FROM '.$this->pre.'categorias c ';
         $q .= ' WHERE c.lang="'.$lang.'" ';
+        return $this->execute_query($q);
+    }
+    function get_categorias_byid($lang, $tipo_tienda){
+        $q = ' SELECT * FROM '.$this->pre.'categorias c ';
+        $q .= ' WHERE c.lang="'.$lang.'" AND c.tipo_tienda="'.$tipo_tienda.'" AND c.deleted_categoria=0 ';
         return $this->execute_query($q);
     }
     /* INFO */

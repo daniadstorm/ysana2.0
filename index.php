@@ -45,7 +45,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                     <div class="p-3">
                         <h1>¿Qué es Ysana Vida Sana?</h1>
                         <p>Ysana® es una marca dedicada al bienestar de las personas. Nuestro equipo profesional y dinámico está comprometido con la innovación constante para incorporar extractos naturales a productos que ayuden a las personas a mantener un estilo de vida saludable.</p>
-                        <a href="#" class="btn btn-bg-color-2">Nuestros productos</a>
+                        <a href="#" class="btn btn-bg-color-2 mt-2">Nuestros productos</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 panel panel-der">
@@ -84,7 +84,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
 
                 </div>
                 <p>Únete ahora al Club Ysana y enlaza con la vida sana. La primera comunidad online orientada al autocuidado y los hábitos de vida saludables, donde podrás compartir tus inquietudes, obtener consejos personalizados de farmacéuticos y coachs profesionales, obtener premios, acceder a muestras de producto en primicia, compartir experiencias y, por supuesto, mejorar tus hábitos de vida de manera constante.</p>
-                <a href="#" class="btn btn-bg-color-3">Nuestros productos</a>
+                <a href="#" class="btn btn-bg-color-3 mt-2">Nuestros productos</a>
             </div>
         </div>
     </div>

@@ -9,6 +9,8 @@ $base = "http://" . $host . $uri . "/";
 $ruta_archivos = 'http://adstormcloud.ddns.net/ysana/'; */
 $ruta_inicio = 'http://192.168.1.2/ysana/';
 $ruta_archivos = 'http://192.168.1.2/ysana/';
+$ruta_actual = '';
+//$ruta_actual = (isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : $_SERVER['HTTP_REFERER']);
 /* $ruta_inicio = 'https://adstorm.es/ysana/';
 $ruta_archivos = 'https://adstorm.es/ysana/'; */
 /* $ruta_inicio = 'https://ysana.es/';
@@ -17,7 +19,6 @@ $document_root = $_SERVER['DOCUMENT_ROOT'].'/ysana/';
 
 //if($_SERVER['REQUEST_SCHEME']=="http") header('Location: '.$ruta_inicio);
 //====================================================================================
-
 /* CONSTANTES */
 //-------------------------------------------------------------------------------------
 define('DOCUMENT_ROOT', $document_root);
@@ -80,29 +81,29 @@ if(!isset($_SESSION)) session_start();
 //lng = array de textos
 /* if (isset($_POST['idioma_seleccionado'])) $_SESSION['lang'] = $_POST['idioma_seleccionado']; */
 if (isset($_REQUEST['idioma_seleccionado'])) $_SESSION['lang'] = $_REQUEST['idioma_seleccionado'];
-$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'spa';
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'ESP';
 $_SESSION['lang'] = $lang;
 switch ($lang) {
     default:
-    case 'spa':        include_once(DOCUMENT_ROOT.'lang/lang.spa.php');   break; //por defecto spa
-    case 'eng':         include_once(DOCUMENT_ROOT.'lang/lang.eng.php');    break; 
+    case 'ESP':        include_once(DOCUMENT_ROOT.'lang/lang.esp.php');   break; //por defecto ESP
+    case 'ENG':         include_once(DOCUMENT_ROOT.'lang/lang.eng.php');    break; 
     case 'cat':         include_once(DOCUMENT_ROOT.'lang/lang.cat.php');    break;
     case 'fra':         include_once(DOCUMENT_ROOT.'lang/lang.fra.php');    break;
 }
 
 switch ($lang) {
     default:
-    case 'spa': $_SESSION['id_lang']=1;     break; //por defecto spa
-    case 'eng': $_SESSION['id_lang']=2;         break; 
+    case 'ESP': $_SESSION['id_lang']=1;     break; //por defecto ESP
+    case 'ENG': $_SESSION['id_lang']=2;         break; 
     case 'cat': $_SESSION['id_lang']=3;         break;
     case 'fra': $_SESSION['id_lang']=4;         break;
 }
 $arrlang = array(
-    '1' => 'spa',
-    '2' => 'eng'
+    '1' => 'ESP',
+    '2' => 'ENG'
 );
 /* echo '<pre>';
-print_r($_SESSION);
+print_r($_SERVER);
 echo '</pre>'; */
 
 //====================================================================================

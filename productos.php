@@ -39,16 +39,16 @@ if($rgcp){
         if(count($arrCategorias[$key]['productos'])>0){
             $count++;
             $out .= '<div id="'.$id.'" class="producto-caja collapsed">
-            <div data-toggle="collapse" href="#collapse'.$id.'" role="button" aria-expanded="false" aria-controls="collapse'.$id.'">
-            <div class="row w-100 '.($numeropar ? 'flex-row-reverse' : '').'">
+            <div data-toggle="collapse" href="#collapse'.$id.'" role="button" aria-expanded="false" class="w-100 collapsed" aria-controls="collapse'.$id.'">
+            <div class="row mx-0 w-100 '.($numeropar ? 'flex-row-reverse' : '').'">
                 <div class="col-md-6 centrar-vertical izq">
                     <div class="contenedor">
                         <h1 class="ttl">'.$value['nombre_categoria'].'</h1>
                         <p class="txt">'.$value['descripcion_categoria'].'</p>
                     </div>
                 </div>
-                <div class="col-md-6 centrar-vertical">
-                    <img src="'.$ruta_inicio.'img/productosnew/ysanavidasana.jpg" class="img-fluid" alt="">
+                <div class="col-md-6 max-imagen-prod centrar-vertical '.(!$numeropar ? 'der' : '').'">
+                    <img src="'.$ruta_inicio.'img/categorianew/'.$value['imagen_categoria'].'" class="img-fluid" alt="">
                 </div>
             </div>
             <div class="linea"></div>
@@ -56,19 +56,24 @@ if($rgcp){
         </div>';
             $out .= '<div class="collapse colapsad" id="collapse'.$id.'">
             <div class="card card-body">
-                <section class="productos-collapse">';
-            foreach ($arrCategorias[$key]['productos'] as $key2 => $value2) {
-                $out .= '<a href="#'.$value2['nombre'].'" class="viaje">
-                            <img src="'.$ruta_inicio.'img/productos/'.$value2['img'].'" class="img-fluid" alt="">
-                            <div class="texto">
-                                <h5>'.$value2['nombre'].'</h5>
-                            </div></a>';
-            }
+                <section class="row">';
+                foreach ($arrCategorias[$key]['productos'] as $key2 => $value2) {
+                    $out .= '<div class="col-6 col-sm-4 col-md-3 col-lg-3 article-block">
+                    <a href="'.$ruta_inicio.'producto/'.$value2['urlseo'].'" class="enlace">
+                        <article>
+                            <div class="article_foto"><img src="'.$ruta_inicio.'img/productos/'.$value2['img'].'" class="img-fluid"></div>
+                            <div class="article_texto"><h5>'.$value2['nombre'].'</h5></div>
+                        </article>
+                    </a>
+                    </div>';
+                }
             $out .= '</section></div></div>';
         }
     }
 }
-
+/* echo '<pre>';
+print_r($arrCategorias);
+echo '</pre>'; */
 //LISTADO____________________________________________________________________
 
 ?>
@@ -84,7 +89,7 @@ if($rgcp){
                 <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical">
                     <div class="contenedor">
                         <h1 class="ttl">Todos los productos de Ysana® Vida Sana</h1>
-                        <p class="txt">YSANA® PONE LA GRAN EXPERIENCIA TERAPÉUTICA A NIVEL INTERNACIONAL DE PHARMALINK AL SERVICIO DE SUS GAMAS DE PRODUCTOS NATURALES, PARA TU CUIDADO Y EL DE LOS TUYOS.</p>
+                        <p class="txt principal">YSANA® PONE LA GRAN EXPERIENCIA TERAPÉUTICA A NIVEL INTERNACIONAL DE PHARMALINK AL SERVICIO DE SUS GAMAS DE PRODUCTOS NATURALES, PARA TU CUIDADO Y EL DE LOS TUYOS.</p>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical der">

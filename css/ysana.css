@@ -57,13 +57,14 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 .parallax-home3{
     height: 350px;
-    background-image: url("../img/test2.jpg");
+    background-image: url("../img/home/5.jpeg");
     /* background-attachment: scroll; */
 }
 .parallax-home4{
     /* height: 70%; */
     background-position: top right;
     background-size: contain;
+    background-attachment: scroll;
     /* background-attachment: scroll;
     background-position: top right;
     background-repeat: no-repeat;
@@ -145,6 +146,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     background-color: #93B7C5;
 }
 .texto-subhome h1{
+    font-size: 1.5rem;
     padding: 3rem 1rem;
     color: white;
     margin-bottom: 0;
@@ -197,16 +199,17 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     align-items: center;
 }
 .panel-izq h1{
-    font-weight: 500;
+    font-weight: bold;
     color: var(--ysana-color-2);
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #000;
 }
 .panel-izq p{
     padding-top: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1rem;
     color: #000;
+    line-height: 2rem;
 }
 .panel-der{
     height: 100%;
@@ -218,9 +221,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 .btn-bg-color-2:hover{ color: white; }
 .btn-bg-color-2{
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     background-color: var(--ysana-color-2);
-    text-decoration: none;
+    text-decoration: none!important;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border: 2px solid var(--ysana-color-2);
@@ -264,12 +267,14 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 #paneles-clubysana .logo-ysana{
     padding-bottom: 1rem;
     border-bottom: 1px solid #000;
+    width: 100%;
 }
 #paneles-clubysana p{
     padding-top: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
     color: #000;
+    max-width: 540px;
 }
 #form-contacto{
     /* display: flex;
@@ -434,7 +439,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 #sobreysana .ttl h1{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    font-weight: 500;
+    font-weight: bold;
     color: #4A4A49;
 }
 
@@ -450,7 +455,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 240px; /* width: 220px; */
+    width: 220px; /* width: 220px; */
     min-height: 260px;
     /* border: 1px solid green; */
     box-shadow: 0px 0px 26px rgba(150, 150, 150, 0.8);
@@ -461,10 +466,15 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 
 .carteles .caja img{
-    padding: 2.5rem;
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
     max-width: 100%;
     height: auto;
     opacity: 0.8;
+}
+.carteles .caja h5{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 #conoceysana{
     overflow: hidden;
@@ -479,6 +489,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     min-height: 300px;
 } */
 #conoceysana .ttl{
+    font-weight: bold;
     margin-bottom: 2rem;
     padding-bottom: .5rem;
     border-bottom: 1px solid #000;
@@ -607,7 +618,8 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     background-color: #66DC71;
     border: none;
     transition: all 200ms ease-in;
-    content: url(../img/add.png);
+    content: url(../img/ejemplorednoda.png);
+
     /* width: 25px;
     height: 25px;
     background-color: white;
@@ -618,7 +630,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     transition: all 200ms ease-in;
 }
 #garantia .texto .ttl{
-    font-weight: 500;
+    font-weight: bold;
 }
 #garantia .texto .txt{
     max-width: 600px;
@@ -700,13 +712,14 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 .centrar-vertical.der{
     justify-content: flex-end;
 }
+
 #productos .colapsad{
     padding-left: 1rem;
 }
-#productos .linea{
+/* #productos .linea{
     border-bottom: 3px solid var(--ysana-color-2);
     width: 100%;
-}
+} */
 /* #productos .linea{
     border-bottom: 3px solid var(--ysana-color-2);
     width: 100%;
@@ -721,15 +734,17 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     border: 0px;
     border-top: 1px solid gray;
     border-bottom: 3px solid var(--ysana-color-2);
+    border-radius: 0px;
 }
-#productos  .contenedor .ttl{
+#productos .contenedor .ttl{
     color: var(--ysana-color-2);
     font-weight: 600;
     position: relative;
 }
-#productos  .contenedor .txt{
-    margin-top: 1rem;
+#productos .contenedor .txt, #productos .contenedor .txt.principal{
+    margin-top: 2rem;
     font-weight: 600;
+    line-height: 2rem;
 }
 
 .productos-collapse{
@@ -737,19 +752,59 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     flex-flow: row wrap;
     /* justify-content: space-around; */
 }
-.productos-collapse .viaje{
+/* .productos-collapse .viaje{
     display: flex;
     flex-direction: column;
-    min-width: 220px;
+    transition: width 0.7s ease-out;
     max-width: 220px;
+    min-height: 400px;
     margin-left: 1rem;
     margin-right: 1rem;
-    min-height: 400px;
+    /* min-width: 220px;
     margin-bottom: 1rem;
+} */
+.article-block article{
+    max-width: 220px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    border: 1px solid #d2d2d2;
+    transition: box-shadow 0.3s ease-in-out;
 }
-.productos-collapse .viaje:hover{
+/* .article-block img{
+    min-height: 180px;
+} */
+.article-block article:hover{
     cursor: pointer;
     box-shadow: 0px 0px 12px #0000007a;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.article-block .article_texto{
+    margin-top: auto;
+    background-color: var(--ysana-color-2);
+    min-height: 150px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.article-block h5{
+    margin-top: auto;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: auto;
+    color: white;
+}
+.article-block .enlace{
+    text-decoration: none;
+}
+.article-block .enlace:hover{
     text-decoration: none;
 }
 /* .productos-collapse .viaje:first-child{
@@ -760,11 +815,10 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     margin-left: 1rem;
     margin-right: 0rem;
 } */
-.productos-collapse .viaje img{
+/* .productos-collapse .viaje img{
     min-height: 180px;
-    max-height: 180px;
-}
-.productos-collapse .viaje .texto{
+} */
+/* .productos-collapse .viaje .texto{
     margin-top: auto;
     background-color: var(--ysana-color-2);
     min-height: 150px;
@@ -781,7 +835,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     padding-right: 1rem;
     margin-bottom: auto;
     color: white;
-}
+} */
 #farmaciacercana{
     width: 100%;
     background-color: var(--ysana-color-2);
@@ -815,6 +869,206 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 #modalFarmacia{
     padding: 0px!important;
 }
+.producto-caja .collapsed .linea{
+    border-bottom: 3px solid var(--ysana-color-2);
+    width: 100%;
+}
+/* #productos .card::before{
+    content: '-';
+    width: 32px;
+    height: 32px;
+    color: #FFF;
+    font-size: 1.25rem;
+    z-index: 999999;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #888;
+    border-radius: 36px;
+} */
+.producto-caja .collapsed .linea::before{
+    content: '+';
+    width: 32px;
+    height: 32px;
+    color: #FFF;
+    font-size: 1.25rem;
+    z-index: 999999;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--ysana-color-2);
+    border-radius: 36px;
+}
+.producto-caja{
+    margin-top: 3rem;
+}
+#categorias .nav-item{
+    font-weight: 300;
+    color: white;
+    background-color: var(--ysana-color-2);
+    min-width: 160px;
+    width: 100%;
+    max-width: 180px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
+}
+#categorias .nav-item:hover,#categorias .nav-item.active{
+    font-weight: bold;
+}
+#catPc1,#catPc2{
+    display: none;
+}
+#catMovil2{
+    display: block;
+}
+#catMovil1 .dropdown-menu,#catMovil2 .dropdown-menu{
+    width: 100%;
+}
+#menuCategorias{
+    color: white;
+    background-color: var(--ysana-color-2);
+    border-color: var(--ysana-color-2);
+}
+#menuCategorias+.dropdown-menu{
+    border: 1px solid var(--ysana-color-2);
+}
+#catMovil1 .nav:not(.show),#catMovil2 .nav:not(.show){
+    display: none;
+}
+#catMovil2 .dropdown-item.show,#catMovil2 .dropdown-item:active,#catMovil1 .dropdown-item.show,#catMovil1 .dropdown-item:active{
+    background-color: var(--ysana-color-2);
+}
+
+#articulos-tienda .article-tienda{
+    margin: 0 0 1rem;
+    padding-bottom: 1px;
+    margin-left: auto;
+    max-width: 300px;
+    margin-right: auto;
+    border: 3px solid var(--ysana-color-2);
+}
+#articulos-tienda .article-tienda:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 12px rgb(160, 157, 157);
+    transition: .2s;
+}
+.tarjeta-articulo__elementos-basicos{
+    position: relative;
+    padding: 0rem 1rem 1rem 1rem;
+    border: 1px solid #fff;
+    background-color: #fff;
+    transition: border .15s ease-out 0s;
+    display: grid;
+    min-height: 400px;
+}
+.article-tienda .tarjeta-articulo__info{
+    /* height: 2.7rem;
+    max-height: 2.7rem; */
+    line-height: 1.5rem;
+    overflow: hidden;
+    margin-top: auto;
+}
+.article-tienda .tarjeta-articulo__info h3{
+    margin: 0;
+    /* width: 100%;
+    text-align: left; */
+    overflow: hidden;
+    font-size: 1rem;
+    color: #888;
+    vertical-align: middle;
+    word-break: normal;
+}
+.article-tienda .tarjeta-articulo__info .titulo{
+    color: var(--ysana-color-2);
+    font-size: .9rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+.article-tienda .tarjeta-articulo__info .nombre{
+    color: #575758;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.article-tienda .tarjeta-articulo__info .precio{
+    color: #575758;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.article-tienda .tarjeta-articulo__venta{
+    margin-top: auto;
+}
+.article-tienda .tarjeta-articulo__venta a{
+    text-decoration: none;
+}
+
+.centrado-porcentual{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.login-responsive{
+    margin-top: 160px;
+    width: auto;
+    /* max-width: 585px; */
+    padding: 0 10px;
+}
+.login-responsive .wrapper{
+    width: auto;
+    max-width: 585px;
+    padding: 1rem;
+    margin: 0 auto;
+    /* border: 1px solid #657786; */
+    background-color: #f5f8fa;
+    /* background-color: #e6ecf0; */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.login-responsive .footer{
+    width: auto;
+    max-width: 585px;
+    padding: 20px 10px;
+    margin: 0 auto;
+    background-color: #e6ecf0;
+    /* background-color: #f5f8fa; */
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 20px;
+    color: #657786;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    /* background-color: red; */
+}
+.login-responsive .footer p{
+    margin-bottom: 0;
+    line-height: 1.5rem;
+}
+.login-responsive .wrapper .titulo{
+    font-size: 2rem;
+    padding: 0px 0 10px 0;
+    color: var(--ysana-color-2);
+}
+.login-responsive .wrapper .form-row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -864,12 +1118,43 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     #modalFarmacia .modal-dialog{
         margin: 0rem;
     }
+    .article-block article{
+        min-height: 320px;
+    }
+    .article-block h5{
+        font-size: 1rem;
+    }
 }
 
 
 
 
 @media (max-width: 575px){
+    .login-responsive .wrapper .titulo{
+        font-size: 1.5rem;
+    }
+    #conoceysana .ttl{
+        text-align: center;
+    }
+    #conoceysana .texto{
+        padding: 0rem 1rem;
+        text-align: justify;
+    }
+    .parallax-sobreysana{
+        background-position: right;
+    }
+    #franjafarmacia{
+        flex-direction: column;
+        text-align: center;
+    }
+    .producto-caja .collapsed .linea{
+        width: 95%;
+    }
+    #productos .contenedor .txt{
+        margin-top: .5rem;
+        font-weight: 600;
+        line-height: 2rem;
+    }
     #mapagoogle{
         margin-top: 1rem;
         margin-bottom: 5rem;
@@ -910,6 +1195,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     #form-contacto .contacto-2{
         padding: 2rem 0rem 2rem 2rem;
     }
+    #paneles .panel-izq{
+        text-align: center;
+    }
     #paneles .panel-izq h1{
         font-size: 1.5rem;
     }
@@ -930,9 +1218,13 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         max-width: 600px;
         padding-left: 2rem;
         padding-right: 2rem;
+        text-align: center;
     }
     #sobreysanaslider>div>div>h1{
-        font-size: 2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 2rem;
         margin-bottom: 2.25rem;
     }
     #transparencia h1{
@@ -951,15 +1243,32 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         height: 32px;
         display: block;
     }
+    #paneles-clubysana .panel-izq{
+        text-align: center;
+    }
+    #paneles-clubysana .panel-izq .btn{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #form-contacto .contacto-1{
+        text-align: center;
+    }
+    #todosproductos .ttl::before{
+        left: 50%;
+        transform: translate(-50%, -0%);
+    }
+    #productos .contenedor .ttl{
+        text-align: center;
+    }
+    #productos .contenedor .txt{
+        text-align: center;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     #modalFarmacia{
         padding: 0px!important;
-    }
-    .texto-subhome h1{
-        font-size: 1.5rem;
     }
     #polaroid{
         padding: 2.5rem;
@@ -971,6 +1280,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         background-size: cover;
     }
     #paneles-clubysana .panel-izq{
+        width: 100%;
         max-width: 100%;
     }
     #form-contacto .contacto-1{
@@ -992,7 +1302,10 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         padding-right: 2rem;
     }
     #sobreysanaslider>div>div>h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 3rem;
+        margin-bottom: 2.25rem;
     }
     #transparencia h1{
         font-size: 1.2rem;
@@ -1003,7 +1316,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     }
     .producto-caja{
         padding-left: 1rem;
-        /* padding-right: 1rem; */
+        padding-right: 1rem;
     }
     .img-g-maps{
         display: none;
@@ -1011,12 +1324,24 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     .producto-caja .flex-row-reverse .izq{
         text-align: right;
     }
+    .texto-subhome h1{
+        font-size: 1.5rem;
+    }
+    /* .max-imagen-prod{
+        max-width: 450px;
+    } */
+    .producto-caja img.img-fluid{
+        /* max-width: 450px; */
+    }
+    #franjafarmacia{
+        flex-direction: column;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .texto-subhome h1{
-        font-size: 2rem;
+    #franjafarmacia{
+        flex-direction: row;
     }
     .parallax-home2 {
         min-height: 550px;
@@ -1052,6 +1377,20 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     }
     #transparencia h1{
         font-size: 1.4rem;
+    }
+    #catPc1{
+        display: block;
+        margin-top: 1rem;
+    }
+    #catPc2{
+        display: block;
+        margin-top: 1rem;
+    }
+    #catPc2 .nav{
+        justify-content: space-around;
+    }
+    #catMovil1,#catMovil2{
+        display: none;
     }
 }
 
@@ -1094,9 +1433,6 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .texto-subhome h1{
-        font-size: 2.5rem;
-    }
     /* .parallax-home5 {
         height: 80%;
     } */

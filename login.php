@@ -5,6 +5,7 @@ $uM = load_model('usuario'); //uM userModel
 $fM = load_model('form');
 $sM = load_model('seo');
 $hM = load_model('html');
+$iM = load_model('inputs');
 
 $nombre_usuario = '';
 $contrasenya_usuario = '';
@@ -51,14 +52,32 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
 }
 //CONTROL_______________________________________________________________________
 
-include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+
 ?>
-<script type="text/javascript"></script>
 <body>
-    <?php include_once('inc/panel_top.inc.php'); ?>
-    <?php include_once('inc/navbar_inicio.inc.php'); ?>
-    <div class="ysana-login">
+    <div id="menu-sticky">
+        <?php include_once('inc/panel_top.inc.php'); //panel superior ?>
+        <?php include_once('inc/menu.inc.php'); //menu superior ?>
+    </div>
+    <div class="max-ysana w-100">
+        <div class="login-responsive">
+            <div class="wrapper">
+                <h1 class="titulo">Inicia sesión en Ysana</h1>
+                <?php if(isset($str_errores) && $str_errores) echo $hM->get_alert($str_errores,"alert-danger"); ?>
+                <form method="post" class="form-row">
+                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-6', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('contrasenya_usuario', '', 'form-control col-12 col-md-6', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>
+                    <input type="submit" class="btn btn-bg-color-2" value="Iniciar Sesión">
+                </form>
+            </div>
+            <div class="footer">
+                <p>¿Nuevo en Ysana? <a href="<?php echo $ruta_inicio; ?>registro">Regístrate ahora »</a></p>
+                <p>¿Has olvidado tu contraseña? <a href="<?php echo $ruta_inicio; ?>forgot-password">Recuperar contraseña »</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="ysana-login">
         <div class="ysana-login-sub">
             <div class="logo mt-5 mb-5">
                 <img src="<?php echo $ruta_inicio;?>img/svg/<?php echo ($cy) ? 'clubysana' : 'ysanacolor' ?>.svg" class="img-responsive" alt="">
@@ -77,7 +96,16 @@ echo $sM->add_cabecera($lng['header'][0]);
                 <a href="<?php echo $ruta_inicio; ?>forgot-password"><input class="<?php echo ($cy) ? 'cycolor' : ''; ?>" type="button" value="<?php echo $lng['forms'][3]; ?>"></a>
             </form>
         </div>
-    </div>
-    <?php include_once('inc/footer.inc.php'); ?>
+    </div> -->
+    
+    
+    <?php include_once('inc/footer.inc.php'); //panel superior ?>
 </body>
+
+
+<script>
+    $("#polaroid").on('click', '.pol', function(){
+        console.log(this);
+    });
+</script>
 </html>

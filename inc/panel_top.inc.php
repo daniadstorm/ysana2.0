@@ -1,11 +1,16 @@
 <?php
-$arr_idioma = array(
-    'spa' => '<img src="'.$ruta_inicio.'img/esp-idioma.png" width="16px">',
-    'eng' => '<img src="'.$ruta_inicio.'img/eng-idioma.png" width="16px">'
-);
 $urlYsana=false;
 if($_SERVER["REQUEST_URI"]=="/ysana/clubysana/"){
     $urlYsana=true;
+}
+$outIdioma = '';
+$outComodin = '';
+
+foreach ($arrlang as $key => $value) {
+    if($lang==$value){
+        $outIdioma .= '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$value.'</a>';
+    }
+    $outComodin .= '<a class="dropdown-item" href="'.$ruta_actual.'?idioma_seleccionado='.$value.'">'.$value.'</a>';
 }
 ?>
 
@@ -14,7 +19,7 @@ if($_SERVER["REQUEST_URI"]=="/ysana/clubysana/"){
         <div class="ttl">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link bienvenidoysana" href="#">Bienvenido a Ysana Vida Sana</a>
+                        <a class="nav-link bienvenidoysana" href="<?php echo $ruta_inicio; ?>">Bienvenido a Ysana Vida Sana</a>
                     </li>
                 </ul>
         </div>
@@ -30,18 +35,15 @@ if($_SERVER["REQUEST_URI"]=="/ysana/clubysana/"){
                         </div>
                     </li>
                     <li class="nav-item no-drop">
-                        <a class="nav-link" href="#">Acceder</a>
+                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>login">Acceder</a>
                     </li>
                     <li class="nav-item no-drop">
-                        <a class="nav-link" href="#">Date de alta</a>
+                        <a class="nav-link" href="<?php echo $ruta_inicio; ?>registro">Date de alta</a>
                     </li>
                     <li id="dropdown-idioma" class="nav-item dropdown dropleft">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SP</a>
+                        <?php echo $outIdioma; ?>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <?php echo $outComodin; ?>
                         </div>
                     </li>
                 </ul>

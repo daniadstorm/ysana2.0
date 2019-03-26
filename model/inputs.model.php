@@ -17,12 +17,16 @@ class inputsModel extends Model {
     function get_input_text($id, $val, $class='', $lbl='', $placeholder='', $err_desc='', $min_length=false, $max_length=false, $allow_empty=false, $classdiv='form-group', $desactivado=false, $arr='') {
         $val = $this->safe_show($val);
         $str_tmp = '';
+        $type = 'text';
         $aux_required = 'required';
         
         $aux_pattern = '';
         if ($allow_empty != false) {
             $aux_pattern .= '.{0}|';
             $aux_required = '';
+        }
+        if(strpos($id, 'contrasenya')!==false){
+            $type = 'password';
         }
         $aux_pattern.= '.{';
         if ($min_length != false) $aux_pattern .= $min_length;
@@ -33,7 +37,7 @@ class inputsModel extends Model {
         
         $o  = '<div class="'.$classdiv.'">';
         if (strlen($lbl) > 0) $o .= '<label>'.$lbl.'</label>';
-        $o .=   '<input autocomplete="off" type="text" id="'.$id.'" name="'.$id.$arr.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" pattern="'.$aux_pattern.'" '.$aux_required.' title="'.$err_desc.'" '.$str_tmp.'>';
+        $o .=   '<input autocomplete="off" type="'.$type.'" id="'.$id.'" name="'.$id.$arr.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" pattern="'.$aux_pattern.'" '.$aux_required.' title="'.$err_desc.'" '.$str_tmp.'>';
         $o .= '</div>';
             
         return $o;

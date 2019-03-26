@@ -47,9 +47,16 @@ RewriteRule ^clubysana/areapersonal/(.*)/(.*)/$ clubysana/articulo.php?id_cat=$1
 
 RewriteRule ^quien-es-ysana-vida-sana/$ quienes-somos.php [L]
 
-RewriteRule ^directo_farmacia/producto/(.*)/$ directo_farmacia/producto.php?id=$1 [L]
-RewriteRule ^directo_farmacia/(.*)/$ directo_farmacia/index.php?categoria=$1 [L]
-RewriteRule ^experiencia/(.*)/$ experiencia/producto.php?id=$1 [L]
+# ---------- TIENDA ---------- #
+RewriteRule ^experiencia/$ ver-tienda.php?tienda=exp [L]
+RewriteRule ^directo-farmacia/$ ver-tienda.php?tienda=df [L]
+#RewriteRule ^directo-farmacia/(.*)/$ ver-tienda.php?tienda=df&id=$1 [L]
+#RewriteRule ^experiencia/(.*)/$ ver-tienda.php?tienda=exp&id=$1 [L]
+# ---------- TIENDA ---------- #
+
+#RewriteRule ^directo_farmacia/producto/(.*)/$ directo_farmacia/producto.php?id=$1 [L]
+#RewriteRule ^directo_farmacia/(.*)/$ directo_farmacia/index.php?categoria=$1 [L]
+#RewriteRule ^experiencia/(.*)/$ experiencia/producto.php?id=$1 [L]
 
 
 RewriteRule ^accept-cookies-policy/$ accept_cookies_policy.php [L]
