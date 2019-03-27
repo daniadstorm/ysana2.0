@@ -12,9 +12,7 @@ $arrImg = array(
 );
 
 echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
-/* echo '<pre style="height:200vh;">';
-print_r($_SERVER);
-echo '</pre>'; */
+
 ?>
 
 <body>
@@ -105,14 +103,58 @@ echo '</pre>'; */
             <h1 class="ttl">Garantía Ysana</h1>
             <p class="txt">En Ysana® Vida Sana no sólo nos encargamos de la producción, sino que también desarrollamos los productos, realizamos los estudios de eficacia y seguridad, llevamos a cabo los controles de calidad y seguimos todas las etapas del proceso regulatorio cumpliendo un exigente código de compromiso con la calidad.</p>
         </div>
-        <ul class="timeline">
+        <div id="sobreysanaimg" class="row px-5">
+            <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="imagen img-1">
+                    <p class="texto color-1">Diseño innovador</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/sobreysana/1.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-imagen"></div>
+            </div>
+            <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="imagen img-2">
+                    <p class="texto color-2">Formulación y Desarrollo</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/sobreysana/2.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-imagen"></div>
+            </div>
+            <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="imagen img-3">
+                    <p class="texto color-3">Certificados Regulatorios</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/sobreysana/3.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-imagen"></div>
+            </div>
+            <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="imagen img-4">
+                    <p class="texto color-4">Control de Calidad</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/sobreysana/4.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-imagen"></div>
+            </div>
+            <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="imagen img-5">
+                    <p class="texto color-5">Valor Tecnológico</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/sobreysana/5.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-imagen"></div>
+            </div>
+            <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="imagen img-6">
+                    <p class="texto color-6">Logística Responsable</p>
+                    <img src="<?php echo $ruta_inicio; ?>img/sobreysana/6.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-imagen"></div>
+            </div>
+        </div>
+        <!-- <ul class="timeline">
             <li class="li"><div class="imagen"></div></li>
             <li class="li"><div class="imagen"></div></li>
             <li class="li"><div class="imagen"></div></li>
             <li class="li"><div class="imagen"></div></li>
             <li class="li"><div class="imagen"></div></li>
             <li class="li"><div class="imagen"></div></li>
-        </ul>
+        </ul> -->
     </div>
     <?php include_once('inc/footer.inc.php'); ?>
     <script>
@@ -127,15 +169,15 @@ echo '</pre>'; */
             });
         });
         function slide(){
-            $('.wrapper1').css("background-image", "url('../"+imgs[i]+"')");
-            $('.wrapper2').css("background-image", "url('../"+imgs[i]+"')");
+            $('.wrapper1').css("background-image", "url('"+imgs[i]+"')");
+            $('.wrapper2').css("background-image", "url('"+imgs[i]+"')");
             i++;
             if(i === imgs.length) i = 0;
         }
 
         function cambiarImgSlider(img, clase){
-            $('.wrapper1').css("background-image", "url('../"+img+"')");
-            $('.wrapper2').css("background-image", "url('../"+img+"')");
+            $('.wrapper1').css("background-image", "url('"+img+"')");
+            $('.wrapper2').css("background-image", "url('"+img+"')");
             $('.slider-redonda').removeClass("active");
             $('.'+clase).addClass("active");
             /* console.log($('.'+clase)); */

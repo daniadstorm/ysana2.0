@@ -20,8 +20,8 @@ $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
 
 //POST__________________________________________________________________________
 
-if(isset($_POST['id_usuario']) && isset($_POST['g-recaptcha-response'])){
-    if(!$uM->get_existe_correo($_POST['email_usuario']) && !$uM->verificarCaptcha(SECRETKEY,$_POST['g-recaptcha-response'])){
+if(isset($_POST['id_usuario'])){
+    if(!$uM->get_existe_correo($_POST['email_usuario'])){
         if($uM->add_usuario($_POST['nombre_usuario'],$_POST['apellidos_usuario'], $_POST['email_usuario'], $_POST['genero_usuario'], $_POST['password_usuario'])){
             $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/usuarios/record/add/', array(
                 'authtoken' => AUTHTOKEN,
@@ -33,7 +33,7 @@ if(isset($_POST['id_usuario']) && isset($_POST['g-recaptcha-response'])){
                 'genero_usuario' => $_POST['genero_usuario']
             ));
             $uM->user_nuevousuario_mail($_POST['email_usuario'], $ruta_inicio, $_SESSION['id_lang']);
-            header('Location: '.$ruta_inicio.'login.php');
+            header('Location: '.$ruta_inicio.'login?str_info=registro');
         }else{
             $str_errores = $lng['forms'][12];
         }
@@ -45,17 +45,7 @@ if(isset($_POST['id_usuario']) && isset($_POST['g-recaptcha-response'])){
 
 //CONTROL_______________________________________________________________________
 if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
-    switch ($_SESSION['id_tipo_usuario']) {
-        default:
-        case USER:
-            header('Location: '.$ruta_inicio.'index.php');
-            exit();
-        break;
-        case ADMIN:
-            header('Location: '.$ruta_inicio.'admin.php');
-            exit();
-        break;
-    }
+    header('Location: '.$ruta_inicio.'index.php');
 }
 //CONTROL_______________________________________________________________________
 echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
@@ -75,8 +65,8 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                     <?php echo $iM->get_input_hidden('authtoken', AUTHTOKEN); ?>
                     <?php echo $iM->get_input_hidden('scope', SCOPE); ?>
                     <?php echo $iM->get_input_hidden('id_usuario', 0); ?>
-                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
-                    <?php echo $iM->get_input_text('apellidos_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-8', '', 'Nombre', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('apellidos_usuario', '', 'form-control col-12 col-md-8', '', 'Apellidos', '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo $iM->get_input_text('email_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', 'Confirmar Password', '', '', '', false, 'form-group w-100', false); ?>
@@ -85,8 +75,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                 </form>
             </div>
             <div class="footer">
-                <p>¿Nuevo en Ysana? <a href="<?php echo $ruta_inicio; ?>registro">Regístrate ahora »</a></p>
-                <p>¿Has olvidado tu contraseña? <a href="<?php echo $ruta_inicio; ?>forgot-password">Recuperar contraseña »</a></p>
+                <p>¿Ya tienes una cuenta? <a href="<?php echo $ruta_inicio; ?>login">Inicia sesion »</a></p>
             </div>
         </div>
     </div>    

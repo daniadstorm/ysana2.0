@@ -12,6 +12,7 @@ $contrasenya_usuario = '';
 
 $arr_err = array();
 $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
+$str_info = (isset($_REQUEST['str_info']) ? 'Te has registado correctamente' : '');
 
 //GET___________________________________________________________________________
 if (isset($_GET['unlogin'])) {
@@ -51,6 +52,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
             <div class="wrapper">
                 <h1 class="titulo<?php echo $clubysana; ?>">Inicia sesión en Ysana</h1>
                 <?php if(isset($str_errores) && $str_errores) echo $hM->get_alert($str_errores,"alert-danger"); ?>
+                <?php if(isset($str_info) && $str_info) echo $hM->get_alert($str_info,"alert-success"); ?>
                 <form method="post" class="form-row">
                     <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-6', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo $iM->get_input_text('contrasenya_usuario', '', 'form-control col-12 col-md-6', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>

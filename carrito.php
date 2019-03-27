@@ -38,34 +38,46 @@ $arrtimecesta = array(
     'mañana' => $lng['experiencia-carrito'][22],
     'tarde' => $lng['experiencia-carrito'][28]
 );
+/* new */
+$strCarritonewexp = '';
+$strCarritonewDf = '';
+$arrProdExp = array();
+$arrProdDf = array();
+$ttlExp = 0;
+$ttlDf = 0;
+/* new */
 /* echo '<pre>';
 print_r($_POST);
 echo '</pre>'; */
 
 //GET__________________________________________________________________________
-if(isset($_POST['btnPedido']) && isset($_GET['opc'])){
+if(isset($_POST['btnPedido']) && isset($_REQUEST['opc'])){
     $valid=false;
 }
 
-if(isset($_GET['id_articulo']) && isset($_GET['opc']) && $valid){
-    switch($_GET['opc']){
+if(isset($_REQUEST['id_articulo']) && isset($_REQUEST['opc']) && $valid){
+    switch($_REQUEST['opc']){
         case "resta":
-            $rguau = $cM->get_unidades_articulo_usuario($id_usuario, $_GET['id_articulo']);
+            $rguau = $cM->get_unidades_articulo_usuario($id_usuario, $_REQUEST['id_articulo']);
             if($rguau){
                 while($frguau = $rguau->fetch_assoc()){
                     if($frguau['total']>1){
-                        $cM->restarArticulo($id_usuario, $_GET['id_articulo']);
+                        $cM->restarArticulo($id_usuario, $_REQUEST['id_articulo']);
+                        header("Refresh:0");
                     }else{
-                        $cM->delete_articulo_usuario_carrito($id_usuario, $_GET['id_articulo']);
+                        $cM->delete_articulo_usuario_carrito($id_usuario, $_REQUEST['id_articulo']);
+                        header("Refresh:0");
                     }
                 }
             }
             break;
         case "suma":
-            $cM->sumarArticulo($id_usuario, $_GET['id_articulo']);
+            $cM->sumarArticulo($id_usuario, $_REQUEST['id_articulo']);
+            header("Refresh:0");
             break;
         case "borrar":
-            $cM->delete_articulo_usuario_carrito($id_usuario, $_GET['id_articulo']);
+            $cM->delete_articulo_usuario_carrito($id_usuario, $_REQUEST['id_articulo']);
+            header("Refresh:0");
             break;
         default:
             break;
@@ -90,283 +102,189 @@ if($id_usuario>0){
     $rgcc = $cM->get_carrito($id_usuario, $_SESSION['lang']);
     if($rgcc){
         while($frgcc = $rgcc->fetch_assoc()){
-            if($frgcc["tipo_tienda"]=="exp"){
-                $outcarritoexp .= '<tr><th scope="row"><div class="foto-carrito"><img src="'.$ruta_inicio.'img/productos/';
-                if($frgcc["img_portada"]!=""){
-                    $outcarritoexp .= $frgcc["img_portada"];
-                }else{
-                    $outcarritoexp .= $frgcc["img"];
-                }
-                $outcarritoexp .= '" alt="" class="img-fluid"></div></th><td><div class="dato-carrito"><div class="h5">'.$frgcc["nombre"].'</div></div></td>
-                <td>'.$frgcc["precio"].'€</td><td>
-                <form class="d-flex mb-0">
-                <a class="d-flex" href="?id_articulo='.$frgcc["id_articulo"].'&opc=resta"><button type="button" class="btn btn-unidades btn-mini btn-sm qtt-menos">--</button></a>
-                <input type="text" class="form-control qtt-input" value="'.$frgcc["cantidad"].'">
-                <a class="d-flex" href="?id_articulo='.$frgcc["id_articulo"].'&opc=suma"><button type="button" class="btn btn-unidades btn-mini btn-sm qtt-mas">+</button></a></form></td><td>
-                <label>'.($frgcc["precio"]*$frgcc["cantidad"]).'€</label>
-                <a href="?id_articulo='.$frgcc["id_articulo"].'&opc=borrar" class="cerrar">
-                <img src="'.$ruta_inicio.'img/borrarProducto.png" alt=""></a></td></tr>';
-                $sumaTotalexp+=($frgcc["precio"]*$frgcc["cantidad"]);
-                $ivatotalexp+=round($sumaTotalexp*$frgcc["iva"],2);
-                $qttCarritoexp+=$frgcc["cantidad"];
-            }else if($frgcc["tipo_tienda"]=="df"){
-                $outcarritodf .= '<tr><th scope="row"><div class="foto-carrito"><img src="'.$ruta_inicio.'img/productos/';
-                if($frgcc["img_portada"]!=""){
-                    $outcarritodf .= $frgcc["img_portada"];
-                }else{
-                    $outcarritodf .= $frgcc["img"];
-                }
-                $outcarritodf .= '" alt="" class="img-fluid"></div></th><td><div class="dato-carrito"><div class="h5">'.$frgcc["nombre"].'</div></div></td>
-                <td>'.$frgcc["precio"].'€</td><td>
-                <form class="d-flex mb-0">
-                <a class="d-flex" href="?id_articulo='.$frgcc["id_articulo"].'&opc=resta"><button type="button" class="btn btn-unidades btn-mini btn-sm qtt-menos">--</button></a>
-                <input type="text" class="form-control qtt-input" value="'.$frgcc["cantidad"].'">
-                <a class="d-flex" href="?id_articulo='.$frgcc["id_articulo"].'&opc=suma"><button type="button" class="btn btn-unidades btn-mini btn-sm qtt-mas">+</button></a></form></td><td>
-                <label>'.($frgcc["precio"]*$frgcc["cantidad"]).'€</label>
-                <a href="?id_articulo='.$frgcc["id_articulo"].'&opc=borrar" class="cerrar">
-                <img src="'.$ruta_inicio.'img/borrarProducto.png" alt=""></a></td></tr>';
-                $sumaTotaldf+=($frgcc["precio"]*$frgcc["cantidad"]);
-                $ivatotaldf+=round($sumaTotaldf*$frgcc["iva"],2);
-                $qttCarritodf+=$frgcc["cantidad"];
+            if($frgcc['tipo_tienda']=="exp"){
+                array_push($arrProdExp, $frgcc);
+            }else if($frgcc['tipo_tienda']=="df"){
+                array_push($arrProdDf, $frgcc);
             }
         }
     }
-    if(isset($_POST['btnPedido']) && $qttCarritoexp>0){
-        header('Location: '.$ruta_inicio.'carrito/datos/');
+}
+if(count($arrProdExp)>0){
+    foreach ($arrProdExp as $key => $value) {
+        /* print_r($value); */
+        $strCarritonewexp .= '<tr>';
+        $strCarritonewexp .= '<td class="img"><img src="'.$ruta_inicio.'img/productos/'.$value['img'].'" width="128px" class="img-thumbnail"></td>';
+        $strCarritonewexp .= '<td><a target="_blank" href="'.$ruta_inicio.'producto/'.$value['urlseo'].'">'.$value['nombre'].'</a></td>';
+        $strCarritonewexp .= '<td>'.$value['precio'].'€</td>';
+        $strCarritonewexp .= '<td><div class="input-group"><form method="post" class="d-inline-block">';
+        $strCarritonewexp .= $iM->get_input_hidden('id_articulo', $value['id_articulo']);
+        $strCarritonewexp .= $iM->get_input_hidden('opc', 'resta');
+        $strCarritonewexp .= '<button type="submit" class="btn">-</button></form>';
+        $strCarritonewexp .= '<span class="input-group-text">'.$value['cantidad'].'</span>';
+        $strCarritonewexp .= '<form method="post" class="d-inline-block">';
+        $strCarritonewexp .= $iM->get_input_hidden('id_articulo', $value['id_articulo']);
+        $strCarritonewexp .= $iM->get_input_hidden('opc', 'suma');
+        $strCarritonewexp .= '<button type="submit" class="btn">+</button></form>';
+        $strCarritonewexp .= '</div></td>';
+        //$strCarritonewexp .= '<td>'.$value['cantidad'].'</td>';
+        $strCarritonewexp .= '<td>'.($value['precio']*$value['cantidad']).'€</td>';
+        $strCarritonewexp .= '<td><a href="?id_articulo='.$value["id_articulo"].'&opc=borrar" class="cerrar"><img width="16px" src="'.$ruta_inicio.'img/borrarProducto.png" alt=""></a></td>';
+        $strCarritonewexp .= '</tr>';
+        $ttlExp += ($value['precio']*$value['cantidad']);
+    }
+}
+if(count($arrProdDf)>0){
+    foreach ($arrProdDf as $key => $value) {
+        $strCarritonewDf .= '<tr>';
+        $strCarritonewDf .= '<td class="img"><img src="'.$ruta_inicio.'img/productos/'.$value['img'].'" width="128px" class="img-thumbnail"></td>';
+        $strCarritonewDf .= '<td><a target="_blank" href="'.$ruta_inicio.'producto/'.$value['urlseo'].'">'.$value['nombre'].'</a></td>';
+        $strCarritonewDf .= '<td>'.$value['precio'].'€</td>';
+        $strCarritonewDf .= '<td><div class="input-group"><form method="post" class="d-inline-block">';
+        $strCarritonewDf .= $iM->get_input_hidden('id_articulo', $value['id_articulo']);
+        $strCarritonewDf .= $iM->get_input_hidden('opc', 'resta');
+        $strCarritonewDf .= '<button type="submit" class="btn">-</button></form>';
+        $strCarritonewDf .= '<span class="input-group-text">'.$value['cantidad'].'</span>';
+        $strCarritonewDf .= '<form method="post" class="d-inline-block">';
+        $strCarritonewDf .= $iM->get_input_hidden('id_articulo', $value['id_articulo']);
+        $strCarritonewDf .= $iM->get_input_hidden('opc', 'suma');
+        $strCarritonewDf .= '<button type="submit" class="btn">+</button></form>';
+        $strCarritonewDf .= '</div></td>';
+        //$strCarritonewDf .= '<td>'.$value['cantidad'].'</td>';
+        $strCarritonewDf .= '<td>'.($value['precio']*$value['cantidad']).'€</td>';
+        $strCarritonewDf .= '<td><a href="?id_articulo='.$value["id_articulo"].'&opc=borrar" class="cerrar"><img width="16px" src="'.$ruta_inicio.'img/borrarProducto.png" alt=""></a></td>';
+        $strCarritonewDf .= '</tr>';
+        $ttlDf += ($value['precio']*$value['cantidad']);
     }
 }
 //LISTADO______________________________________________________________________
-include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]);
+
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
 ?>
-<script type="text/javascript">
-</script>
 
 <body>
-    <?php include_once('inc/panel_top.inc.php'); ?>
-    <?php include_once('inc/navbar_inicio_experiencia.inc.php'); ?>
-    <div class="bg-carrito">
-        <div class="container carrito">
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 my-4">
-                    <div class="carrito p-3">
-                        <?php
-                            if($str_error) echo $hM->get_alert_danger($str_error);
-                            else if($str_success) echo $hM->get_alert_success($str_success);
-                        ?>
-                        <div class="<?php echo (isset($_GET['compra']) ? 'pb-3' : ''); ?>">
-                        <?php
-                        if(isset($_GET['compra'])){
-                            if($_GET['compra']=='ok'){
-                                echo $hM->get_alert_success("Pago realizada con éxito!");
-                            }else if($_GET['compra']=='ko'){
-                                echo $hM->get_alert_danger("El pago no se ha podido realizar");
-                            }
-                        }
-                        ?>
-                        </div>
-                        <!-- experiencia -->
-                        <h1 class="h3 m-b-1">
-                            <strong>(<?php echo $qttCarritoexp; ?>)</strong>
-                            <?php echo $lng['experiencia-carrito'][0]; ?>
-                            <strong> <?php echo $lng['experiencia-carrito'][1]; ?></strong>
-                            <?php echo $lng['experiencia-carrito'][16]; ?>
-                        </h1>
-                        <div class="tabla-carrito pt-2">
-                            <table class="table">
-                                <thead class="bg-grayopacity-ysana">
-                                    <tr>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][2]; ?></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][3]; ?></th>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][4]; ?></th>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][5]; ?></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php echo $outcarritoexp; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-8">
-                                <div class="info-pago">
-                                    <div class="ticket-resumen">
-                                        <div class="ticket-pago">
-                                            <div class="ticket-pago_desglose">
-                                                <div class="ticket-pago_articulos">
-                                                    <div class="d-flex flex-column">
-                                                        <strong class="w-100">
-                                                            <span>IVA</span>
-                                                            <span data-precio-total class="pull-xs-right">
-                                                                <?php echo $ivatotalexp; ?> €</span>
-                                                        </strong>
-                                                        <strong class="w-100">
-                                                            <span>
-                                                                <?php echo $lng['experiencia-carrito'][13]; ?></span>
-                                                            <span data-precio-total class="pull-xs-right">
-                                                                <?php echo $lng['experiencia-carrito'][14]; ?></span>
-                                                        </strong>
-                                                    </div>
-                                                </div>
-                                                <div class="ticket-pago_total">
-                                                    <strong class="w-100">
-                                                        <?php echo $lng['experiencia-carrito'][7]; ?>
-                                                        <span data-precio-total class="pull-xs-right">
-                                                            <?php echo $sumaTotalexp; ?> €</span>
-                                                    </strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <form method="post" action="">
-                                    <button type="submit" name="btnPedido" class="btn bg-blue-ysana btn-lg btn-block text-light">
-                                    <?php echo $lng['experiencia-carrito'][8]; ?></button>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- experiencia -->
-                        <br>
-                        <hr>
-                        <br>
-                        <!-- directo farmacia -->
-                        <h1 class="h3 m-b-1">
-                            <strong>(<?php echo $qttCarritodf; ?>)</strong>
-                            <?php echo $lng['experiencia-carrito'][0]; ?>
-                            <strong> <?php echo $lng['experiencia-carrito'][1]; ?></strong>
-                            <?php echo $lng['experiencia-carrito'][17]; ?>
-                        </h1>
-                        <div class="tabla-carrito pt-2">
-                            <table class="table">
-                                <thead class="bg-grayopacity-ysana">
-                                    <tr>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][2]; ?></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][3]; ?></th>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][4]; ?></th>
-                                        <th scope="col"><?php echo $lng['experiencia-carrito'][5]; ?></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php echo $outcarritodf; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-8">
-                                <div class="info-pago">
-                                    <div class="ticket-resumen">
-                                        <div class="ticket-pago">
-                                            <div class="ticket-pago_desglose">
-                                                <div class="ticket-pago_articulos">
-                                                    <div class="d-flex flex-column">
-                                                        <strong class="w-100">
-                                                            <span>IVA</span>
-                                                            <span data-precio-total class="pull-xs-right">
-                                                                <?php echo $ivatotaldf; ?> €</span>
-                                                        </strong>
-                                                        <strong class="w-100">
-                                                            <span>
-                                                                <?php echo $lng['experiencia-carrito'][13]; ?></span>
-                                                            <span data-precio-total class="pull-xs-right">
-                                                                <?php echo $lng['experiencia-carrito'][14]; ?></span>
-                                                        </strong>
-                                                    </div>
-                                                </div>
-                                                <div class="ticket-pago_total">
-                                                    <strong class="w-100">
-                                                        <?php echo $lng['experiencia-carrito'][7]; ?>
-                                                        <span data-precio-total class="pull-xs-right">
-                                                            <?php echo $sumaTotaldf; ?> €</span>
-                                                    </strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <form method="post" action="">
-                                    <?php echo $iM->get_input_text('buscarfarmacia', $buscarfarmacia, 'form-control', '', $lng['experiencia-carrito'][18], '', '', '', true); ?>
-                                    <?php echo $iM->get_select('selectfarmacia', $selectfarmacia, $arrselectfarmacia, 'form-control'); ?>
-                                    <button type="button" name="btnPedidodf" class="btn bg-blue-ysana btn-lg btn-block text-light" data-toggle="modal" data-target="#exampleModalCenter">
-                                    <?php echo $lng['experiencia-carrito'][8]; ?></button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle"><?php echo $lng['experiencia-carrito'][19]; ?></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <div>
-                                                            <label><?php echo $lng['experiencia-carrito'][21]; ?></label>
-                                                        </div>
-                                                        <?php echo $iM->get_select('timecesta', $timecesta, $arrtimecesta, 'form-control'); ?>
-                                                    </div>
-                                                    <?php echo $iM->get_input_date('fechadia', $fechadia, 'form-control', $lng['experiencia-carrito'][23] , '', '', '', '', true) ?>
-                                                    <p class="font-italic"><?php echo $lng['experiencia-carrito'][25]; ?></p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lng['experiencia-carrito'][27]; ?></button>
-                                                    <button type="submit" name="cestadf" class="btn bg-blue-ysana text-light"><?php echo $lng['experiencia-carrito'][24]; ?></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal -->
-                                </form>
-                            </div>
-                        </div>
-                        <!-- directo farmacia -->
-                    </div>
-                </div>
-                <!-- <div class="col-12 col-md-12 col-lg-4 my-4">
-                    <div class="info-pago">
-                        <div class="ticket-resumen">
-                            <div class="ticket-pago">
-                                <div class="ticket-pago_desglose">
-                                    <div class="ticket-pago_articulos">
-                                        <div class="d-flex flex-column">
-                                            <strong class="w-100">
-                                                <span>IVA (21%)</span>
-                                                <span data-precio-total class="pull-xs-right"><?php echo round($sumaTotal*$iva,2); ?> €</span>
-                                            </strong>
-                                            <strong class="w-100">
-                                                <span><?php echo $lng['experiencia-carrito'][13]; ?></span>
-                                                <span data-precio-total class="pull-xs-right"><?php echo $lng['experiencia-carrito'][14]; ?></span>
-                                            </strong>
-                                        </div>
-                                    </div>
-                                    <div class="ticket-pago_total">
-                                        <strong class="w-100">
-                                            <?php echo $lng['experiencia-carrito'][7]; ?>
-                                            <span data-precio-total class="pull-xs-right"><?php echo $sumaTotal; ?> €</span>
-                                        </strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <form method="post" action="">
-                            <button type="submit" name="btnPedido" class="btn bg-blue-ysana btn-lg btn-block mt-2 text-light"><?php echo $lng['experiencia-carrito'][8]; ?></button>
-                        </form>
-                    </div>
-                </div> -->
+    <div id="menu-sticky">
+        <?php include_once('inc/panel_top.inc.php'); ?>
+        <?php include_once('inc/menu.inc.php'); ?>
+    </div>
+    <div id="carrito" class="max-ysana marg-ysana">
+        <div class="contenedor">
+            <div class="ttl">
+                <h1>Tu cesta de experiencias</h1>
+            </div>
+            <div class="table-responsive-lg">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Artículo</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Total</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="body-carrito">
+                        <?php echo $strCarritonewexp; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+    <div id="carrito2" class="max-ysana w-100">
+        <div class="contenedor">
+            <div class="row carrito-cart">
+                <div class="col-md-12 col-lg-7">
+                    <div class="contenedor-farmacia">
+                        <div class="ttl">
+                            <h1>Reserva en tu farmacia:</h1>
+                        </div>
+                        <div class="table-responsive-xl">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Artículo</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Unidades</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="body-carrito">
+                                    <?php echo $strCarritonewDf; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-7 mb-2">
+                                <?php echo $iM->get_input_text('buscarfarmacia', $buscarfarmacia, 'form-control', '', $lng['experiencia-carrito'][18], '', '', '', true); ?>
+                                <?php echo $iM->get_select('selectfarmacia', $selectfarmacia, $arrselectfarmacia, 'form-control', false, false, false, 'form-group mb-0'); ?>
+                            </div>
+                            <div class="col-12 col-lg-5 mb-2 d-flex">
+                                <button type="button" name="btnPedidodf" <?php echo ($ttlDf==0 ? 'disabled' : ''); ?>  class="btn btn-block btn-bg-color-2 mt-auto" data-toggle="modal" data-target="#realizarPedido">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="total-carrito">
+                        <div class="ttl">
+                            <h1>Total mi cesta experiencia</h1>
+                        </div>
+                        <div id="totalexp">
+                            <strong class="d-flex-jcb">
+                                <span>Base imp.</span>
+                                <span>0€</span>
+                            </strong>
+                            <strong class="d-flex-jcb">
+                                <span>IVA</span>
+                                <span>0€</span>
+                            </strong>
+                            <strong class="d-flex-jcb">
+                                <span>Gastos de envío</span>
+                                <span>0€</span>
+                            </strong>
+                            <strong class="d-flex-jcb">
+                                <span>TOTAL</span>
+                                <span><?php echo $ttlExp; ?>€</span>
+                            </strong>
+                        </div>
+                        <div class="row mx-0 mt-2">
+                            <?php echo $iM->get_input_text('totalprecio', $ttlExp, 'form-control', 'TOTAL', $ttlExp, '', false, false, false, 'form-group col-12 col-sm-6 mb-0 qmb', true); ?>
+                            <div class="form-group col-12 col-sm-6 mb-0 qmb">
+                                <label></label>
+                                <button type="button" name="btnPedidodf" class="btn btn-block btn-bg-color-2" >Realizar pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="realizarPedido" tabindex="-1" role="dialog" aria-labelledby="realizarPedidoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="realizarPedidoLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL -->
     <?php include_once('inc/footer.inc.php'); ?>
-    <script>
+<script>
     function MaysPrimera(string){
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
@@ -400,5 +318,4 @@ echo $sM->add_cabecera($lng['header'][0]);
     });
 </script>
 </body>
-
 </html>
