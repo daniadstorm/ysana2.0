@@ -1293,6 +1293,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 .modal-body div{
     background-color: #eaeaea;
 }
+#modalFarmacia .modal-body div{
+    background-color: transparent;
+}
 .editarDireccion{
     color: var(--ysana-color-2);
 }
@@ -1323,7 +1326,30 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     margin-bottom: 1rem;
 }
 
-
+.contenedor-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.contenedor-info .informacion{
+    border-bottom: 1px solid #575756;
+}
+.contenedor-info .informacion .categoria h1{
+    color: var(--ysana-color-2);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.contenedor-info .informacion .nombre h1{
+    color: #575756;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.contenedor-info .informacion .texto p{
+    color: #575756;
+    font-size: 1rem;
+    font-weight: 500;
+}
 
 
 

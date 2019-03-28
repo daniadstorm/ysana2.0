@@ -34,6 +34,8 @@ RewriteRule ^clubysana/registro/$ registro.php?clubysana=cy [L]
 RewriteRule ^forgot-password/$ forgot-password.php [L]
 RewriteRule ^unsubscribe/$ dar-de-baja.php [L]
 
+RewriteRule ^producto/(.*)/$ ver-producto.php?id=$1 [L]
+
 #RewriteRule ^directo_farmacia/carrito/$ directo_farmacia/carrito.php [L]
 #RewriteRule ^experiencia/carrito/$ experiencia/carrito.php [L]
 RewriteRule ^carrito/$ carrito.php [L]
