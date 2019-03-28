@@ -8,9 +8,18 @@ class carritoModel extends Model {
         return $this->execute_query($q);
     }
 
-    function add_direccion_envio($id_usuario, $nombre, $apellidos, $direccion, $cp, $poblacion, $movil){
+    function get_direccion_envio_estado($id_usuario, $pred){
+        $q = ' SELECT * FROM '.$this->pre.'carrito_datos cd ';
+        $q .= ' WHERE cd.id_usuario='.$id_usuario.' ';
+        $q .= ' AND cd.predeterminada='.$pred.' ';
+        $r = $this->execute_query($q);
+        if ($r) return $r->num_rows;
+            else return false;
+    }
+
+    function add_direccion_envio($id_usuario, $pred, $nombre, $apellidos, $direccion, $cp, $poblacion, $movil){
         $q  = ' INSERT INTO '.$this->pre.'carrito_datos (id_usuario, predeterminada, nombre, apellidos, direccion, codigo_postal, poblacion, movil) VALUES ';
-        $q .= ' ("'.$id_usuario.'", 1, "'.$nombre.'", "'.$apellidos.'", "'.$direccion.'", "'.$cp.'", "'.$poblacion.'", "'.$movil.'")';
+        $q .= ' ("'.$id_usuario.'", '.$pred.', "'.$nombre.'", "'.$apellidos.'", "'.$direccion.'", "'.$cp.'", "'.$poblacion.'", "'.$movil.'")';
         return $this->execute_query($q);
     }
 

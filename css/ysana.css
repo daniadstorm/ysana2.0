@@ -56,7 +56,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     /* background-image: url("../img/test1.jpeg"); */
 }
 .parallax-home3{
-    height: 350px;
+    height: 400px;
     background-image: url("../img/home/5.jpeg");
     /* background-attachment: scroll; */
 }
@@ -69,7 +69,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     background-position: top right;
     background-repeat: no-repeat;
     background-size: inherit; */
-    background-image: url("../img/test3.png");
+    background-image: url("../img/home/6.jpg");
 }
 .parallax-home5{
     /* height: 80%; */
@@ -854,13 +854,19 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     width: 100%;
     background-color: var(--ysana-color-2);
     margin-top: 3rem;
+    max-height: 140px;
 }
 #franjafarmacia{
-    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.franjfarm{
+    display: inline-flex;
 }
 .btn.b-white{
     border: 2px solid #FFF;
@@ -1153,11 +1159,32 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     margin-right: 2rem;
 } */
 #carrito{
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 #carrito .ttl, #carrito2 .ttl{
-    border-bottom: 1px solid #000;
+    margin-bottom: 1rem;
 }
+#carrito .table th, #carrito2 .table th{
+    opacity: .7;
+}
+#carrito td a{
+    color: var(--ysana-color-2);
+}
+#carrito .input-group .btn{
+    border-color: var(--ysana-color-2);
+    background-color: white;
+    color: var(--ysana-color-2);
+}
+#carrito .input-group .btn:hover{
+    font-weight: bold;
+}
+#carrito .input-group .input-group-text{
+    border-color: var(--ysana-color-2);
+    background-color: var(--ysana-color-2);
+    color: white;
+}
+
 /* #carrito .ttl h1, #carrito2 .ttl h1{
     font-size: 1.75rem;
 } */
@@ -1180,15 +1207,45 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     border: 3px solid var(--ysana-color-2);
     border-radius: 4px;
     padding: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 #carrito .table .input-group, #carrito2 .table .input-group{
     min-width: 108px;
 }
-
+#carrito .modal-dialog .form-control{
+    border-color: var(--ysana-color-2);
+}
+#carrito .modal-dialog .form-control::placeholder{
+    color: var(--ysana-color-2);
+}
 .carrito-cart{
     flex-direction: column-reverse;
 }
-
+#carrito .modal-footer .btn-primary{
+    border-color: var(--ysana-color-2);
+    background-color: white;
+    color: var(--ysana-color-2);
+    transition: 250ms;
+}
+#carrito .modal-footer .btn-primary:hover{
+    border-color: var(--ysana-color-2);
+    background-color: var(--ysana-color-2);
+    color: white;
+    transition: 250ms;
+}
+/* #carrito .modal-footer .btn-secondary{
+    border-color: var(--ysana-color-2);
+    background-color: white;
+    color: var(--ysana-color-2);
+    transition: 250ms;
+}
+#carrito .modal-footer .btn-secondary:hover{
+    border-color: var(--ysana-color-2);
+    background-color: var(--ysana-color-2);
+    color: white;
+    transition: 250ms;
+} */
 .pull-xs-right{
     text-align: right!important;
 }
@@ -1214,6 +1271,83 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     justify-content: space-between;
     margin-bottom: 1.5rem;
 }
+
+.green-bg{
+    background-color: #eaeaea;
+}
+.otraDireccion{
+    color: var(--ysana-color-2)!important;
+}
+.btnAdddireccion{
+    border-color: var(--ysana-color-2);
+    background-color: white;
+    color: var(--ysana-color-2);
+    transition: 250ms;
+}
+.btnAdddireccion:hover{
+    border-color: var(--ysana-color-2);
+    background-color: var(--ysana-color-2);
+    color: white;
+    transition: 250ms;
+}
+.modal-body div{
+    background-color: #eaeaea;
+}
+.editarDireccion{
+    color: var(--ysana-color-2);
+}
+.delDireccion{
+    color: var(--ysana-color-2);
+}
+.ttl_direccion{
+    color: var(--ysana-color-2);
+}
+.contenedor .ttl h1{
+    color: var(--ysana-color-2);
+}
+.parallax-home1 .max-ysana{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#centrar-home1{
+    position: absolute;
+    top: 23%;
+    left: 0%;
+}
+#centrar-home1 h1{
+    color: var(--ysana-color-2);
+    font-weight: bold;
+}
+#centrar-home1 img{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1510,7 +1644,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 @media (min-width: 768px) {
     .marg-ysana{
         width: 100%;
-        margin-top: 140px;
+        margin-top: 130px;
     }
     #carrito .ttl h1, #carrito2 .ttl h1{
         font-size: 2rem;
@@ -1526,7 +1660,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         min-height: 550px;
     }
     .parallax-home4 {
-        background-size: inherit;
+        background-size: cover;
         height: 70%;
     }
     #form-contacto .contacto-1{
@@ -1575,6 +1709,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .total-carrito{
+        margin-bottom: 0rem;
+    }
     #carrito .ttl h1, #carrito2 .ttl h1{
         font-size: 1.75rem;
     }

@@ -414,8 +414,7 @@ echo $sM->add_cabecera($lng['header'][0]);
             <input type="hidden" name="Ds_SignatureVersion" value="<?php echo $Ds_version; ?>" />
             <input type="hidden" name="Ds_MerchantParameters" value="<?php echo $Ds_params; ?>" />
             <input type="hidden" name="Ds_Signature" value="<?php echo $Ds_signature; ?>" />
-                <input type="submit" class="btn_aceptar" style="padding:4px 22px;max-width:200px;margin-left:auto;margin-right:auto;"
-                    value="Aceptar" />
+            <input type="submit" class="btn_aceptar" style="padding:4px 22px;max-width:200px;margin-left:auto;margin-right:auto;" value="Aceptar" />
         </form>
     </div>
     

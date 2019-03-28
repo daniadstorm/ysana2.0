@@ -388,6 +388,8 @@ $lng['articulo-sueno'][7] = 'El sueño es un proceso biológico de gran compleji
 $lng['articulo-sueno'][8] = 'Cuando nuestro sueño es insuficiente, ya sea en cantidad o en calidad, esto puede tener repercusiones en la salud. Pueden darse alteraciones cognitivas que afecten a nuestro rendimiento mental, como una reducción en la velocidad de reacción y procesamiento de la información, en la consolidación de memorias, en tareas de atención complejas y en la capacidad para tomar decisiones; alteraciones del estado de ánimo, relacionadas con sintomatología ansiosa y depresiva, mayor irritabilidad y mayores dificultades en las relaciones personales; alteraciones de tipo vascular, como aumento de la presión arterial, fomento de enfermedades del corazón u ocurrencia de accidentes cerebrovasculares; o puede fomentar otras condiciones médicas relacionadas con la función hepática, obesidad o diabetes tipo 2. Es por ello que resulta de gran importancia el adoptar unos hábitos de sueño saludables que nos permitan conseguir una adecuada cantidad y calidad del sueño.';
 //articulo sueno______________________________________________________________________________________________
 
+/*  */
+
 //Tipo producto
 define('NORMAL', 1);
 define('EXPERIENCIA', 2);

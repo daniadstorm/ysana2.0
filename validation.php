@@ -222,11 +222,11 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
         //enviar mail
         if($rcc){
             echo 'ok';
-            header('Location: '.$ruta_inicio.'carrito/?compra=ok');
+            //header('Location: '.$ruta_inicio.'carrito/?compra=ok');
             exit();
         }else{
             echo 'ko';
-            header('Location: '.$ruta_inicio.'carrito/?compra=ko');
+            //header('Location: '.$ruta_inicio.'carrito/?compra=ko');
             exit();
         }
     }

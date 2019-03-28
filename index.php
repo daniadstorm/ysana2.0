@@ -34,7 +34,15 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         <?php include_once('inc/panel_top.inc.php'); //panel superior ?>
         <?php include_once('inc/menu.inc.php'); //menu superior ?>
     </div>
-    <div class="parallax parallax-home1"></div>
+    <div class="parallax parallax-home1 marg-ysana">
+        <div class="max-ysana">
+            <div id="centrar-home1">
+                <img width="96px" src="<?php echo $ruta_inicio; ?>img/logos/logoy.svg" alt="">
+                <h1>Con Ysana</h1>
+                <h1>enlaza con la vida sana</h1>
+            </div>
+        </div>
+    </div>
     <div class="texto-subhome">
         <h1>La fórmula del éxito: ejercicio, comida sana e Ysana</h1>
     </div>
@@ -50,11 +58,11 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                 </div>
                 <div class="col-12 col-md-6 panel panel-der">
                     <div id="polaroid">
-                        <div class="polaroid polzi-1"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-1" alt=""></div>
-                        <div class="polaroid polzi-2"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-2" alt=""></div>
-                        <div class="polaroid polzi-3"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-3" alt=""></div>
-                        <div class="polaroid polzi-4"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-4" alt=""></div>
-                        <div class="polaroid polzi-5"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.png" class="pol pol-5" alt=""></div>
+                        <div class="polaroid polzi-1"><img src="<?php echo $ruta_inicio ?>img/polaroid/1.jpg" class="pol pol-1" alt=""></div>
+                        <div class="polaroid polzi-2"><img src="<?php echo $ruta_inicio ?>img/polaroid/2.jpg" class="pol pol-2" alt=""></div>
+                        <div class="polaroid polzi-3"><img src="<?php echo $ruta_inicio ?>img/polaroid/3.jpg" class="pol pol-3" alt=""></div>
+                        <div class="polaroid polzi-4"><img src="<?php echo $ruta_inicio ?>img/polaroid/4.jpg" class="pol pol-4" alt=""></div>
+                        <div class="polaroid polzi-5"><img src="<?php echo $ruta_inicio ?>img/polaroid/5.jpg" class="pol pol-5" alt=""></div>
                     </div>
                 </div>
             </div>

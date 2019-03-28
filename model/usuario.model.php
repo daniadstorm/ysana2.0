@@ -447,7 +447,7 @@ class usuarioModel extends Model {
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
         $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
-        $mail->AddCC("info@ysana.es"); //CCopia
+        //$mail->AddCC("info@ysana.es"); //CCopia
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = utf8_encode('Titulo'); // Este es el titulo del email. 
         $mail->Body = utf8_encode($contenido); // Mensaje a enviar.
@@ -552,7 +552,7 @@ class usuarioModel extends Model {
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
         $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
-        $mail->AddCC("info@ysana.es"); //CCopia
+        //$mail->AddCC("info@ysana.es"); //CCopia
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
         $mail->Body = utf8_encode($op); // Mensaje a enviar.
@@ -645,10 +645,10 @@ class usuarioModel extends Model {
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
         $mail->AddAddress("dani.martinez@adstorm.es"); // Esta es la dirección a donde enviamos 
-        $mail->AddCC("info@ysana.es"); //CCopia
+        //$mail->AddCC("info@ysana.es"); //CCopia
         $mail->IsHTML(true); // El correo se envía como HTML 
-        $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
-        $mail->Body = utf8_encode($op); // Mensaje a enviar.
+        $mail->Subject = $asuntoMail; // Este es el titulo del email. 
+        $mail->Body = $op; // Mensaje a enviar.
         //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
         $exito = $mail->Send(); // Envía el correo.
 

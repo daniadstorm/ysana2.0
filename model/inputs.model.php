@@ -34,10 +34,12 @@ class inputsModel extends Model {
         if ($max_length != false) $aux_pattern .= $max_length;
         $aux_pattern .= '}';
         $str_tmp .= ($desactivado) ? ' disabled ' : '';
-        
+        if($aux_pattern=='.{,}'){
+            $aux_pattern = '';
+        }
         $o  = '<div class="'.$classdiv.'">';
         if (strlen($lbl) > 0) $o .= '<label>'.$lbl.'</label>';
-        $o .=   '<input autocomplete="off" type="'.$type.'" id="'.$id.'" name="'.$id.$arr.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" pattern="'.$aux_pattern.'" '.$aux_required.' title="'.$err_desc.'" '.$str_tmp.'>';
+        $o .=   '<input autocomplete="off" type="'.$type.'" id="'.$id.'" name="'.$id.$arr.'" value="'.$val.'" class="'.$class.'" placeholder="'.$placeholder.'" '.($aux_pattern!='' ? 'pattern=' : '').'"'.$aux_pattern.'" '.$aux_required.' title="'.$err_desc.'" '.$str_tmp.'>';
         $o .= '</div>';
             
         return $o;
@@ -111,8 +113,8 @@ class inputsModel extends Model {
         $aux_max = '';
         
         if ($allow_empty != false) $aux_required = '';
-        if ($min != false) $aux_min = 'min="'.$min_length.'"';
-        if ($max != false) $aux_max = 'max="'.$max_length.'"';
+        if ($min != false) $aux_min = 'min="'.$min.'"';
+        if ($max != false) $aux_max = 'max="'.$max.'"';
         
         $o = '<div class="form-group">';
         if (strlen($lbl) > 0) $o .= '<div><label>'.$lbl.'</label></div>';
