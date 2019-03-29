@@ -101,21 +101,21 @@ if(isset($_REQUEST['id_articulo']) && isset($_REQUEST['opc']) && $valid){
                 while($frguau = $rguau->fetch_assoc()){
                     if($frguau['total']>1){
                         $cM->restarArticulo($id_usuario, $_REQUEST['id_articulo']);
-                        header("Refresh:0");
+                        //header("Refresh:0");
                     }else{
                         $cM->delete_articulo_usuario_carrito($id_usuario, $_REQUEST['id_articulo']);
-                        header("Refresh:0");
+                        //header("Refresh:0");
                     }
                 }
             }
             break;
         case "suma":
             $cM->sumarArticulo($id_usuario, $_REQUEST['id_articulo']);
-            header("Refresh:0");
+            //header("Refresh:0");
             break;
         case "borrar":
             $cM->delete_articulo_usuario_carrito($id_usuario, $_REQUEST['id_articulo']);
-            header("Refresh:0");
+            //header("Refresh:0");
             break;
         default:
             break;
@@ -305,9 +305,10 @@ if(isset($_POST['btnPedido']) && $sumaTotalexp>0){
     $Ds_Merchant_Terminal = DS_MERCHANT_TERMINAL;
     $Ds_Merchant_TransactionType = DS_AUTORIZACION;
     $Ds_Merchant_Amount = $cM->get_gateway_format($sumaTotalexp);
+    //$Ds_Merchant_Amount = 0;
     $DS_Merchant_Currency = DS_EURO;
     $Ds_Merchant_Order = $aux_id_factura; //$aux_id_factura;
-    //$Ds_Merchant_Order = '00000888'; //$aux_id_factura;
+    //$Ds_Merchant_Order = '00030888'; //$aux_id_factura;
     $Ds_Merchant_MerchantURL = DS_MERCHANT_URL;
     $Ds_Merchant_MerchantURLOK = DS_MERCHANT_URL.'?factura='.$aux_id_factura.'&result=ok';
     $Ds_Merchant_MerchantURLKO = DS_MERCHANT_URL.'?factura='.$aux_id_factura.'&result=ko';
@@ -338,7 +339,7 @@ if(isset($_POST['btnPedido']) && $sumaTotalexp>0){
 }
 //LISTADO______________________________________________________________________
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
 ?>
 
 <body>

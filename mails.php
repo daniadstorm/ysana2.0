@@ -4,6 +4,7 @@ include_once('config/config.inc.php'); //cargando archivo de configuracion
 $uM = load_model('usuario');
 $hM = load_model('html');
 $iM = load_model('inputs');
+$sM = load_model('seo');
 $uM->control_sesion($ruta_inicio, ADMIN);
 
 $arr_filtro = array(//Estados
@@ -100,7 +101,7 @@ if(isset($_POST['enviarEmailPrueba'])){
 }
 //POST-POST______________________________________________________________________
 
-include_once('inc/cabecera.inc.php'); //cargando cabecera 
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin'); 
 
 echo '<script type="text/javascript">
 $(document).ready(function(){

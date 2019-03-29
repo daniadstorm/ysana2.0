@@ -48,7 +48,6 @@
             .done(function(data, textStatus, jqXHR){
                 strData = '';
                 data.forEach(function(element){
-                    console.log(element);
                     strData += '<li class="list-group-item item-farmacia" url-mapa="'+element.link_embed_farmacia+'"><div class="d-flex align-items-center"><label class="mb-0">'+element.nombrecompleto_farmacia+'</label><a class="img-g-maps ml-auto" href="'+element.link_gmaps_farmacia+'"><img src="https://img.icons8.com/color/32/000000/google-maps.png"></a></div></li>';
                 });
                 $("#listafarmacias").html(strData);

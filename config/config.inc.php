@@ -7,15 +7,17 @@ $uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $base = "http://" . $host . $uri . "/";
 /* $ruta_inicio = 'http://adstormcloud.ddns.net/ysana/';
 $ruta_archivos = 'http://adstormcloud.ddns.net/ysana/'; */
+$ruta_dominio = 'http://192.168.1.2';
 $ruta_inicio = 'http://192.168.1.2/ysana/';
 $ruta_archivos = 'http://192.168.1.2/ysana/';
 $ruta_actual = '';
+$path = '/ysana/';
 //$ruta_actual = (isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : $_SERVER['HTTP_REFERER']);
 /* $ruta_inicio = 'https://adstorm.es/ysana/';
 $ruta_archivos = 'https://adstorm.es/ysana/'; */
 /* $ruta_inicio = 'https://ysana.es/';
 $ruta_archivos = 'https://ysana.es/'; */
-$document_root = $_SERVER['DOCUMENT_ROOT'].'/ysana/';
+$document_root = $_SERVER['DOCUMENT_ROOT'].$path;
 
 //if($_SERVER['REQUEST_SCHEME']=="http") header('Location: '.$ruta_inicio);
 //====================================================================================
@@ -80,6 +82,7 @@ if(!isset($_SESSION)) session_start();
 //lang = el nombre del lenguaje
 //lng = array de textos
 /* if (isset($_POST['idioma_seleccionado'])) $_SESSION['lang'] = $_POST['idioma_seleccionado']; */
+
 if (isset($_REQUEST['idioma_seleccionado'])) $_SESSION['lang'] = $_REQUEST['idioma_seleccionado'];
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'ESP';
 $_SESSION['lang'] = $lang;

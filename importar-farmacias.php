@@ -5,6 +5,7 @@ $uM = load_model('usuario');
 $fM = load_model('farmacias');
 $iM = load_model('inputs');
 $hM = load_model('html');
+$sM = load_model('seo');
 $uM->control_sesion($ruta_inicio, ADMIN);
 
 /* echo '<pre>';
@@ -71,7 +72,8 @@ if(isset($_POST['subirFichero'])){
 //POST-POST______________________________________________________________________
 
 //POST-POST______________________________________________________________________
-include_once('inc/cabecera.inc.php'); //cargando cabecera 
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin'); 
+
 ?>
 
 <body>

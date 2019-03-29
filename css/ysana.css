@@ -972,7 +972,6 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     border: 3px solid var(--ysana-color-2);
 }
 #articulos-tienda .article-tienda:hover{
-    cursor: pointer;
     box-shadow: 0px 0px 12px rgb(160, 157, 157);
     transition: .2s;
 }
@@ -1350,20 +1349,197 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     font-size: 1rem;
     font-weight: 500;
 }
+.contenedor-info .informacion-extra{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1rem;
+}
+.contenedor-info .informacion-extra div{
+    display: flex;
+}
+.contenedor-info .informacion-extra .precio h1{
+    display: inline-block;
+    color: #575756;
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.contenedor-info .informacion-extra .cantidad p{
+    display: inline-block;
+    color: #575756;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.btn-add-cesta{
+    border-color: var(--ysana-color-2);
+    color: white;
+    background-color: var(--ysana-color-2);
+    border-radius: 6px;
+    min-width: 160px;
+}
+/* .contenedor-info .informacion-extra .precio{
+    flex-grow: 1;
+}
+.contenedor-info .informacion-extra .cantidad{
+    flex-grow: 1;
+}
+.contenedor-info .informacion-extra .cesta{
+    flex-grow: 1;
+} */
 
+#info-articulo .nav-tabs{
+    border-bottom: 1px solid transparent;
+    margin-bottom: 2rem;
+}
+#info-articulo .nav .nav-item{
+    margin-right: 4rem;
+}
+#info-articulo .nav .nav-item:last-child{
+    margin-right: 0rem;
+}
+#info-articulo .nav .nav-item .nav-link{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #575756;
+    font-weight: 600;
+}
+#info-articulo .nav .nav-link{
+    border: 0;
+    border-bottom: 3px solid transparent;
+}
+#info-articulo .nav .nav-item .nav-link.active{
+    border-color: #fff #fff var(--ysana-color-2) #fff;
+}
+#info-articulo .nav .nav-item .nav-link:hover{
+    border-color: #fff #fff var(--ysana-color-2) #fff;
+}
+#marg-producto{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
+#cantidad_prod{
+    margin-left: .5rem;
+    border-radius: 4px;
+    width: 44px;
+    height: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
+#clubysana-home .logocy{
+    position: relative;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+#clubysana-home .logocy::before{
+    content: '';
+    position: absolute;
+    width: 70%;
+    border-bottom: 1px solid var(--ysana-color-7);
+    bottom: 0;
+}
+#clubysana-home .logocy img{
+    max-width: 450px;
+}
+#clubysana-home .texto{
+    margin-top: 3rem;
+}
+#clubysana-home .texto p{
+    margin: 0 auto;
+    max-width: 640px;
+    text-align: center;
+    color: var(--ysana-color-7);
+    font-weight: 500;
+}
+#clubysana-home .cta{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+#clubysana-home .cta .btn-enlace{
+    margin: 0 auto;
+    padding: .375rem 1rem;
+    background-color: var(--ysana-color-7);
+    color: white;
+    border: var(--ysana-color-7);
+    font-weight: 500;
+}
+#clubysana-home .skyline{
+    margin: 4rem auto;
+}
+.anchoclubysana{
+    margin: 0 auto;
+    width: 70%;
+}
 
+#clubysana-general .nav-tabs{
+    border-bottom: 1px solid transparent;
+}
+#clubysana-general .nav-tabs .nav-item.quitar-lateral:first-child::after{
+    position: absolute;
+    content: "";
+    height: 70%;
+    width: 0px;
+    top: 50%;
+    background-color: var(--ysana-color-7);
+    right: -2px;
+    transform: translate(-50%, -50%);
+}
+#clubysana-general .nav-tabs .nav-item:first-child::after{
+    position: absolute;
+    content: "";
+    height: 70%;
+    width: 2px;
+    top: 50%;
+    background-color: var(--ysana-color-7);
+    right: -2px;
+    transform: translate(-50%, -50%);
+}
 
+#clubysana-general .nav-tabs .nav-item{
+    border: 1px solid transparent;
+    position: relative;
+}
+#clubysana-general .nav-tabs .nav-link{
+    color: var(--ysana-color-7);
+    font-weight: 100;
+}
+#clubysana-general .nav-tabs .quitar-lateral .nav-link{
+    color: var(--ysana-color-2);
+}
+#clubysana-general .nav-tabs .nav-link:hover{
+    border-color: transparent;
+}
+#clubysana-general .nav-tabs .nav-link.active{
+    border: 1px solid transparent;
+    font-weight: 600;
+}
 
+.cy-color .ttl{
+    color: var(--ysana-color-7);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.cy-color .form-group label{
+    color: var(--ysana-color-7);
+    font-weight: 600;
+}
 
-
-
-
-
-
-
-
+.y-color .ttl{
+    color: var(--ysana-color-2);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.y-color .form-group label{
+    color: var(--ysana-color-2);
+    font-weight: 600;
+}
 
 
 

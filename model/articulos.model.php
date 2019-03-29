@@ -163,7 +163,7 @@ class articulosModel extends Model {
         $q  = ' SELECT * FROM '.$this->pre.'categorias c ';
         //$q  .= ' INNER JOIN '.$this->pre.'categorias_articulo ca ';
         //$q  .= ' ON c.id_categoria=ca.id_categoria ';
-        $q .= ' WHERE c.lang="'.$id_lang.'" AND c.nombre_categoria<>"Packs experiencias" ';
+        $q .= ' WHERE c.lang="'.$id_lang.'" AND c.nombre_categoria<>"Packs experiencias" and c.nombre_categoria<>"Experience Packs" ';
         return $this->execute_query($q);
     }
 

@@ -88,7 +88,7 @@ class usuarioModel extends Model {
         if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= $nivel) {
             return true;
         } else {
-            header('Location: '.$ruta_inicio.'index.php'); exit();
+            header('Location: '.$ruta_inicio); exit();
         }
     }
 }

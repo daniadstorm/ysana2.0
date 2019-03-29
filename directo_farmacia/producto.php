@@ -67,7 +67,6 @@ if(isset($_POST['enviarazoho'])){
 //btnCestaph
 
 if((isset($_POST['btnCesta']) || isset($_POST['btnCestaph'])) && $id_usuario>0){
-    echo $cM->get_articulo_carrito($id_usuario, $_POST['id_articulo']);
     if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
         $rsa = $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], $cantidad_prod);
     }else{

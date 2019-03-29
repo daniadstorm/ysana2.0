@@ -6,6 +6,17 @@ if($_SERVER["REQUEST_URI"]=="/ysana/clubysana/"){
 $outIdioma = '';
 $outComodin = '';
 $rutaysana = '';
+$frmIdioma = '';
+if(isset($_SERVER['REDIRECT_URL'])){
+    if(!strpos($_SERVER['REDIRECT_URL'], "/ysana/login/") && !strpos($_SERVER['REDIRECT_URL'], "/ysana/registro/") && !strpos($_SERVER['REDIRECT_URL'], "/ysana/clubysana/login/") && !strpos($_SERVER['REDIRECT_URL'], "/ysana/clubysana/registro/")){
+        $request_uri = (isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : '');
+    }else{
+        $request_uri = '';
+    }
+}else{
+    $request_uri = '';
+}
+
 $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
 if($clubysana!=''){
     $rutaysana = 'clubysana/';
@@ -14,16 +25,23 @@ foreach ($arrlang as $key => $value) {
     if($lang==$value){
         $outIdioma .= '<a class="nav-link dropdown-toggle -'.$clubysana.'" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$value.'</a>';
     }
-    $outComodin .= '<a class="dropdown-item -'.$clubysana.'" href="'.$ruta_actual.'?idioma_seleccionado='.$value.'">'.$value.'</a>';
+    $outComodin .= '<a nombre="idioma'.$value.'" class="dropdown-item frmidioma -'.$clubysana.'" href="#">'.$value.'</a>';
+    $frmIdioma .= '<form class="d-none" id="idioma'.$value.'" method="post"><input name="idioma_seleccionado" type="text" value="'.$value.'"></form>';
 }
 ?>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.frmidioma').on('click', function(){
+            $("#"+$(this).attr("nombre")).submit();
+        });
+    });
+</script>
 <div class="navbar-ad">
     <div id="panel-top" class="max-ysana mt-2">
         <div class="ttl">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link bienvenidoysana -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>">Bienvenido a Ysana Vida Sana</a>
+                    <a class="nav-link bienvenidoysana -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>"><?php echo ($clubysana) ? 'Bienvenido a ClubYsana' : 'Bienvenido a Ysana Vida Sana' ?></a>
                 </li>
             </ul>
         </div>
@@ -40,10 +58,10 @@ foreach ($arrlang as $key => $value) {
                     </li>
                     <?php if(!isset($_SESSION['id_usuario'])){ ?>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>login">Acceder</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>login?ruta_anterior=<?php echo $request_uri; ?>">Acceder</a>
                         </li>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>registro">Date de alta</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>registro?ruta_anterior=<?php echo $request_uri; ?>">Date de alta</a>
                         </li>
                     <?php }else{ ?>
                         <?php if($_SESSION['id_tipo_usuario']==ADMIN){ ?>
@@ -52,7 +70,7 @@ foreach ($arrlang as $key => $value) {
                             </li>
                         <?php } ?>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>profile">Mi Perfil</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?><?php echo ($clubysana!='') ? 'clubysana/' : ''; ?>profile">Mi Perfil</a>
                         </li>
                         <li class="nav-item no-drop">
                             <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>login?unlogin">Cerrar sesión</a>
@@ -63,6 +81,7 @@ foreach ($arrlang as $key => $value) {
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php echo $outComodin; ?>
                         </div>
+                        <?php echo $frmIdioma; ?>
                     </li>
                 </ul>
             </div>

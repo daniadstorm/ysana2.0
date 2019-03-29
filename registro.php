@@ -12,7 +12,7 @@ $contrasenya_usuario = '';
 $captcha = false;
 $arr_err = array();
 $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
-
+$ruta_anterior = (isset($_REQUEST['ruta_anterior']) ? $_REQUEST['ruta_anterior'] : '/');
 
 //GET___________________________________________________________________________
 
@@ -45,7 +45,7 @@ if(isset($_POST['id_usuario'])){
 
 //CONTROL_______________________________________________________________________
 if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
-    header('Location: '.$ruta_inicio.'index.php');
+    header('Location: '.$ruta_dominio.$ruta_anterior);
 }
 //CONTROL_______________________________________________________________________
 echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 

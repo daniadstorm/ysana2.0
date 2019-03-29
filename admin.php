@@ -2,8 +2,10 @@
 include_once('config/config.inc.php'); //cargando archivo de configuracion
 $uM = load_model('usuario');
 $iM = load_model('inputs');
+$sM = load_model('seo');
 $uM->control_sesion($ruta_inicio, ADMIN);
-include_once('inc/cabecera.inc.php'); //cargando cabecera 
+
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin'); 
 ?>
 
 <body>

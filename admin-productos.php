@@ -5,6 +5,7 @@ $uM = load_model('usuario');
 $aM = load_model('articulos');
 $iM = load_model('inputs');
 $hM = load_model('html');
+$sM = load_model('seo');
 $uM->control_sesion($ruta_inicio, ADMIN);
 
 $out1 = '';
@@ -185,7 +186,7 @@ if(isset($arrlang)){
 //POST-POST______________________________________________________________________
 
 //POST-POST______________________________________________________________________
-include_once('inc/cabecera.inc.php'); //cargando cabecera 
+echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin');
 ?>
 
 <body>

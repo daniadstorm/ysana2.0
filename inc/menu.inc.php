@@ -7,7 +7,7 @@ $arrMenu = array(
         2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
         3 => array( 'txt'=>'Experiencias', 'url'=>'experiencia' ),
         4 => array( 'txt'=>'Farmacias', 'url'=>'directo-farmacia' ),
-        5 => array( 'txt'=>'Club Ysana', 'url'=>'#' ),
+        5 => array( 'txt'=>'Club Ysana', 'url'=>'clubysana' ),
         6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
     ),
     2 => array(

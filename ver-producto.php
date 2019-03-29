@@ -6,6 +6,7 @@ $iM = load_model('inputs');
 $aM = load_model('articulos');
 $cM = load_model('carrito');
 $sM = load_model('seo');
+$hM = load_model('html');
 
 
 //VARIABLES_________________________________________________
@@ -23,6 +24,8 @@ $id_articulo = '';
 $imgs_producto = '';
 $usosEditor = '';
 $infoEditor = '';
+$str_info = '';
+$str_error = '';
 
 //VARIABLES_________________________________________________
 
@@ -31,7 +34,60 @@ $infoEditor = '';
 //GET_______________________________________________________
 
 //POST______________________________________________________
-
+if(isset($_POST['enviarazoho'])){
+    $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/producto/record/add/', array(
+        'authtoken' => AUTHTOKEN,
+        'scope' => SCOPE,
+        'id_producto' => $_POST['id_producto'],
+        'categoria' => $_POST['nombre_categoria'],
+        'titulo' => str_replace('%','&#37;',$_POST['nombre']),
+        'descripcion' => substr(str_replace('%','&#37;',$_POST['descripcion']), 0, 255),
+        'imagen' => $_POST['imagen'],
+        'precio' => $_POST['precio'],
+        'tipo_tienda' => $_POST['tipo_tienda']
+    ));
+}
+if(isset($_POST['addCesta'])){
+    if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
+        $rsa = $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], $cantidad_prod);
+    }else{
+        $raac = $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], $cantidad_prod, "df");
+    }
+}
+if(isset($_POST['editorusos'])){
+    if(!$aM->existeuso($id_producto)){
+        $rau = $aM->addusos($id_producto, $_POST['editorusos']);
+        if($rau){
+            $str_info = 'Usos añadido correctamente!';
+        }else{
+            $str_error = 'Error al añadir usos';
+        }
+    }else{
+        $rau = $aM->updateusos($id_producto, $_POST['editorusos']);
+        if($rau){
+            $str_info = 'Usos actualizado correctamente!';
+        }else{
+            $str_error = 'Usos no actualizado';
+        }
+    }
+}
+if(isset($_POST['editorinfo'])){
+    if(!$aM->existeinfo($id_producto)){
+        $rau = $aM->addinfo($id_producto, $_POST['editorinfo']);
+        if($rau){
+            $str_info = 'Info añadido correctamente!';
+        }else{
+            $str_error = 'Error al añadir info';
+        }
+    }else{
+        $rau = $aM->updateinfo($id_producto, $_POST['editorinfo']);
+        if($rau){
+            $str_info = 'Info actualizado correctamente!';
+        }else{
+            $str_error = 'Info no actualizado';
+        }
+    }
+}
 //POST______________________________________________________
 
 //LISTADO___________________________________________________
@@ -101,16 +157,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         <?php include_once('inc/menu.inc.php'); //menu superior ?>
     </div>
     <div class="marg-ysana">
-        <div class="max-ysana">
-            <!-- <pre><?php
-                echo 'id_usuario: '.$id_usuario.'<br>';
-                echo 'id_producto: '.$id_producto.'<br>';
-                echo 'id_articulo: '.$id_articulo.'<br>';
-                echo 'cantidad_prod: '.$cantidad_prod.'<br>';
-                //echo 'usosEditor: '.$usosEditor.'<br>';
-                //echo 'infoEditor: '.$infoEditor.'<br>';
-                echo 'imgs_producto: '.$imgs_producto.'<br>';
-            ?></pre> -->
+        <div id="marg-producto" class="max-ysana">
             <div id="ver-articulo" class="row">
                 <div class="col-md-5">
                     <div class="imagen">
@@ -130,15 +177,96 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                 <p><?php echo $descripcion; ?></p>
                             </div>
                         </div>
-                        <div class="informacion-extra">
-                            <div class="precio"><?php echo $precio; ?></div>
-                            <div class="cantidad"><?php echo $cantidad_prod; ?></div>
-                            <div class="cesta"></div>
-                        </div>
+                        <form method="post" action="">
+                            <div class="informacion-extra">
+                                <div class="precio">
+                                    <h1><?php echo $precio; ?>€</h1>
+                                </div>
+                                <div class="cantidad">
+                                    <p>Cantidad</p>
+                                    <select name="cantidad_productos" id="cantidad_prod">
+                                        <?php for ($i=1; $i <= 10; $i++) { 
+                                            echo '<option value="'.$i.'">'.$i.'</option>';
+                                        } ?>
+                                    </select>
+                                </div>
+                                <div class="cesta">
+                                    <?php echo $iM->get_input_hidden('id_articulo', $id_articulo); ?>
+                                    <button class="btn btn-add-cesta" name="addCesta">Añadir a la cesta</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <?php
+            echo ($str_info!='' ? $hM->get_alert_success($str_info) : '');
+            echo ($str_error!='' ? $hM->get_alert_danger($str_error) : '');
+            ?>
+            <div id="info-articulo">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="usos-tab" data-toggle="tab" href="#usos" role="tab" aria-controls="usos"
+                            aria-selected="true">Usos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
+                            aria-selected="false">Información Adicional</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="usos" role="tabpanel" aria-labelledby="usos-tab">
+                        <?php if(isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario']==ADMIN){ ?>
+                            <form method="post">
+                                <textarea id="editorusos" name="editorusos"></textarea>
+                                <div class="d-flex justify-content-end mt-2">
+                                    <button type="submit" class="btn btn-outline-secondary"><?php echo $lng['productos_ysana'][17]; ?></button>
+                                </div>
+                            </form>
+                        <?php
+                        }else{
+                            echo $usosEditor;
+                        } ?>
+                    </div>
+                    <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                        <?php if(isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario']==ADMIN){ ?>
+                        <form method="post">
+                            <textarea id="editorinfo" name="editorinfo"></textarea>
+                            <div class="d-flex justify-content-end mt-2">
+                                <button type="submit" class="btn btn-outline-secondary"><?php echo $lng['productos_ysana'][17]; ?></button>
+                            </div>
+                        </form>
+                        <?php
+                        }else{
+                            echo $infoEditor;
+                        } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php
+    if(isset($_SESSION['id_tipo_usuario'])){
+        if($_SESSION['id_tipo_usuario']==ADMIN){
+            echo '<script type="text/javascript">
+            $(document).ready(function () {
+                $("#editorusos").summernote({
+                    height: 300,
+                    minHeight: null,
+                    maxHeight: null
+                });
+                $("#editorusos").summernote(\'code\', `'.$usosEditor.'`);
+                $("#editorinfo").summernote({
+                    height: 300,
+                    minHeight: null,
+                    maxHeight: null
+                });
+                $("#editorinfo").summernote(\'code\', `'.$infoEditor.'`);
+            });
+        </script>';
+        }
+    }
+    ?>
+    <?php include_once('inc/footer.inc.php'); //panel superior ?>
 </body>
 </html>

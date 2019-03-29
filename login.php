@@ -13,6 +13,7 @@ $contrasenya_usuario = '';
 $arr_err = array();
 $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
 $str_info = (isset($_REQUEST['str_info']) ? 'Te has registado correctamente' : '');
+$ruta_anterior = (isset($_REQUEST['ruta_anterior']) ? $_REQUEST['ruta_anterior'] : '/');
 
 //GET___________________________________________________________________________
 if (isset($_GET['unlogin'])) {
@@ -35,7 +36,7 @@ if (isset($_POST['nombre_usuario'])) { //si viene de submit de login
 /* echo '<pre>'.print_r($_POST).'</pre>'; */
 //CONTROL_______________________________________________________________________
 if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
-    header('Location: '.$ruta_inicio);
+    header('Location: '.$ruta_dominio.$ruta_anterior);
 }
 //CONTROL_______________________________________________________________________
 

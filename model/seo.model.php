@@ -5,7 +5,7 @@ class seoModel {
     function __construct() {
     }
 
-    function add_cabecera($ruta_inicio, $title="Ysana", $lang="es", $description="",$keywords=""){
+    function add_cabecera($ruta_inicio, $title="Ysana", $admin=false, $lang="es", $description="",$keywords=""){
         $o = '';
         $o .= '<!DOCTYPE html>
         <html lang="'.$lang.'">
@@ -29,8 +29,8 @@ class seoModel {
             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
             <script src="'.$ruta_inicio.'js/jquery-ui.min.js"></script>
             <script type="text/javascript" src="'.$ruta_inicio.'js/ysana.js"></script>
-            <link type="text/css" href="'.$ruta_inicio.'css/ysana.css" rel="Stylesheet" />
-            <script src="'.$ruta_inicio.'js/plugins/sortable.js" type="text/javascript"></script>
+            <link type="text/css" href="'.$ruta_inicio.'css/ysana'.$admin.'.css" rel="Stylesheet" />';
+            $o .= '<script src="'.$ruta_inicio.'js/plugins/sortable.js" type="text/javascript"></script>
             <script src="'.$ruta_inicio.'js/fileinput.min.js" type="text/javascript"></script>
             <script src="'.$ruta_inicio.'js/locales/fr.js" type="text/javascript"></script>
             <script src="'.$ruta_inicio.'js/locales/es.js" type="text/javascript"></script>

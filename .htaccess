@@ -25,6 +25,12 @@ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 RewriteRule ^sobre-ysana/$ sobreysana.php [L]
 RewriteRule ^productos-ysana/$ productos.php [L]
 RewriteRule ^admin/$ admin.php [L]
+RewriteRule ^admin/mails/$ mails.php [L]
+RewriteRule ^admin/verproductos/$ ver-productos.php [L]
+RewriteRule ^admin/productos/$ admin-productos.php [L]
+RewriteRule ^admin/importarfarmacias/$ importar-farmacias.php [L]
+RewriteRule ^admin/clubysana/$ admin-clubysana.php [L]
+
 
 
 RewriteRule ^login/$ login.php [L]
@@ -33,6 +39,7 @@ RewriteRule ^registro/$ registro.php [L]
 RewriteRule ^clubysana/registro/$ registro.php?clubysana=cy [L]
 RewriteRule ^forgot-password/$ forgot-password.php [L]
 RewriteRule ^unsubscribe/$ dar-de-baja.php [L]
+RewriteRule ^profile/$ clubysana/clubysana.php?opcion=perfil [L]
 
 RewriteRule ^producto/(.*)/$ ver-producto.php?id=$1 [L]
 
@@ -41,7 +48,9 @@ RewriteRule ^producto/(.*)/$ ver-producto.php?id=$1 [L]
 RewriteRule ^carrito/$ carrito.php [L]
 RewriteRule ^carrito/datos/$ carrito-datos.php [L]
 
-RewriteRule ^clubysana/$ clubysana.php?clubysana=cy [L]
+RewriteRule ^clubysana/$ clubysana/index.php?clubysana=cy [L]
+RewriteRule ^clubysana/profile/$ clubysana/clubysana.php?clubysana=cy&opcion=perfil [L]
+RewriteRule ^clubysana/miexperiencia/$ clubysana/clubysana.php?clubysana=cy&opcion=experiencia [L]
 #RewriteRule ^clubysana/registro/$ clubysana/registro.php [L]
 #RewriteRule ^clubysana/areapersonal/$ clubysana/areapersonal.php [L]
 #RewriteRule ^clubysana/areapersonal/neurologia/$ clubysana/neurologia.php [L]
