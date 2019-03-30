@@ -37,7 +37,7 @@ class articulosModel extends Model {
         return $this->execute_query($q);
     }
 
-    function get_info_articulo($url){
+    function get_info_articulo($url, $lang){
         $q  = ' SELECT a.*,al.*,c.nombre_categoria FROM '.$this->pre.'articulos a ';
         $q .= ' INNER JOIN '.$this->pre.'articulos_lang as al ';
         $q .= ' ON a.id_articulo=al.id_articulo ';
@@ -48,6 +48,7 @@ class articulosModel extends Model {
         $q .= ' WHERE a.deleted = 0 ';
         $q .= ' AND a.activo = 1 ';
         $q .= ' AND al.urlseo = "'.$url.'" ';
+        $q .= ' AND c.lang = "'.$lang.'" ';
         return $this->execute_query($q);
     }
 

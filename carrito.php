@@ -68,6 +68,10 @@ $id_carrito = 0;
 print_r($_POST);
 echo '</pre>'; */
 
+if (!isset($_SESSION['id_tipo_usuario'])) { //si hay login
+    header('Location: '.$ruta_inicio.'login');
+}
+
 //GET__________________________________________________________________________
 if(isset($_GET['opc'])){
     switch($_GET['opc']){
@@ -377,10 +381,11 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                     <div class="info-resumen">
                         <div class="d-flex justify-content-between">
                             <h5 class="ttl_direccion">
-                                <?php echo $lng['forms'][38]; ?>
+                                Dirección de entrega
                             </h5>
                             <a class="otraDireccion" data-toggle="modal" data-target="#modalDireccionSeleccionar">
-                                <?php echo $lng['forms'][39]; ?></a>
+                                Seleccionar otra dirección
+                            </a>
                         </div>
                         <!-- Modal -->
                         <div class="modal fade" id="modalDireccionSeleccionar" tabindex="-1" role="dialog" aria-labelledby="modalDireccionSeleccionarLabel"
@@ -411,8 +416,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                             <?php echo $old; ?>
                         </div>
                         <div class="botones mt-3">
-                            <button id="btndireccion" class="btnAdddireccion btn btn-lg" data-toggle="modal" data-target="#modalDireccion">
-                                <?php echo $lng['forms'][40]; ?></button>
+                            <button id="btndireccion" class="btnAdddireccion btn btn-lg" data-toggle="modal" data-target="#modalDireccion">+ Añadir direccion de envio</button>
                         </div>
                         <!-- Modal -->
                         <div class="modal fade" id="modalDireccion" tabindex="-1" role="dialog" aria-labelledby="modalDireccionLabel"

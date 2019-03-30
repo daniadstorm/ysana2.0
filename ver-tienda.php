@@ -61,7 +61,7 @@ foreach ($arr_categorias as $key => $value) {
     $outCatContenido .= '</div></div>';
 }
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
+echo $sM->add_cabecera($ruta_inicio, '');
 
 ?>
 

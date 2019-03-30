@@ -18,7 +18,7 @@ $ruta_archivos = 'https://adstorm.es/ysana/'; */
 /* $ruta_inicio = 'https://ysana.es/';
 $ruta_archivos = 'https://ysana.es/'; */
 $document_root = $_SERVER['DOCUMENT_ROOT'].$path;
-
+error_reporting(0);
 //if($_SERVER['REQUEST_SCHEME']=="http") header('Location: '.$ruta_inicio);
 //====================================================================================
 /* CONSTANTES */

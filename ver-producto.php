@@ -98,7 +98,7 @@ if(isset($_POST['editorinfo'])){
 
 //LISTADO___________________________________________________
 if($id_producto!=''){
-    $rgia = $aM->get_info_articulo($id_producto);
+    $rgia = $aM->get_info_articulo($id_producto, $_SESSION['id_lang']);
     if($rgia){
         while($frgia = $rgia->fetch_assoc()){
             $nombre=$frgia['nombre'];
