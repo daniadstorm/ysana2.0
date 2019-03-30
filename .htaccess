@@ -46,7 +46,6 @@ RewriteRule ^producto/(.*)/$ ver-producto.php?id=$1 [L]
 #RewriteRule ^directo_farmacia/carrito/$ directo_farmacia/carrito.php [L]
 #RewriteRule ^experiencia/carrito/$ experiencia/carrito.php [L]
 RewriteRule ^carrito/$ carrito.php [L]
-RewriteRule ^carrito/datos/$ carrito-datos.php [L]
 
 RewriteRule ^clubysana/$ clubysana/index.php?clubysana=cy [L]
 RewriteRule ^clubysana/profile/$ clubysana/clubysana.php?clubysana=cy&opcion=perfil [L]
