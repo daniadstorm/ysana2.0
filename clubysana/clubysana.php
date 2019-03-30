@@ -23,8 +23,8 @@ $outPedidosArt = '';
 $outCategoria = '';
 
 $arr_genero = array(
-    'M' => $lng['forms'][8],
-    'F' => $lng['forms'][7]
+    'M' => $lng[47],
+    'F' => $lng[48]
 );
 $opcion = 'experiencia';
 $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
@@ -42,18 +42,18 @@ if(isset($_POST['dardeBaja'])){
     if($raru){
         $rufm = $uM->user_unsuscribe_mail($_POST['email_usuario'], $raru, $ruta_inicio, $_SESSION['id_lang']);
         if($rufm){
-            $str_info = $lng['clubysana'][12];
+            $str_info = $lng[49];
         }else{
-            $str_error = 'Error al enviar el mail';
+            $str_error = $lng[50];
         }
     }else{
-        $str_error = $lng['forms'][18];
+        $str_error = $lng[51];
     }
 }
 if(isset($_POST['guardarDatos'])){
     $ruu = $uM->update_usuario($id_usuario, $_POST['nombre_usuario'], $_POST['apellidos_usuario'], $_POST['genero']);
     if($ruu){
-        $str_info = 'Datos actualizados';
+        $str_info = $lng[52];
         $rapz = $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/usuarios/record/add/', array(
             'authtoken' => AUTHTOKEN,
             'scope' => SCOPE,
@@ -64,7 +64,7 @@ if(isset($_POST['guardarDatos'])){
             'genero_usuario' => $_POST['genero']
         ));
     }else{
-        $str_error = $lng['forms'][20];
+        $str_error = $lng[53];
     }
 }
 //POST__________________________________________________________________________
@@ -80,7 +80,7 @@ if($id_usuario>0){
             $genero = $frgdu['genero'];
         }
     }else{
-        $str_error = $lng['forms'][21];
+        $str_error = $lng[54];
     }
     $rgpu = $uM->get_pedidos_usuario($id_usuario, 1);
     if($rgpu){
@@ -95,10 +95,10 @@ if($id_usuario>0){
             <table class="table table-responsive-sm table-sm">
                 <thead>
                     <tr>
-                        <th scope="col" class="p-row">Articulo</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Uds.</th>
-                        <th scope="col">Total</th>
+                        <th scope="col" class="p-row">'.$lng[55].'</th>
+                        <th scope="col">'.$lng[56].'</th>
+                        <th scope="col">'.$lng[57].'</th>
+                        <th scope="col">'.$lng[58].'</th>
                     </tr>
                 </thead>
                 <tbody>';
@@ -141,7 +141,7 @@ if($id_usuario>0){
                     $outCategoria .= '<div class="subcat">
                     <div class="redonda"></div>
                     <img src="'.$ruta_inicio.'img/clubysana/'.$rfgdeii['imagen'].'" class="img" alt="">
-                    <a href="#" class="txt-subcat">Sueño</a>
+                    <a href="#" class="txt-subcat">'.$lng[59].'</a>
                 </div>';
                 }
             }
@@ -153,7 +153,7 @@ if($id_usuario>0){
 //CONTROL_______________________________________________________________________
 
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 ?>
 
 <body>
@@ -166,18 +166,18 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         <div class="general px-4">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item <?php echo ($clubysana=='') ? 'quitar-lateral' : ''; ?>">
-                    <a class="nav-link <?php echo ($opcion=="perfil") ? 'active' : ''; ?>" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="perfil" aria-selected="true">Mi perfil</a>
+                    <a class="nav-link <?php echo ($opcion=="perfil") ? 'active' : ''; ?>" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="perfil" aria-selected="true"><?php echo $lng[60]; ?></a>
                 </li>
                 <?php if($clubysana!=''){ ?>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($opcion=="experiencia") ? 'active' : ''; ?>" id="experiencia-tab" data-toggle="tab" href="#experiencia" role="tab" aria-controls="experiencia" aria-selected="false">Tu Experiencia</a>
+                    <a class="nav-link <?php echo ($opcion=="experiencia") ? 'active' : ''; ?>" id="experiencia-tab" data-toggle="tab" href="#experiencia" role="tab" aria-controls="experiencia" aria-selected="false"><?php echo $lng[61]; ?></a>
                 </li>
                 <?php } ?>
             </ul>
             <div class="tab-content mt-3" id="myTabContent">
                 <div class="tab-pane fade <?php echo ($opcion=="perfil") ? 'show active' : ''; ?>" id="perfil" role="tabpanel" aria-labelledby="perfil-tab">
                     <div class="<?php echo ($clubysana) ? 'cy-color' : 'y-color'; ?> cont-max">
-                        <div class="ttl">Mis datos personales</div>
+                        <div class="ttl"><?php echo $lng[62]; ?></div>
                         <div class="errores">
                             <?php
                             if($str_error) echo $hM->get_alert_danger($str_error);
@@ -187,27 +187,27 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                         <form action="" method="post" class="form-row mb-0 mt-3">
                             <?php
                             echo $iM->get_input_hidden('id_usuario', $id_usuario);
-                            echo $iM->get_input_text('nombre_usuario', $nombre_usuario, 'form-control', $lng['forms'][4], '','', '', '', '', 'form-group col-md-6', false);
-                            echo $iM->get_input_text('apellidos_usuario', $apellidos_usuario, 'form-control', $lng['forms'][5], '','', '', '', '', 'form-group col-md-6', false);
+                            echo $iM->get_input_text('nombre_usuario', $nombre_usuario, 'form-control', $lng[40], '','', '', '', '', 'form-group col-md-6', false);
+                            echo $iM->get_input_text('apellidos_usuario', $apellidos_usuario, 'form-control', $lng[41], '','', '', '', '', 'form-group col-md-6', false);
                             echo $iM->get_input_hidden('email_usuario', $email_usuario);
-                            echo $iM->get_input_text('email', $email_usuario, 'form-control', $lng['forms'][14], '','', '', '', '', 'form-group col-md-6', true);
-                            echo $iM->get_select('genero', $genero, $arr_genero, 'form-control', 'Genero', false, false, 'form-group col-md-6');
+                            echo $iM->get_input_text('email', $email_usuario, 'form-control', $lng[32], '','', '', '', '', 'form-group col-md-6', true);
+                            echo $iM->get_select('genero', $genero, $arr_genero, 'form-control', $lng[63], false, false, 'form-group col-md-6');
                             ?>
                             <div class="ml-auto btnmisdatos">
-                                <button type="submit" class="btn btn-baja" name="dardeBaja">Darme de baja</button>
-                                <button type="submit" class="btn btn-guardar" name="guardarDatos"><?php echo $lng['forms'][19]; ?></button>
+                                <button type="submit" class="btn btn-baja" name="dardeBaja"><?php echo $lng[64]; ?></button>
+                                <button type="submit" class="btn btn-guardar" name="guardarDatos"><?php echo $lng[65]; ?></button>
                             </div>
                         </form>
                     </div>
                     <?php if(!$clubysana){ ?>
-                    <div class="pedidos-<?php echo ($clubysana) ? 'cy' : 'y'; ?>-ttl">Mis pedidos</div>
+                    <div class="pedidos-<?php echo ($clubysana) ? 'cy' : 'y'; ?>-ttl"><?php echo $lng[66]; ?></div>
                     <div class="pedidos pedidos-<?php echo ($clubysana) ? 'cy' : 'y'; ?>">
                         <table class="table table-responsive-sm table-sm">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="p-row">Número de pedido</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Información adicional</th>
+                                    <th scope="col" class="p-row"><?php echo $lng[67]; ?></th>
+                                    <th scope="col"><?php echo $lng[68]; ?></th>
+                                    <th scope="col"><?php echo $lng[69]; ?></th>
                                 </tr>
                             </thead>
                             <tbody>

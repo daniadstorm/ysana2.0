@@ -8,7 +8,7 @@ $sM = load_model('seo');
 if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
     header('Location: '.$ruta_inicio.'clubysana/miexperiencia/');
 }
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 ?>
 
 <body>
@@ -22,10 +22,10 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
             <img src="<?php echo $ruta_inicio; ?>img/svg/clubysana.svg" alt="">
         </div>
         <div class="texto">
-            <p>Únete ahora al Club Ysana y enlaza con la vida sana. La primera comunidad online orientada al autocuidado y los hábitos de vida saludables, donde podrás compartir tus inquietudes, obtener consejos personalizados de farmacéuticos y coachs profesionales, obtener premios, acceder a muestras de producto en primicia, compartir experiencias y, por supuesto, mejorar tus hábitos de vida de manera constante.</p>
+            <p><?php echo $lng[45]; ?></p>
         </div>
         <div class="cta">
-            <a href="<?php echo $ruta_inicio; ?>clubysana/registro" class="btn btn-enlace">UNIRME AL CLUB YSANA</a>
+            <a href="<?php echo $ruta_inicio; ?>clubysana/registro" class="btn btn-enlace"><?php echo $lng[46]; ?></a>
         </div>
         <div class="skyline anchoclubysana">
             <img src="<?php echo $ruta_inicio; ?>img/svg/skylinemagenta.svg" alt="">
