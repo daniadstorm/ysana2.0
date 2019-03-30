@@ -6,7 +6,7 @@ $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
     <div class="max-ysana">
         <div class="redes">
             <div class="texto">
-                <h1>Síguenos en las redes</h1>
+                <h1><?php echo $lng[70]; ?></h1>
             </div>
             <div class="imagenes">
                 <img src="<?php echo $ruta_inicio; ?>img/redes/10.svg" width="64px" alt="">
