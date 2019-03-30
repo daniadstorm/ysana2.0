@@ -26,6 +26,7 @@ $usosEditor = '';
 $infoEditor = '';
 $str_info = '';
 $str_error = '';
+$tipo_tienda = '';
 
 //VARIABLES_________________________________________________
 
@@ -51,7 +52,12 @@ if(isset($_POST['addCesta'])){
     if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
         $rsa = $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], $cantidad_prod);
     }else{
-        $raac = $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], $cantidad_prod, "df");
+        if($_POST['tipo_tienda']==1){
+            $tipo_tienda = "exp";
+        }else{
+            $tipo_tienda = "df";
+        }
+        $raac = $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], $cantidad_prod, $tipo_tienda);
     }
 }
 if(isset($_POST['editorusos'])){
@@ -102,6 +108,7 @@ if($id_producto!=''){
             $precio=$frgia['precio'];
             $id_articulo=$frgia['id_articulo'];
             $imgs_producto = $frgia['img'];
+            $tipo_tienda = $frgia['tipo_tienda'];
             //array_push($imgs_producto, $frgia['img']);
         }
         $imgPortada = $imgs_producto[0];
@@ -192,6 +199,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                 </div>
                                 <div class="cesta">
                                     <?php echo $iM->get_input_hidden('id_articulo', $id_articulo); ?>
+                                    <?php echo $iM->get_input_hidden('tipo_tienda', $tipo_tienda); ?>
                                     <button class="btn btn-add-cesta" name="addCesta">Añadir a la cesta</button>
                                 </div>
                             </div>

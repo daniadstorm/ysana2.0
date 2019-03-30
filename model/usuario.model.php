@@ -179,6 +179,27 @@ class usuarioModel extends Model {
         return $this->execute_query($q);
     }
 
+    function get_pedidos_usuario($id_usuario, $completado=1) {
+        $q = ' SELECT * FROM '.$this->pre.'pedidos p ';
+        $q .= ' WHERE p.id_usuario='.$id_usuario.' ';
+        $q .= ' AND p.completado='.$completado.' ';
+        return $this->execute_query($q);
+    }
+    function get_detalles_pedido($id_pedido) {
+        $q = ' SELECT * FROM '.$this->pre.'detallepedidos dp ';
+        $q .= ' WHERE dp.id_pedido='.$id_pedido.' ';
+        return $this->execute_query($q);
+    }
+
+    /* unction get_pedidos_usuario($id_usuario, $completado=1) {
+        $q = ' SELECT * FROM '.$this->pre.'pedidos p ';
+        $q .= ' INNER JOIN '.$this->pre.'detallepedidos dp ';
+        $q .= ' ON p.id_pedido=dp.id_pedido ';
+        $q .= ' WHERE p.id_usuario='.$id_usuario.' ';
+        $q .= ' AND p.completado='.$completado.' ';
+        return $this->execute_query($q);
+    } */
+
     function get_datos_pedido_y_usuario($id_pedido) {
         $q = ' SELECT * FROM '.$this->pre.'pedidos p ';
         $q .= ' INNER JOIN '.$this->pre.'usuarios u ';

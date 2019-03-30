@@ -1,6 +1,9 @@
 <?php 
 $url = $_SERVER['REQUEST_URI'];
 $outMenu = '';
+$carritoTotal = '0';
+$id_usuario = (isset($_SESSION['id_usuario'])) ? $_SESSION['id_usuario'] : '';
+$cM = load_model('carrito');
 $arrMenu = array(
     1 => array(
         1 => array( 'txt'=>'Inicio', 'url'=>'' ),
@@ -24,6 +27,7 @@ foreach ($arrMenu[$_SESSION['id_lang']] as $key => $value) {
     $url_format = str_replace('//', '/', $url_format);
     $outMenu .= '<li class="nav-item '.($url_format==$url ? 'active' : '').'"><a class="nav-link" href="'.$ruta_inicio.$value['url'].'">'.$value['txt'].'</a></li>';
 }
+if($id_usuario!='') $carritoTotal = $cM->get_total_carrito($id_usuario);
 ?>
 
 <header id="menu-top" class="max-ysana">
@@ -39,7 +43,8 @@ foreach ($arrMenu[$_SESSION['id_lang']] as $key => $value) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <?php echo $outMenu; ?>
-                <li class="nav-item">
+                <li class="nav-item nav-item-carrito">
+                    <label><?php echo $carritoTotal; ?></label>
                     <a class="nav-link" href="<?php echo $ruta_inicio; ?>carrito">
                         <img src="<?php echo $ruta_inicio; ?>img/svg/carrito-01.svg" width="32px" alt="">
                     </a>

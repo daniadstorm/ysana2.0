@@ -7,11 +7,9 @@ $iM = load_model('inputs');
 $sM = load_model('seo');
 if($uM->control_sesion($ruta_inicio, USER)){
     if(isset($_REQUEST['clubysana'])) header('Location: '.$ruta_inicio.'clubysana/miexperiencia');
-    else header('Location: '.$ruta_inicio.'profile');
 }
+
 echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
-
-
 ?>
 
 <body>

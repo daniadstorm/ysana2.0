@@ -131,6 +131,15 @@ class carritoModel extends Model {
         return $this->execute_query($q);
     }
 
+    function get_total_carrito($id_usuario){
+        $q = ' SELECT * FROM '.$this->pre.'carrito_compra ca ';
+        $q .= ' WHERE ca.id_usuario='.$id_usuario.' ';
+        $q .= ' AND ca.estado<>"pendiente" ';
+        $r = $this->execute_query($q);
+        if ($r) return $r->num_rows;
+            else return false;
+    }
+
     function get_articulo_carrito($id_usuario, $id_articulo){
         $q = ' SELECT * FROM '.$this->pre.'carrito_compra ca ';
         $q .= ' WHERE ca.id_usuario='.$id_usuario.' ';

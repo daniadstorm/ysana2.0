@@ -175,9 +175,9 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
         if($rgc){
             while($frgc = $rgc->fetch_assoc()){
                 $cM->add_detallepedidos($_REQUEST['factura'], $frgc['cantidad'], $frgc['precio'], $frgc['nombre']);
-                echo '<pre>';
+                /* echo '<pre>';
                 print_r($frgc);
-                echo '</pre>';
+                echo '</pre>'; */
                 $uM->add_post_zoho('https://creator.zoho.eu/api/pharmalink/json/ysanaapp/form/relacional_pedido/record/add/', array(
                     'authtoken' => AUTHTOKEN,
                     'scope' => SCOPE,
@@ -191,9 +191,9 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
         $rgpd = $uM->get_datos_pedido($factura);
         if($rgpd){
             while($frgpd = $rgpd->fetch_assoc()){
-                echo '<pre>';
+                /* echo '<pre>';
                 print_r($frgpd);
-                echo '</pre>';
+                echo '</pre>'; */
                 $id_correo_usuario = '';
                 $rgmu = $uM->get_mail_user($_SESSION['id_usuario']);
                 if($rgmu){
@@ -222,11 +222,11 @@ if(isset($_REQUEST['saved_order']) && isset($_REQUEST['factura'])){
         //enviar mail
         if($rcc){
             echo 'ok';
-            //header('Location: '.$ruta_inicio.'carrito/?compra=ok');
+            header('Location: '.$ruta_inicio.'carrito/?compra=ok');
             exit();
         }else{
             echo 'ko';
-            //header('Location: '.$ruta_inicio.'carrito/?compra=ko');
+            header('Location: '.$ruta_inicio.'carrito/?compra=ko');
             exit();
         }
     }

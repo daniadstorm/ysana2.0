@@ -1315,7 +1315,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 #centrar-home1{
     position: absolute;
     top: 23%;
-    left: 0%;
+    left: 5%;
 }
 #centrar-home1 h1{
     color: var(--ysana-color-2);
@@ -1541,6 +1541,379 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     font-weight: 600;
 }
 
+.btnmisdatos{
+
+}
+.btnmisdatos .btn{
+    font-weight: 500;
+    padding: .175rem 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    border-radius: .4rem;
+}
+.cy-color .btnmisdatos .btn:hover{
+    box-shadow: 0px 0px 6px #e6007e;
+}
+
+.cy-color .btnmisdatos .btn-baja{
+    border: 1px solid var(--ysana-color-7);
+    background-color: white;
+    color: var(--ysana-color-7);
+}
+.cy-color .btnmisdatos .btn-guardar{
+    border: 1px solid var(--ysana-color-7);
+    background-color: var(--ysana-color-7);
+    color: white;
+}
+
+.y-color .btnmisdatos .btn:hover{
+    box-shadow: 0px 0px 6px var(--ysana-color-2);
+}
+
+.y-color .btnmisdatos .btn-baja{
+    border: 1px solid var(--ysana-color-2);
+    background-color: white;
+    color: var(--ysana-color-2);
+}
+.y-color .btnmisdatos .btn-guardar{
+    border: 1px solid var(--ysana-color-2);
+    background-color: var(--ysana-color-2);
+    color: white;
+}
+.pedidos{
+    margin-top: 1rem;
+}
+.pedidos .table .p-row{
+    text-align: left;
+}
+.pedidos .table th, .pedidos .table td{
+    text-align: center;
+}
+.pedidos tr td.cs-4{
+    padding: .3rem 0rem;
+}
+.pedidos tr td.cs-4 .card{
+    border: 1px solid rgba(0,0,0,0);
+}
+.pedidos tr td.cs-4 .card-body{
+    padding: 1.25rem 0rem;
+}
+.pedidos-y-ttl{
+    margin-top: 3rem;
+    color: var(--ysana-color-2);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.pedidos-cy-ttl{
+    margin-top: 3rem;
+    color: var(--ysana-color-7);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.pedidos .table th{
+    border-top: 1px solid transparent;
+    
+    font-weight: 600;
+}
+.pedidos-y .table th{
+    border-bottom: 1px solid var(--ysana-color-2);
+    color: var(--ysana-color-2);
+}
+.pedidos .table td{
+    border-top: 1px solid transparent;
+}
+.pedidos .sub-pedido td{
+    vertical-align: middle;
+}
+.pedidos .card .table th{
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-weight: 600;
+}
+.sub-pedido .collapsed .rtt-img{
+    transform: rotate(180deg);
+    transition: .5s;
+    width: 48px;
+}
+.sub-pedido .rtt-img{
+    width: 48px;
+    transition: .5s;
+}
+.nav-item-carrito label{
+    position: absolute;
+    right: 1.25rem;
+    border: 1px solid var(--ysana-color-2);
+    border-radius: 16px;
+    margin-bottom: 0;
+    /* padding: 0rem .4rem; */
+    text-align: center;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    color: var(--ysana-color-2);
+}
+
+#bannerredes{
+    min-height: 100px;
+    margin-top: auto;
+    height: 100px;
+}
+#bannerredes .max-ysana{
+    height: 100%;
+}
+#bannerredes.redes-y{
+    background-color: var(--ysana-color-2);
+}
+#bannerredes.redes-cy{
+    background-color: var(--ysana-color-7);
+}
+#bannerredes .redes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+#bannerredes .redes h1{
+    color: white;
+    font-weight: 500;
+}
+#tuexp .contenedor-categoria{
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+#tuexp .contenedor-categoria img.img{
+    width: 100%;
+    max-width: 200px;
+    /* min-width: 200px; */
+}
+#tuexp .contenedor-categoria .txt-cat{
+    font-weight: 600;
+    font-size: 2rem;
+}
+#tuexp .contenedor-categoria .categoria{
+    text-align: center;
+    padding: 0rem 3rem;
+    border-right: 1px solid var(--ysana-color-7);
+}
+#tuexp .contenedor-categoria .cont-general{
+    display: flex;
+    justify-content: space-around;
+    margin: auto 0;
+    height: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+#tuexp .contenedor-categoria .subcat{
+    display: flex;
+    justify-content: center;
+    max-width: 250px;
+    flex-direction: column;
+}
+#tuexp .contenedor-categoria .subcat .txt-subcat{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #575756;
+}
+#tuexp .contenedor-categoria .subcat:hover .txt-subcat{
+    font-weight: 600;
+    text-decoration: none;
+}
+#tuexp .contenedor-categoria .subcat img.img{
+    width: 100%;
+    max-width: 130px;
+    min-width: 130px;
+}
+#tuexp .contenedor-categoria .subcat .redonda{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    background-color: transparent;
+    z-index: -1;
+    border-radius: 50%;
+    transition: 300ms;
+}
+#tuexp .contenedor-categoria .subcat:hover .redonda{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    background-color: var(--ysana-color-7);
+    z-index: -1;
+    border-radius: 50%;
+    transition: 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1746,8 +2119,21 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     }
 }
 @media (max-width: 768px){
+    #tuexp .contenedor-categoria .categoria{
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid var(--ysana-color-7);
+    }
+    #tuexp .contenedor-categoria .subcategorias{
+        margin-top: 2rem;
+    }
     .navbar-ad{
         display: none;
+    }
+    #tuexp .contenedor-categoria{
+        padding: 0rem 3rem;
+    }
+    #tuexp .contenedor-categoria .txt-cat{
+
     }
 }
 @media (min-width: 576px) {
@@ -1844,6 +2230,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 
 @media (min-width: 768px) {
+    #tuexp .contenedor-categoria .txt-cat{
+        font-size: 1.25rem;
+    }
     .marg-ysana{
         width: 100%;
         margin-top: 130px;
