@@ -48,7 +48,7 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
     header('Location: '.$ruta_dominio.$ruta_anterior);
 }
 //CONTROL_______________________________________________________________________
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
 
 ?>
 <body>
@@ -59,23 +59,23 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
     <div class="max-ysana w-100">
         <div class="login-responsive">
             <div class="wrapper">
-                <h1 class="titulo<?php echo $clubysana; ?>">Registrate en Ysana</h1>
+                <h1 class="titulo<?php echo $clubysana; ?>"><?php echo $lng[39]; ?></h1>
                 <?php if(isset($str_errores) && $str_errores) echo $hM->get_alert($str_errores,"alert-danger"); ?>
                 <form method="post" class="form-row">
                     <?php echo $iM->get_input_hidden('authtoken', AUTHTOKEN); ?>
                     <?php echo $iM->get_input_hidden('scope', SCOPE); ?>
                     <?php echo $iM->get_input_hidden('id_usuario', 0); ?>
-                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-8', '', 'Nombre', '', '', '', false, 'form-group w-100', false); ?>
-                    <?php echo $iM->get_input_text('apellidos_usuario', '', 'form-control col-12 col-md-8', '', 'Apellidos', '', '', '', false, 'form-group w-100', false); ?>
-                    <?php echo $iM->get_input_text('email_usuario', '', 'form-control col-12 col-md-8', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
-                    <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>
-                    <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', 'Confirmar Password', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-8', '', $lng[40], '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('apellidos_usuario', '', 'form-control col-12 col-md-8', '', $lng[41], '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('email_usuario', '', 'form-control col-12 col-md-8', '', $lng[32], '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', $lng[33], '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('password_usuario', '', 'form-control col-12 col-md-8', '', $lng[42], '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo '<input hidden type="text" name="cy" value="'.$clubysana.'">'; ?>
-                    <input id="button_enviar" name="button_enviar" type="submit" class="btn btn-bg-color-2 btn-bg-color-2<?php echo $clubysana; ?>" value="Iniciar Sesión" disabled>
+                    <input id="button_enviar" name="button_enviar" type="submit" class="btn btn-bg-color-2 btn-bg-color-2<?php echo $clubysana; ?>" value="<?php echo $lng[34]; ?>" disabled>
                 </form>
             </div>
             <div class="footer">
-                <p>¿Ya tienes una cuenta? <a href="<?php echo $ruta_inicio; ?>login">Inicia sesion »</a></p>
+                <p><?php echo $lng[43]; ?> <a href="<?php echo $ruta_inicio; ?>login"><?php echo $lng[44]; ?> »</a></p>
             </div>
         </div>
     </div>    

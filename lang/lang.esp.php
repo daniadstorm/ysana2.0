@@ -1,2780 +1,3006 @@
 <?php
 if (!isset($lng)) $lng = array();
-//header____________________________________________________________________________________________
-$lng['header'][0] = 'Complementos para una vida sana - Ysana marca de confianza';
-//header____________________________________________________________________________________________
 
-//franjaTop_________________________________________________________________________________________
-$lng['ttl_idioma'] = 'Idioma';
-//franjaTop_________________________________________________________________________________________
-
-//panel_top_________________________________________________________________________________________
-$lng['panel_top'][0] = 'Bienvenido a Ysana® Vida Sana';
-$lng['panel_top'][1] = 'Acceder';
-$lng['panel_top'][2] = 'Date de alta';
-$lng['panel_top'][3] = 'Bienvenido a Club Ysana®';
-$lng['panel_top'][4] = 'Cerrar sesión';
-$lng['panel_top'][5] = 'Próximamente';
-//panel_top_________________________________________________________________________________________
-
-//navbar_inicio_____________________________________________________________________________________
-$lng['navbar_inicio'][0] = 'Productos';
-$lng['navbar_inicio'][1] = 'Comprar experiencias';
-$lng['navbar_inicio'][2] = 'Directo a Farmacia';
-$lng['navbar_inicio'][3] = 'Contacto';
-$lng['navbar_inicio'][4] = 'Bienvenido a Ysana® Vida Sana';
-$lng['navbar_inicio'][5] = 'Busca tu producto Ysana®';
-//navbar_inicio_____________________________________________________________________________________
-
-//breadcrumb________________________________________________________________________________________
-$lng['breadcrumb'][0] = 'Directo a Farmacia';
-$lng['breadcrumb'][1] = 'Experiencia';
-$lng['breadcrumb'][2] = 'Club Ysana';
-$lng['breadcrumb'][3] = 'Tu Area Personal';
-$lng['breadcrumb'][4] = 'Tu Experiencia';
-//breadcrumb________________________________________________________________________________________
-
-//forms_____________________________________________________________________________________________
-$lng['forms'][0] = 'Usuario';
-$lng['forms'][1] = 'Contraseña';
-$lng['forms'][2] = 'Iniciar Sesión';
-$lng['forms'][3] = '¿Has olvidado tu contraseña?';
-$lng['forms'][4] = 'Nombre';
-$lng['forms'][5] = 'Apellidos';
-$lng['forms'][6] = 'Email';
-$lng['forms'][7] = 'Femenino';
-$lng['forms'][8] = 'Masculino';
-$lng['forms'][9] = 'Contraseña';
-$lng['forms'][10] = 'Confirmar contraseña';
-$lng['forms'][11] = 'Crear cuenta';
-$lng['forms'][12] = 'No se ha podido dar de alta el usuario';
-$lng['forms'][13] = 'Este correo ya existe';
-$lng['forms'][14] = 'Correo electrónico';
-$lng['forms'][15] = 'Enviar';
-$lng['forms'][16] = 'Contraseña cambiada';
-$lng['forms'][17] = 'No ha sido posible cambiar la contraseña';
-$lng['forms'][18] = 'No ha sido posible envíar el correo de recuperación de contraseña';
-$lng['forms'][19] = 'Guardar cambios';
-$lng['forms'][20] = 'Error al actualizar los datos';
-$lng['forms'][21] = 'No ha sido posible cargar los datos';
-$lng['forms'][22] = 'Dirección de envío eliminada correctamente';
-$lng['forms'][23] = 'No ha sido posible eliminar la dirección de envío';
-$lng['forms'][24] = 'No ha sido posible seleccionar la dirección de envío';
-$lng['forms'][25] = 'Dirección de envío añadia correctamente';
-$lng['forms'][26] = 'Error al añadir la dirección de envío';
-$lng['forms'][27] = 'Dirección de envío actualizada correctamente';
-$lng['forms'][28] = 'Editar';
-$lng['forms'][29] = 'Eliminar';
-$lng['forms'][30] = 'Añadir y/o Editar dirección de Envio';
-$lng['forms'][31] = 'Dirección';
-$lng['forms'][32] = 'Código Postal';
-$lng['forms'][33] = 'Población';
-$lng['forms'][34] = 'Móvil';
-$lng['forms'][35] = 'Guardar';
-$lng['forms'][36] = 'Cancelar';
-$lng['forms'][37] = 'Enviar a esta dirección';
-$lng['forms'][38] = 'Dirección de entrega';
-$lng['forms'][39] = 'Seleccionar otra dirección';
-$lng['forms'][40] = '+ Añadir dirección de envío';
-$lng['forms'][41] = 'Envío de 1 artículo(s)';
-$lng['forms'][42] = 'Darme de alta';
-$lng['forms'][43] = 'Darme de baja';
-//forms_____________________________________________________________________________________________
-
-//index.php_____________________________________________________________________________________
-$lng['index']['img'][0] = 'home-clubysana1.svg';
-$lng['index'][0] = '¿Quién es Ysana® Vida Sana?';
-$lng['index'][1] = 'Ysana® es una marca del laboratorio Pharmalink dedicada al bienestar de las personas. Nuestro equipo profesional y dinámico está comprometido con la innovación constante para incorporar extractos naturales a productos que ayuden a las personas a mantener un estilo de vida saludable.';
-$lng['index'][2] = 'Novedades';
-$lng['index'][3] = 'AdelgaYsana Forte';
-$lng['index'][4] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus. Aenean efficitur nisi at fringilla molestie.';
-$lng['index'][5] = 'AdelgaYsana Forte';
-$lng['index'][6] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis id sapien a dapibus. Aenean efficitur nisi at fringilla molestie.';
-$lng['index'][7] = 'Contacta';
-$lng['index'][8] = 'con Ysana®';
-$lng['index'][9] = 'Si deseas más información sobre nuestro laboratorio o gama de productos naturales para el autocuidado, no dudes en contactarnos.';
-$lng['index'][10] = 'Acepto la <a href="politica-privacidad">politica de privacidad</a>';
-$lng['index'][11] = 'Enviar';
-$lng['index'][12] = 'Nombre y Apellidos';
-$lng['index'][13] = 'E-mail';
-$lng['index'][14] = 'Dirección';
-$lng['index'][15] = 'CP';
-$lng['index'][16] = 'Telf';
-$lng['index'][17] = 'Tu pregunta';
-$lng['index'][18] = 'Asimismo y de acuerdo con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, en su artículo 21, solicitamos también su consentimiento expreso para enviarle publicidad de nuestros productos o promociones que consideremos puedan ser de su interés, por medios electrónicos.';
-$lng['index'][19] = 'He leído y acepto recibir publicidad o información promocional de PHARMALINK SL.';
-$lng['index'][20] = 'He leído y no acepto recibir publicidad o información promocional de PHARMALINK SL.';
-$lng['index'][21] = 'Le informamos que podrá revocar en cualquier momento el consentimiento prestado a la recepción de comunicaciones comerciales enviando un e-mail a la dirección de correo electrónico: info@ysana.es .';
-$lng['index'][22] = 'Este usuario ha sido dado de baja';
-$lng['index'][23] = 'Usuario o contraseña incorrecto';
-//index.php_____________________________________________________________________________________
-
-//clubysana.php_________________________________________________________________________________
-$lng['clubysana']['ttl'] = 'PRONTO EN YSANA<sup>®</sup>';
-$lng['clubysana']['txt'] = 'Muy pronto lanzaremos el Club Ysana para todas aquellas personas que desean practicar el atuocuidado y sentirse bien.<br>La primera comunidad online en la que compartir tus inquietudes, además de obtener consejos personalizados de farmacéuticos y coachs profesionales.';
-$lng['clubysana'][0] = 'Únete ahora al Club Ysana y enlaza con la vida sana. La primera comunidad online orientada al autocuidado y los hábitos de vida saludables, donde podrás compartir tus inquietudes, obtener consejos personalizados de farmacéuticos y coachs profesionales, obtener premios, acceder a muestras de producto en primicia, compartir experiencias y, por supuesto, mejorar tus hábitos de vida de manera constante.';
-$lng['clubysana'][1] = 'Unirme al Club Ysana®';
-$lng['clubysana'][2] = 'Ver más';
-$lng['clubysana'][3] = 'Tus datos personales';
-$lng['clubysana'][4] = 'Obtén ahora un diagnóstico de hábitos de sueño. Te damos la bienvenida a la experiencia Eficaps';
-$lng['clubysana'][5] = 'Pedir diagnóstico del sueño gratis ahora';
-$lng['clubysana'][6] = 'Ysana® 360º Neurología';
-$lng['clubysana'][7] = 'Tu Área Personal';
-$lng['clubysana'][8] = 'Tu Experiencia';
-$lng['clubysana'][9] = 'Sueño';
-$lng['clubysana'][10] = 'Pronto Disponible';
-$lng['clubysana'][11] = 'UNIRME AL CLUB YSANA®';
-$lng['clubysana'][12] = 'Correo para dar de baja enviado';
-//clubysana.php_________________________________________________________________________________
-
-//productos.php_____________________________________________________________________________________
-$lng['productos'][0] = 'Todos los productos de Ysana® Vida Sana';
-$lng['productos'][1] = 'YSANA® PONE LA GRAN EXPERIENCIA TERAPÉUTICA A NIVEL INTERNACIONAL DE PHARMALINK AL SERVICIO DE SUS GAMAS DE PRODUCTOS NATURALES, PARA TU CUIDADO Y EL DE LOS TUYOS.';
-$lng['productos'][2] = 'Una nueva generación de complementos alimenticios tecnológicamente naturales en cápsulas inteligentes de liberación controlada.';
-$lng['productos'][3] = 'Eficaps®';
-$lng['productos'][4] = 'Productos creados para cuidar y mejorar la vida diaria de la mujer, diseñados pensando en ellas.';
-$lng['productos'][5] = 'Mujer';
-$lng['productos'][6] = 'La línea destinada a ayudar a tu cuerpo y mente a mantener el estado natural recomendado y adoptar un estilo de vida saludable.';
-$lng['productos'][7] = 'Autocuidado';
-$lng['productos'][8] = 'Nuestros productos Senior están formulados para ayudar a nuestros mayores a llevar un estilo de vida pleno y lleno de energía.';
-$lng['productos'][9] = 'Senior';
-$lng['productos'][10] = 'La gama Free Nose® consolidada en la limpieza, el tratamiento y la hidratación del sistema respiratorio. Porque lo natural es sentirse bien, respira.';
-$lng['productos'][11] = 'Respira';
-$lng['productos'][12] = 'La serie de productos para los más pequeños destinada a cuidar de ellos de la forma más natural.';
-$lng['productos'][13] = 'Infantil';
-//productos.php_____________________________________________________________________________________
-
-//productos_ysana___________________________________________________________________________________
-$lng['productos_ysana'][0] = 'Elige el tuyo';
-$lng['productos_ysana'][1] = 'Puedes elegir entre recibir en casa uno de nuestros Pack Experiencia o recoger el producto Ysana® de tu preferencia en tu farmacia más cercana.';
-$lng['productos_ysana'][2] = 'Elige el producto principal de tu pack y nosotros los complementamos con los artículos que mejorarán sus resultados. Así tendrás una experiencia completa y descubrirás todos los beneficios de enlazar con la vida sana. ¡Pídelo ahora y recíbelo en casa!';
-$lng['productos_ysana'][3] = 'Reserva un producto Ysana®, recógelo en tu farmacia más cercana, y no lo pagues hasta el momento de la recogida.';
-$lng['productos_ysana'][4] = 'Usos';
-$lng['productos_ysana'][5] = 'Información Adicional';
-$lng['productos_ysana'][6] = 'Valoraciones';
-$lng['productos_ysana'][7] = 'Elige tu Farmacia';
-$lng['productos_ysana'][8] = 'Añadir a la Cesta';
-$lng['productos_ysana'][9] = 'Cantidad';
-$lng['productos_ysana'][10] = 'En stock';
-$lng['productos_ysana'][11] = 'Sin stock';
-$lng['productos_ysana'][12] = 'Añadir a Favoritos';
-$lng['productos_ysana'][13] = 'Compartir';
-$lng['productos_ysana'][14] = 'LO LAMENTAMOS';
-$lng['productos_ysana'][15] = 'PRODUCTO SIN STOCK';
-$lng['productos_ysana'][16] = '¿Quiere que le avisemos cuando volvamos a tener stock?';
-$lng['productos_ysana'][17] = 'Guardar';
-$lng['productos_ysana'][18] = 'Información Producto';
-$lng['productos_ysana'][19] = 'Para poder ver este contenido debes de loguearte en ClubYsana';
-$lng['productos_ysana'][20] = 'Consejo Farmacéutico';
-$lng['productos_ysana'][21] = 'Preguntas';
-$lng['productos_ysana'][22] = 'Para poder ver este contenido debes de loguearte en ClubYsana';
-$lng['productos_ysana'][23] = 'Comentarios de los Coach del Club Ysana disponibles próximamente';
-$lng['productos_ysana'][24] = 'Las valoraciones de productos Ysana® disponibles próximamente';
-
-//productos_ysana___________________________________________________________________________________
-
-//footer.php_____________________________________________________________________________________
-$lng['footer'][0] = 'Sobre Ysana';
-$lng['footer'][1] = 'Valores';
-$lng['footer'][2] = 'Compañía';
-$lng['footer'][3] = 'Compromiso';
-$lng['footer'][4] = 'Código ético';
-$lng['footer'][5] = 'Sala Prensa';
-$lng['footer'][6] = 'Prensa';
-$lng['footer'][7] = 'Noticias';
-$lng['footer'][8] = 'Vídeos';
-$lng['footer'][9] = 'Material gráfico';
-$lng['footer'][10] = 'Políticas';
-$lng['footer'][11] = 'Aviso Legal';
-$lng['footer'][12] = 'Política de privacidad';
-$lng['footer'][13] = 'Política de cookies';
-$lng['footer'][14] = 'Política de ventas';
-$lng['footer'][15] = 'Club Ysana';
-$lng['footer'][16] = 'Productos';
-//legal---------------------------------------------
-//cookies accept--
-$lng['footer'][17] = 'Este sitio web utiliza Cookies propias y de terceros, para recopilar información con la finalidad de mejorar nuestros servicios, para mostrarle publicidad relacionada con sus preferencias, así como analizar sus hábitos de navegación. Si continua navegando, supone la aceptación de la instalación de las mismas. El usuario tiene la posibilidad de configurar su navegador pudiendo, si así lo desea, impedir que sean instaladas en su disco duro, aunque deberá tener en cuenta que dicha acción podrá ocasionar dificultades de navegación de la página web.';
-$lng['footer'][18] = 'Aceptar';
-$lng['footer'][19] = 'Cómo configurar';
-//cookies accept--
-//como configurar cookies--
-$lng['footer'][20] = 'Asimismo, PHARMALINK SL informa al usuario de que tiene la posibilidad de configurar su navegador de modo que se le informe de la recepción de cookies, pudiendo, si así lo desea, impedir que sean instaladas en su disco duro.';
-$lng['footer'][21] = 'A continuación le proporcionamos los enlaces de diversos navegadores, a través de los cuales podrá realizar dicha configuración:';
-$lng['footer'][22] = 'Firefox desde aquí: <a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we">http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we</a>';
-$lng['footer'][23] = 'Chrome desde aquí: <a href="http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647">http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647</a>';
-$lng['footer'][24] = 'Explorer desde aquí: <a href="http://windows.microsoft.com/es-es/internet-explorer/delete-manage-cookies#ie=ie-10">http://windows.microsoft.com/es-es/internet-explorer/delete-manage-cookies#ie=ie-10</a>';
-$lng['footer'][25] = 'Safari desde aquí: <a href="https://support.apple.com/kb/ph17191?locale=es_ES">https://support.apple.com/kb/ph17191?locale=es_ES</a>';
-$lng['footer'][26] = 'Opera desde aquí: <a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html">http://help.opera.com/Windows/11.50/es-ES/cookies.html</a>';
-$lng['footer'][27] = 'Por último, recuerde que debe actualizar la tabla del documento Política de cookies, indicando las Cookies que su página web instala con la navegación por parte del usuario';
-$lng['footer'][28] = 'CÓMO CONFIGURAR COOKIES';
-//como configurar cookies--
-//politica cookies--
-$lng['footer'][29] = 'POLÍTICA DE COOKIES';
-$lng['footer'][30] = 'Una Cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contenga y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario.';
-$lng['footer'][31] = 'Las cookies son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos, facilitándole la navegación y usabilidad de nuestra web.';
-$lng['footer'][32] = 'La información que le proporcionamos a continuación, le ayudará a comprender los diferentes tipos de cookies:';
-$lng['footer'][33] = 'TIPOS DE COOKIES';
-$lng['footer'][34] = 'SEGÚN LA ENTIDAD QUE LAS GESTIONE';
-$lng['footer'][35] = 'Cookies propias';
-$lng['footer'][36] = 'Son aquellas que se recaban por el propio editor para prestar el servicio solicitado por el usuario.';
-$lng['footer'][37] = 'Cookies de tercero';
-$lng['footer'][38] = 'Son aquellas que son recabadas y gestionadas por un tercero, estas no se pueden considerar propias.';
-$lng['footer'][39] = 'SEGÚN EL PLAZO DE TIEMPO QUE PERMANEZCAN ACTIVADAS';
-$lng['footer'][40] = 'Cookies de sesión';
-$lng['footer'][41] = 'Recaban datos mientras el usuario navega por la red con la finalidad de prestar el servicio solicitado.';
-$lng['footer'][42] = 'Cookies persistentes';
-$lng['footer'][43] = 'Se almacenan en el terminal y la información obtenida, será utilizada por el responsable de la cookie con la finalidad de prestar el servicio solicitado.';
-$lng['footer'][44] = 'SEGÚN SU FINALIDAD';
-$lng['footer'][45] = 'Cookies técnicas';
-$lng['footer'][46] = 'Son las necesarias para la correcta navegación por la web.';
-$lng['footer'][47] = 'Cookies de personalización';
-$lng['footer'][48] = 'Permiten al usuario las características (idioma) para la navegación por la website';
-$lng['footer'][49] = 'Cookies de análisis';
-$lng['footer'][50] = 'Permiten al prestador el análisis vinculado a la navegación realizada por el usuario, con la finalidad de llevar un seguimiento de uso de la página web, así como realizar estadísticas de los contenidos más visitados, número de visitantes, etc.';
-$lng['footer'][51] = 'Cookies publicitarias';
-$lng['footer'][52] = 'Permiten al editor incluir en la web, espacios publicitarios, según el contenido de la propia web.';
-$lng['footer'][53] = 'Cookies de publicidad comportamental';
-$lng['footer'][54] = 'Permiten al editor incluir en la página web espacios publicitarios según la información obtenida a través de los hábitos de navegación del usuario.';
-$lng['footer'][55] = 'Según lo dispuesto en el artículo 22.2 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), PHARMALINK SL informa de las cookies utilizadas en nuestra website:';
-$lng['footer'][56] = 'Cookies técnicas';
-$lng['footer'][57] = 'Cookies de personalización';
-$lng['footer'][58] = 'Cookies de análisis';
-$lng['footer'][59] = 'Cookies publicitarias';
-$lng['footer'][60] = 'Cookies de publicidad comportamental';
-$lng['footer'][61] = 'Cookies propias';
-$lng['footer'][62] = 'Cookies de tercero';
-$lng['footer'][63] = 'Cookies de sesión';
-$lng['footer'][64] = 'Cookies persistentes';
-$lng['footer'][65] = 'Google Analytics: Almacena cookies para poder elaborar estadísticas sobre el tráfico y volumen de visitas de esta web. Al utilizar este sitio web está consintiendo el tratamiento de información acerca de usted por Google. Por tanto, el ejercicio de cualquier derecho en este sentido deberá hacerlo comunicando directamente con Google. Las cookies de Google Analytics, se almacenan en servidores ubicados en Estados Unidos y se compromete a no compartirla con terceros, excepto en los casos en los que sea necesario para el funcionamiento del sistema o cuando la ley obligue a tal efecto. Según Google no guarda su dirección IP.';
-$lng['footer'][66] = 'Google Inc. es una compañía adherida a “Privacy Shiels” (escudo de privacidad) que garantiza que todos los datos transferidos serán tratados con un nivel de protección acorde a la normativa europea. Puede consultar información detallada a este respecto a través del siguiente enlace: <a href="https://support.google.com/analytics/answer/6004245">https://support.google.com/analytics/answer/6004245</a>';
-$lng['footer'][67] = 'Si lo desea puede utilizar el Complemento de inhabilitación para navegadores de Google Analytics a través de cuyas instrucciones pueden rechazarse las cookies analíticas de dicho servicio en todos los navegadores. Puede consultar más información al respecto en el siguiente enlace: <a href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>';
-$lng['footer'][68] = 'Asimismo, PHARMALINK SL informa al usuario de que tiene la posibilidad de configurar su navegador de modo que se le informe de la recepción de cookies, pudiendo, si así lo desea, impedir que sean instaladas en su disco duro.';
-$lng['footer'][69] = 'A continuación le proporcionamos los enlaces de diversos navegadores, a través de los cuales podrá realizar dicha configuración:';
-//politica cookies--
-//condiciones uso--
-$lng['footer'][70] = 'POLÍTICA DE PRIVACIDAD - CONDICIONES DE USO';
-$lng['footer'][71] = 'En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), PHARMALINK SL, nombre comercial YSANA ,informa que es titular del sitio web WWW.YSANA.ES. De acuerdo con la exigencia del artículo 10 de la citada Ley, PHARMALINK SL informa de los siguientes datos:';
-$lng['footer'][72] = 'El titular de este sitio web es PHARMALINK SL, con CIF B62152335 y domicilio social en AV. UNIVERSITAT AUTÒNOMA, 13-PARC TECNOLÒGIC 08290, CERDANYOLA DEL VALLES (BARCELONA), inscrita en el Registro Mercantil, en el tomo 37882 folio 23 hoja B-210706 e inscripción 25 La dirección de correo electrónico de contacto con la empresa es: info@ysana.es .';
-$lng['footer'][73] = 'Usuario y régimen de responsabilidades';
-$lng['footer'][74] = 'La navegación, acceso y uso por el sitio web de PHARMALINK SL confiere la condición de usuario, por la que se aceptan, desde la navegación por el sitio web de PHARMALINK SL, todas las condiciones de uso aquí establecidas sin perjuicio de la aplicación de la correspondiente normativa de obligado cumplimiento legal según el caso.';
-$lng['footer'][75] = 'El sitio web de PHARMALINK SL proporciona gran diversidad de información, servicios y datos. El usuario asume su responsabilidad en el uso correcto del sitio web. Esta responsabilidad se extenderá a:';
-$lng['footer'][76] = 'La veracidad y licitud de las informaciones aportadas por el usuario en los formularios extendidos por PHARMALINK SL para el acceso a ciertos contenidos o servicios ofrecidos por el web.';
-$lng['footer'][77] = 'El uso de la información, servicios y datos ofrecidos por PHARMALINK SL contrariamente a lo dispuesto por las presentes condiciones, la Ley, la moral, las buenas costumbres o el orden público, o que de cualquier otro modo puedan suponer lesión de los derechos de terceros o del mismo funcionamiento del sitio web.';
-$lng['footer'][78] = 'Política de enlaces y exenciones de responsabilidad';
-$lng['footer'][79] = 'PHARMALINK SL no se hace responsable del contenido de los sitios web a los que el usuario pueda acceder a través de los enlaces establecidos en su sitio web y declara que en ningún caso procederá a examinar o ejercitar ningún tipo de control sobre el contenido de otros sitios de la red. Asimismo, tampoco garantizará la disponibilidad técnica, exactitud, veracidad, validez o legalidad de sitios ajenos a su propiedad a los que se pueda acceder por medio de los enlaces.';
-$lng['footer'][80] = 'PHARMALINK SL declara haber adoptado todas las medidas necesarias para evitar cualquier daño a los usuarios de su sitio web, que pudieran derivarse de la navegación por su sitio web. En consecuencia, PHARMALINK SL no se hace responsable, en ningún caso, de los eventuales daños que por la navegación por Internet pudiera sufrir el usuario.';
-$lng['footer'][81] = 'Modificaciones';
-$lng['footer'][82] = 'PHARMALINK SL se reserva el derecho a realizar las modificaciones que considere oportunas, sin aviso previo, en el contenido de su sitio web. Tanto en lo referente a los contenidos del sitio web, como en las condiciones de uso del mismo. Dichas modificaciones podrán realizarse a través de su sitio web por cualquier forma admisible en derecho y serán de obligado cumplimiento durante el tiempo en que se encuentren publicadas en la web y hasta que no sean modificadas válidamente por otras posteriores.';
-$lng['footer'][83] = 'Protección de datos';
-$lng['footer'][84] = 'De conformidad con lo establecido en la normativa vigente en Protección de Datos de Carácter Personal, le informamos que sus datos serán incorporados al sistema de tratamiento titularidad de PHARMALINK SL con CIF B62152335 y domicilio social sito en AV. UNIVERSITAT AUTÒNOMA, 13-PARC TECNOLÒGIC 08290, CERDANYOLA DEL VALLES (BARCELONA), con la finalidad de poder facilitar, agilizar y cumplir los compromisos establecidos entre ambas partes. En cumplimiento con la normativa vigente, PHARMALINK SL informa que los datos serán conservados durante el plazo estrictamente necesario para cumplir con los preceptos mencionados con anterioridad.';
-$lng['footer'][85] = 'PHARMALINK SL informa que procederá a tratar los datos de manera lícita, leal, transparente, adecuada, pertinente, limitada, exacta y actualizada. Es por ello que PHARMALINK SL se compromete a adoptar todas las medidas razonables para que estos se supriman o rectifiquen sin dilación cuando sean inexactos.';
-$lng['footer'][86] = 'De acuerdo con lo establecido por el artículo 32 del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE, PHARMALINK SL se compromete a adoptar las medidas técnicas y organizativas necesarias, acorde al nivel de riesgos que acompañan los tratamientos realizados por éstas e indicados en el apartado de los términos y condiciones de uso, de forma que garanticen su integridad, confidencialidad y disponibilidad.';
-$lng['footer'][87] = 'Asimismo, PHARMALINK SL informa que en el caso que el Usuario introduzca datos en los formularios de los sitios web de terceros, serán estos últimos los responsables de los datos de carácter personal, y quienes deberán adoptar las medidas técnicas descritas en el apartado de los presentes Términos y Condiciones de Uso.';
-$lng['footer'][88] = 'PHARMALINK SL informa de la posibilidad de ejercer los derechos de acceso, rectificación, limitación de tratamiento, supresión, portabilidad y oposición al tratamiento, de los que el Usuario dispone y que pueden ser ejercitados ante PHARMALINK SL. De acuerdo con el Capítulo III del RGPD, debe tener en cuenta los siguientes matices:';
-$lng['footer'][89] = 'Derecho de Acceso: Es el derecho del usuario a obtener información sobre sus datos concretos de carácter personal y del tratamiento que se haya realizado o realice, así como de la información disponible sobre el origen de dichos datos y las comunicaciones realizadas o previstas de los mismos.';
-$lng['footer'][90] = 'Derecho de Rectificación: Es el derecho del afectado a que se modifiquen los datos que resulten ser inexactos o incompletos. Sólo podrá satisfacerse en relación a aquella información que se encuentre bajo el control de PHARMALINK SL, por ejemplo, eliminar comentarios publicados en la propia página, imágenes o contenidos web donde consten datos de carácter personal del usuario.';
-$lng['footer'][91] = 'Derecho a la Limitación de tratamiento: Es el derecho a que se limiten los fines del tratamiento previstos de forma original por el responsable del tratamiento.';
-$lng['footer'][92] = 'Derecho de Supresión: Es el derecho a suprimir los datos de carácter personal del usuario, a excepción de lo previsto en el propio RGPD o en otras normativas aplicables que determinen la obligatoriedad de la conservación de los mismos, en tiempo y forma.';
-$lng['footer'][93] = 'Derecho de portabilidad: El derecho a recibir los datos personales que el usuario, haya facilitado, en un formato estructurado, de uso común y lectura mecánica, y a transmitirlos a otro responsable.';
-$lng['footer'][94] = 'Derecho de Oposición: Es el derecho del usuario a que no se lleve a cabo el tratamiento de sus datos de carácter personal o se cese el tratamiento de los mismos por parte de PHARMALINK SL.';
-$lng['footer'][95] = 'De acuerdo con los derechos que le confiere el la normativa vigente en protección de datos podrá ejercer los derechos de acceso, rectificación, limitación de tratamiento, supresión, portabilidad y oposición al tratamiento de sus datos de carácter personal así como del consentimiento prestado para el tratamiento de los mismos, dirigiendo su petición a la dirección postal indicada más arriba o al correo electrónico info@ysana.es .';
-$lng['footer'][96] = 'Podrá dirigirse a la Autoridad de Control competente para presentar la reclamación que considere oportuna.';
-$lng['footer'][97] = 'Propiedad intelectual e industrial';
-$lng['footer'][98] = 'PHARMALINK SL por sí misma o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (a título enunciativo, imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.), titularidad de PHARMALINK SL. Serán, por consiguiente, obras protegidas como propiedad intelectual por el ordenamiento jurídico español, siéndoles aplicables tanto la normativa española y comunitaria en este campo, como los tratados internacionales relativos a la materia y suscritos por España.';
-$lng['footer'][99] = 'Todos los derechos reservados. En virtud de lo dispuesto en la Ley de Propiedad Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de PHARMALINK SL.';
-$lng['footer'][100] = 'El usuario se compromete a respetar los derechos de Propiedad Intelectual e Industrial titularidad de PHARMALINK SL. Podrá visualizar los elementos del portal e incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, única y exclusivamente, para su uso personal y privado. El usuario deberá abstenerse de suprimir, alterar, eludir o manipular cualquier dispositivo de protección o sistema de seguridad que estuviera instalado en las páginas de PHARMALINK SL.';
-$lng['footer'][101] = 'Acciones legales, legislación aplicable y jurisdicción';
-$lng['footer'][102] = 'PHARMALINK SL se reserva, asimismo, la facultad de presentar las acciones civiles o penales que considere oportunas por la utilización indebida de su sitio web y contenidos, o por el incumplimiento de las presentes condiciones.';
-$lng['footer'][103] = 'La relación entre el usuario y el prestador se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia las partes podrán someter sus conflictos a arbitraje o acudir a la jurisdicción ordinaria cumpliendo con las normas sobre jurisdicción y competencia al respecto. PHARMALINK SL tiene su domicilio en BARCELONA, España.';
-//condiciones uso--
-//politica privacidad--
-$lng['footer'][104] = 'Política de Privacidad';
-$lng['footer'][105] = 'De conformidad con la normativa vigente y aplicable en Protección de Datos de Carácter Personal, le informamos que sus datos serán incorporados al sistema de tratamiento titularidad de PHARMALINK SL con CIF B62152335 y domicilio social sito en AV. UNIVERSITAT AUTÒNOMA, 13-PARC TECNOLÒGIC 08290, CERDANYOLA DEL VALLES (BARCELONA), y que a continuación se relacionan sus respectivas finalidades, plazos de conservación y bases legitimadoras. Para aquellos tratamientos que lo requieran, se informa también de la posible elaboración de perfiles y decisiones automatizadas, así como las posibles cesiones y las transferencias internacionales que PHARMALINK SL tiene previsto realizar:';
-$lng['footer'][106] = 'Finalidad: Atender sus consultas realizadas a través del formulario, así como cualquier gestión que se pueda derivar de la misma';
-$lng['footer'][107] = 'Plazo de conservación: mientras se mantenga el consentimiento del interesado';
-$lng['footer'][108] = 'Base legítima: consentimiento del interesado';
-$lng['footer'][109] = 'Elaboración de perfiles: no se prevén elaboraciones de perfiles';
-$lng['footer'][110] = 'Cesiones: no se prevén cesiones de datos';
-$lng['footer'][111] = 'Transferencias Internacionales: no se prevén transferencias internaciones de datos';
-$lng['footer'][112] = 'Los datos identificados con una marca (*) se entienden como campos obligatorios y requeridos, en consecuencia se entenderán como necesarios para acometer las finalidades mencionadas con anterioridad.';
-$lng['footer'][113] = 'De acuerdo con los derechos que le confiere la normativa vigente y aplicable en protección de datos podrá ejercer los derechos de acceso, rectificación, limitación de tratamiento, supresión (“derecho al olvido”), portabilidad y oposición al tratamiento de sus datos de carácter personal así como la revocación del consentimiento prestado para el tratamiento de los mismos, dirigiendo su petición a la dirección postal indicada más arriba o al correo electrónico info@ysana.es . Podrá dirigirse a la Autoridad de Control competente para presentar la reclamación que considere oportuna.';
-$lng['footer'][114] = 'Con envío del formulario de recogida de datos usted acepta la política de privacidad de PHARMALINK SL';
-//politica privacidad--
-//legal---------------------------------------------
-//footer.php_____________________________________________________________________________________
-
-//experiencia/index.php_____________________________________________________________________________________
-$lng['experiencia-index']['img'][0] = 'cabecera-experiencias-adelgaysana-forte.png';
-$lng['experiencia-index'][0] = 'Comprar ahora';
-$lng['directo-farmacia'][0] = 'Pídelo ahora';
-$lng['experiencia-index'][1] = 'Iniciar Sesión';
-$lng['experiencia-index'][2] = 'Crear cuenta';
-$lng['experiencia-index'][3] = 'Packs experiencias';
-//experiencia/index.php_____________________________________________________________________________________
-
-//experiencia/carrito.php_____________________________________________________________________________________
-$lng['experiencia-carrito'][0] = 'Artículos en';
-$lng['experiencia-carrito'][1] = 'tu cesta';
-$lng['experiencia-carrito'][2] = 'ARTÍCULO';
-$lng['experiencia-carrito'][3] = 'PRECIO';
-$lng['experiencia-carrito'][4] = 'UNIDADES';
-$lng['experiencia-carrito'][5] = 'TOTAL';
-$lng['experiencia-carrito'][6] = 'Con Ysana® puedes beneficiarte de gastos de envío GRATIS';
-$lng['experiencia-carrito'][7] = 'TOTAL';
-$lng['experiencia-carrito'][8] = 'REALIZAR PEDIDO';
-$lng['experiencia-carrito'][9] = 'PAGAR Y FINALIZAR';
-$lng['experiencia-carrito'][10] = 'Cantidad';
-$lng['experiencia-carrito'][11] = 'Unidades';
-$lng['experiencia-carrito'][12] = 'Realizar Pedido';
-$lng['experiencia-carrito'][13] = 'Gastos de envío';
-$lng['experiencia-carrito'][14] = 'Incluidos';
-$lng['experiencia-carrito'][15] = 'Disponibilidad';
-$lng['experiencia-carrito'][16] = 'de Experiencias';
-$lng['experiencia-carrito'][17] = 'de Directo a Farmacia';
-$lng['experiencia-carrito'][18] = 'Nombre de la Farmacia';
-$lng['experiencia-carrito'][19] = '¿Cuándo te gustaría recoger tu orden?';
-$lng['experiencia-carrito'][20] = 'Falta seleccionar una dirección de envío';
-$lng['experiencia-carrito'][21] = 'Horario';
-$lng['experiencia-carrito'][22] = 'Mañana';
-$lng['experiencia-carrito'][23] = 'Fecha';
-$lng['experiencia-carrito'][24] = 'Realizar pedido';
-$lng['experiencia-carrito'][25] = '*Recuerda que habitualmente las farmacias cierran a la hora del almuerzo';
-$lng['experiencia-carrito'][26] = 'Pedido realizado con éxito';
-$lng['experiencia-carrito'][27] = 'Cancelar';
-$lng['experiencia-carrito'][28] = 'Tarde';
-
-//experiencia/carrito.php_____________________________________________________________________________________
-
-//directo_farmacia/index.php__________________________________________________________________________________
-$lng['directo-index']['img'][0] = 'cabecera-farmacia-directa.mp4';
-$lng['directo-index'][0] = 'Mujer';
-$lng['directo-index'][1] = 'Autocuidado';
-$lng['directo-index'][2] = 'Senior';
-$lng['directo-index'][3] = 'Respira';
-$lng['directo-index'][4] = 'Infantil';
-
-//directo_farmacia/index.php__________________________________________________________________________________
-
-//quienes-somos.php___________________________________________________________________________________________
-$lng['quienes-somos'][0] = '¿Quiénes Somos?';
-$lng['quienes-somos'][1] = 'Nuestros Valores';
-$lng['quienes-somos'][2] = 'La Compañía';
-$lng['quienes-somos'][3] = 'Compromiso';
-$lng['quienes-somos'][4] = 'Código ético';
-$lng['quienes-somos'][5] = '¿Quién es Ysana® Vida Sana?';
-$lng['quienes-somos'][6] = 'Ysana® es una marca del laboratorio Pharmalink. Pharmalink es una empresa dedicada a diseñar, desarrollar y producir formulaciones para el  bienestar de las personas. Nos mueve la innovación por eso combinamos tecnología y naturaleza en todos nuestros productos, incorporando extractos naturales a complementos alimenticios y productos sanitarios que contribuyen a llevar un estilo de vida saludable.';
-$lng['quienes-somos'][7] = 'Ysana® piensa en toda la familia, por eso hemos desarrollado un amplio abanico de productos que ayuda a todos a sentirse mejor gracias a las propiedades de nuestros ingredientes naturales y de última innovación científica.';
-$lng['quienes-somos'][8] = 'Nuestros Valores';
-$lng['quienes-somos'][9] = 'Innovación, Compromiso, Integridad, Trabajo en Equipo y Confianza';
-$lng['quienes-somos'][10] = 'La Compañía';
-$lng['quienes-somos'][11] = 'Con más de 10 años de experiencia, Pharmalink es una compañía internacional especializada en el desarrollo y fabricación de formulaciones líquidas innovadoras, complementos alimenticios en viales monodosis o spray oral, así como productos sanitarios para uso respiratorio. Sus productos, tecnológicamente avanzados, contribuyen al bienestar de las personas a través de soluciones de origen natural.';
-$lng['quienes-somos'][12] = 'Con sede en Barcelona (Parc Tecnològic del Vallès), Pharmalink cuenta con una planta de producción en Vilabella (Tarragona) de más de 10.000 m2, completamente equipada con la más avanzada tecnología para la fabricación de los siguientes formatos: Complementos Alimenticios en viales monodosis, extemporáneos, tecnología Eficaps®, y spray oral; en cuanto a Dispositivos Médicos ofrece áreas especializadas de aspiradores nasales para bebés, spray de bomba y sprays "bulk on valve". <br> Los productos de Pharmalink están presentes en toda Europa, en el Norte de África, Oriente Medio, Asia y América Latina. El portafolio de Pharmalink está disponible a través de sus  colaboradores, que operan en más de 55 países de todo el mundo.';
-$lng['quienes-somos'][13] = 'Compromiso';
-$lng['quienes-somos'][14] = 'En Ysana® basamos nuestro trabajo en el compromiso por la calidad, una innovación constante de nuestros productos basados en principios activos naturales, un código ético de transparencia y comunicación, además de un riguroso cumplimiento de los estándares legales.';
-$lng['quienes-somos'][15] = 'Código ético';
-$lng['quienes-somos'][16] = 'Ysana® Vida Sana es una marca avalada por la cadena de valor del laboratorio Pharmalink, cuyos procesos cumplen con un exigente código de calidad y compromiso:';
-//quienes-somos.php___________________________________________________________________________________________
-
-//articulo sueno______________________________________________________________________________________________
-$lng['articulo-sueno'][0] = 'Recomendaciones generales sobre hábitos de sueño saludables';
-//$lng['articulo-sueno'][0] = 'Pedir diagnóstico del sueño gratis ahora';
-$lng['articulo-sueno'][1] = 'Evitar dormir siesta';
-$lng['articulo-sueno'][2] = 'En caso de dificultades en la conciliación del sueño o de presentar sueño fraccionado, o bien limitarla a 20-30 minutos tras la comida.';
-$lng['articulo-sueno'][3] = 'Horas de sueño';
-$lng['articulo-sueno'][4] = 'Dormir la cantidad de horas suficientes. Esta cantidad variará según la edad: recién nacidos (de 0-3 meses) 14-17 h; lactantes (4-11 meses), 12-15 h; niños pequeños (1-2 años), 11-14 h; niños en edad preescolar (3-5 años), 10-13 h; niños en edad escolar (6-13 años), 9-11 h; adolescentes, 8-10 h; adultos (18-64 años), 7-9 h; y adultez tardía (> 65 años), 7-8 h.';
-$lng['articulo-sueno'][5] = 'Regularidad de sueño';
-$lng['articulo-sueno'][6] = 'Buscar una regularidad en los horarios, intentando que la diferencia entre la hora de acostarse y la hora de despertarse, entre los días laborables y los días festivos, no exceda las dos horas de diferencia.';
-$lng['articulo-sueno'][7] = 'El sueño es un proceso biológico de gran complejidad que contribuye a un funcionamiento adecuado de nuestro sistema inmunológico, vascular y endocrino, entre otros, fomentando el procesamiento de la información, la fijación de las memorias y la recuperación física.<br><br>Los patrones de sueño pueden variar en función de los ritmos y necesidades fisiológicas de cada persona, modificándose la cantidad necesaria de sueño según la edad de la persona, desde las 14-17 horas necesarias para un recién nacido, a las 8-10 horas necesarias para un adolescente. A partir de los 18 años, y durante toda la etapa adulta, la media de sueño necesaria sería de 7 a 9 horas, bajando a una media de 7-8 horas en personas mayores de 65 años, y considerándose perjudicial tanto medias inferiores como superiores a las indicadas.';
-$lng['articulo-sueno'][8] = 'Cuando nuestro sueño es insuficiente, ya sea en cantidad o en calidad, esto puede tener repercusiones en la salud. Pueden darse alteraciones cognitivas que afecten a nuestro rendimiento mental, como una reducción en la velocidad de reacción y procesamiento de la información, en la consolidación de memorias, en tareas de atención complejas y en la capacidad para tomar decisiones; alteraciones del estado de ánimo, relacionadas con sintomatología ansiosa y depresiva, mayor irritabilidad y mayores dificultades en las relaciones personales; alteraciones de tipo vascular, como aumento de la presión arterial, fomento de enfermedades del corazón u ocurrencia de accidentes cerebrovasculares; o puede fomentar otras condiciones médicas relacionadas con la función hepática, obesidad o diabetes tipo 2. Es por ello que resulta de gran importancia el adoptar unos hábitos de sueño saludables que nos permitan conseguir una adecuada cantidad y calidad del sueño.';
-//articulo sueno______________________________________________________________________________________________
-
-/*  */
-
-//Tipo producto
-define('NORMAL', 1);
-define('EXPERIENCIA', 2);
-
-//Tipo tienda
-define('ONLINE', 1);
-define('DIRECTO', 2);
-
-define('ACTIVADO', 1);
-define('DESACTIVADO', 2);
-
-$productos_ysana = array(
-    array(
-        'nombre_categoria' => 'Eficaps',
-        'descripcion_categoria' => 'Descripción de Eficaps',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Eficaps® Sueño',
-                'url-seo' => 'directo_farmacia/producto/eficaps-sueño',
-                'h1' => '¡LA CÁPSULA INTELIGENTE QUE TE AYUDA A CONCILIAR EL SUEÑO!',
-                'descripcion' => 'Gracias a su tecnología de disolución controlada, Eficaps® Sueño, libera sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.
-                Esta extraordinaria innovación permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada según su absorción en nuestro organismo y momento de máximo aprovechamiento.
-                Eficaps® Es el primer complemento alimenticio que concentra varios nutrientes en una sola cápsula. Con una única toma administra Melatonina, GABA, Valeriana y Pasiflora en el tiempo y momentos óptimos. Esta formulación además, simula el proceso natural de segregación de melatonina en el cerebro eliminado el efecto rebote habitual en otros productos para el sueño. ',
-                'img' => 'eficapssueno',
-                'cabecera' => 'eficaps.mp4',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Eficaps Ansiedad',
-                'url-seo' => 'eficaps_ansiedad',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => '',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Eficaps Defenses',
-                'url-seo' => 'eficaps_defenses',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => '',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Mujer',
-        'descripcion_categoria' => 'Descripción de Mujer',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Y·Woman Menopausia',
-                'url-seo' => 'directo_farmacia/producto/ywoman-menopausia',
-                'h1' => 'Y·WOMAN MENOPAUSIA AYUDA A ALIVIAR LOS SÍNTOMAS DE LA MENOPAUSIA Y A SENTIRTE MEJOR',
-                'descripcion' => 'Con la ayuda de Y-woman menopausia alivias los síntomas diurnos y nocturnos de la menopausia. Además, con su efecto 24h durante el día calma los sofocos, la sudoración y la irritabilidad a la vez que regula el desequilibrio hormonal causado por la menopausia. Durante la noche, su contenido en Pasiflora contribuye a disminuir el nerviosismo y el insomnio. 
-                El principio activo estrella de la fórmula natural de Y-woman menopausia es el extracto de lúpulo Lifenol® cuyos estudios clínicos revelan resultados innovadores en el tratamiento del desequilibrio hormonal. Gracias a Y-woman menopausia regula tu cuerpo las 24 horas y ¡siéntete cómoda durante todo el día!',
-                'img' => 'ymenopausia',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'adelgaYsana Forte',
-                'url-seo' => 'directo_farmacia/producto/adelgaysana-forte',
-                'h1' => '¡CUIDA TU SILUETA Y ALCANZA TU PESO DESEADO BENEFICIANDO A TU ORGANISMO!',
-                'descripcion' => 'AdelgaYsana Forte es un complemento alimenticio con extractos de plantas naturales que ayuda a perder peso, eliminar líquidos y toxinas en tan sólo 20 días.
-                Su plan de doble acción combina dos fórmulas: 10 viales rojos para ayudar al metabolismo de las grasas por su contenido en café verde y garcinia cambogia y 10 viales verdes con extracto de cola de caballo, una planta utilizada tradicionalmente para depurar el organismo gracias a sus propiedades diuréticas.
-                adelgaYsana Forte es tu aliado ideal ya que contribuye al metabolismo de las gracias y a la eliminación de líquidos. El café verde sido relacionado directamente como un potenciador de la pérdida de peso, duplicando la pérdida de masa corporal y ayudando a perder grasa conservando el músculo. ¡Ayuda a tu silueta con adelgaYsana!',
-                'img' => 'Adelgaysana',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Light Legs',
-                'url-seo' => 'light_legs',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => '',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Easy Digest',
-                'url-seo' => 'easy_digest',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => '',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Autocuidado',
-        'descripcion_categoria' => 'Descripción de Autocuidado',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Y·Wellness Articular',
-                'url-seo' => 'directo_farmacia/producto/articular',
-                'h1' => '¡PROTEGE TUS ARTICULACIONES GRACIAS A SU DOBLE EFECTO REGENERADOR y ANTIINFLAMATORIO!',
-                'descripcion' => 'Cuida naturalmente la salud de tus articulaciones con el doble efecto de y·wellness articular.  Refuerza el alivio de los síntomas del dolor articular gracias a su potente efecto antiinflamatorio. Sin embargo, y·wellness articular, va más allá previniendo la degeneración del cartílago gracias a su alta concentración en Ovomet®. Siente cómo disminuye la inflamación y rigidez, aumentando la flexibilidad de las articulaciones.
-                El Ovomet®,io activo de y·wellness articular, es un ingrediente natural rico en proteínas y nutrientes esenciales que se obtienen de la membrana de huevo, que destaca por su alto contenido en colágeno. cuatro efectos en un solo ingrediente antiinflamatorio, analgésic, regenerador  del cartílago y protector del tendón.',
-                'img' => 'ysana-articulaciones-ywellness',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )/*,
-            array(
-                'nombre' => 'Y·Wellness Colesterol',
-                'url-seo' => 'directo_farmacia/producto/colesterol',
-                'h1' => '¡REGULA TU COLESTEROL MIENTRAS TE CUIDAS POR DENTRO!',
-                'descripcion' => 'Los principios de extractos naturales de y·wellness Colesterol contribuyen a regular los niveles de colesterol manteniendo las concentraciones normales en sangre. Mantén el colesterol a raya cuidando tu organismo con y·wellness Colesterol.
-                La Monacolina K, principio activo en la levadura de arroz rojo, es el ingrediente principal de y·wellness Colesterol. Estudios demuestran sus propiedades y beneficios actuando directamente sobre la regulación interna del colesterol por parte del hígado. Además, en Ysana® le hemos añadido Coenzima Q10 protector cardiovascular y Silimarina para proteger tu hígado.',
-                'img' => 'ycolesterol',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )*/
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Senior',
-        'descripcion_categoria' => 'Descripción de Senior',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Bemory®',
-                'url-seo' => 'directo_farmacia/producto/bemory-senior',
-                'h1' => 'MEJORA LA CONCENTRACIÓN, LA MEMORIA Y EL APRENDIZAJE.',
-                'descripcion' => 'Bemory® Senior colabora en evitar el deterioro cognitivo que se produce con el envejecimiento y refuerza la memoria, la atención y la velocidad de procesamiento de la información (VPI).
-                Este complemento alimenticio, fácil de tomar gracias a su formato vial líquido monodosis, está especialmente recomendado en períodos de estrés mental o actividad intensa, cuando necesitamos  mantener un alto nivel de concentración o reforzar la memoria y el aprendizaje.
-                ¡Toma Bemory® cada día e incentiva tu actividad mental!',
-                'img' => 'Bememory',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Y·Wellness Colesterol',
-                'url-seo' => 'directo_farmacia/producto/colesterol',
-                'h1' => '¡REGULA TU COLESTEROL MIENTRAS TE CUIDAS POR DENTRO!',
-                'descripcion' => 'Los principios de extractos naturales de y·wellness Colesterol contribuyen a regular los niveles de colesterol manteniendo las concentraciones normales en sangre. Mantén el colesterol a raya cuidando tu organismo con y·wellness Colesterol.
-                La Monacolina K, principio activo en la levadura de arroz rojo, es el ingrediente principal de y·wellness Colesterol. Estudios demuestran sus propiedades y beneficios actuando directamente sobre la regulación interna del colesterol por parte del hígado. Además, en Ysana® le hemos añadido Coenzima Q10 protector cardiovascular y Silimarina para proteger tu hígado.',
-                'img' => 'ycolesterol',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Respira',
-        'descripcion_categoria' => 'Descripción de Respira',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Free Nose® Aspirador Nasal Pediátrico + 4 recambios',
-                'url-seo' => 'directo_farmacia/producto/freenose-agua-mar-isotonica-120ml',
-                'h1' => 'ELIMINA LA MUCOSIDAD DE FORMA SUAVE Y SEGURA PARA EL BEBÉ.',
-                'descripcion' => 'El aspirador anatómico Free Nose® ha sido diseñado para facilitar la higiene diaria de las cavidades nasales del bebé. Es fácil de usar, higiénico y seguro, debido a su diseño único de puntas extra suaves. Además te permite controlar la fuerza de succión requerida cada vez. 
-                En Ysana® sabemos que prevenir es la mejor forma de curar por eso te ayudamos a mantener higienizada la nariz de tu bebé reduciendo el riesgo de infecciones y resfriados. ¡Un bebé sano, son unos padres y unos abuelos felices!',
-                'img' => 'isotonic120',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Isotónica Pediátrico 120ml',
-                'url-seo' => 'freenose_agua_mar_isotonica_pediatrico_120ml',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => 'ysana-free-nose-spray-nasal-isotonica-pedriatico-120ml',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Isotónica Pediátrico 30ml',
-                'url-seo' => 'freenose_agua_mar_isotonica_pediatrico_30ml',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => 'hypertonic',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Descongestionante 30ml',
-                'url-seo' => 'directo_farmacia/producto/freenose-agua-mar-hypertonica-30ml/',
-                'h1' => 'LIMPIA, DESCONGESTIONA E HIDRATA TU NARIZ',
-                'descripcion' => 'Free Nose® Agua de mar Hipertónica limpia en profundidad las fosas nasales, las descongestiona y las hidrata. Además, el efecto osmosis reduce la inflamación de la mucosa, así disminuyes el uso de fármacos descongestionantes.
-                El agua de mar de Free Nose® se obtiene directamente de la Bahía de Cancale en la Bretaña, área conocida por la calidad y pureza de sus aguas. 
-                Mantén limpia tu nariz con Free Nose® agua de mar hipertónica y ayuda a tu cuerpo a luchar contra los microbios producidos por los resfriados e infecciones nasales.',
-                'img' => 'hypertonic',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Descongestionante con Aloe vera y Menta 30ml',
-                'url-seo' => 'directo_farmacia/producto/freenose-agua-mar-hypertonica-30ml',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => 'hypertonic',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal Própolis +1',
-                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-1',
-                'h1' => 'PROTEGE TU NARIZ Y ACTÚA CONTRA LOS PROCESOS INFECCIOSOS',
-                'descripcion' => 'Free Nose® Propolis está indicado para niños a partir de 1 año de edad. Nuestro spray nasal con esencias naturales de tomillo está indicado para hidratar, calmar y proteger el conducto nasal de forma natural. Su formulación a base de solución salina con própolis y extracto de tomillo combina dos ingredientes naturales ampliamente conocidos por sus propiedades beneficiosas. 
-                Un estudio clínico encargado por Ysana® arrojó resultados positivos con respecto a una reducción significativa de los síntomas de la rinitis en niños. El tratamiento de Free Nose®  Própolis +1 aplicado a niños con rinitis infecciosa aguda y con síntomas de resfriado común fue seguro reduciendo desde el primer día la intensidad de los síntomas nasales, y la obstrucción por secreción nasal desde el segundo día de aplicación. (Estudio disponible en http://free-nose.com/)',
-                'img' => 'propolis1',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal Própolis +12',
-                'url-seo' => 'directo_farmacia/producto/freenose-resfriado-spray-nasal-propolis-12',
-                'h1' => 'ALIVIA LOS SÍNTOMAS DE LA SECRECIÓN Y CONGESTIÓN NASAL',
-                'descripcion' => 'Free Nose®  Propolis+12 descongestiona el conducto nasal y actúa contra los procesos infecciosos. Hidratando, calmando y protegiendo el conducto nasal de forma natural gracias al própolis y al extracto de tomillo y eucaliptus.
-                El propolis es usado por las abejas para mantener sana la colmena y reducir el crecimiento microbiano en sus paredes, sus propiedades antisépticas, antibacterianas, antimicrobianas, antiinflamatorias y anestésicas están demostradas por estudios científicos.
-                Por otro lado, los extractos de tomillo y eucalipto aportan a Free Nose® Propolis +12 propiedades antibióticas, expectorantes y balsámicas, combinando con la hidratación profunda aportada por el agua de mar isotónica.',
-                'img' => 'propolis12',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => ACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal Antialérgico',
-                'url-seo' => 'freenose_antialergico_spray_nasal',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => 'ysana-free-nose-spray-nasal-antialergico',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Infantil',
-        'descripcion_categoria' => 'Descripción de Infantil',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Bemory',
-                'url-seo' => 'bemory_kids',
-                'h1' => 'REFUERZA LA CONCENTRACIÓN  Y ESTIMULA LA MEMORIA DE TUS HIJOS',
-                'descripcion' => 'Bemory® Kids es un complemento alimenticio que ayuda a estimular la actividad cerebral, la concentración y el aprendizaje de los niños.
-                Gracias a sus componentes específico como el DHA, Bemory® Kids está especialmente recomendado para los períodos más exigentes de concentración y memoria. Al estar endulzado con sucralosa, no sólo cuida de los más pequeños, si no que también tiene un rico sabor dulce y por su formato de viales líquidos individuales estarán encantados de tomarlo cada día.',
-                'img' => 'Bememory-kids-pack',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Multivitamin Kids',
-                'url-seo' => 'multivitamin_kids',
-                'h1' => '¡La forma más divertida de tomar vitaminas!',
-                'descripcion' => 'Nuestro spray multivitamínico es fácil, práctico y tan eficaz que asegura la ingesta diaria de vitaminas indicada para niños.
-                Su contenido en vitaminas B3, B5 y B12 ayuda a disminuir el cansancio y la fatiga. La vitamina B6 y el Selenio contribuyen al funcionamiento normal del sistema inmune.
-                Todas las vitaminas que contiene Multivitamin son hidrosolubles, por lo que se requiere una ingesta prácticamente diaria, ya que al no almacenarse depende de los alimentos que consumamos.
-                Ysana®  ayuda a cuidar de los peques de forma natural y divertida. !Con Multivitamin Kids, tendrán todas las vitaminas necesitan para crecer!',
-                'img' => 'ysana-multivitamina-vitamina-b3-b12-b6-b5',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Isotónica Pediátrico 120ml',
-                'url-seo' => 'freenose_agua_mar_isotonica_pediatrico_120ml',
-                'h1' => 'LA FORMA MÁS NATURAL DE LIMPIAR Y PROTEGER LA NARIZ DE TU BEBÉ.',
-                'descripcion' => 'Una buena higiene nasal es primordial tanto en bebés como en niños, ya que todavía no saben sonarse solos y tienen dificultades para respirar por la boca. Con Free Nose® Pediátrico evitarás que el exceso de mucosidad aumente y pueda complicarse o causar infecciones.
-                En Ysana® sabemos que prevenir es la mejor forma de curar por eso te ayudamos a mantener higienizada la nariz de tu bebé reduciendo el riesgo de infecciones y resfriados. ¡Un bebé sano, son unos padres y unos abuelos felices!
-                Free Nose® agua de mar isotónica te ayudará a luchar contra los gérmenes y virus que producen los mocos. Mantén la naricita de tu bebé limpia e hidratada con el poder natural del agua de mar.',
-                'img' => 'ysana-free-nose-spray-nasal-isotonica-pedriatico-120ml',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Isotónica Pediátrico 30ml',
-                'url-seo' => 'freenose_agua_mar_isotonica_pediatrico_30ml',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => '',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal Própolis +1',
-                'url-seo' => 'freenose_spray_nasal_propolis_1',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => 'propolis1',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal Própolis +12',
-                'url-seo' => 'freenose_spray_nasal_propolis_12',
-                'h1' => '',
-                'descripcion' => '',
-                'img' => 'propolis12',
-                'cabecera' => '',
-                'tipo_producto' => NORMAL,
-                'tipo_tienda' => DIRECTO,
-                'activo' => DESACTIVADO,
-                'url-tienda' => array(
-                    'experiencia' => '',
-                    'farmacia' => ''
-                )
-            )
-        )
-    )
-);
-
-$productos_ysana_df = array(
-    array(
-        'nombre_categoria' => 'Eficaps',
-        'descripcion_categoria' => 'Descripción de Eficaps',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Eficaps® Sueño',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'eficaps_sueño',
-                'img-portada' => 'ysana-sueno-eficaps-caja.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tienes dificultades para conciliar el sueño? ¿Sufres despertares nocturnos? ¿Padeces insomnio? Se estima que alrededor del 45% de la población española adulta presenta uno de estos trastornos del sueño.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Dormir bien es un proceso biológico imprescindible para llevar una vida saludable:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Restablece el equilibrio físico y psicológico básico.</li>
-                        <li>Restablece los niveles de energía.</li>
-                        <li>Fija los procesos de aprendizaje y memoria.</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu rutina afecta tu ciclo de sueño? Date de alta en Club Ysana y descúbrelo  ahora completando nuestro cuestionario gratuito sobre hábitos de sueño. Recibirás consejos personalizados de Neuropsicólogos titulados para  tu día a día que te ayudarán a dormir mejor!'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eficaps® Sueño actúa sobre el ciclo del sueño, liberando sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Esta extraordinaria innovación permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada según su absorción en nuestro organismo y momento de máximo aprovechamiento.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Evita los despertares nocturnos y asegura un descanso de calidad.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'CONSECUENCIAS DE NO DORMIR BIEN:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Somnolencia excesiva diurna.</li>
-                        <li>Desorientación.</li>
-                        <li>Escaso nivel de concentración.</li>
-                        <li>Disminución de la calidad de vida.</li>
-                        <li>Reducción de la productividad laboral.</li>
-                        <li>Problemas de salud.</li>'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eﬁcaps® Sueño es un innovador complemento alimenticio con una nueva tecnología de liberación controlada ayudando a dormir naturalmente durante 8 horas con una sola toma.'
-                    ),
-                    array(
-                        'etiqueta' => 'h5',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MELATONINA'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es la hormona que produce de forma  natural el cerebro durante el anochecer, es estimulada por la oscuridad e inhibida por la luz, controlando el ritmo circadiano que regula los ciclos de sueño - vigilia de nuestro reloj biológico. Además, la melatonina contribuye a conciliar el sueño más rápidamente y a descansar mejor. Está indicada también para aliviar los síntomas del jet-lag o facilitar el sueño a las personas con horarios irregulares.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'GABA'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es un neurotransmisor cerebral que ayuda a calmar la actividad cerebral excesiva. Resulta clave para el cerebro para luchar contra los efectos nocivos del estrés, promoviendo estados mentales de mayor relajación y favoreciendo el sueño.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'PASIFLORA Y VALERIANA'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'con propiedades sedantes, calmantes y relajantes que ayudan a conciliar el sueño.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'LAS FASES DE LOS COMPRIMIDOS DE UNA SÓLA CÁPSULA:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>COMPRIMIDO 1 A LOS 30 MINUTOS (MELATONINA Y GABA): Contribuyen a conciliar el sueño a la media hora de la toma de eficaps.</li>
-                        <li>COMPRIMIDO 2 y 3 A LOS 30 MINUTOS (VALERIANA Y PASIFLORA): Refuerza la acción inductora del sueño.</li>
-                        <li>COMPRIMIDO 4 DE FORMA SOSTENIDA DURANTE 8 HORAS (MELATONINA, GABA Y PASIFLORA)</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'No superar la dosis diaria recomendada. Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada. Mantener fuera del alcance de los niños más pequeños. En caso de seguir un tratamiento médico, estar embarazada o sospecha estarlo, consulte con su médicos antes de consumir este producto.'
-                    ),
-                    
-                ),
-                'activo' => ACTIVADO
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Mujer',
-        'descripcion_categoria' => 'Descripción de Mujer',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Y·Woman menopausia',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'ywoman-menopausia',
-                'img-portada' => 'ysana-ywonan-menopausia-capsulas-efecto-24h.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Sufres sofocos, insomnio, nerviosismo y cambios de humor? ¿Te sientes irritada?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'La intensidad de los síntomas de la menopausia varía de una mujer a otra en función de la disminución hormonal, Y-woman Menopausia alivia los síntomas en todos sus niveles y gracias a su efecto regulador 24h te ayuda a sentirte mejor en tu día a día.'
-                    )                     
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES FÓRMULAS DIA Y NOCHE DE Y-WOMAN:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA DÍA CON CIMICÍFUGA: La fórmula día está diseñada para aliviar los signos asociados a la menopausia como los sofocos, la sudoración o la irritabilidad. La Cimicífuga es una planta utilizada como con fines medicinales que ayuda a la mujer a tener una menopausia confortable.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA NOCHE CON PASIFLORA: La fórmula noche está diseñada para contrarrestar el insomnio y nerviosismo propios de la menopausia. La Pasiflora es una planta rica en sustancias flavonoides, fenoles y aceites esenciales a las que se le atribuye su acción sedante. La Pasiflora facilita tener un estado de relajación propicio para tener un sueño y descanso saludable.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTE ESTRELLA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL®: extracto de Lúpulo patentado. Los estudios clínicos revelan que gracias a su molécula 8PN, el extracto de Lúpulo es actualmente el fitoestrógeno más potente que se conoce, ya que posee el 100% de las propiedades necesarias para equilibrar los desajustes hormonales propios de la menopausia.
-                        LIFENOL reduce los sofocos en un 31% después de 6 semanas.
-                        LIFENOL mejora la calidad de vida en un 90% regulando el desequilibrio hormonal.
-                        '
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS DIARIA RECOMENDADA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Para conseguir un efecto regulador 24h: un comprimido fórmula DÍA por la mañana y 1 comprimido fórmula NOCHE por la noche antes de acostarse.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'No superar la dosis diaria recomendada. Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada. Mantener fuera del alcance de los niños más pequeños. En caso de seguir un tratamiento médico, estar embarazada o sospecha estarlo, consulte con su médicos antes de consumir este producto.'
-                    ),
-                    
-                ),
-                'activo' => ACTIVADO
-            ),
-            array(
-                'nombre' => 'adelgaYsana Forte',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'adelgaysana-forte',
-                'img-portada' => 'Adelgaysana.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Estás empezando a llevar un estilo de vida saludable y te gustaría contar con una ayuda extra? ¿Te sientes hinchada o te gustaría alcanzar tu silueta ideal?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¡Empieza a sentirte mejor con adelgaYsana Forte!'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Su plan doble acción combina dos fórmulas: 10 botellitas rojas para ayudar al metabolismo de la grasa por su contenido en café verde, garcinia y picolinato de cromo y 10 botellitas verdes con extracto de cola de caballo, una planta utilizada tradicionalmente para depurar el organismo gracias a sus propiedades diuréticas.'
-                    )                    
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'EL PLAN 20 DÍAS'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PLAN 20 DÍAS-DOBLE ACCIÓN que contribuye a quemar grasas y a eliminar líquidos y toxinas gracias a la alternancia de sus fórmulas ROJA, y VERDE. Combinando las dos fórmulas conseguirás el efecto quemar-grasas y la eliminación de líquidos.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA ROJA: con Café Verde, Garcinia y Picolinato de Cromo, contribuye al metabolismo de las grasas.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA VERDE: con Cola de Caballo, tradicionalmente usado por sus efectos diuréticos y detoxificantes.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Ambas fórmulas (roja y verde) deben tomarse en días alternos durante 20 días, comenzando el primer día por el vial rojo. El contenido de las botellitas se debe disolver en una botella de 1,5 l de agua e ir consumiéndose a lo largo del día.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'No superar la dosis diaria recomendada. Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada. Mantener fuera del alcance de los niños más pequeños. En caso de seguir un tratamiento médico, estar embarazada o sospecha estarlo, consulte con su médicos antes de consumir este producto.'
-                    ),
-                    
-                ),
-                'activo' => ACTIVADO
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Autocuidado',
-        'descripcion_categoria' => 'Descripción de Autocuidado',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Y·Wellness Colesterol',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'ywellness-colesterol',
-                'img-portada' => 'ycolesterol.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Alguna vez has sufrido pesadez de estómago, indigestión, dolor en el pecho, dolor de cabeza, visión borrosa o pérdida de equilibrio o hinchazón en las extremidades?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'El exceso de colesterol en la sangre, combinado con otras sustancias, puede adherirse a las paredes de las arterias formando unas placas que pueden estrecharlas u obstruirlas, ocasionando síntomas estos síntomas e incluso convirtiéndose en un un factor de riesgo cardiovascular. '
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Una alimentación variada y sana, practicar ejercicio físico y realizar un control analítico periódicamente es fundamental para que nuestro cuerpo se mantenga en estado óptimo y puedas disfrutar de tu día a día sin reservas sin importar la edad.'
-                    ),
-                                      
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'MONACOLINA K: activo que se obtiene de la fermentación de la LEVADURA DE ARROZ ROJO. Actúa inhibiendo la HMG-CoA reductasa, enzima responsable de la síntesis del colesterol en el hígado. Este activo natural tiene el mismo mecanismo de acción que la Lovaestatina, el fármaco utilizado para tratar el colesterol LDL, pero sin los efectos secundarios negativos de las estatinas.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'COENZIMA Q-10: Es una pseudo vitamina, presente especialmente en el corazón, hígado, riñón, y páncreas. Su misión es transferir oxígeno y energía a las células. La toma de estatinas para reducir el colesterol, reduce significativamente los niveles de la coenzima Q-10 en sangre, provocando dolores musculares. El CoQ10 es un potente antioxidante que además disminuye el riesgo de padecer enfermedades cardiovasculares.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'CARDO MARIANO (80% SILIMARINA): Uno de los efectos negativos de las estatinas es toxicidad hepática. Este extracto proporciona una actividad hepatoprotectora frente a agentes químicos.'
-                    ), 
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 comprimido al día por la mañana.'
-                    ), 
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. No superar la dosis expresamente recomendada. Para el uso prolongado se aconseja el seguimiento de un médico. No tomar durante el embarazo ni la lactancia, o en caso de tratamiento con fármacos hipolipemiantes. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-            array(
-                'nombre' => 'Y·Wellness Articular',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'ywellness-articular',
-                'img-portada' => 'ysana-articulaciones-ywellness.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Sufres de dolor articular? ¿Por las mañanas notas tus articulaciones rígidas?  ¿El dolor empeora y notas que disminuye la movilidad?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Estos pueden ser algunos de los síntomas de artrosis, artritis o degradación del hueso o el cartílago.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Con el doble efecto de y·wellness Articular además de contribuir a aliviar el dolor de tus articulaciones también previenes la degradación del cartílago. Confía en y·wellness Articular, su fórmula te ayudará a disminuir inflamación y rigidez, y aumentar la flexibilidad de las articulaciones'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Enlaza con la vida sana y combina nuestro y·wellness Articular con ejercicio diario, aumentarás tu flexibilidad articular, fortalecerás las articulaciones, reducirás los dolores, y tendrás menos lesiones mientras favoreces la modulación del sistema inmunológico.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'OVOMET®: ingrediente natural rico en proteínas y nutrientes esenciales que se obtiene de la membrana de huevo, rico en Colágeno. Además, contiene Ácido Hialurónico, Condroitín sulfato, Glucosamina, Queratina y Lisozima.  Todos estos ingredientes actúan sinérgicamente reduciendo el dolor y disminuyendo la inflamación. Contribuyen a la regeneración de los cartílagos y mejoran la flexibilidad.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Según estudios* clínicos realizados por Ovomet®, tras 10 días de tratamiento la percepción del dolor en personas diagnosticadas con Artrosis, disminuye en un 24% alcanzando el 49% a los 50 días.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'CÚRCUMA: contribuye reducir los procesos inflamatorios, manteniendo la flexibilidad y el bienestar articular. Además, posee propiedades antioxidantes.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PIPERINA: Este ingrediente contribuye de forma significativa a la mejor biodisponibilidad (absorción) de la cúrcuma, mejorando su eficacia.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'BOSWELIA SERRATA: Potente antiinflamatorio natural que se extrae de un árbol de origen indio. Ayuda igualmente a mejorar la movilidad de las articulaciones y a reducir el dolor.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'VITAMINA C: contribuye a la formación natural del colágeno, y contribuye al normal
-                        funcionamiento de los vasos sanguíneos, huesos y cartílagos.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 comprimido al día con la comida'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. No superar la dosis expresamente recomendada. Para el uso prolongado se aconseja el seguimiento de un médico. No tomar durante el embarazo ni la lactancia, o en caso de tratamiento con fármacos hipolipemiantes. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            )
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Senior',
-        'descripcion_categoria' => 'Descripción de Senior',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Bemory® Senior',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'bemory-senior',
-                'img-portada' => 'Bememory.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Te cuesta concentrarte?  ¿Sueles perder cosas frecuentemente o te olvidas de asistir a eventos importantes o a citas?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Bemory®  mejora la concentración, la memoria y el aprendizaje, reforzando el rendimiento cerebral.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Recomendado especialmente en períodos de estrés mental o actividad intensa en que es necesario mantener un alto nivel de concentración o reforzar la memoria y el aprendizaje.'
-                    )                
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'BACOPA: planta tradicional de la medicina ayurvédica, que contribuye a estimular la síntesis de la acetilcolina, la sustancia que necesitan las neuronas para poder transmitir la información entre ellas. Además de mejorar la conducción nerviosa, la Bacopa tiene una acción antioxidante, protegiendo el cerebro de los radicales libres y reparando las neuronas lesionadas.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'HIERRO: El Hierro proporciona oxígeno a los órganos mediante la producción de glóbulos rojos. Puesto que el cerebro utiliza aproximadamente el 20% del oxígeno de la sangre, el hierro está directamente relacionado con la salud del cerebro y sus funciones. Es necesario para el crecimiento, desarrollo y el funcionamiento celular normal y también para la sínstesis de algunas hormonas y tejido conectivo.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'VITAMINAS DEL GRUPO B: el papel principal de las vitaminas B en la función cerebral es el de propagar los impulsos nerviosos necesarios para el buen funcionamiento del sistema nerviosos y la buena salud mental.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 vial al día por la mañana'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. No superar la dosis expresamente recomendada. Para el uso prolongado se aconseja el seguimiento de un médico. No tomar durante el embarazo ni la lactancia, o en caso de tratamiento con fármacos hipolipemiantes. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Respira',
-        'descripcion_categoria' => 'Descripción de respira',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Free Nose® Agua de Mar Descongestionante 30ml',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'freenose-agua-de-mar-hipertonica',
-                'img-portada' => 'hypertonic-spraynasal.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Te cuesta respirar por culpa de la congestión nasal? ¿El resfriado no te deja descansar por la noche? ¿Sufres nasofaringitis, rinitis o sinusitis?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Free Nose®  Agua de Mar Hipertónica es un tratamiento que alivia los síntomas de la congestión nasal y de nariz seca gracias a su diseño que permite limpiar, purificar e hidratar la cavidad nasal.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Además, su agua de mar es obtenida de una forma controlada directamente del mar de la zona de la Bahía de Cancale en la Bretaña, área conocida por la calidad y pureza de sus aguas.
-                        Porque lo natural es sentirse bien, Respira.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CARACTERÍSTICAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Spray sin gas propelente.</li>
-                        <li>Botella de 30 ml.</li>
-                        <li>Aplicador nasal</li>
-                        <li>Agua de mar clase A, de la Bahía de Cancale en Bretaña.</li>
-                        <li>Limpia en profundidad las fosas nasales.</li>
-                        <li>Descongestiona.</li>
-                        <li>Hidrata.</li>
-                        <li>El efecto osmosis reduce la inflamación de la mucosa.</li>
-                        <li>Ayuda a disminuir el uso de fármacos descongestionantes</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INDICADO PARA:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Congestión nasal</li>
-                        <li>Nasofaringitis</li>
-                        <li>Rinitis alérgica obstructiva y sinusitis</li>
-                        <li>Nariz seca y ronquera debido a mucosas secas</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO Y DOSIS:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Agitar la botella antes de usar.</li>
-                        <li>Introducir el aplicador en una de las fosas nasales y presionar la bomba para aplicar el producto.</li>
-                        <li>Repetir el proceso en la otra fosa nasal.</li>
-                        <li>Repetir el proceso durante el día, las veces que sean necesarias.</li>
-                        <li>3 veces al día</li>'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal própolis +1',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'freenose-spray-nasal-propolis-mas1',
-                'img-portada' => 'propolis1.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Notas que tu hijo muestra síntomas de resfriado? ¿Sufre fiebre, malestar, dolor de cabeza, congestión nasal, tos, estornudos, dolor muscular o de garganta? 
-                        Trata las enfermedades infecciosas desde el primer síntoma. Free Nose® Própolis +1 actúa contra los procesos infecciosos hidratando, calmando y protegiendo el conducto nasal de forma natural.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PRÓPOLIS: Es una sustancia resinosa natural similar a la cera que obtienen las abejas a partir de la savia u otras fuentes vegetales y lo utilizan para proteger sus colmenas.
-                        El própolis tiene propiedades antisépticas, antibacterianas, antimicrobianas, antivíricas, fungicidas, antiinflamatorias, anestésicas y antioxidantes, por lo que resulta especialmente beneficioso ante los procesos infecciosos.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'TOMILLO: Planta aromática que contiene aceite esencial rico en Timol y Carvacrol, dos sustancias con propiedades antibióticas, expectorantes y balsámicas.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'EUCALIPTUS: Su aceite esencial tiene un gran poder expectorante y abre las vías respiratorias.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 o 2 pulverizaciones, 2-3 veces al día en cada fosa nasal.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Agitar el envase antes de su uso y aplicar en cada fosa nasal con un ligero masaje.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-            array(
-                'nombre' => 'Multi-vitamin Kids<br><br>',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'multivitamin-kids-spray-oral',
-                'img-portada' => 'ysana-multivitamina-vitamina-b3-b12-b6-b5.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu hijo está más cansado de lo habitual? 
- 
-                        Multi-Vitamin Kids Spray oral aporta las vitaminas imprescindibles que el cuerpo necesita consumir para un correcto funcionamiento del metabolismo, el crecimiento, el desarrollo, y la salud en general.
-                         
-                        Su formato spray hace de Multivitamin una manera fácil y eficaz de dar a tus hijos su contenido vitamínico.
-                         
-                        Además, está buenísimo ¡y a los niños les encanta!'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'VITAMINAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'VITAMINA B:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Contribuye a la reducción del cansancio y la fatiga.</li>
-                        <li>Interviene en la obtención de energía.</li>
-                        <li>Mantiene un buen estado del sistema nervioso.</li>
-                        <li>Mejora el sistema circulatorio.</li>
-                        <li>Mantiene la piel sana y las mucosas digestivas.</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'VITAMINA B5'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Indispensable para un buen funcionamiento del sistema inmune.</li>
-                        <li>Contribuye a la reducción de la fatiga y el cansancio.</li>
-                        <li>Aporta energía y vitalidad.</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => ''
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => ''
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => ''
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-            array(
-                'nombre' => 'Free Nose® Aspirador nasal pediátrico + 4 recambios',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'freenose-pediatrico-agua-de-mar',
-                'img-portada' => 'ysana-free-nose-spray-nasal-isotonica-pedriatico-120ml.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu bebé tiene acumulación de mocos u obstrucción nasal? ¿Le cuesta dormir por culpa de un resfriado o congestión?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Estos síntomas pueden promover la proliferación de virus y bacterias y pueden causar infecciones secundarias y complicaciones tales como la otitis o sinusitis.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Una buena higiene nasal es primordial tanto en bebés como en niños, ya que todavía no saben sonarse solos y tienen dificultades para respirar por la boca.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Free Nose®  pediátrico agua de mar realiza una acción mecánica de lavado y de extracción de la mucosidad y proporciona un efecto descongestivo por arrastre para cuidar de tu bebé y evitar infecciones.'
-                    ),
-                    
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Agua de mar clase A, de la Bahía de Cancale en Bretaña y agua purificada.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CARACTERÍSTICAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Spray sin gas propelente.</li>
-                        <li>Botella de 120 ml aplicador fuerza suave</li>
-                        <li>Botella de 30 ml aplicador nasal</li>
-                        <li>Adaptado a la cavidad nasal del bebé.</li>
-                        <li>Agua de mar clase A, de la Bahía de Cancale en Bretaña.</li>'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-                    array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Agitar la botella antes de usar.</li>
-                        <li>Introducir el aplicador en una de las fosas nasales y presionar la bomba para aplicar el producto.</li>
-                        <li>Repetir el proceso en la otra fosa nasal.</li>
-                        <li>Repetir el proceso durante el día, las veces que sean necesarias, especialmente antes de comer y antes de acostarse.</li>'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-            array(
-                'nombre' => 'Free Nose® Spray Nasal Própolis +12',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'freenose-spray-nasal-propolis-mas12',
-                'img-portada' => 'propolis12-pack.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Alguna vez has sufrido fiebre, malestar, dolor de cabeza, congestión nasal, tos, estornudos, dolor muscular o de garganta? Entonces seguro que ya conoces los síntomas del resfriado.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Trata las enfermedades infecciosas desde el primer síntoma. Free Nose® Própolis +12 actúa contra los procesos infecciosos hidratando, calmando y protegiendo el conducto nasal de forma natural.'
-                    )                    
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PRÓPOLIS: Es una sustancia resinosa natural similar a la cera que obtienen las abejas a partir de la savia u otras fuentes vegetales y lo utilizan para proteger sus colmenas.
-                        El própolis tiene propiedades antisépticas, antibacterianas, antimicrobianas, antivíricas, fungicidas, antiinflamatorias, anestésicas y antioxidantes, por lo que resulta especialmente beneficioso ante los procesos infecciosos.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'TOMILLO: Planta aromática que contiene aceite esencial rico en Timol y Carvacrol, dos sustancias con propiedades antibióticas, expectorantes y balsámicas.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'EUCALIPTUS: Su aceite esencial tiene un gran poder expectorante y abre las vías respiratorias.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 o 2 pulverizaciones, 2-3 veces al día en cada fosa nasal.'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Agitar el envase antes de su uso y aplicar en cada fosa nasal con un ligero masaje.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-        )
-    ),
-    array(
-        'nombre_categoria' => 'Infantil',
-        'descripcion_categoria' => 'Descripción de Infantil',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Bemory® Kids',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => 'bemory-kids',
-                'img-portada' => 'Bememory-kids.png',
-                'stock' => 2,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Notas que a tu hijo le cuesta concentrarse?  ¿Suele despistarse y olvida sus tareas?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Bemory® Kids ayuda a mejorar la concentración, la memoria y el aprendizaje y estimula la actividad cerebral, reforzando su rendimiento.'
-                    ), 
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Gracias a sus componentes específicos, Bemory® Kids está especialmente recomendado para los períodos más exigentes de concentración y memoria.'
-                    )                
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'BENEFICIOS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'VITAMIN C: Contribuye al funcionamiento normal del sistema nervioso y a las funciones psicológicas DHA, CYTIDINE Y URIDINE: Contribuyen al rendimiento y a la correcta actividad cerebral JALEA REAL: Aporta a los niños los nutrientes y energía necesaria para aguantar todas sus actividades diarias'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 vial al día por la mañana antes del desayuno'
-                    ),
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.  Conservar en un lugar fresco, seco y protegido de la luz. Después de cada tres cajas consumidas, dejar un mes de reposo.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-        )
-    )
-);
-
-$productos_ysana_experiencia = array(
-    array(
-        'nombre_categoria' => 'Pack experiencias',
-        'descripcion_categoria' => 'Descripción de Pack experiencias',
-        'productos_categoria' => array(
-            array(
-                'nombre' => 'Pack Mujer',
-                'descripcion' => 'Nuestro Pack Mujer está especialmente diseñado para acompañarte a lograr tus objetivos y sentirte cómoda en tu día a día. Incluye Y-woman menopausia + adelgaYsana Forte, dos productos que combinan a la perfección. No esperes más ¡Siéntete mejor!',
-                'url-seo' => 'pack-mujer',
-                'img-portada' => 'ysana-pack-mujer-ywonan.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Sufres sofocos, insomnio, nerviosismo y cambios de humor? ¿Te sientes irritada?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'La intensidad de los síntomas de la menopausia varía de una mujer a otra en función de la disminución hormonal, Y-woman Menopausia alivia los síntomas en todos sus niveles y gracias a su efecto regulador 24h te ayuda a sentirte mejor en tu día a día.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>¿Quieres empezar a llevar un estilo de vida saludable y te gustaría contar con una ayuda extra? ¿Te sientes hinchada o te gustaría combatir esos kilos de más?</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¡Empieza a sentirte mejor con adelgaYsana Forte!'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Su plan doble acción combina dos fórmulas: 10 botellitas rojas para ayudar al metabolismo de la grasa por su contenido en café verde, garcinia y picolinato de cromo y 10 botellitas verdes con extracto de cola de caballo, una planta utilizada tradicionalmente para depurar el organismo gracias a sus propiedades diuréticas.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Y-Woman Menopausia:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES FÓRMULAS DIA Y NOCHE DE Y-WOMAN:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA DÍA CON CIMICÍFUGA: La fórmula día está diseñada para aliviar los signos asociados a la menopausia como los sofocos, la sudoración o la irritabilidad. La Cimicífuga es una planta utilizada como con fines medicinales que ayuda a la mujer a tener una menopausia confortable.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA NOCHE CON PASIFLORA: La fórmula noche está diseñada para contrarrestar el insomnio y nerviosismo propios de la menopausia. La Pasiflora es una planta rica en sustancias flavonoides, fenoles y aceites esenciales a las que se le atribuye su acción sedante. La Pasiflora facilita tener un estado de relajación propicio para tener un sueño y descanso saludable.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTE ESTRELLA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL®: extracto de Lúpulo patentado. Los estudios clínicos revelan que gracias a su molécula 8PN, el extracto de Lúpulo es actualmente el fitoestrógeno más potente que se conoce, ya que posee el 100% de las propiedades necesarias para equilibrar los desajustes hormonales propios de la menopausia.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL reduce los sofocos en un 31% después de 6 semanas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL mejora la calidad de vida en un 90% regulando el desequilibrio hormonal.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS DIARIA RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Para conseguir un efecto regulador 24h: un comprimido fórmula DÍA por la mañana y 1 comprimido fórmula NOCHE por la noche antes de acostarse.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'No superar la dosis diaria recomendada. Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada. Mantener fuera del alcance de los niños más pequeños.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>adelgaYsana Forte:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'EL PLAN 20 DÍAS'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PLAN 20 DÍAS-DOBLE ACCIÓN que contribuye a quemar grasas y a eliminar líquidos y toxinas gracias a la alternancia de sus fórmulas ROJA, y VERDE. Combinando las dos fórmulas conseguirás el efecto quemar-grasas y la eliminación de líquidos.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>FÓRMULA ROJA</strong>: con <strong>Café Verde, Garcinia y Picolinato de Cromo</strong>, contribuye al metabolismo de las grasas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>FÓRMULA VERDE</strong>: con <strong>Cola de Caballo</strong>, tradicionalmente usado por sus efectos diuréticos y detoxificantes.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Ambas fórmulas (roja y verde) deben tomarse en días alternos durante 20 días, comenzando el primer día por el vial rojo. El contenido de las botellitas se debe disolver en una botella de 1,5 l de agua e ir consumiéndose a lo largo del día.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Mujer Confort',
-                'descripcion' => 'Nuestro Pack Mujer Confort está pensado para que nada te pare. Ysana® Vida Sana desea estar a tu lado en ese momento de la vida en el que necesitas tomar el control pero a la vez estar descansada, por ello te proponemos este pack con el cual podrás con todo. Incluye Y-woman menopausia + Eficaps® sueño, dos productos que te ayudarán a reducir los síntomas de la menopausia y a mejorar tu ciclo de sueño.',
-                'url-seo' => 'pack-mujer-confort',
-                'img-portada' => 'ysana-pack-confort-eficaps.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Sufres sofocos, insomnio, nerviosismo y cambios de humor? ¿Te sientes irritada?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'La intensidad de los síntomas de la menopausia varía de una mujer a otra en función de la disminución hormonal, Y-woman Menopausia alivia los síntomas en todos sus niveles y gracias a su efecto regulador 24h te ayuda a sentirte mejor en tu día a día.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tienes dificultades para conciliar el sueño? ¿Sufres despertares nocturnos? ¿Padeces insomnio? Se estima que alrededor del 45% de la población española adulta presenta uno de estos trastornos del sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Dormir bien es un proceso biológico imprescindible para llevar una vida saludable:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Restablece el equilibrio físico y psicológico básico.</li>
-							<li>Restablece los niveles de energía.</li>
-							<li>Fija los procesos de aprendizaje y memoria.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu rutina afecta tu ciclo de sueño? Date de alta en Club Ysana y descúbrelo  ahora completando nuestro cuestionario gratuito sobre hábitos de sueño. Recibirás consejos personalizados de Neuropsicólogos titulados para  tu día a día que te ayudarán a dormir mejor!'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eficaps®  Sueño actúa sobre el ciclo del sueño, liberando sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Esta extraordinaria innovación <strong>permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada</strong> según su absorción en nuestro organismo y momento de máximo aprovechamiento.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Evita los despertares nocturnos y asegura un descanso de calidad.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CONSECUENCIAS DE NO DORMIR BIEN:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Somnolencia excesiva diurna.</li>
-							<li>Desorientación.</li>
-							<li>Escaso nivel de concentración.</li>
-							<li>Disminución de la calidad de vida.</li>
-							<li>Reducción de la productividad laboral.</li>'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Y-Woman Menopausia:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES FÓRMULAS DIA Y NOCHE DE Y-WOMAN:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA DÍA CON CIMICÍFUGA: La fórmula día está diseñada para aliviar los signos asociados a la menopausia como los sofocos, la sudoración o la irritabilidad. La Cimicífuga es una planta utilizada como con fines medicinales que ayuda a la mujer a tener una menopausia confortable.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FÓRMULA NOCHE CON PASIFLORA: La fórmula noche está diseñada para contrarrestar el insomnio y nerviosismo propios de la menopausia. La Pasiflora es una planta rica en sustancias flavonoides, fenoles y aceites esenciales a las que se le atribuye su acción sedante. La Pasiflora facilita tener un estado de relajación propicio para tener un sueño y descanso saludable.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTE ESTRELLA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL®: extracto de Lúpulo patentado. Los estudios clínicos revelan que gracias a su molécula 8PN, el extracto de Lúpulo es actualmente el fitoestrógeno más potente que se conoce, ya que posee el 100% de las propiedades necesarias para equilibrar los desajustes hormonales propios de la menopausia.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL reduce los sofocos en un 31% después de 6 semanas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'LIFENOL mejora la calidad de vida en un 90% regulando el desequilibrio hormonal.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS DIARIA RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Para conseguir un efecto regulador 24h: un comprimido fórmula DÍA por la mañana y 1 comprimido fórmula NOCHE por la noche antes de acostarse.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'No superar la dosis diaria recomendada. Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada. Mantener fuera del alcance de los niños más pequeños.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Eficaps Sueño:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eﬁcaps Sueño es un innovador complemento alimenticio con una nueva tecnología de liberación controlada ayudando a dormir naturalmente durante 8 horas con una sola toma.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>MELATONINA</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es la hormona que produce de forma  natural el cerebro durante el anochecer, es estimulada por la oscuridad e inhibida por la luz, controlando el ritmo circadiano que regula los ciclos de sueño - vigilia de nuestro reloj biológico. Además, la melatonina contribuye a conciliar el sueño más rápidamente y a descansar mejor. Está indicada también para aliviar los síntomas del <strong>jet-lag</strong> o facilitar el sueño a las personas con horarios irregulares.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>GABA:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es un neurotransmisor cerebral que ayuda a calmar la actividad cerebral excesiva. Resulta clave para el cerebro para luchar contra los efectos nocivos del estrés, promoviendo estados mentales de mayor relajación y favoreciendo el sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>PASIFLORA Y VALERIANA</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Con propiedades sedantes, calmantes y relajantes que ayudan a conciliar el sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'LAS FASES DE LOS COMPRIMIDOS DE UNA SÓLA CÁPSULA:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li><strong>COMPRIMIDO 1 A LOS 30 MINUTOS (MELATONINA Y GABA): </strong>Contribuyen a conciliar el sueño a la media hora de la toma de eficaps.</li>
-							<li><strong>COMPRIMIDO 2 y 3 A LOS 30 MINUTOS (VALERIANA Y PASIFLORA): </strong>Refuerza la acción inductora del sueño.</li>
-							<li><strong>COMPRIMIDO 4 DE FORMA SOSTENIDA DURANTE 8 HORAS (MELATONINA, GABA Y PASIFLORA)</strong></li>'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Memoria y Sueño',
-                'descripcion' => 'Nuestro Pack Memoria y Sueño es tu aliado perfecto para reforzar el rendimiento cerebral, mejorar la concentración y ayudarte en tu descanso diario, mejorando la calidad de tu sueño. Incluye Bemory® Senior + Eficaps® sueño, dos productos desarrollados en base a extractos naturales que combinan a la perfección. No esperes más ¡Ve a por todas!',
-                'url-seo' => 'pack-memoria-sueño',
-                'img-portada' => 'ysana-pack-memoria-sueno-bemory-eficaps.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Te cuesta concentrarte?  ¿Sueles perder cosas frecuentemente o te olvidas de asistir a eventos importantes o a citas?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Bemory® contribuye a mejorar la concentración, la memoria y el aprendizaje, reforzando el rendimiento cerebral.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Recomendado especialmente en períodos de estrés mental o actividad intensa en que es necesario mantener un alto nivel de concentración o reforzar la memoria y el aprendizaje.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tienes dificultades para conciliar el sueño? ¿Sufres despertares nocturnos? ¿Padeces insomnio? Se estima que alrededor del 45% de la población española adulta presenta uno de estos trastornos del sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Dormir bien es un proceso biológico imprescindible para llevar una vida saludable:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Restablece el equilibrio físico y psicológico básico.</li>
-							<li>Restablece los niveles de energía.</li>
-							<li>Fija los procesos de aprendizaje y memoria.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu rutina afecta tu ciclo de sueño? Date de alta en Club Ysana y descúbrelo  ahora completando nuestro cuestionario gratuito sobre hábitos de sueño. Recibirás consejos personalizados de Neuropsicólogos titulados para  tu día a día que te ayudarán a dormir mejor!'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eficaps®  Sueño actúa sobre el ciclo del sueño, liberando sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Esta extraordinaria innovación <strong>permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada</strong> según su absorción en nuestro organismo y momento de máximo aprovechamiento.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Evita los despertares nocturnos y asegura un descanso de calidad.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CONSECUENCIAS DE NO DORMIR BIEN:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Somnolencia excesiva diurna.</li>
-							<li>Desorientación.</li>
-							<li>Escaso nivel de concentración.</li>
-							<li>Disminución de la calidad de vida.</li>
-							<li>Reducción de la productividad laboral.</li>'
-                    ),
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Bemory® Senior:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'BACOPA: planta tradicional de la medicina ayurvédica, que contribuye a estimular la síntesis de la acetilcolina, la sustancia que necesitan las neuronas para poder transmitir la información entre ellas. Además de mejorar la conducción nerviosa, la Bacopa tiene una acción antioxidante, protegiendo el cerebro de los radicales libres y reparando las neuronas lesionadas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'HIERRO: El Hierro proporciona oxígeno a los órganos mediante la producción de glóbulos rojos. Puesto que el cerebro utiliza aproximadamente el 20% del oxígeno de la sangre, el hierro está directamente relacionado con la salud del cerebro y sus funciones. Es necesario para el crecimiento, desarrollo y el funcionamiento celular normal y también para la sístesis de algunas hormonas y tejido conectivo.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'VITAMINAS DEL GRUPO B: el papel principal de las vitaminas B en la función cerebral es el de propagar los impulsos nerviosos necesarios para el buen funcionamiento del sistema nerviosos y la buena salud mental.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 vial al día por la mañana'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.  Conservar en un lugar fresco, seco y protegido de la luz.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Eficaps Sueño:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eﬁcaps Sueño es un innovador complemento alimenticio con una nueva tecnología de liberación controlada ayudando a dormir naturalmente durante 8 horas con una sola toma.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>MELATONINA</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es la hormona que produce de forma  natural el cerebro durante el anochecer, es estimulada por la oscuridad e inhibida por la luz, controlando el ritmo circadiano que regula los ciclos de sueño - vigilia de nuestro reloj biológico. Además, la melatonina contribuye a conciliar el sueño más rápidamente y a descansar mejor. Está indicada también para aliviar los síntomas del <strong>jet-lag</strong> o facilitar el sueño a las personas con horarios irregulares.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>GABA:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es un neurotransmisor cerebral que ayuda a calmar la actividad cerebral excesiva. Resulta clave para el cerebro para luchar contra los efectos nocivos del estrés, promoviendo estados mentales de mayor relajación y favoreciendo el sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>PASIFLORA Y VALERIANA</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Con propiedades sedantes, calmantes y relajantes que ayudan a conciliar el sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'LAS FASES DE LOS COMPRIMIDOS DE UNA SÓLA CÁPSULA:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li><strong>COMPRIMIDO 1 A LOS 30 MINUTOS (MELATONINA Y GABA):</strong> Contribuyen a conciliar el sueño a la media hora de la toma de eficaps.</li>
-							<li><strong>COMPRIMIDO 2 y 3 A LOS 30 MINUTOS (VALERIANA Y PASIFLORA):</strong> Refuerza la acción inductora del sueño.</li>
-							<li><strong>COMPRIMIDO 4 DE FORMA SOSTENIDA DURANTE 8 HORAS (MELATONINA, GABA Y PASIFLORA)</strong></li>'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Articulaciones al 100%',
-                'descripcion' => 'Nuestro Pack Articulaciones al 100% te ayudará a aliviar el dolor de tus articulaciones y aumentar su flexibilidad.  Incluye y·wellness Articular + un Plan de Ejercicios personalizado adaptado a tí. Vive la experiencia Vida Sana. No esperes más ¡Recupera tu ritmo!',
-                'url-seo' => 'pack-articulaciones-100',
-                'img-portada' => 'ysana-pack-articulaciones-ywellness.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Sufres de dolor articular? ¿Por las mañanas notas tus articulaciones rígidas?  ¿El dolor empeora y notas que disminuye la movilidad?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Estos pueden ser algunos de los síntomas de artrosis, artritis o degradación del hueso o el cartílago.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Con el doble efecto de y·wellness Articular además de contribuir a aliviar el dolor de tus articulaciones también previenes la degradación del cartílago. Confía en y·wellness Articular, su fórmula te ayudará a disminuir inflamación y rigidez, y aumentar la flexibilidad de las articulaciones'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Enlaza con la vida sana y combina nuestro y·wellness Articular con ejercicio diario, aumentarás tu flexibilidad articular, fortalecerás las articulaciones, reducirás los dolores, y tendrás menos lesiones mientras favoreces la modulación del sistema inmunológico.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Las dolencias en  las articulaciones se presentan habitualmente a partir de los 30 años y aumentan con la edad debido a la degeneración articular. en Ysana® sabemos que mantener unas articulaciones activas es la mejor manera de prevenir el dolor articular, por ello, incluimos en este pack un plan adaptado a tí con una serie de ejercicios que fortalecerán tus articulaciones mediante la construcción de los músculos que las rodean. Siguiendo este plan de ejercicios, desarrollado por fisioterapeutas profesionales, mantendrás tus tendones y ligamentos flexibles al 100%'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Y·Wellness Articular:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'OVOMET®: ingrediente natural rico en proteínas y nutrientes esenciales que se obtiene de la membrana de huevo, rico en Colágeno. Además, contiene Ácido Hialurónico, Condroitín sulfato, Glucosamina, Queratina y Lisozima.  Todos estos ingredientes actúan sinérgicamente reduciendo el dolor y disminuyendo la inflamación. Contribuyen a la regeneración de los cartílagos y mejoran la flexibilidad.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Según estudios* clínicos realizados por Ovomet®, tras 10 días de tratamiento la percepción del dolor en personas diagnosticadas con Artrosis, disminuye en un 24% alcanzando el 49% a los 50 días'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'CÚRCUMA: contribuye reducir los procesos inflamatorios, manteniendo la flexibilidad y el bienestar articular. Además, posee propiedades antioxidantes.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PIPERINA: Este ingrediente contribuye de forma significativa a la mejor biodisponibilidad (absorción) de la cúrcuma, mejorando su eficacia.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'BOSWELIA SERRATA: Potente antiinflamatorio natural que se extrae de un árbol de origen indio. Ayuda igualmente a mejorar la movilidad de las articulaciones y a reducir el dolor.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'VITAMINA C: contribuye a la formación natural del colágeno, y contribuye al normal funcionamiento de los vasos sanguíneos, huesos y cartílagos.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 comprimido al día con la comida'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. No superar la dosis expresamente recomendada. Para el uso prolongado se aconseja el seguimiento de un médico. No tomar durante el embarazo ni la lactancia, o en caso de tratamiento con fármacos hipolipemiantes. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack controla tu Colesterol',
-                'descripcion' => 'Nuestro Pack Controla tu Colesterol está especialmente diseñado para ayudar a regular los niveles de colesterol en sangre.  Incluye y·wellness Colesterol + un Seguimiento Nutricional adaptado a tus hábitos y situación personal. Llevar una vida sana y practicar ejercicio físico es esencial para poder tener un control total sobre tu bienestar. Vive la experiencia Vida Sana. No esperes más déjate cuidar y ¡siéntete mejor!',
-                'url-seo' => 'pack-controlar-colesterol',
-                'img-portada' => 'ysana-pack-reduce-colesterol-ywellness-colesterol.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Y-Wellness Colesterol:</strong>'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Alguna vez has sufrido pesadez de estómago, indigestión, dolor en el pecho, dolor de cabeza, visión borrosa o pérdida de equilibrio o hinchazón en las extremidades?'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'El exceso de colesterol en la sangre, combinado con otras sustancias, puede adherirse a las paredes de las arterias formando unas placas que pueden estrecharlas u obstruirlas, ocasionando síntomas estos síntomas e incluso convirtiéndose en un un factor de riesgo cardiovascular.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Una alimentación variada y sana, practicar ejercicio físico y realizar un control analítico periódicamente es fundamental para que nuestro cuerpo se mantenga en estado óptimo y puedas disfrutar de tu día a día sin reservas sin importar la edad.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Tener hábitos saludables siempre es la mejor manera de prevenir. Este pack te proporcionará la lista de bien hacer nutricional más adecuada a tu situación personal para que plantes cara al colesterol. Nuestros nutricionistas evaluarán tu situación y hábitos alimentarios, analizándolos en profundidad para diseñar un plan alimentario individualizado exclusivo para ti.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'MONACOLINA K: activo que se obtiene de la fermentación de la LEVADURA DE ARROZ ROJO. Actúa inhibiendo la HMG-CoA reductasa, enzima responsable de la síntesis del colesterol en el hígado. Este activo natural tiene el mismo mecanismo de acción que la Lovaestatina, el fármaco utilizado para tratar el colesterol LDL, pero sin los efectos secundarios negativos de las estatinas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'COENZIMA Q-10: Es una pseudo vitamina, presente especialmente en el corazón, hígado, riñón, y páncreas. Su misión es transferir oxígeno y energía a las células. La toma de estatinas para reducir el colesterol, reduce significativamente los niveles de la coenzima Q-10 en sangre, provocando dolores musculares. El CoQ10 es un potente antioxidante que además disminuye el riesgo de padecer enfermedades cardiovasculares.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'CARDO MARIANO (80% SILIMARINA): Uno de los efectos negativos de las estatinas es toxicidad hepática. Este extracto proporciona una actividad hepatoprotectora frente a agentes químicos.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 comprimido al día por la mañana.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. No superar la dosis expresamente recomendada. Para el uso prolongado se aconseja el seguimiento de un médico. No tomar durante el embarazo ni la lactancia, o en caso de tratamiento con fármacos hipolipemiantes. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Duerme Mejor',
-                'descripcion' => 'Nuestro Pack Duerme Mejor está formulado para contribuir a regular el ciclo del sueño y mejorar tus hábitos diarios para que así puedas descansar toda la noche. La experiencia incluye Eficaps® sueño + un taller de seguimiento del sueño desarrollado por neuropsicólogos titulados. Vive la experiencia Vida Sana. No esperes más, descansa bien y ¡mejora tus hábitos!',
-                'url-seo' => 'pack-dormir-mejor',
-                'img-portada' => '',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tienes dificultades para conciliar el sueño? ¿Sufres despertares nocturnos? ¿Padeces insomnio? Se estima que alrededor del 45% de la población española adulta presenta uno de estos trastornos del sueño.'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Dormir bien es un proceso biológico imprescindible para llevar una vida saludable:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Restablece el equilibrio físico y psicológico básico.</li>
-							<li>Restablece los niveles de energía.</li>
-							<li>Fija los procesos de aprendizaje y memoria.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu rutina afecta tu ciclo de sueño? Date de alta en Club Ysana y descúbrelo  ahora completando nuestro cuestionario gratuito sobre hábitos de sueño. Recibirás consejos personalizados de Neuropsicólogos titulados para  tu día a día que te ayudarán a dormir mejor!'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eficaps®  Sueño actúa sobre el ciclo del sueño, liberando sus activos de forma inmediata para conciliar el sueño y de forma continuada para que puedas dormir plácidamente durante toda la noche.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Esta extraordinaria innovación <strong>permite liberar los 4 comprimidos de la cápsula de forma inmediata, sostenida o retardada</strong> según su absorción en nuestro organismo y momento de máximo aprovechamiento.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Evita los despertares nocturnos y asegura un descanso de calidad.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CONSECUENCIAS DE NO DORMIR BIEN:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Somnolencia excesiva diurna.</li>
-							<li>Desorientación.</li>
-							<li>Escaso nivel de concentración.</li>
-							<li>Disminución de la calidad de vida.</li>
-							<li>Reducción de la productividad laboral.</li>
-							<li>Problemas de salud.</li>'
-                    ),
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Eficaps sueño:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Eﬁcaps Sueño es un innovador complemento alimenticio con una nueva tecnología de liberación controlada ayudando a dormir naturalmente durante 8 horas con una sola toma.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>MELATONINA</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es la hormona que produce de forma  natural el cerebro durante el anochecer, es estimulada por la oscuridad e inhibida por la luz, controlando el ritmo circadiano que regula los ciclos de sueño - vigilia de nuestro reloj biológico. Además, la melatonina contribuye a conciliar el sueño más rápidamente y a descansar mejor. Está indicada también para aliviar los síntomas del <strong>jet-lag</strong> o facilitar el sueño a las personas con horarios irregulares.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>GABA:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Es un neurotransmisor cerebral que ayuda a calmar la actividad cerebral excesiva. Resulta clave para el cerebro para luchar contra los efectos nocivos del estrés, promoviendo estados mentales de mayor relajación y favoreciendo el sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>PASIFLORA Y VALERIANA</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Con propiedades sedantes, calmantes y relajantes que ayudan a conciliar el sueño.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'LAS FASES DE LOS COMPRIMIDOS DE UNA SÓLA CÁPSULA:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li><strong>COMPRIMIDO 1 A LOS 30 MINUTOS (MELATONINA Y GABA):</strong> Contribuyen a conciliar el sueño a la media hora de la toma de eficaps.</li>
-							<li><strong>COMPRIMIDO 2 y 3 A LOS 30 MINUTOS (VALERIANA Y PASIFLORA):</strong> Refuerza la acción inductora del sueño.</li>
-							<li><strong>COMPRIMIDO 4 DE FORMA SOSTENIDA DURANTE 8 HORAS (MELATONINA, GABA Y PASIFLORA)</strong></li>'
-                    )
-                ),
-                'activo' => DESACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Memoria Senior',
-                'descripcion' => 'Nuestro Pack Memoria Senior es el aliado ideal para que las personas en edad Senior mantengan su cerebro en forma. Con la ayuda de profesionales expertos, combinamos Bemory® Senior + un taller de seguimiento de la memoria que te ayudará a reforzar los procesos cognitivos, la actividad cerebral y mejorar la concentración y la memoria. No esperes más ¡Pon tu cerebro en forma!',
-                'url-seo' => 'pack-memoria-senior',
-                'img-portada' => 'ysana-pack-memoria-sueno-bemory.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Te cuesta concentrarte?  ¿Sueles perder cosas frecuentemente o te olvidas de asistir a eventos importantes o a citas?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Bemory® contribuye a mejorar la concentración, la memoria y el aprendizaje, reforzando el rendimiento cerebral.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Recomendado especialmente en períodos de estrés mental o actividad intensa en que es necesario mantener un alto nivel de concentración o reforzar la memoria y el aprendizaje.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Sabías que tu memoria es como un músculo? Y como tal, has de entrenarla para mantenerla activa. El envejecimiento cerebral dificulta el recuerdo, por eso te proponemos acciones preventivas para que tu memoria esté siempre alerta.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'El taller de seguimiento de memoria desarrollado por nuestros especialistas está orientado a optimizar el funcionamiento de memoria mediante técnicas de aprendizaje que pretenden contribuir a reducir los cambios cognitivos asociados a la edad.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Una memoria activa es un tesoro, y en Ysana® te ayudaremos a cuidar de ella.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Bemory® Senior:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'BACOPA: planta tradicional de la medicina ayurvédica, que contribuye a estimular la síntesis de la acetilcolina, la sustancia que necesitan las neuronas para poder transmitir la información entre ellas. Además de mejorar la conducción nerviosa, la Bacopa tiene una acción antioxidante, protegiendo el cerebro de los radicales libres y reparando las neuronas lesionadas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'HIERRO: El Hierro proporciona oxígeno a los órganos mediante la producción de glóbulos rojos. Puesto que el cerebro utiliza aproximadamente el 20% del oxígeno de la sangre, el hierro está directamente relacionado con la salud del cerebro y sus funciones. Es necesario para el crecimiento, desarrollo y el funcionamiento celular normal y también para la sístesis de algunas hormonas y tejido conectivo.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'VITAMINAS DEL GRUPO B: el papel principal de las vitaminas B en la función cerebral es el de propagar los impulsos nerviosos necesarios para el buen funcionamiento del sistema nerviosos y la buena salud mental.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 vial al día por la mañana'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Los complementos alimenticios no deben utilizarse como sustitutos de una dieta equilibrada y de un estilo de vida saludable. No superar la dosis expresamente recomendada. Para el uso prolongado se aconseja el seguimiento de un médico. No tomar durante el embarazo ni la lactancia, o en caso de tratamiento con fármacos hipolipemiantes. Evitar el consumo de pomelo. Mantener fuera del alcance de los niños más pequeños.'
-                    ),
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Mejora tu Silueta',
-                'descripcion' => 'Nuestro Pack Mejora tu Silueta te ayudará a conseguir tu silueta deseada manteniéndote saludable. Sin dietas milagro, ni sacrificios. La experiencia incluye adelgaYsana Forte + una bonita botella de cristal par que lleves tu adelgaYsana Forte a todos lados. ¡Vive una experiencia completa! No esperes más, ¡enlaza con la vida sana!',
-                'url-seo' => 'pack-mejorar-silueta',
-                'img-portada' => 'ysana-pack-mejora-silueta-adelgaysana-forte.png',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Estás empezando a llevar un estilo de vida saludable y te gustaría contar con una ayuda extra? ¿Te sientes hinchada o te gustaría alcanzar tu silueta ideal?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¡Empieza a sentirte mejor con adelgaYsana Forte!'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Su plan doble acción combina dos fórmulas: 10 botellitas rojas para ayudar al metabolismo de la grasa por su contenido en café verde, garcinia y picolinato de cromo y 10 botellitas verdes con extracto de cola de caballo, una planta utilizada tradicionalmente para depurar el organismo gracias a sus propiedades diuréticas.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>adelgaYsana Forte:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'EL PLAN 20 DÍAS'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PLAN 20 DÍAS-DOBLE ACCIÓN que contribuye a quemar grasas y a eliminar líquidos y toxinas gracias a la alternancia de sus fórmulas ROJA, y VERDE. Combinando las dos fórmulas conseguirás el efecto quemar-grasas y la eliminación de líquidos.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>FÓRMULA ROJA:</strong> con <strong>Café Verde, Garcinia y Picolinato de Cromo</strong>, contribuye al metabolismo de las grasas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>FÓRMULA VERDE:</strong> con <strong>Cola de Caballo</strong>, tradicionalmente usado por sus efectos diuréticos y detoxificantes.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Ambas fórmulas (roja y verde) deben tomarse en días alternos durante 20 días, comenzando el primer día por el vial rojo. El contenido de las botellitas se debe disolver en una botella de 1,5 l de agua e ir consumiéndose a lo largo del día.'
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Cuida a tu Bebé',
-                'descripcion' => 'El Pack Cuida a tu Bebé está diseñado para cuidar de los más pequeños de la casa y mantener a raya los procesos infecciosos y congestivos de tu bebé, evitando la proliferación de virus e infecciones. El pack incluye Free Nose® Agua de Mar Isótonica pediátrico de 120ml + Free Nose® Aspirador Nasal Pediátrico.',
-                'url-seo' => 'pack-cuida-a-tu-bebe',
-                'img-portada' => '',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu bebé tiene acumulación de mocos u obstrucción nasal? ¿Le cuesta dormir por culpa de un resfriado o congestión?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Estos síntomas pueden promover la proliferación de virus y bacterias y pueden causar infecciones secundarias y complicaciones tales como la otitis o sinusitis.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Una buena higiene nasal es primordial tanto en bebés como en niños, ya que todavía no saben sonarse solos y tienen dificultades para respirar por la boca.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Free Nose® Pediátrico Agua de Mar realiza una acción mecánica de lavado y de extracción de la mucosidad y proporciona un efecto descongestivo por arrastre para cuidar de tu bebé y evitar infecciones.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu bebé sufre una secreción nasal excesiva y tiene dificultades para respirar?'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'El aspirador anatómico Free Nose® ha sido diseñado para facilitar la higiene diaria de las cavidades nasales del bebé y asegura que el pequeño pueda respirar libremente. Es <strong>Fácil de usar, higiénico y seguro</strong>, debido a su diseño único de puntas extra suaves. El aspirador nasal te permite <strong>controlar la fuerza de succión</strong> requerida cada vez, de manera que obtiene una eliminación suave y eficaz del moco de tu bebé.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Free Nose® Pediátrico – Agua de Mar</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Agua de mar clase A, de la Bahía de Cancale en Bretaña y agua purificada.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CARACTERÍSTICAS:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Spray sin gas propelente.</li>
-							<li>Botella de 120 ml aplicador fuerza suave</li>
-							<li>Botella de 30 ml aplicador nasal</li>
-							<li>Adaptado a la cavidad nasal del bebé.</li>
-							<li>Agua de mar clase A, de la Bahía de Cancale en Bretaña.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Agitar la botella antes de usar.</li>
-							<li>Introducir el aplicador en una de las fosas nasales y presionar la bomba para aplicar el producto.</li>
-							<li>Repetir el proceso en la otra fosa nasal.</li>
-							<li>Repetir el proceso durante el día, las veces que sean necesarias, especialmente antes de comer y antes de acostarle</li>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Aspirador Nasal</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Estira a tu bebé en una posición segura y cómoda.</li>
-							<li>Coloca la punta desechable en el cuerpo del aspirador.</li>
-							<li>Coloca la punta del aplicador en la fosa nasal del bebé e inspira suavemente a través de la boquilla. El filtro retiene las secreciones, evitando así cualquier posibilidad de ingestión.</li>
-							<li>Repite la acción en la otra fosa nasal.</li>
-							<li>Retira el aplicador con el moco aspirado y deséchalo.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INDICACIONES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Está indicado en procesos gripales, resfriados, sinusitis y todas aquellas patologías que cursan en secreción nasal excesiva. De este modo el aspirador nasal permite al bebé volver a respirar con normalidad. Para obtener un mejor resultado es recomendable realizar previamente el lavado con agua de mar FREE NOSE® pediátrico, incrementando así la fluidez de la mucosidad y favoreciendo su expulsión mediante la aspiración.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INSTRUCCIONES DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Colocar un recambio en el cuerpo del conector del aspirador.</li>
-							<li>Colocar el extremo del recambio en uno de los orificios nasales del bebé.</li>
-							<li>Aspirar suave, lentamente y de forma regular a través de la boquilla de aspiración.</li>
-							<li>Repetir la misma operación en el otro orificio nasal del bebé con el mismo recambio.</li>
-							<li>Quitar el recambio utilizado del cuerpo del conector y desecharlo.</li>
-							<li>Si el recambio se llena antes de finalizar la aspiración en los dos orificios, retirar las secreciones nasales sobre un pañuelo soplando la boquilla de aspiración o utilizar un nuevo recambio.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'ADVERTENCIAS:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'El recambio se debe desechar después de cada uso para prevenir el riesgo de infecciones posteriores.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'FREE NOSE® pediátrico aspirador nasal solo puede usarse con los recambios FREE NOSE.'
-                    )
-                ),
-                'activo' => DESACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Pediátrico Agua de Mar',
-                'descripcion' => 'Nuestro Pack Pediátrico Agua de Mar está especialmente diseñado para tratar los procesos infecciosos, congestivos y resfriados de los más pequeños de la casa. Una buena higiene nasal el primordial para mantener a raya la proliferación de virus e infecciones. El pack incluye Free Nose® Agua de Mar Isótonica pediátrico de 30ml + incluye Free Nose® Agua de Mar Isótonica pediátrico de 120ml',
-                'url-seo' => 'pack-pediátrico-agua-de-mar',
-                'img-portada' => '',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Tu bebé tiene acumulación de mocos u obstrucción nasal? ¿Le cuesta dormir por culpa de un resfriado o congestión?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Estos síntomas pueden promover la proliferación de virus y bacterias y pueden causar infecciones secundarias y complicaciones tales como la otitis o sinusitis.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Una buena higiene nasal es primordial tanto en bebés como en niños, ya que todavía no saben sonarse solos y tienen dificultades para respirar por la boca.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Free Nose® Pediátrico Agua de Mar realiza una acción mecánica de lavado y de extracción de la mucosidad y proporciona un efecto descongestivo por arrastre para cuidar de tu bebé y evitar infecciones.'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Free Nose® Pediátrico – Agua de Mar</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Agua de mar clase A, de la Bahía de Cancale en Bretaña y agua purificada.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CARACTERÍSTICAS:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Spray sin gas propelente.</li>
-							<li>Botella de 120 ml aplicador fuerza suave</li>
-							<li>Botella de 30 ml aplicador nasal</li>
-							<li>Adaptado a la cavidad nasal del bebé.</li>
-							<li>Agua de mar clase A, de la Bahía de Cancale en Bretaña.</li>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Agitar la botella antes de usar.</li>
-							<li>Introducir el aplicador en una de las fosas nasales y presionar la bomba para aplicar el producto.</li>
-							<li>Repetir el proceso en la otra fosa nasal.</li>
-							<li>Repetir el proceso durante el día, las veces que sean necesarias, especialmente antes de comer y antes de acostarle</li>'
-                    )
-                ),
-                'activo' => DESACTIVADO
-            ),
-			array(
-                'nombre' => 'Pack Protege tu Nariz',
-                'descripcion' => 'Nuestro Pack Protege tu Nariz te acompañará en los meses más fríos del año. Lo hemos diseñado para tratar y aliviar las fosas nasales, reduciendo los síntomas del resfriado y la congestión. Hidratando, limpiando y purificando la cavidad nasal de forma natural. El pack incluye Free Nose® Agua de Mar Hipertónica de 120ml + Free Nose® Spray Nasal Própolis +12.',
-                'url-seo' => 'proteccion-nasal',
-                'img-portada' => '',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Te cuesta respirar por culpa de la congestión nasal? ¿El resfriado no te deja descansar por la noche? ¿Sufres nasofaringitis, rinitis o sinusitis?'
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Free Nose® Agua de Mar Hipertónica es un tratamiento que alivia los síntomas de la congestión nasal y de nariz seca gracias a su diseño que permite limpiar, purificar e hidratar la cavidad nasal.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Además, su agua de mar es obtenida de una forma controlada directamente del mar de la zona de la Bahía de Cancale en la Bretaña, área conocida por la calidad y pureza de sus aguas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '¿Alguna vez has sufrido fiebre, malestar, dolor de cabeza, congestión nasal, tos, estornudos, dolor muscular o de garganta? Entonces seguro que ya conoces los síntomas del resfriado.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Trata las enfermedades infecciosas desde el primer síntoma. Free Nose® Própolis actúa contra los procesos infecciosos hidratando, calmando y protegiendo el conducto nasal de forma natural'
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Free Nose® agua de mar Hipertónica:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'CARACTERÍSTICAS:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Spray sin gas propelente.</li>
-							<li>Botella de 30 ml.</li>
-							<li>Aplicador nasal</li>
-							<li>Agua de mar clase A, de la Bahía de Cancale en Bretaña.</li>
-							<li>Limpia en profundidad las fosas nasales.</li>
-							<li>Descongestiona.</li>
-							<li>Hidrata.</li>
-							<li>El efecto osmosis reduce la inflamación de la mucosa.</li>
-							<li>Ayuda a disminuir el uso de fármacos descongestionantes</li>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INDICADO PARA:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Congestión nasal</li>
-							<li>Nasofaringitis</li>
-							<li>Rinitis alérgica obstructiva y sinusitis</li>
-							<li>Nariz seca y ronquera debido a mucosas secas</li>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO Y DOSIS:'
-                    ),
-					array(
-                        'etiqueta' => 'ul',
-                        'contenido' => '<li>Agitar la botella antes de usar.</li>
-							<li>Introducir el aplicador en una de las fosas nasales y presionar la bomba para aplicar el producto.</li>
-							<li>Repetir el proceso en la otra fosa nasal.</li>
-							<li>Repetir el proceso durante el día, las veces que sean necesarias.</li>
-							<li>3 veces al día</li>'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '<strong>Free Nose® Spray Nasal Própolis +12:</strong>'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'INGREDIENTES'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'PRÓPOLIS: Es una sustancia resinosa natural similar a la cera que obtienen las abejas a partir de la savia u otras fuentes vegetales y lo utilizan para proteger sus colmenas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'El própolis tiene propiedades antisépticas, antibacterianas, antimicrobianas, antivíricas, fungicidas, antiinflamatorias, anestésicas y antioxidantes, por lo que resulta especialmente beneficioso ante los procesos infecciosos.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'TOMILLO: Planta aromática que contiene aceite esencial rico en Timol y Carvacrol, dos sustancias con propiedades antibióticas, expectorantes y balsámicas.'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'EUCALIPTUS: Su aceite esencial tiene un gran poder expectorante y abre las vías respiratorias.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'DOSIS RECOMENDADA:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => '1 o 2 pulverizaciones, 2-3 veces al día en cada fosa nasal.'
-                    ),
-					array(
-                        'etiqueta' => 'h6',
-                        'contenido' => 'MODO DE USO:'
-                    ),
-					array(
-                        'etiqueta' => 'p',
-                        'contenido' => 'Agitar el envase antes de su uso y aplicar en cada fosa nasal con un ligero masaje.'
-                    )
-                ),
-                'activo' => DESACTIVADO
-            ),
-			//PLANTILLA____________________________________________________
-			/*
-			array(
-                'nombre' => '',
-                'descripcion' => 'Descripcion producto',
-                'url-seo' => '',
-                'img-portada' => '',
-                'stock' => 1,
-                'precio' => '0.00',
-                'usos' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => ''
-                    ),
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => ''
-                    )
-                ),
-                'informacion' => array(
-                    array(
-                        'etiqueta' => 'p',
-                        'contenido' => ''
-                    )
-                ),
-                'activo' => ACTIVADO
-            ),
-			*/
-			//PLANTILLA____________________________________________________
-        )
-    )
-);
-
-
-//echo '<pre>';
-//print_r($productos);
-//echo '</pre>';
+$lng[0]='Complementos para una vida sana - Ysana marca de confianza';
+$lng[1]='Ysana® es una marca natural e innovadora dedicada al bienestar de las personas.';
+$lng[2]='Nuestros productos';
+$lng[3]='Valores Ysana';
+$lng[4]='Innovación';
+$lng[5]='Compromiso';
+$lng[6]='Integridad';
+$lng[7]='Trabajo en Equipo';
+$lng[8]='Confianza';
+$lng[9]='Conoce más de Ysana®';
+$lng[10]='Nuestra planta de producción está ubicada en Vilabella (Tarragona) de más de 10.000 m2. Completamente equipada con la más avanzada tecnología para la fabricación de: Complementos Alimenticios en viales monodosis, extemporáneos, tecnología Eficaps®, y spray oral; en cuanto a Dispositivos Médicos contamos con áreas especializadas en aspiradores nasales para bebés, esprays de bomba y esprays “bulk on valve”. Desde nuestra sede en Barcelona diseñamos, desarrollamos y fabricamos productos tecnológicamente avanzados, con formulaciones exclusivas a base de extractos de plantas e ingredientes naturales, rigurosamente escogidos y avalados por estudios científicos. El equipo de I+D de Ysana Vida Sana desarrolla constantemente tecnologías propias e impulsa estudios clínicos específicos de eficacia y seguridad.';
+$lng[11]='Contamos con las principales ISO y GMP de exigencia a nivel Europeo, de la misma manera todos los productos Ysana® cuentan con las certificaciones técnicas de los organismos notificados nacionales, esta ardua y rigurosa labor se lleva a cabo desde nuestro departamento de Regulatorio cuyo equipo tiene amplio conocimiento y dominio de las normas tanto locales como en otros países del mundo.';
+$lng[12]='En Ysana® basamos nuestro trabajo en el compromiso por la calidad, una innovación constante de nuestros productos basados en principios activos naturales, un código ético de transparencia y comunicación, además de un riguroso cumplimiento de los estándares legales.';
+$lng[13]='Garantía Ysana';
+$lng[14]='En Ysana® Vida Sana no sólo nos encargamos de la producción, sino que también desarrollamos los productos, realizamos los estudios de eficacia y seguridad, llevamos a cabo los controles de calidad y seguimos todas las etapas del proceso regulatorio cumpliendo un exigente código de compromiso con la calidad.';
+$lng[15]='Diseño innovador';
+$lng[16]='Formulación y Desarrollo';
+$lng[17]='Certificados Regulatorios';
+$lng[18]='Control de Calidad';
+$lng[19]='Valor Tecnológico';
+$lng[20]='Logística Responsable';
+$lng[21]='Todos los productos de Ysana® Vida Sana';
+$lng[22]='YSANA® PONE LA GRAN EXPERIENCIA TERAPÉUTICA A NIVEL INTERNACIONAL DE PHARMALINK AL SERVICIO DE SUS GAMAS DE PRODUCTOS NATURALES, PARA TU CUIDADO Y EL DE LOS TUYOS.';
+$lng[23]='Encuentra la farmacia más cercana';
+$lng[24]='Encontrar';
+$lng[25]='Nombre de la Farmacia';
+$lng[26]='Cargando';
+$lng[27]='Error al cargar las farmacias';
+$lng[28]='Te has registado correctamente';
+$lng[29]='Este usuario ha sido dado de baja';
+$lng[30]='Usuario o contraseña incorrecto';
+$lng[31]='Inicia sesión en Ysana';
+$lng[32]='Correo eléctronico';
+$lng[33]='Contraseña';
+$lng[34]='Iniciar Sesión';
+$lng[35]='¿Nuevo en Ysana?';
+$lng[36]='Regístrate ahora';
+$lng[37]='¿Has olvidado tu contraseña?';
+$lng[38]='Recuperar contraseña';
+$lng[39]='Regístrate en Ysana';
+$lng[40]='Nombre';
+$lng[41]='Apellidos';
+$lng[42]='Confirmar Contraseña';
+$lng[43]='¿Ya tienes una cuenta?';
+$lng[44]='Inicia sesión';
+$lng[45]='';
+$lng[46]='';
+$lng[47]='';
+$lng[48]='';
+$lng[49]='';
+$lng[50]='';
+$lng[51]='';
+$lng[52]='';
+$lng[53]='';
+$lng[54]='';
+$lng[55]='';
+$lng[56]='';
+$lng[57]='';
+$lng[58]='';
+$lng[59]='';
+$lng[60]='';
+$lng[61]='';
+$lng[62]='';
+$lng[63]='';
+$lng[64]='';
+$lng[65]='';
+$lng[66]='';
+$lng[67]='';
+$lng[68]='';
+$lng[69]='';
+$lng[70]='';
+$lng[71]='';
+$lng[72]='';
+$lng[73]='';
+$lng[74]='';
+$lng[75]='';
+$lng[76]='';
+$lng[77]='';
+$lng[78]='';
+$lng[79]='';
+$lng[80]='';
+$lng[81]='';
+$lng[82]='';
+$lng[83]='';
+$lng[84]='';
+$lng[85]='';
+$lng[86]='';
+$lng[87]='';
+$lng[88]='';
+$lng[89]='';
+$lng[90]='';
+$lng[91]='';
+$lng[92]='';
+$lng[93]='';
+$lng[94]='';
+$lng[95]='';
+$lng[96]='';
+$lng[97]='';
+$lng[98]='';
+$lng[99]='';
+$lng[100]='';
+$lng[101]='';
+$lng[102]='';
+$lng[103]='';
+$lng[104]='';
+$lng[105]='';
+$lng[106]='';
+$lng[107]='';
+$lng[108]='';
+$lng[109]='';
+$lng[110]='';
+$lng[111]='';
+$lng[112]='';
+$lng[113]='';
+$lng[114]='';
+$lng[115]='';
+$lng[116]='';
+$lng[117]='';
+$lng[118]='';
+$lng[119]='';
+$lng[120]='';
+$lng[121]='';
+$lng[122]='';
+$lng[123]='';
+$lng[124]='';
+$lng[125]='';
+$lng[126]='';
+$lng[127]='';
+$lng[128]='';
+$lng[129]='';
+$lng[130]='';
+$lng[131]='';
+$lng[132]='';
+$lng[133]='';
+$lng[134]='';
+$lng[135]='';
+$lng[136]='';
+$lng[137]='';
+$lng[138]='';
+$lng[139]='';
+$lng[140]='';
+$lng[141]='';
+$lng[142]='';
+$lng[143]='';
+$lng[144]='';
+$lng[145]='';
+$lng[146]='';
+$lng[147]='';
+$lng[148]='';
+$lng[149]='';
+$lng[150]='';
+$lng[151]='';
+$lng[152]='';
+$lng[153]='';
+$lng[154]='';
+$lng[155]='';
+$lng[156]='';
+$lng[157]='';
+$lng[158]='';
+$lng[159]='';
+$lng[160]='';
+$lng[161]='';
+$lng[162]='';
+$lng[163]='';
+$lng[164]='';
+$lng[165]='';
+$lng[166]='';
+$lng[167]='';
+$lng[168]='';
+$lng[169]='';
+$lng[170]='';
+$lng[171]='';
+$lng[172]='';
+$lng[173]='';
+$lng[174]='';
+$lng[175]='';
+$lng[176]='';
+$lng[177]='';
+$lng[178]='';
+$lng[179]='';
+$lng[180]='';
+$lng[181]='';
+$lng[182]='';
+$lng[183]='';
+$lng[184]='';
+$lng[185]='';
+$lng[186]='';
+$lng[187]='';
+$lng[188]='';
+$lng[189]='';
+$lng[190]='';
+$lng[191]='';
+$lng[192]='';
+$lng[193]='';
+$lng[194]='';
+$lng[195]='';
+$lng[196]='';
+$lng[197]='';
+$lng[198]='';
+$lng[199]='';
+$lng[200]='';
+$lng[201]='';
+$lng[202]='';
+$lng[203]='';
+$lng[204]='';
+$lng[205]='';
+$lng[206]='';
+$lng[207]='';
+$lng[208]='';
+$lng[209]='';
+$lng[210]='';
+$lng[211]='';
+$lng[212]='';
+$lng[213]='';
+$lng[214]='';
+$lng[215]='';
+$lng[216]='';
+$lng[217]='';
+$lng[218]='';
+$lng[219]='';
+$lng[220]='';
+$lng[221]='';
+$lng[222]='';
+$lng[223]='';
+$lng[224]='';
+$lng[225]='';
+$lng[226]='';
+$lng[227]='';
+$lng[228]='';
+$lng[229]='';
+$lng[230]='';
+$lng[231]='';
+$lng[232]='';
+$lng[233]='';
+$lng[234]='';
+$lng[235]='';
+$lng[236]='';
+$lng[237]='';
+$lng[238]='';
+$lng[239]='';
+$lng[240]='';
+$lng[241]='';
+$lng[242]='';
+$lng[243]='';
+$lng[244]='';
+$lng[245]='';
+$lng[246]='';
+$lng[247]='';
+$lng[248]='';
+$lng[249]='';
+$lng[250]='';
+$lng[251]='';
+$lng[252]='';
+$lng[253]='';
+$lng[254]='';
+$lng[255]='';
+$lng[256]='';
+$lng[257]='';
+$lng[258]='';
+$lng[259]='';
+$lng[260]='';
+$lng[261]='';
+$lng[262]='';
+$lng[263]='';
+$lng[264]='';
+$lng[265]='';
+$lng[266]='';
+$lng[267]='';
+$lng[268]='';
+$lng[269]='';
+$lng[270]='';
+$lng[271]='';
+$lng[272]='';
+$lng[273]='';
+$lng[274]='';
+$lng[275]='';
+$lng[276]='';
+$lng[277]='';
+$lng[278]='';
+$lng[279]='';
+$lng[280]='';
+$lng[281]='';
+$lng[282]='';
+$lng[283]='';
+$lng[284]='';
+$lng[285]='';
+$lng[286]='';
+$lng[287]='';
+$lng[288]='';
+$lng[289]='';
+$lng[290]='';
+$lng[291]='';
+$lng[292]='';
+$lng[293]='';
+$lng[294]='';
+$lng[295]='';
+$lng[296]='';
+$lng[297]='';
+$lng[298]='';
+$lng[299]='';
+$lng[300]='';
+$lng[301]='';
+$lng[302]='';
+$lng[303]='';
+$lng[304]='';
+$lng[305]='';
+$lng[306]='';
+$lng[307]='';
+$lng[308]='';
+$lng[309]='';
+$lng[310]='';
+$lng[311]='';
+$lng[312]='';
+$lng[313]='';
+$lng[314]='';
+$lng[315]='';
+$lng[316]='';
+$lng[317]='';
+$lng[318]='';
+$lng[319]='';
+$lng[320]='';
+$lng[321]='';
+$lng[322]='';
+$lng[323]='';
+$lng[324]='';
+$lng[325]='';
+$lng[326]='';
+$lng[327]='';
+$lng[328]='';
+$lng[329]='';
+$lng[330]='';
+$lng[331]='';
+$lng[332]='';
+$lng[333]='';
+$lng[334]='';
+$lng[335]='';
+$lng[336]='';
+$lng[337]='';
+$lng[338]='';
+$lng[339]='';
+$lng[340]='';
+$lng[341]='';
+$lng[342]='';
+$lng[343]='';
+$lng[344]='';
+$lng[345]='';
+$lng[346]='';
+$lng[347]='';
+$lng[348]='';
+$lng[349]='';
+$lng[350]='';
+$lng[351]='';
+$lng[352]='';
+$lng[353]='';
+$lng[354]='';
+$lng[355]='';
+$lng[356]='';
+$lng[357]='';
+$lng[358]='';
+$lng[359]='';
+$lng[360]='';
+$lng[361]='';
+$lng[362]='';
+$lng[363]='';
+$lng[364]='';
+$lng[365]='';
+$lng[366]='';
+$lng[367]='';
+$lng[368]='';
+$lng[369]='';
+$lng[370]='';
+$lng[371]='';
+$lng[372]='';
+$lng[373]='';
+$lng[374]='';
+$lng[375]='';
+$lng[376]='';
+$lng[377]='';
+$lng[378]='';
+$lng[379]='';
+$lng[380]='';
+$lng[381]='';
+$lng[382]='';
+$lng[383]='';
+$lng[384]='';
+$lng[385]='';
+$lng[386]='';
+$lng[387]='';
+$lng[388]='';
+$lng[389]='';
+$lng[390]='';
+$lng[391]='';
+$lng[392]='';
+$lng[393]='';
+$lng[394]='';
+$lng[395]='';
+$lng[396]='';
+$lng[397]='';
+$lng[398]='';
+$lng[399]='';
+$lng[400]='';
+$lng[401]='';
+$lng[402]='';
+$lng[403]='';
+$lng[404]='';
+$lng[405]='';
+$lng[406]='';
+$lng[407]='';
+$lng[408]='';
+$lng[409]='';
+$lng[410]='';
+$lng[411]='';
+$lng[412]='';
+$lng[413]='';
+$lng[414]='';
+$lng[415]='';
+$lng[416]='';
+$lng[417]='';
+$lng[418]='';
+$lng[419]='';
+$lng[420]='';
+$lng[421]='';
+$lng[422]='';
+$lng[423]='';
+$lng[424]='';
+$lng[425]='';
+$lng[426]='';
+$lng[427]='';
+$lng[428]='';
+$lng[429]='';
+$lng[430]='';
+$lng[431]='';
+$lng[432]='';
+$lng[433]='';
+$lng[434]='';
+$lng[435]='';
+$lng[436]='';
+$lng[437]='';
+$lng[438]='';
+$lng[439]='';
+$lng[440]='';
+$lng[441]='';
+$lng[442]='';
+$lng[443]='';
+$lng[444]='';
+$lng[445]='';
+$lng[446]='';
+$lng[447]='';
+$lng[448]='';
+$lng[449]='';
+$lng[450]='';
+$lng[451]='';
+$lng[452]='';
+$lng[453]='';
+$lng[454]='';
+$lng[455]='';
+$lng[456]='';
+$lng[457]='';
+$lng[458]='';
+$lng[459]='';
+$lng[460]='';
+$lng[461]='';
+$lng[462]='';
+$lng[463]='';
+$lng[464]='';
+$lng[465]='';
+$lng[466]='';
+$lng[467]='';
+$lng[468]='';
+$lng[469]='';
+$lng[470]='';
+$lng[471]='';
+$lng[472]='';
+$lng[473]='';
+$lng[474]='';
+$lng[475]='';
+$lng[476]='';
+$lng[477]='';
+$lng[478]='';
+$lng[479]='';
+$lng[480]='';
+$lng[481]='';
+$lng[482]='';
+$lng[483]='';
+$lng[484]='';
+$lng[485]='';
+$lng[486]='';
+$lng[487]='';
+$lng[488]='';
+$lng[489]='';
+$lng[490]='';
+$lng[491]='';
+$lng[492]='';
+$lng[493]='';
+$lng[494]='';
+$lng[495]='';
+$lng[496]='';
+$lng[497]='';
+$lng[498]='';
+$lng[499]='';
+$lng[500]='';
+$lng[501]='';
+$lng[502]='';
+$lng[503]='';
+$lng[504]='';
+$lng[505]='';
+$lng[506]='';
+$lng[507]='';
+$lng[508]='';
+$lng[509]='';
+$lng[510]='';
+$lng[511]='';
+$lng[512]='';
+$lng[513]='';
+$lng[514]='';
+$lng[515]='';
+$lng[516]='';
+$lng[517]='';
+$lng[518]='';
+$lng[519]='';
+$lng[520]='';
+$lng[521]='';
+$lng[522]='';
+$lng[523]='';
+$lng[524]='';
+$lng[525]='';
+$lng[526]='';
+$lng[527]='';
+$lng[528]='';
+$lng[529]='';
+$lng[530]='';
+$lng[531]='';
+$lng[532]='';
+$lng[533]='';
+$lng[534]='';
+$lng[535]='';
+$lng[536]='';
+$lng[537]='';
+$lng[538]='';
+$lng[539]='';
+$lng[540]='';
+$lng[541]='';
+$lng[542]='';
+$lng[543]='';
+$lng[544]='';
+$lng[545]='';
+$lng[546]='';
+$lng[547]='';
+$lng[548]='';
+$lng[549]='';
+$lng[550]='';
+$lng[551]='';
+$lng[552]='';
+$lng[553]='';
+$lng[554]='';
+$lng[555]='';
+$lng[556]='';
+$lng[557]='';
+$lng[558]='';
+$lng[559]='';
+$lng[560]='';
+$lng[561]='';
+$lng[562]='';
+$lng[563]='';
+$lng[564]='';
+$lng[565]='';
+$lng[566]='';
+$lng[567]='';
+$lng[568]='';
+$lng[569]='';
+$lng[570]='';
+$lng[571]='';
+$lng[572]='';
+$lng[573]='';
+$lng[574]='';
+$lng[575]='';
+$lng[576]='';
+$lng[577]='';
+$lng[578]='';
+$lng[579]='';
+$lng[580]='';
+$lng[581]='';
+$lng[582]='';
+$lng[583]='';
+$lng[584]='';
+$lng[585]='';
+$lng[586]='';
+$lng[587]='';
+$lng[588]='';
+$lng[589]='';
+$lng[590]='';
+$lng[591]='';
+$lng[592]='';
+$lng[593]='';
+$lng[594]='';
+$lng[595]='';
+$lng[596]='';
+$lng[597]='';
+$lng[598]='';
+$lng[599]='';
+$lng[600]='';
+$lng[601]='';
+$lng[602]='';
+$lng[603]='';
+$lng[604]='';
+$lng[605]='';
+$lng[606]='';
+$lng[607]='';
+$lng[608]='';
+$lng[609]='';
+$lng[610]='';
+$lng[611]='';
+$lng[612]='';
+$lng[613]='';
+$lng[614]='';
+$lng[615]='';
+$lng[616]='';
+$lng[617]='';
+$lng[618]='';
+$lng[619]='';
+$lng[620]='';
+$lng[621]='';
+$lng[622]='';
+$lng[623]='';
+$lng[624]='';
+$lng[625]='';
+$lng[626]='';
+$lng[627]='';
+$lng[628]='';
+$lng[629]='';
+$lng[630]='';
+$lng[631]='';
+$lng[632]='';
+$lng[633]='';
+$lng[634]='';
+$lng[635]='';
+$lng[636]='';
+$lng[637]='';
+$lng[638]='';
+$lng[639]='';
+$lng[640]='';
+$lng[641]='';
+$lng[642]='';
+$lng[643]='';
+$lng[644]='';
+$lng[645]='';
+$lng[646]='';
+$lng[647]='';
+$lng[648]='';
+$lng[649]='';
+$lng[650]='';
+$lng[651]='';
+$lng[652]='';
+$lng[653]='';
+$lng[654]='';
+$lng[655]='';
+$lng[656]='';
+$lng[657]='';
+$lng[658]='';
+$lng[659]='';
+$lng[660]='';
+$lng[661]='';
+$lng[662]='';
+$lng[663]='';
+$lng[664]='';
+$lng[665]='';
+$lng[666]='';
+$lng[667]='';
+$lng[668]='';
+$lng[669]='';
+$lng[670]='';
+$lng[671]='';
+$lng[672]='';
+$lng[673]='';
+$lng[674]='';
+$lng[675]='';
+$lng[676]='';
+$lng[677]='';
+$lng[678]='';
+$lng[679]='';
+$lng[680]='';
+$lng[681]='';
+$lng[682]='';
+$lng[683]='';
+$lng[684]='';
+$lng[685]='';
+$lng[686]='';
+$lng[687]='';
+$lng[688]='';
+$lng[689]='';
+$lng[690]='';
+$lng[691]='';
+$lng[692]='';
+$lng[693]='';
+$lng[694]='';
+$lng[695]='';
+$lng[696]='';
+$lng[697]='';
+$lng[698]='';
+$lng[699]='';
+$lng[700]='';
+$lng[701]='';
+$lng[702]='';
+$lng[703]='';
+$lng[704]='';
+$lng[705]='';
+$lng[706]='';
+$lng[707]='';
+$lng[708]='';
+$lng[709]='';
+$lng[710]='';
+$lng[711]='';
+$lng[712]='';
+$lng[713]='';
+$lng[714]='';
+$lng[715]='';
+$lng[716]='';
+$lng[717]='';
+$lng[718]='';
+$lng[719]='';
+$lng[720]='';
+$lng[721]='';
+$lng[722]='';
+$lng[723]='';
+$lng[724]='';
+$lng[725]='';
+$lng[726]='';
+$lng[727]='';
+$lng[728]='';
+$lng[729]='';
+$lng[730]='';
+$lng[731]='';
+$lng[732]='';
+$lng[733]='';
+$lng[734]='';
+$lng[735]='';
+$lng[736]='';
+$lng[737]='';
+$lng[738]='';
+$lng[739]='';
+$lng[740]='';
+$lng[741]='';
+$lng[742]='';
+$lng[743]='';
+$lng[744]='';
+$lng[745]='';
+$lng[746]='';
+$lng[747]='';
+$lng[748]='';
+$lng[749]='';
+$lng[750]='';
+$lng[751]='';
+$lng[752]='';
+$lng[753]='';
+$lng[754]='';
+$lng[755]='';
+$lng[756]='';
+$lng[757]='';
+$lng[758]='';
+$lng[759]='';
+$lng[760]='';
+$lng[761]='';
+$lng[762]='';
+$lng[763]='';
+$lng[764]='';
+$lng[765]='';
+$lng[766]='';
+$lng[767]='';
+$lng[768]='';
+$lng[769]='';
+$lng[770]='';
+$lng[771]='';
+$lng[772]='';
+$lng[773]='';
+$lng[774]='';
+$lng[775]='';
+$lng[776]='';
+$lng[777]='';
+$lng[778]='';
+$lng[779]='';
+$lng[780]='';
+$lng[781]='';
+$lng[782]='';
+$lng[783]='';
+$lng[784]='';
+$lng[785]='';
+$lng[786]='';
+$lng[787]='';
+$lng[788]='';
+$lng[789]='';
+$lng[790]='';
+$lng[791]='';
+$lng[792]='';
+$lng[793]='';
+$lng[794]='';
+$lng[795]='';
+$lng[796]='';
+$lng[797]='';
+$lng[798]='';
+$lng[799]='';
+$lng[800]='';
+$lng[801]='';
+$lng[802]='';
+$lng[803]='';
+$lng[804]='';
+$lng[805]='';
+$lng[806]='';
+$lng[807]='';
+$lng[808]='';
+$lng[809]='';
+$lng[810]='';
+$lng[811]='';
+$lng[812]='';
+$lng[813]='';
+$lng[814]='';
+$lng[815]='';
+$lng[816]='';
+$lng[817]='';
+$lng[818]='';
+$lng[819]='';
+$lng[820]='';
+$lng[821]='';
+$lng[822]='';
+$lng[823]='';
+$lng[824]='';
+$lng[825]='';
+$lng[826]='';
+$lng[827]='';
+$lng[828]='';
+$lng[829]='';
+$lng[830]='';
+$lng[831]='';
+$lng[832]='';
+$lng[833]='';
+$lng[834]='';
+$lng[835]='';
+$lng[836]='';
+$lng[837]='';
+$lng[838]='';
+$lng[839]='';
+$lng[840]='';
+$lng[841]='';
+$lng[842]='';
+$lng[843]='';
+$lng[844]='';
+$lng[845]='';
+$lng[846]='';
+$lng[847]='';
+$lng[848]='';
+$lng[849]='';
+$lng[850]='';
+$lng[851]='';
+$lng[852]='';
+$lng[853]='';
+$lng[854]='';
+$lng[855]='';
+$lng[856]='';
+$lng[857]='';
+$lng[858]='';
+$lng[859]='';
+$lng[860]='';
+$lng[861]='';
+$lng[862]='';
+$lng[863]='';
+$lng[864]='';
+$lng[865]='';
+$lng[866]='';
+$lng[867]='';
+$lng[868]='';
+$lng[869]='';
+$lng[870]='';
+$lng[871]='';
+$lng[872]='';
+$lng[873]='';
+$lng[874]='';
+$lng[875]='';
+$lng[876]='';
+$lng[877]='';
+$lng[878]='';
+$lng[879]='';
+$lng[880]='';
+$lng[881]='';
+$lng[882]='';
+$lng[883]='';
+$lng[884]='';
+$lng[885]='';
+$lng[886]='';
+$lng[887]='';
+$lng[888]='';
+$lng[889]='';
+$lng[890]='';
+$lng[891]='';
+$lng[892]='';
+$lng[893]='';
+$lng[894]='';
+$lng[895]='';
+$lng[896]='';
+$lng[897]='';
+$lng[898]='';
+$lng[899]='';
+$lng[900]='';
+$lng[901]='';
+$lng[902]='';
+$lng[903]='';
+$lng[904]='';
+$lng[905]='';
+$lng[906]='';
+$lng[907]='';
+$lng[908]='';
+$lng[909]='';
+$lng[910]='';
+$lng[911]='';
+$lng[912]='';
+$lng[913]='';
+$lng[914]='';
+$lng[915]='';
+$lng[916]='';
+$lng[917]='';
+$lng[918]='';
+$lng[919]='';
+$lng[920]='';
+$lng[921]='';
+$lng[922]='';
+$lng[923]='';
+$lng[924]='';
+$lng[925]='';
+$lng[926]='';
+$lng[927]='';
+$lng[928]='';
+$lng[929]='';
+$lng[930]='';
+$lng[931]='';
+$lng[932]='';
+$lng[933]='';
+$lng[934]='';
+$lng[935]='';
+$lng[936]='';
+$lng[937]='';
+$lng[938]='';
+$lng[939]='';
+$lng[940]='';
+$lng[941]='';
+$lng[942]='';
+$lng[943]='';
+$lng[944]='';
+$lng[945]='';
+$lng[946]='';
+$lng[947]='';
+$lng[948]='';
+$lng[949]='';
+$lng[950]='';
+$lng[951]='';
+$lng[952]='';
+$lng[953]='';
+$lng[954]='';
+$lng[955]='';
+$lng[956]='';
+$lng[957]='';
+$lng[958]='';
+$lng[959]='';
+$lng[960]='';
+$lng[961]='';
+$lng[962]='';
+$lng[963]='';
+$lng[964]='';
+$lng[965]='';
+$lng[966]='';
+$lng[967]='';
+$lng[968]='';
+$lng[969]='';
+$lng[970]='';
+$lng[971]='';
+$lng[972]='';
+$lng[973]='';
+$lng[974]='';
+$lng[975]='';
+$lng[976]='';
+$lng[977]='';
+$lng[978]='';
+$lng[979]='';
+$lng[980]='';
+$lng[981]='';
+$lng[982]='';
+$lng[983]='';
+$lng[984]='';
+$lng[985]='';
+$lng[986]='';
+$lng[987]='';
+$lng[988]='';
+$lng[989]='';
+$lng[990]='';
+$lng[991]='';
+$lng[992]='';
+$lng[993]='';
+$lng[994]='';
+$lng[995]='';
+$lng[996]='';
+$lng[997]='';
+$lng[998]='';
+$lng[999]='';
+$lng[1000]='';
+$lng[1001]='';
+$lng[1002]='';
+$lng[1003]='';
+$lng[1004]='';
+$lng[1005]='';
+$lng[1006]='';
+$lng[1007]='';
+$lng[1008]='';
+$lng[1009]='';
+$lng[1010]='';
+$lng[1011]='';
+$lng[1012]='';
+$lng[1013]='';
+$lng[1014]='';
+$lng[1015]='';
+$lng[1016]='';
+$lng[1017]='';
+$lng[1018]='';
+$lng[1019]='';
+$lng[1020]='';
+$lng[1021]='';
+$lng[1022]='';
+$lng[1023]='';
+$lng[1024]='';
+$lng[1025]='';
+$lng[1026]='';
+$lng[1027]='';
+$lng[1028]='';
+$lng[1029]='';
+$lng[1030]='';
+$lng[1031]='';
+$lng[1032]='';
+$lng[1033]='';
+$lng[1034]='';
+$lng[1035]='';
+$lng[1036]='';
+$lng[1037]='';
+$lng[1038]='';
+$lng[1039]='';
+$lng[1040]='';
+$lng[1041]='';
+$lng[1042]='';
+$lng[1043]='';
+$lng[1044]='';
+$lng[1045]='';
+$lng[1046]='';
+$lng[1047]='';
+$lng[1048]='';
+$lng[1049]='';
+$lng[1050]='';
+$lng[1051]='';
+$lng[1052]='';
+$lng[1053]='';
+$lng[1054]='';
+$lng[1055]='';
+$lng[1056]='';
+$lng[1057]='';
+$lng[1058]='';
+$lng[1059]='';
+$lng[1060]='';
+$lng[1061]='';
+$lng[1062]='';
+$lng[1063]='';
+$lng[1064]='';
+$lng[1065]='';
+$lng[1066]='';
+$lng[1067]='';
+$lng[1068]='';
+$lng[1069]='';
+$lng[1070]='';
+$lng[1071]='';
+$lng[1072]='';
+$lng[1073]='';
+$lng[1074]='';
+$lng[1075]='';
+$lng[1076]='';
+$lng[1077]='';
+$lng[1078]='';
+$lng[1079]='';
+$lng[1080]='';
+$lng[1081]='';
+$lng[1082]='';
+$lng[1083]='';
+$lng[1084]='';
+$lng[1085]='';
+$lng[1086]='';
+$lng[1087]='';
+$lng[1088]='';
+$lng[1089]='';
+$lng[1090]='';
+$lng[1091]='';
+$lng[1092]='';
+$lng[1093]='';
+$lng[1094]='';
+$lng[1095]='';
+$lng[1096]='';
+$lng[1097]='';
+$lng[1098]='';
+$lng[1099]='';
+$lng[1100]='';
+$lng[1101]='';
+$lng[1102]='';
+$lng[1103]='';
+$lng[1104]='';
+$lng[1105]='';
+$lng[1106]='';
+$lng[1107]='';
+$lng[1108]='';
+$lng[1109]='';
+$lng[1110]='';
+$lng[1111]='';
+$lng[1112]='';
+$lng[1113]='';
+$lng[1114]='';
+$lng[1115]='';
+$lng[1116]='';
+$lng[1117]='';
+$lng[1118]='';
+$lng[1119]='';
+$lng[1120]='';
+$lng[1121]='';
+$lng[1122]='';
+$lng[1123]='';
+$lng[1124]='';
+$lng[1125]='';
+$lng[1126]='';
+$lng[1127]='';
+$lng[1128]='';
+$lng[1129]='';
+$lng[1130]='';
+$lng[1131]='';
+$lng[1132]='';
+$lng[1133]='';
+$lng[1134]='';
+$lng[1135]='';
+$lng[1136]='';
+$lng[1137]='';
+$lng[1138]='';
+$lng[1139]='';
+$lng[1140]='';
+$lng[1141]='';
+$lng[1142]='';
+$lng[1143]='';
+$lng[1144]='';
+$lng[1145]='';
+$lng[1146]='';
+$lng[1147]='';
+$lng[1148]='';
+$lng[1149]='';
+$lng[1150]='';
+$lng[1151]='';
+$lng[1152]='';
+$lng[1153]='';
+$lng[1154]='';
+$lng[1155]='';
+$lng[1156]='';
+$lng[1157]='';
+$lng[1158]='';
+$lng[1159]='';
+$lng[1160]='';
+$lng[1161]='';
+$lng[1162]='';
+$lng[1163]='';
+$lng[1164]='';
+$lng[1165]='';
+$lng[1166]='';
+$lng[1167]='';
+$lng[1168]='';
+$lng[1169]='';
+$lng[1170]='';
+$lng[1171]='';
+$lng[1172]='';
+$lng[1173]='';
+$lng[1174]='';
+$lng[1175]='';
+$lng[1176]='';
+$lng[1177]='';
+$lng[1178]='';
+$lng[1179]='';
+$lng[1180]='';
+$lng[1181]='';
+$lng[1182]='';
+$lng[1183]='';
+$lng[1184]='';
+$lng[1185]='';
+$lng[1186]='';
+$lng[1187]='';
+$lng[1188]='';
+$lng[1189]='';
+$lng[1190]='';
+$lng[1191]='';
+$lng[1192]='';
+$lng[1193]='';
+$lng[1194]='';
+$lng[1195]='';
+$lng[1196]='';
+$lng[1197]='';
+$lng[1198]='';
+$lng[1199]='';
+$lng[1200]='';
+$lng[1201]='';
+$lng[1202]='';
+$lng[1203]='';
+$lng[1204]='';
+$lng[1205]='';
+$lng[1206]='';
+$lng[1207]='';
+$lng[1208]='';
+$lng[1209]='';
+$lng[1210]='';
+$lng[1211]='';
+$lng[1212]='';
+$lng[1213]='';
+$lng[1214]='';
+$lng[1215]='';
+$lng[1216]='';
+$lng[1217]='';
+$lng[1218]='';
+$lng[1219]='';
+$lng[1220]='';
+$lng[1221]='';
+$lng[1222]='';
+$lng[1223]='';
+$lng[1224]='';
+$lng[1225]='';
+$lng[1226]='';
+$lng[1227]='';
+$lng[1228]='';
+$lng[1229]='';
+$lng[1230]='';
+$lng[1231]='';
+$lng[1232]='';
+$lng[1233]='';
+$lng[1234]='';
+$lng[1235]='';
+$lng[1236]='';
+$lng[1237]='';
+$lng[1238]='';
+$lng[1239]='';
+$lng[1240]='';
+$lng[1241]='';
+$lng[1242]='';
+$lng[1243]='';
+$lng[1244]='';
+$lng[1245]='';
+$lng[1246]='';
+$lng[1247]='';
+$lng[1248]='';
+$lng[1249]='';
+$lng[1250]='';
+$lng[1251]='';
+$lng[1252]='';
+$lng[1253]='';
+$lng[1254]='';
+$lng[1255]='';
+$lng[1256]='';
+$lng[1257]='';
+$lng[1258]='';
+$lng[1259]='';
+$lng[1260]='';
+$lng[1261]='';
+$lng[1262]='';
+$lng[1263]='';
+$lng[1264]='';
+$lng[1265]='';
+$lng[1266]='';
+$lng[1267]='';
+$lng[1268]='';
+$lng[1269]='';
+$lng[1270]='';
+$lng[1271]='';
+$lng[1272]='';
+$lng[1273]='';
+$lng[1274]='';
+$lng[1275]='';
+$lng[1276]='';
+$lng[1277]='';
+$lng[1278]='';
+$lng[1279]='';
+$lng[1280]='';
+$lng[1281]='';
+$lng[1282]='';
+$lng[1283]='';
+$lng[1284]='';
+$lng[1285]='';
+$lng[1286]='';
+$lng[1287]='';
+$lng[1288]='';
+$lng[1289]='';
+$lng[1290]='';
+$lng[1291]='';
+$lng[1292]='';
+$lng[1293]='';
+$lng[1294]='';
+$lng[1295]='';
+$lng[1296]='';
+$lng[1297]='';
+$lng[1298]='';
+$lng[1299]='';
+$lng[1300]='';
+$lng[1301]='';
+$lng[1302]='';
+$lng[1303]='';
+$lng[1304]='';
+$lng[1305]='';
+$lng[1306]='';
+$lng[1307]='';
+$lng[1308]='';
+$lng[1309]='';
+$lng[1310]='';
+$lng[1311]='';
+$lng[1312]='';
+$lng[1313]='';
+$lng[1314]='';
+$lng[1315]='';
+$lng[1316]='';
+$lng[1317]='';
+$lng[1318]='';
+$lng[1319]='';
+$lng[1320]='';
+$lng[1321]='';
+$lng[1322]='';
+$lng[1323]='';
+$lng[1324]='';
+$lng[1325]='';
+$lng[1326]='';
+$lng[1327]='';
+$lng[1328]='';
+$lng[1329]='';
+$lng[1330]='';
+$lng[1331]='';
+$lng[1332]='';
+$lng[1333]='';
+$lng[1334]='';
+$lng[1335]='';
+$lng[1336]='';
+$lng[1337]='';
+$lng[1338]='';
+$lng[1339]='';
+$lng[1340]='';
+$lng[1341]='';
+$lng[1342]='';
+$lng[1343]='';
+$lng[1344]='';
+$lng[1345]='';
+$lng[1346]='';
+$lng[1347]='';
+$lng[1348]='';
+$lng[1349]='';
+$lng[1350]='';
+$lng[1351]='';
+$lng[1352]='';
+$lng[1353]='';
+$lng[1354]='';
+$lng[1355]='';
+$lng[1356]='';
+$lng[1357]='';
+$lng[1358]='';
+$lng[1359]='';
+$lng[1360]='';
+$lng[1361]='';
+$lng[1362]='';
+$lng[1363]='';
+$lng[1364]='';
+$lng[1365]='';
+$lng[1366]='';
+$lng[1367]='';
+$lng[1368]='';
+$lng[1369]='';
+$lng[1370]='';
+$lng[1371]='';
+$lng[1372]='';
+$lng[1373]='';
+$lng[1374]='';
+$lng[1375]='';
+$lng[1376]='';
+$lng[1377]='';
+$lng[1378]='';
+$lng[1379]='';
+$lng[1380]='';
+$lng[1381]='';
+$lng[1382]='';
+$lng[1383]='';
+$lng[1384]='';
+$lng[1385]='';
+$lng[1386]='';
+$lng[1387]='';
+$lng[1388]='';
+$lng[1389]='';
+$lng[1390]='';
+$lng[1391]='';
+$lng[1392]='';
+$lng[1393]='';
+$lng[1394]='';
+$lng[1395]='';
+$lng[1396]='';
+$lng[1397]='';
+$lng[1398]='';
+$lng[1399]='';
+$lng[1400]='';
+$lng[1401]='';
+$lng[1402]='';
+$lng[1403]='';
+$lng[1404]='';
+$lng[1405]='';
+$lng[1406]='';
+$lng[1407]='';
+$lng[1408]='';
+$lng[1409]='';
+$lng[1410]='';
+$lng[1411]='';
+$lng[1412]='';
+$lng[1413]='';
+$lng[1414]='';
+$lng[1415]='';
+$lng[1416]='';
+$lng[1417]='';
+$lng[1418]='';
+$lng[1419]='';
+$lng[1420]='';
+$lng[1421]='';
+$lng[1422]='';
+$lng[1423]='';
+$lng[1424]='';
+$lng[1425]='';
+$lng[1426]='';
+$lng[1427]='';
+$lng[1428]='';
+$lng[1429]='';
+$lng[1430]='';
+$lng[1431]='';
+$lng[1432]='';
+$lng[1433]='';
+$lng[1434]='';
+$lng[1435]='';
+$lng[1436]='';
+$lng[1437]='';
+$lng[1438]='';
+$lng[1439]='';
+$lng[1440]='';
+$lng[1441]='';
+$lng[1442]='';
+$lng[1443]='';
+$lng[1444]='';
+$lng[1445]='';
+$lng[1446]='';
+$lng[1447]='';
+$lng[1448]='';
+$lng[1449]='';
+$lng[1450]='';
+$lng[1451]='';
+$lng[1452]='';
+$lng[1453]='';
+$lng[1454]='';
+$lng[1455]='';
+$lng[1456]='';
+$lng[1457]='';
+$lng[1458]='';
+$lng[1459]='';
+$lng[1460]='';
+$lng[1461]='';
+$lng[1462]='';
+$lng[1463]='';
+$lng[1464]='';
+$lng[1465]='';
+$lng[1466]='';
+$lng[1467]='';
+$lng[1468]='';
+$lng[1469]='';
+$lng[1470]='';
+$lng[1471]='';
+$lng[1472]='';
+$lng[1473]='';
+$lng[1474]='';
+$lng[1475]='';
+$lng[1476]='';
+$lng[1477]='';
+$lng[1478]='';
+$lng[1479]='';
+$lng[1480]='';
+$lng[1481]='';
+$lng[1482]='';
+$lng[1483]='';
+$lng[1484]='';
+$lng[1485]='';
+$lng[1486]='';
+$lng[1487]='';
+$lng[1488]='';
+$lng[1489]='';
+$lng[1490]='';
+$lng[1491]='';
+$lng[1492]='';
+$lng[1493]='';
+$lng[1494]='';
+$lng[1495]='';
+$lng[1496]='';
+$lng[1497]='';
+$lng[1498]='';
+$lng[1499]='';
+$lng[1500]='';
+$lng[1501]='';
+$lng[1502]='';
+$lng[1503]='';
+$lng[1504]='';
+$lng[1505]='';
+$lng[1506]='';
+$lng[1507]='';
+$lng[1508]='';
+$lng[1509]='';
+$lng[1510]='';
+$lng[1511]='';
+$lng[1512]='';
+$lng[1513]='';
+$lng[1514]='';
+$lng[1515]='';
+$lng[1516]='';
+$lng[1517]='';
+$lng[1518]='';
+$lng[1519]='';
+$lng[1520]='';
+$lng[1521]='';
+$lng[1522]='';
+$lng[1523]='';
+$lng[1524]='';
+$lng[1525]='';
+$lng[1526]='';
+$lng[1527]='';
+$lng[1528]='';
+$lng[1529]='';
+$lng[1530]='';
+$lng[1531]='';
+$lng[1532]='';
+$lng[1533]='';
+$lng[1534]='';
+$lng[1535]='';
+$lng[1536]='';
+$lng[1537]='';
+$lng[1538]='';
+$lng[1539]='';
+$lng[1540]='';
+$lng[1541]='';
+$lng[1542]='';
+$lng[1543]='';
+$lng[1544]='';
+$lng[1545]='';
+$lng[1546]='';
+$lng[1547]='';
+$lng[1548]='';
+$lng[1549]='';
+$lng[1550]='';
+$lng[1551]='';
+$lng[1552]='';
+$lng[1553]='';
+$lng[1554]='';
+$lng[1555]='';
+$lng[1556]='';
+$lng[1557]='';
+$lng[1558]='';
+$lng[1559]='';
+$lng[1560]='';
+$lng[1561]='';
+$lng[1562]='';
+$lng[1563]='';
+$lng[1564]='';
+$lng[1565]='';
+$lng[1566]='';
+$lng[1567]='';
+$lng[1568]='';
+$lng[1569]='';
+$lng[1570]='';
+$lng[1571]='';
+$lng[1572]='';
+$lng[1573]='';
+$lng[1574]='';
+$lng[1575]='';
+$lng[1576]='';
+$lng[1577]='';
+$lng[1578]='';
+$lng[1579]='';
+$lng[1580]='';
+$lng[1581]='';
+$lng[1582]='';
+$lng[1583]='';
+$lng[1584]='';
+$lng[1585]='';
+$lng[1586]='';
+$lng[1587]='';
+$lng[1588]='';
+$lng[1589]='';
+$lng[1590]='';
+$lng[1591]='';
+$lng[1592]='';
+$lng[1593]='';
+$lng[1594]='';
+$lng[1595]='';
+$lng[1596]='';
+$lng[1597]='';
+$lng[1598]='';
+$lng[1599]='';
+$lng[1600]='';
+$lng[1601]='';
+$lng[1602]='';
+$lng[1603]='';
+$lng[1604]='';
+$lng[1605]='';
+$lng[1606]='';
+$lng[1607]='';
+$lng[1608]='';
+$lng[1609]='';
+$lng[1610]='';
+$lng[1611]='';
+$lng[1612]='';
+$lng[1613]='';
+$lng[1614]='';
+$lng[1615]='';
+$lng[1616]='';
+$lng[1617]='';
+$lng[1618]='';
+$lng[1619]='';
+$lng[1620]='';
+$lng[1621]='';
+$lng[1622]='';
+$lng[1623]='';
+$lng[1624]='';
+$lng[1625]='';
+$lng[1626]='';
+$lng[1627]='';
+$lng[1628]='';
+$lng[1629]='';
+$lng[1630]='';
+$lng[1631]='';
+$lng[1632]='';
+$lng[1633]='';
+$lng[1634]='';
+$lng[1635]='';
+$lng[1636]='';
+$lng[1637]='';
+$lng[1638]='';
+$lng[1639]='';
+$lng[1640]='';
+$lng[1641]='';
+$lng[1642]='';
+$lng[1643]='';
+$lng[1644]='';
+$lng[1645]='';
+$lng[1646]='';
+$lng[1647]='';
+$lng[1648]='';
+$lng[1649]='';
+$lng[1650]='';
+$lng[1651]='';
+$lng[1652]='';
+$lng[1653]='';
+$lng[1654]='';
+$lng[1655]='';
+$lng[1656]='';
+$lng[1657]='';
+$lng[1658]='';
+$lng[1659]='';
+$lng[1660]='';
+$lng[1661]='';
+$lng[1662]='';
+$lng[1663]='';
+$lng[1664]='';
+$lng[1665]='';
+$lng[1666]='';
+$lng[1667]='';
+$lng[1668]='';
+$lng[1669]='';
+$lng[1670]='';
+$lng[1671]='';
+$lng[1672]='';
+$lng[1673]='';
+$lng[1674]='';
+$lng[1675]='';
+$lng[1676]='';
+$lng[1677]='';
+$lng[1678]='';
+$lng[1679]='';
+$lng[1680]='';
+$lng[1681]='';
+$lng[1682]='';
+$lng[1683]='';
+$lng[1684]='';
+$lng[1685]='';
+$lng[1686]='';
+$lng[1687]='';
+$lng[1688]='';
+$lng[1689]='';
+$lng[1690]='';
+$lng[1691]='';
+$lng[1692]='';
+$lng[1693]='';
+$lng[1694]='';
+$lng[1695]='';
+$lng[1696]='';
+$lng[1697]='';
+$lng[1698]='';
+$lng[1699]='';
+$lng[1700]='';
+$lng[1701]='';
+$lng[1702]='';
+$lng[1703]='';
+$lng[1704]='';
+$lng[1705]='';
+$lng[1706]='';
+$lng[1707]='';
+$lng[1708]='';
+$lng[1709]='';
+$lng[1710]='';
+$lng[1711]='';
+$lng[1712]='';
+$lng[1713]='';
+$lng[1714]='';
+$lng[1715]='';
+$lng[1716]='';
+$lng[1717]='';
+$lng[1718]='';
+$lng[1719]='';
+$lng[1720]='';
+$lng[1721]='';
+$lng[1722]='';
+$lng[1723]='';
+$lng[1724]='';
+$lng[1725]='';
+$lng[1726]='';
+$lng[1727]='';
+$lng[1728]='';
+$lng[1729]='';
+$lng[1730]='';
+$lng[1731]='';
+$lng[1732]='';
+$lng[1733]='';
+$lng[1734]='';
+$lng[1735]='';
+$lng[1736]='';
+$lng[1737]='';
+$lng[1738]='';
+$lng[1739]='';
+$lng[1740]='';
+$lng[1741]='';
+$lng[1742]='';
+$lng[1743]='';
+$lng[1744]='';
+$lng[1745]='';
+$lng[1746]='';
+$lng[1747]='';
+$lng[1748]='';
+$lng[1749]='';
+$lng[1750]='';
+$lng[1751]='';
+$lng[1752]='';
+$lng[1753]='';
+$lng[1754]='';
+$lng[1755]='';
+$lng[1756]='';
+$lng[1757]='';
+$lng[1758]='';
+$lng[1759]='';
+$lng[1760]='';
+$lng[1761]='';
+$lng[1762]='';
+$lng[1763]='';
+$lng[1764]='';
+$lng[1765]='';
+$lng[1766]='';
+$lng[1767]='';
+$lng[1768]='';
+$lng[1769]='';
+$lng[1770]='';
+$lng[1771]='';
+$lng[1772]='';
+$lng[1773]='';
+$lng[1774]='';
+$lng[1775]='';
+$lng[1776]='';
+$lng[1777]='';
+$lng[1778]='';
+$lng[1779]='';
+$lng[1780]='';
+$lng[1781]='';
+$lng[1782]='';
+$lng[1783]='';
+$lng[1784]='';
+$lng[1785]='';
+$lng[1786]='';
+$lng[1787]='';
+$lng[1788]='';
+$lng[1789]='';
+$lng[1790]='';
+$lng[1791]='';
+$lng[1792]='';
+$lng[1793]='';
+$lng[1794]='';
+$lng[1795]='';
+$lng[1796]='';
+$lng[1797]='';
+$lng[1798]='';
+$lng[1799]='';
+$lng[1800]='';
+$lng[1801]='';
+$lng[1802]='';
+$lng[1803]='';
+$lng[1804]='';
+$lng[1805]='';
+$lng[1806]='';
+$lng[1807]='';
+$lng[1808]='';
+$lng[1809]='';
+$lng[1810]='';
+$lng[1811]='';
+$lng[1812]='';
+$lng[1813]='';
+$lng[1814]='';
+$lng[1815]='';
+$lng[1816]='';
+$lng[1817]='';
+$lng[1818]='';
+$lng[1819]='';
+$lng[1820]='';
+$lng[1821]='';
+$lng[1822]='';
+$lng[1823]='';
+$lng[1824]='';
+$lng[1825]='';
+$lng[1826]='';
+$lng[1827]='';
+$lng[1828]='';
+$lng[1829]='';
+$lng[1830]='';
+$lng[1831]='';
+$lng[1832]='';
+$lng[1833]='';
+$lng[1834]='';
+$lng[1835]='';
+$lng[1836]='';
+$lng[1837]='';
+$lng[1838]='';
+$lng[1839]='';
+$lng[1840]='';
+$lng[1841]='';
+$lng[1842]='';
+$lng[1843]='';
+$lng[1844]='';
+$lng[1845]='';
+$lng[1846]='';
+$lng[1847]='';
+$lng[1848]='';
+$lng[1849]='';
+$lng[1850]='';
+$lng[1851]='';
+$lng[1852]='';
+$lng[1853]='';
+$lng[1854]='';
+$lng[1855]='';
+$lng[1856]='';
+$lng[1857]='';
+$lng[1858]='';
+$lng[1859]='';
+$lng[1860]='';
+$lng[1861]='';
+$lng[1862]='';
+$lng[1863]='';
+$lng[1864]='';
+$lng[1865]='';
+$lng[1866]='';
+$lng[1867]='';
+$lng[1868]='';
+$lng[1869]='';
+$lng[1870]='';
+$lng[1871]='';
+$lng[1872]='';
+$lng[1873]='';
+$lng[1874]='';
+$lng[1875]='';
+$lng[1876]='';
+$lng[1877]='';
+$lng[1878]='';
+$lng[1879]='';
+$lng[1880]='';
+$lng[1881]='';
+$lng[1882]='';
+$lng[1883]='';
+$lng[1884]='';
+$lng[1885]='';
+$lng[1886]='';
+$lng[1887]='';
+$lng[1888]='';
+$lng[1889]='';
+$lng[1890]='';
+$lng[1891]='';
+$lng[1892]='';
+$lng[1893]='';
+$lng[1894]='';
+$lng[1895]='';
+$lng[1896]='';
+$lng[1897]='';
+$lng[1898]='';
+$lng[1899]='';
+$lng[1900]='';
+$lng[1901]='';
+$lng[1902]='';
+$lng[1903]='';
+$lng[1904]='';
+$lng[1905]='';
+$lng[1906]='';
+$lng[1907]='';
+$lng[1908]='';
+$lng[1909]='';
+$lng[1910]='';
+$lng[1911]='';
+$lng[1912]='';
+$lng[1913]='';
+$lng[1914]='';
+$lng[1915]='';
+$lng[1916]='';
+$lng[1917]='';
+$lng[1918]='';
+$lng[1919]='';
+$lng[1920]='';
+$lng[1921]='';
+$lng[1922]='';
+$lng[1923]='';
+$lng[1924]='';
+$lng[1925]='';
+$lng[1926]='';
+$lng[1927]='';
+$lng[1928]='';
+$lng[1929]='';
+$lng[1930]='';
+$lng[1931]='';
+$lng[1932]='';
+$lng[1933]='';
+$lng[1934]='';
+$lng[1935]='';
+$lng[1936]='';
+$lng[1937]='';
+$lng[1938]='';
+$lng[1939]='';
+$lng[1940]='';
+$lng[1941]='';
+$lng[1942]='';
+$lng[1943]='';
+$lng[1944]='';
+$lng[1945]='';
+$lng[1946]='';
+$lng[1947]='';
+$lng[1948]='';
+$lng[1949]='';
+$lng[1950]='';
+$lng[1951]='';
+$lng[1952]='';
+$lng[1953]='';
+$lng[1954]='';
+$lng[1955]='';
+$lng[1956]='';
+$lng[1957]='';
+$lng[1958]='';
+$lng[1959]='';
+$lng[1960]='';
+$lng[1961]='';
+$lng[1962]='';
+$lng[1963]='';
+$lng[1964]='';
+$lng[1965]='';
+$lng[1966]='';
+$lng[1967]='';
+$lng[1968]='';
+$lng[1969]='';
+$lng[1970]='';
+$lng[1971]='';
+$lng[1972]='';
+$lng[1973]='';
+$lng[1974]='';
+$lng[1975]='';
+$lng[1976]='';
+$lng[1977]='';
+$lng[1978]='';
+$lng[1979]='';
+$lng[1980]='';
+$lng[1981]='';
+$lng[1982]='';
+$lng[1983]='';
+$lng[1984]='';
+$lng[1985]='';
+$lng[1986]='';
+$lng[1987]='';
+$lng[1988]='';
+$lng[1989]='';
+$lng[1990]='';
+$lng[1991]='';
+$lng[1992]='';
+$lng[1993]='';
+$lng[1994]='';
+$lng[1995]='';
+$lng[1996]='';
+$lng[1997]='';
+$lng[1998]='';
+$lng[1999]='';
+$lng[2000]='';
+$lng[2001]='';
+$lng[2002]='';
+$lng[2003]='';
+$lng[2004]='';
+$lng[2005]='';
+$lng[2006]='';
+$lng[2007]='';
+$lng[2008]='';
+$lng[2009]='';
+$lng[2010]='';
+$lng[2011]='';
+$lng[2012]='';
+$lng[2013]='';
+$lng[2014]='';
+$lng[2015]='';
+$lng[2016]='';
+$lng[2017]='';
+$lng[2018]='';
+$lng[2019]='';
+$lng[2020]='';
+$lng[2021]='';
+$lng[2022]='';
+$lng[2023]='';
+$lng[2024]='';
+$lng[2025]='';
+$lng[2026]='';
+$lng[2027]='';
+$lng[2028]='';
+$lng[2029]='';
+$lng[2030]='';
+$lng[2031]='';
+$lng[2032]='';
+$lng[2033]='';
+$lng[2034]='';
+$lng[2035]='';
+$lng[2036]='';
+$lng[2037]='';
+$lng[2038]='';
+$lng[2039]='';
+$lng[2040]='';
+$lng[2041]='';
+$lng[2042]='';
+$lng[2043]='';
+$lng[2044]='';
+$lng[2045]='';
+$lng[2046]='';
+$lng[2047]='';
+$lng[2048]='';
+$lng[2049]='';
+$lng[2050]='';
+$lng[2051]='';
+$lng[2052]='';
+$lng[2053]='';
+$lng[2054]='';
+$lng[2055]='';
+$lng[2056]='';
+$lng[2057]='';
+$lng[2058]='';
+$lng[2059]='';
+$lng[2060]='';
+$lng[2061]='';
+$lng[2062]='';
+$lng[2063]='';
+$lng[2064]='';
+$lng[2065]='';
+$lng[2066]='';
+$lng[2067]='';
+$lng[2068]='';
+$lng[2069]='';
+$lng[2070]='';
+$lng[2071]='';
+$lng[2072]='';
+$lng[2073]='';
+$lng[2074]='';
+$lng[2075]='';
+$lng[2076]='';
+$lng[2077]='';
+$lng[2078]='';
+$lng[2079]='';
+$lng[2080]='';
+$lng[2081]='';
+$lng[2082]='';
+$lng[2083]='';
+$lng[2084]='';
+$lng[2085]='';
+$lng[2086]='';
+$lng[2087]='';
+$lng[2088]='';
+$lng[2089]='';
+$lng[2090]='';
+$lng[2091]='';
+$lng[2092]='';
+$lng[2093]='';
+$lng[2094]='';
+$lng[2095]='';
+$lng[2096]='';
+$lng[2097]='';
+$lng[2098]='';
+$lng[2099]='';
+$lng[2100]='';
+$lng[2101]='';
+$lng[2102]='';
+$lng[2103]='';
+$lng[2104]='';
+$lng[2105]='';
+$lng[2106]='';
+$lng[2107]='';
+$lng[2108]='';
+$lng[2109]='';
+$lng[2110]='';
+$lng[2111]='';
+$lng[2112]='';
+$lng[2113]='';
+$lng[2114]='';
+$lng[2115]='';
+$lng[2116]='';
+$lng[2117]='';
+$lng[2118]='';
+$lng[2119]='';
+$lng[2120]='';
+$lng[2121]='';
+$lng[2122]='';
+$lng[2123]='';
+$lng[2124]='';
+$lng[2125]='';
+$lng[2126]='';
+$lng[2127]='';
+$lng[2128]='';
+$lng[2129]='';
+$lng[2130]='';
+$lng[2131]='';
+$lng[2132]='';
+$lng[2133]='';
+$lng[2134]='';
+$lng[2135]='';
+$lng[2136]='';
+$lng[2137]='';
+$lng[2138]='';
+$lng[2139]='';
+$lng[2140]='';
+$lng[2141]='';
+$lng[2142]='';
+$lng[2143]='';
+$lng[2144]='';
+$lng[2145]='';
+$lng[2146]='';
+$lng[2147]='';
+$lng[2148]='';
+$lng[2149]='';
+$lng[2150]='';
+$lng[2151]='';
+$lng[2152]='';
+$lng[2153]='';
+$lng[2154]='';
+$lng[2155]='';
+$lng[2156]='';
+$lng[2157]='';
+$lng[2158]='';
+$lng[2159]='';
+$lng[2160]='';
+$lng[2161]='';
+$lng[2162]='';
+$lng[2163]='';
+$lng[2164]='';
+$lng[2165]='';
+$lng[2166]='';
+$lng[2167]='';
+$lng[2168]='';
+$lng[2169]='';
+$lng[2170]='';
+$lng[2171]='';
+$lng[2172]='';
+$lng[2173]='';
+$lng[2174]='';
+$lng[2175]='';
+$lng[2176]='';
+$lng[2177]='';
+$lng[2178]='';
+$lng[2179]='';
+$lng[2180]='';
+$lng[2181]='';
+$lng[2182]='';
+$lng[2183]='';
+$lng[2184]='';
+$lng[2185]='';
+$lng[2186]='';
+$lng[2187]='';
+$lng[2188]='';
+$lng[2189]='';
+$lng[2190]='';
+$lng[2191]='';
+$lng[2192]='';
+$lng[2193]='';
+$lng[2194]='';
+$lng[2195]='';
+$lng[2196]='';
+$lng[2197]='';
+$lng[2198]='';
+$lng[2199]='';
+$lng[2200]='';
+$lng[2201]='';
+$lng[2202]='';
+$lng[2203]='';
+$lng[2204]='';
+$lng[2205]='';
+$lng[2206]='';
+$lng[2207]='';
+$lng[2208]='';
+$lng[2209]='';
+$lng[2210]='';
+$lng[2211]='';
+$lng[2212]='';
+$lng[2213]='';
+$lng[2214]='';
+$lng[2215]='';
+$lng[2216]='';
+$lng[2217]='';
+$lng[2218]='';
+$lng[2219]='';
+$lng[2220]='';
+$lng[2221]='';
+$lng[2222]='';
+$lng[2223]='';
+$lng[2224]='';
+$lng[2225]='';
+$lng[2226]='';
+$lng[2227]='';
+$lng[2228]='';
+$lng[2229]='';
+$lng[2230]='';
+$lng[2231]='';
+$lng[2232]='';
+$lng[2233]='';
+$lng[2234]='';
+$lng[2235]='';
+$lng[2236]='';
+$lng[2237]='';
+$lng[2238]='';
+$lng[2239]='';
+$lng[2240]='';
+$lng[2241]='';
+$lng[2242]='';
+$lng[2243]='';
+$lng[2244]='';
+$lng[2245]='';
+$lng[2246]='';
+$lng[2247]='';
+$lng[2248]='';
+$lng[2249]='';
+$lng[2250]='';
+$lng[2251]='';
+$lng[2252]='';
+$lng[2253]='';
+$lng[2254]='';
+$lng[2255]='';
+$lng[2256]='';
+$lng[2257]='';
+$lng[2258]='';
+$lng[2259]='';
+$lng[2260]='';
+$lng[2261]='';
+$lng[2262]='';
+$lng[2263]='';
+$lng[2264]='';
+$lng[2265]='';
+$lng[2266]='';
+$lng[2267]='';
+$lng[2268]='';
+$lng[2269]='';
+$lng[2270]='';
+$lng[2271]='';
+$lng[2272]='';
+$lng[2273]='';
+$lng[2274]='';
+$lng[2275]='';
+$lng[2276]='';
+$lng[2277]='';
+$lng[2278]='';
+$lng[2279]='';
+$lng[2280]='';
+$lng[2281]='';
+$lng[2282]='';
+$lng[2283]='';
+$lng[2284]='';
+$lng[2285]='';
+$lng[2286]='';
+$lng[2287]='';
+$lng[2288]='';
+$lng[2289]='';
+$lng[2290]='';
+$lng[2291]='';
+$lng[2292]='';
+$lng[2293]='';
+$lng[2294]='';
+$lng[2295]='';
+$lng[2296]='';
+$lng[2297]='';
+$lng[2298]='';
+$lng[2299]='';
+$lng[2300]='';
+$lng[2301]='';
+$lng[2302]='';
+$lng[2303]='';
+$lng[2304]='';
+$lng[2305]='';
+$lng[2306]='';
+$lng[2307]='';
+$lng[2308]='';
+$lng[2309]='';
+$lng[2310]='';
+$lng[2311]='';
+$lng[2312]='';
+$lng[2313]='';
+$lng[2314]='';
+$lng[2315]='';
+$lng[2316]='';
+$lng[2317]='';
+$lng[2318]='';
+$lng[2319]='';
+$lng[2320]='';
+$lng[2321]='';
+$lng[2322]='';
+$lng[2323]='';
+$lng[2324]='';
+$lng[2325]='';
+$lng[2326]='';
+$lng[2327]='';
+$lng[2328]='';
+$lng[2329]='';
+$lng[2330]='';
+$lng[2331]='';
+$lng[2332]='';
+$lng[2333]='';
+$lng[2334]='';
+$lng[2335]='';
+$lng[2336]='';
+$lng[2337]='';
+$lng[2338]='';
+$lng[2339]='';
+$lng[2340]='';
+$lng[2341]='';
+$lng[2342]='';
+$lng[2343]='';
+$lng[2344]='';
+$lng[2345]='';
+$lng[2346]='';
+$lng[2347]='';
+$lng[2348]='';
+$lng[2349]='';
+$lng[2350]='';
+$lng[2351]='';
+$lng[2352]='';
+$lng[2353]='';
+$lng[2354]='';
+$lng[2355]='';
+$lng[2356]='';
+$lng[2357]='';
+$lng[2358]='';
+$lng[2359]='';
+$lng[2360]='';
+$lng[2361]='';
+$lng[2362]='';
+$lng[2363]='';
+$lng[2364]='';
+$lng[2365]='';
+$lng[2366]='';
+$lng[2367]='';
+$lng[2368]='';
+$lng[2369]='';
+$lng[2370]='';
+$lng[2371]='';
+$lng[2372]='';
+$lng[2373]='';
+$lng[2374]='';
+$lng[2375]='';
+$lng[2376]='';
+$lng[2377]='';
+$lng[2378]='';
+$lng[2379]='';
+$lng[2380]='';
+$lng[2381]='';
+$lng[2382]='';
+$lng[2383]='';
+$lng[2384]='';
+$lng[2385]='';
+$lng[2386]='';
+$lng[2387]='';
+$lng[2388]='';
+$lng[2389]='';
+$lng[2390]='';
+$lng[2391]='';
+$lng[2392]='';
+$lng[2393]='';
+$lng[2394]='';
+$lng[2395]='';
+$lng[2396]='';
+$lng[2397]='';
+$lng[2398]='';
+$lng[2399]='';
+$lng[2400]='';
+$lng[2401]='';
+$lng[2402]='';
+$lng[2403]='';
+$lng[2404]='';
+$lng[2405]='';
+$lng[2406]='';
+$lng[2407]='';
+$lng[2408]='';
+$lng[2409]='';
+$lng[2410]='';
+$lng[2411]='';
+$lng[2412]='';
+$lng[2413]='';
+$lng[2414]='';
+$lng[2415]='';
+$lng[2416]='';
+$lng[2417]='';
+$lng[2418]='';
+$lng[2419]='';
+$lng[2420]='';
+$lng[2421]='';
+$lng[2422]='';
+$lng[2423]='';
+$lng[2424]='';
+$lng[2425]='';
+$lng[2426]='';
+$lng[2427]='';
+$lng[2428]='';
+$lng[2429]='';
+$lng[2430]='';
+$lng[2431]='';
+$lng[2432]='';
+$lng[2433]='';
+$lng[2434]='';
+$lng[2435]='';
+$lng[2436]='';
+$lng[2437]='';
+$lng[2438]='';
+$lng[2439]='';
+$lng[2440]='';
+$lng[2441]='';
+$lng[2442]='';
+$lng[2443]='';
+$lng[2444]='';
+$lng[2445]='';
+$lng[2446]='';
+$lng[2447]='';
+$lng[2448]='';
+$lng[2449]='';
+$lng[2450]='';
+$lng[2451]='';
+$lng[2452]='';
+$lng[2453]='';
+$lng[2454]='';
+$lng[2455]='';
+$lng[2456]='';
+$lng[2457]='';
+$lng[2458]='';
+$lng[2459]='';
+$lng[2460]='';
+$lng[2461]='';
+$lng[2462]='';
+$lng[2463]='';
+$lng[2464]='';
+$lng[2465]='';
+$lng[2466]='';
+$lng[2467]='';
+$lng[2468]='';
+$lng[2469]='';
+$lng[2470]='';
+$lng[2471]='';
+$lng[2472]='';
+$lng[2473]='';
+$lng[2474]='';
+$lng[2475]='';
+$lng[2476]='';
+$lng[2477]='';
+$lng[2478]='';
+$lng[2479]='';
+$lng[2480]='';
+$lng[2481]='';
+$lng[2482]='';
+$lng[2483]='';
+$lng[2484]='';
+$lng[2485]='';
+$lng[2486]='';
+$lng[2487]='';
+$lng[2488]='';
+$lng[2489]='';
+$lng[2490]='';
+$lng[2491]='';
+$lng[2492]='';
+$lng[2493]='';
+$lng[2494]='';
+$lng[2495]='';
+$lng[2496]='';
+$lng[2497]='';
+$lng[2498]='';
+$lng[2499]='';
+$lng[2500]='';
+$lng[2501]='';
+$lng[2502]='';
+$lng[2503]='';
+$lng[2504]='';
+$lng[2505]='';
+$lng[2506]='';
+$lng[2507]='';
+$lng[2508]='';
+$lng[2509]='';
+$lng[2510]='';
+$lng[2511]='';
+$lng[2512]='';
+$lng[2513]='';
+$lng[2514]='';
+$lng[2515]='';
+$lng[2516]='';
+$lng[2517]='';
+$lng[2518]='';
+$lng[2519]='';
+$lng[2520]='';
+$lng[2521]='';
+$lng[2522]='';
+$lng[2523]='';
+$lng[2524]='';
+$lng[2525]='';
+$lng[2526]='';
+$lng[2527]='';
+$lng[2528]='';
+$lng[2529]='';
+$lng[2530]='';
+$lng[2531]='';
+$lng[2532]='';
+$lng[2533]='';
+$lng[2534]='';
+$lng[2535]='';
+$lng[2536]='';
+$lng[2537]='';
+$lng[2538]='';
+$lng[2539]='';
+$lng[2540]='';
+$lng[2541]='';
+$lng[2542]='';
+$lng[2543]='';
+$lng[2544]='';
+$lng[2545]='';
+$lng[2546]='';
+$lng[2547]='';
+$lng[2548]='';
+$lng[2549]='';
+$lng[2550]='';
+$lng[2551]='';
+$lng[2552]='';
+$lng[2553]='';
+$lng[2554]='';
+$lng[2555]='';
+$lng[2556]='';
+$lng[2557]='';
+$lng[2558]='';
+$lng[2559]='';
+$lng[2560]='';
+$lng[2561]='';
+$lng[2562]='';
+$lng[2563]='';
+$lng[2564]='';
+$lng[2565]='';
+$lng[2566]='';
+$lng[2567]='';
+$lng[2568]='';
+$lng[2569]='';
+$lng[2570]='';
+$lng[2571]='';
+$lng[2572]='';
+$lng[2573]='';
+$lng[2574]='';
+$lng[2575]='';
+$lng[2576]='';
+$lng[2577]='';
+$lng[2578]='';
+$lng[2579]='';
+$lng[2580]='';
+$lng[2581]='';
+$lng[2582]='';
+$lng[2583]='';
+$lng[2584]='';
+$lng[2585]='';
+$lng[2586]='';
+$lng[2587]='';
+$lng[2588]='';
+$lng[2589]='';
+$lng[2590]='';
+$lng[2591]='';
+$lng[2592]='';
+$lng[2593]='';
+$lng[2594]='';
+$lng[2595]='';
+$lng[2596]='';
+$lng[2597]='';
+$lng[2598]='';
+$lng[2599]='';
+$lng[2600]='';
+$lng[2601]='';
+$lng[2602]='';
+$lng[2603]='';
+$lng[2604]='';
+$lng[2605]='';
+$lng[2606]='';
+$lng[2607]='';
+$lng[2608]='';
+$lng[2609]='';
+$lng[2610]='';
+$lng[2611]='';
+$lng[2612]='';
+$lng[2613]='';
+$lng[2614]='';
+$lng[2615]='';
+$lng[2616]='';
+$lng[2617]='';
+$lng[2618]='';
+$lng[2619]='';
+$lng[2620]='';
+$lng[2621]='';
+$lng[2622]='';
+$lng[2623]='';
+$lng[2624]='';
+$lng[2625]='';
+$lng[2626]='';
+$lng[2627]='';
+$lng[2628]='';
+$lng[2629]='';
+$lng[2630]='';
+$lng[2631]='';
+$lng[2632]='';
+$lng[2633]='';
+$lng[2634]='';
+$lng[2635]='';
+$lng[2636]='';
+$lng[2637]='';
+$lng[2638]='';
+$lng[2639]='';
+$lng[2640]='';
+$lng[2641]='';
+$lng[2642]='';
+$lng[2643]='';
+$lng[2644]='';
+$lng[2645]='';
+$lng[2646]='';
+$lng[2647]='';
+$lng[2648]='';
+$lng[2649]='';
+$lng[2650]='';
+$lng[2651]='';
+$lng[2652]='';
+$lng[2653]='';
+$lng[2654]='';
+$lng[2655]='';
+$lng[2656]='';
+$lng[2657]='';
+$lng[2658]='';
+$lng[2659]='';
+$lng[2660]='';
+$lng[2661]='';
+$lng[2662]='';
+$lng[2663]='';
+$lng[2664]='';
+$lng[2665]='';
+$lng[2666]='';
+$lng[2667]='';
+$lng[2668]='';
+$lng[2669]='';
+$lng[2670]='';
+$lng[2671]='';
+$lng[2672]='';
+$lng[2673]='';
+$lng[2674]='';
+$lng[2675]='';
+$lng[2676]='';
+$lng[2677]='';
+$lng[2678]='';
+$lng[2679]='';
+$lng[2680]='';
+$lng[2681]='';
+$lng[2682]='';
+$lng[2683]='';
+$lng[2684]='';
+$lng[2685]='';
+$lng[2686]='';
+$lng[2687]='';
+$lng[2688]='';
+$lng[2689]='';
+$lng[2690]='';
+$lng[2691]='';
+$lng[2692]='';
+$lng[2693]='';
+$lng[2694]='';
+$lng[2695]='';
+$lng[2696]='';
+$lng[2697]='';
+$lng[2698]='';
+$lng[2699]='';
+$lng[2700]='';
+$lng[2701]='';
+$lng[2702]='';
+$lng[2703]='';
+$lng[2704]='';
+$lng[2705]='';
+$lng[2706]='';
+$lng[2707]='';
+$lng[2708]='';
+$lng[2709]='';
+$lng[2710]='';
+$lng[2711]='';
+$lng[2712]='';
+$lng[2713]='';
+$lng[2714]='';
+$lng[2715]='';
+$lng[2716]='';
+$lng[2717]='';
+$lng[2718]='';
+$lng[2719]='';
+$lng[2720]='';
+$lng[2721]='';
+$lng[2722]='';
+$lng[2723]='';
+$lng[2724]='';
+$lng[2725]='';
+$lng[2726]='';
+$lng[2727]='';
+$lng[2728]='';
+$lng[2729]='';
+$lng[2730]='';
+$lng[2731]='';
+$lng[2732]='';
+$lng[2733]='';
+$lng[2734]='';
+$lng[2735]='';
+$lng[2736]='';
+$lng[2737]='';
+$lng[2738]='';
+$lng[2739]='';
+$lng[2740]='';
+$lng[2741]='';
+$lng[2742]='';
+$lng[2743]='';
+$lng[2744]='';
+$lng[2745]='';
+$lng[2746]='';
+$lng[2747]='';
+$lng[2748]='';
+$lng[2749]='';
+$lng[2750]='';
+$lng[2751]='';
+$lng[2752]='';
+$lng[2753]='';
+$lng[2754]='';
+$lng[2755]='';
+$lng[2756]='';
+$lng[2757]='';
+$lng[2758]='';
+$lng[2759]='';
+$lng[2760]='';
+$lng[2761]='';
+$lng[2762]='';
+$lng[2763]='';
+$lng[2764]='';
+$lng[2765]='';
+$lng[2766]='';
+$lng[2767]='';
+$lng[2768]='';
+$lng[2769]='';
+$lng[2770]='';
+$lng[2771]='';
+$lng[2772]='';
+$lng[2773]='';
+$lng[2774]='';
+$lng[2775]='';
+$lng[2776]='';
+$lng[2777]='';
+$lng[2778]='';
+$lng[2779]='';
+$lng[2780]='';
+$lng[2781]='';
+$lng[2782]='';
+$lng[2783]='';
+$lng[2784]='';
+$lng[2785]='';
+$lng[2786]='';
+$lng[2787]='';
+$lng[2788]='';
+$lng[2789]='';
+$lng[2790]='';
+$lng[2791]='';
+$lng[2792]='';
+$lng[2793]='';
+$lng[2794]='';
+$lng[2795]='';
+$lng[2796]='';
+$lng[2797]='';
+$lng[2798]='';
+$lng[2799]='';
+$lng[2800]='';
+$lng[2801]='';
+$lng[2802]='';
+$lng[2803]='';
+$lng[2804]='';
+$lng[2805]='';
+$lng[2806]='';
+$lng[2807]='';
+$lng[2808]='';
+$lng[2809]='';
+$lng[2810]='';
+$lng[2811]='';
+$lng[2812]='';
+$lng[2813]='';
+$lng[2814]='';
+$lng[2815]='';
+$lng[2816]='';
+$lng[2817]='';
+$lng[2818]='';
+$lng[2819]='';
+$lng[2820]='';
+$lng[2821]='';
+$lng[2822]='';
+$lng[2823]='';
+$lng[2824]='';
+$lng[2825]='';
+$lng[2826]='';
+$lng[2827]='';
+$lng[2828]='';
+$lng[2829]='';
+$lng[2830]='';
+$lng[2831]='';
+$lng[2832]='';
+$lng[2833]='';
+$lng[2834]='';
+$lng[2835]='';
+$lng[2836]='';
+$lng[2837]='';
+$lng[2838]='';
+$lng[2839]='';
+$lng[2840]='';
+$lng[2841]='';
+$lng[2842]='';
+$lng[2843]='';
+$lng[2844]='';
+$lng[2845]='';
+$lng[2846]='';
+$lng[2847]='';
+$lng[2848]='';
+$lng[2849]='';
+$lng[2850]='';
+$lng[2851]='';
+$lng[2852]='';
+$lng[2853]='';
+$lng[2854]='';
+$lng[2855]='';
+$lng[2856]='';
+$lng[2857]='';
+$lng[2858]='';
+$lng[2859]='';
+$lng[2860]='';
+$lng[2861]='';
+$lng[2862]='';
+$lng[2863]='';
+$lng[2864]='';
+$lng[2865]='';
+$lng[2866]='';
+$lng[2867]='';
+$lng[2868]='';
+$lng[2869]='';
+$lng[2870]='';
+$lng[2871]='';
+$lng[2872]='';
+$lng[2873]='';
+$lng[2874]='';
+$lng[2875]='';
+$lng[2876]='';
+$lng[2877]='';
+$lng[2878]='';
+$lng[2879]='';
+$lng[2880]='';
+$lng[2881]='';
+$lng[2882]='';
+$lng[2883]='';
+$lng[2884]='';
+$lng[2885]='';
+$lng[2886]='';
+$lng[2887]='';
+$lng[2888]='';
+$lng[2889]='';
+$lng[2890]='';
+$lng[2891]='';
+$lng[2892]='';
+$lng[2893]='';
+$lng[2894]='';
+$lng[2895]='';
+$lng[2896]='';
+$lng[2897]='';
+$lng[2898]='';
+$lng[2899]='';
+$lng[2900]='';
+$lng[2901]='';
+$lng[2902]='';
+$lng[2903]='';
+$lng[2904]='';
+$lng[2905]='';
+$lng[2906]='';
+$lng[2907]='';
+$lng[2908]='';
+$lng[2909]='';
+$lng[2910]='';
+$lng[2911]='';
+$lng[2912]='';
+$lng[2913]='';
+$lng[2914]='';
+$lng[2915]='';
+$lng[2916]='';
+$lng[2917]='';
+$lng[2918]='';
+$lng[2919]='';
+$lng[2920]='';
+$lng[2921]='';
+$lng[2922]='';
+$lng[2923]='';
+$lng[2924]='';
+$lng[2925]='';
+$lng[2926]='';
+$lng[2927]='';
+$lng[2928]='';
+$lng[2929]='';
+$lng[2930]='';
+$lng[2931]='';
+$lng[2932]='';
+$lng[2933]='';
+$lng[2934]='';
+$lng[2935]='';
+$lng[2936]='';
+$lng[2937]='';
+$lng[2938]='';
+$lng[2939]='';
+$lng[2940]='';
+$lng[2941]='';
+$lng[2942]='';
+$lng[2943]='';
+$lng[2944]='';
+$lng[2945]='';
+$lng[2946]='';
+$lng[2947]='';
+$lng[2948]='';
+$lng[2949]='';
+$lng[2950]='';
+$lng[2951]='';
+$lng[2952]='';
+$lng[2953]='';
+$lng[2954]='';
+$lng[2955]='';
+$lng[2956]='';
+$lng[2957]='';
+$lng[2958]='';
+$lng[2959]='';
+$lng[2960]='';
+$lng[2961]='';
+$lng[2962]='';
+$lng[2963]='';
+$lng[2964]='';
+$lng[2965]='';
+$lng[2966]='';
+$lng[2967]='';
+$lng[2968]='';
+$lng[2969]='';
+$lng[2970]='';
+$lng[2971]='';
+$lng[2972]='';
+$lng[2973]='';
+$lng[2974]='';
+$lng[2975]='';
+$lng[2976]='';
+$lng[2977]='';
+$lng[2978]='';
+$lng[2979]='';
+$lng[2980]='';
+$lng[2981]='';
+$lng[2982]='';
+$lng[2983]='';
+$lng[2984]='';
+$lng[2985]='';
+$lng[2986]='';
+$lng[2987]='';
+$lng[2988]='';
+$lng[2989]='';
+$lng[2990]='';
+$lng[2991]='';
+$lng[2992]='';
+$lng[2993]='';
+$lng[2994]='';
+$lng[2995]='';
+$lng[2996]='';
+$lng[2997]='';
+$lng[2998]='';
+$lng[2999]='';
+$lng[3000]='';
 
 ?>
