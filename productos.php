@@ -6,7 +6,7 @@ $aM = load_model('articulos');
 $iM = load_model('inputs');
 $sM = load_model('seo');
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 
 $arrCategorias = array();
 
@@ -88,8 +88,8 @@ echo '</pre>'; */
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical">
                     <div class="contenedor">
-                        <h1 class="ttl">Todos los productos de Ysana® Vida Sana</h1>
-                        <p class="txt principal">YSANA® PONE LA GRAN EXPERIENCIA TERAPÉUTICA A NIVEL INTERNACIONAL DE PHARMALINK AL SERVICIO DE SUS GAMAS DE PRODUCTOS NATURALES, PARA TU CUIDADO Y EL DE LOS TUYOS.</p>
+                        <h1 class="ttl"><?php echo $lng[21]; ?></h1>
+                        <p class="txt principal"><?php echo $lng[22]; ?></p>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical der">

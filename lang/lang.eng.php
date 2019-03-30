@@ -22,5 +22,11 @@ $lng[17]='Regulatory Certificates';
 $lng[18]='Quality Control';
 $lng[19]='Technological Value';
 $lng[20]='Logística Responsable';
-
+$lng[21]='All Ysana® Vida Sana products';
+$lng[22]='YSANA® PUTS THE GREAT INTERNATIONAL THERAPEUTIC EXPERIENCE OF PHARMALINK AT THE SERVICE OF ITS RANGES OF NATURAL PRODUCTS, FOR YOUR CARE AND THAT OF YOURS.';
+$lng[23]='Find the nearest pharmacy';
+$lng[24]='Find';
+$lng[25]='Pharmacy Name';
+$lng[26]='Loading';
+$lng[27]='Error when loading pharmacies';
 ?>
