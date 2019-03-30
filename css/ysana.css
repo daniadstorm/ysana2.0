@@ -1743,8 +1743,41 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     transition: 300ms;
 }
 
-
-
+#slidertienda-1{
+    display: flex;
+    justify-content: center;
+    min-height: 450px;
+    align-items: center;
+}
+#slidertienda-1 .contenedor{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#slidertienda-1 .contenedor .ttl{
+    color: var(--ysana-color-2);
+    font-weight: 600;
+    position: relative;
+}
+#slidertienda-2{
+    display: flex;
+    justify-content: center;
+    min-height: 450px;
+    align-items: center;
+    height: 450px;
+    background-image: url('../img/banners/farmacia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#slidertienda-2 .contenedor{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#slidertienda-2 .contenedor .ttl{
+    color: var(--ysana-color-2);
+    font-weight: 600;
+    position: relative;
+}
 
 
 

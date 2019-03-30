@@ -112,7 +112,8 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                         <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'CP', '', '', '', '', false, 'form-group col-6', false); ?>
                         <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Telf', '', '', '', '', false, 'form-group col-6', false); ?>
                     </div>
-                    <?php echo $iM->get_input_textarea('frm_pregunta', '', 'form-control', 'Tu pregunta', '', 10, 500, true, false, 5, 'form-group') ?>
+                    <?php echo $iM->get_input_textarea('frm_pregunta', '', 'form-control', 'Tu pregunta', '', 10, 5, 500, false, 5, 'form-group') ?>
+                    <a class="mb-0"><input id="" type="checkbox" name="" required><a href="#terminoos" class="ml-2 text-light">Acepto los terminos y condiciones</a></p>
                     <div class="d-flex justify-content-end">
                         <button id="btnEnviar" type="submit" class="btn btn-bg-color-3">Enviar</button>
                     </div>

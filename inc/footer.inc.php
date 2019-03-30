@@ -18,7 +18,7 @@
         </div>
         <div class="col-12 col-sm-3">
             <ul class="list-footer">
-                <li class="list-footer-item titulo">Sobre ysana</li>
+                <li class="list-footer-item titulo"><a href="<?php echo $ruta_inicio; ?>sobre-ysana">Sobre ysana</a></li>
                 <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Corporate</a></li>
                 <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Valores</a></li>
                 <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Compañía</a></li>

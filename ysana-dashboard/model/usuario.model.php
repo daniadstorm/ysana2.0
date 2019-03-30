@@ -83,12 +83,14 @@ class usuarioModel extends Model {
         unset($_SESSION['nombrecompleto_usuario']);
     }
     
-    function control_sesion($ruta_inicio, $nivel) {
+    function control_sesion($ruta_inicio, $nivel, $comprobacion=false) {
         //si existe session, y el nivel de id_tipo_usuario meno o igual a nivel
         if (isset($_SESSION['id_tipo_usuario']) && $_SESSION['id_tipo_usuario'] <= $nivel) {
             return true;
         } else {
-            header('Location: '.$ruta_inicio); exit();
+            if(!$comprobacion){
+                header('Location: '.$ruta_inicio); exit();
+            }
         }
     }
 }

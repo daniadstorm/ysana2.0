@@ -36,7 +36,11 @@ if (isset($_POST['nombre_usuario'])) { //si viene de submit de login
 /* echo '<pre>'.print_r($_POST).'</pre>'; */
 //CONTROL_______________________________________________________________________
 if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
-    header('Location: '.$ruta_dominio.$ruta_anterior);
+    if($clubysana){
+        header('Location: '.$ruta_inicio.'clubysana/miexperiencia/');
+    }else{
+        header('Location: '.$ruta_inicio);
+    }
 }
 //CONTROL_______________________________________________________________________
 

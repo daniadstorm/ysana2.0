@@ -70,7 +70,34 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         <?php include_once('inc/panel_top.inc.php'); ?>
         <?php include_once('inc/menu.inc.php'); ?>
     </div>
-    <div class="w-100 max-ysana" style="margin-top: 128px;">
+    <?php if($tienda==1){ //Experiencia ?>
+        <div id="slidertienda-<?php echo $tienda; ?>" class="max-ysana" style="margin-top: 128px;">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical">
+                    <div class="contenedor">
+                        <h1 class="ttl">Recibe tus pack experiencia Ysana en casa</h1>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical der">
+                    <img src="<?php echo $ruta_inicio; ?>img/banners/experiencia.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    <?php }else{ //Farmacia ?>
+        <div id="slidertienda-<?php echo $tienda; ?>" class="w-100" style="margin-top: 128px;">
+            <div class="max-ysana">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical">
+                        <div class="contenedor">
+                            <h1 class="ttl">Reserva tus productos Ysana y recogelos en tu farmacia más cercana</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical der"></div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+    <div class="w-100 max-ysana">
         <nav id="catPc<?php echo $tienda; ?>">
             <div class="nav nav-pills nav-justified" id="categorias" role="tablist">
                 <?php echo $outCatNombres; ?>
