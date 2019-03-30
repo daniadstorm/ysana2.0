@@ -11,7 +11,7 @@ $arrImg = array(
     "img/home/3.jpg"
 );
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
 
 ?>
 
@@ -23,35 +23,35 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
     <div id="sobreysanaslider" class="parallax parallax-sobreysana">
         <div class="max-ysana">
             <div>
-                <h1>Ysana® es una marca natural e innovadora dedicada al bienestar de las personas.</h1>
-                <a href="#" class="btn btn-bg-color-4">Nuestros productos</a>
+                <h1><?php echo $lng[1]; ?></h1>
+                <a href="#" class="btn btn-bg-color-4"><?php echo $lng[2]; ?></a>
             </div>
         </div>
     </div>
     <div id="sobreysana" class="max-ysana">
         <div class="ttl">
-            <h1>Valores Ysana</h1>
+            <h1><?php echo $lng[3]; ?></h1>
         </div>
         <div class="carteles">
             <div class="caja">
                 <img src="<?php echo $ruta_inicio; ?>img/home/3.svg" alt="">
-                <h5>Innovación</h5>
+                <h5><?php echo $lng[4]; ?></h5>
             </div>
             <div class="caja">
                 <img src="<?php echo $ruta_inicio; ?>img/home/1.svg" alt="">
-                <h5>Compromiso</h5>
+                <h5><?php echo $lng[5]; ?></h5>
             </div>
             <div class="caja">
                 <img src="<?php echo $ruta_inicio; ?>img/home/2.svg" alt="">
-                <h5>Integridad</h5>
+                <h5><?php echo $lng[6]; ?></h5>
             </div>
             <div class="caja">
                 <img src="<?php echo $ruta_inicio; ?>img/home/5.svg" alt="">
-                <h5>Trabajo en Equipo</h5>
+                <h5><?php echo $lng[7]; ?></h5>
             </div>
             <div class="caja">
                 <img src="<?php echo $ruta_inicio; ?>img/home/4.svg" alt="">
-                <h5>Confianza</h5>
+                <h5><?php echo $lng[8]; ?></h5>
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
             </div>
             <div class="col-12 col-lg-6 conoce-2">
                 <div class="conoceysana">
-                    <h1 class="ttl">Conoce más de Ysana®</h1>
+                    <h1 class="ttl"><?php echo $lng[9]; ?></h1>
                     <div class="d-lg-none d-xl-none">
                         <div id="sliderysanamenos-xl" class="wrapper2">
                             <div class="botonslider">
@@ -87,61 +87,61 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                             </div>
                         </div>
                     </div>
-                    <p class="texto">Nuestra planta de producción está ubicada en Vilabella (Tarragona) de más de 10.000 m2. Completamente equipada con la más avanzada tecnología para la fabricación de: Complementos Alimenticios en viales monodosis, extemporáneos, tecnología Eficaps®, y spray oral; en cuanto a Dispositivos Médicos contamos con áreas especializadas en aspiradores nasales para bebés, esprays de bomba y esprays “bulk on valve”. Desde nuestra sede en Barcelona diseñamos, desarrollamos y fabricamos productos tecnológicamente avanzados, con formulaciones exclusivas a base de extractos de plantas e ingredientes naturales, rigurosamente escogidos y avalados por estudios científicos. El equipo de I+D de Ysana Vida Sana desarrolla constantemente tecnologías propias e impulsa estudios clínicos específicos de eficacia y seguridad.</p>
-                    <p class="texto">Contamos con las principales ISO y GMP de exigencia a nivel Europeo, de la misma manera todos los productos Ysana® cuentan con las certificaciones técnicas de los organismos notificados nacionales, esta ardua y rigurosa labor se lleva a cabo desde nuestro departamento de Regulatorio cuyo equipo tiene amplio conocimiento y dominio de las normas tanto locales como en otros países del mundo.</p>
+                    <p class="texto"><?php echo $lng[10]; ?></p>
+                    <p class="texto"><?php echo $lng[11]; ?></p>
                 </div>
             </div>
         </div>
     </div>
     <div id="transparencia" class="max-ysana">
         <div>
-            <h1>En Ysana® basamos nuestro trabajo en el compromiso por la calidad, una innovación constante de nuestros productos basados en principios activos naturales, un código ético de transparencia y comunicación, además de un riguroso cumplimiento de los estándares legales.</h1>
+            <h1><?php echo $lng[12]; ?></h1>
         </div>
     </div>
     <div id="garantia" class="max-ysana">
         <div class="texto">
-            <h1 class="ttl">Garantía Ysana</h1>
-            <p class="txt">En Ysana® Vida Sana no sólo nos encargamos de la producción, sino que también desarrollamos los productos, realizamos los estudios de eficacia y seguridad, llevamos a cabo los controles de calidad y seguimos todas las etapas del proceso regulatorio cumpliendo un exigente código de compromiso con la calidad.</p>
+            <h1 class="ttl"><?php echo $lng[13]; ?></h1>
+            <p class="txt"><?php echo $lng[14]; ?></p>
         </div>
         <div id="sobreysanaimg" class="row px-5">
             <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="imagen img-1">
-                    <p class="texto color-1">Diseño innovador</p>
+                    <p class="texto color-1"><?php echo $lng[15]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/sobreysana/1.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-imagen"></div>
             </div>
             <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="imagen img-2">
-                    <p class="texto color-2">Formulación y Desarrollo</p>
+                    <p class="texto color-2"><?php echo $lng[16]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/sobreysana/2.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-imagen"></div>
             </div>
             <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="imagen img-3">
-                    <p class="texto color-3">Certificados Regulatorios</p>
+                    <p class="texto color-3"><?php echo $lng[17]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/sobreysana/3.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-imagen"></div>
             </div>
             <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="imagen img-4">
-                    <p class="texto color-4">Control de Calidad</p>
+                    <p class="texto color-4"><?php echo $lng[18]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/sobreysana/4.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-imagen"></div>
             </div>
             <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="imagen img-5">
-                    <p class="texto color-5">Valor Tecnológico</p>
+                    <p class="texto color-5"><?php echo $lng[19]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/sobreysana/5.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-imagen"></div>
             </div>
             <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-2">
                 <div class="imagen img-6">
-                    <p class="texto color-6">Logística Responsable</p>
+                    <p class="texto color-6"><?php echo $lng[20]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/sobreysana/6.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-imagen"></div>
