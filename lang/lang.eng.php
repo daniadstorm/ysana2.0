@@ -29,4 +29,15 @@ $lng[24]='Find';
 $lng[25]='Pharmacy Name';
 $lng[26]='Loading';
 $lng[27]='Error when loading pharmacies';
+$lng[28]='You have registered correctly';
+$lng[29]='This user has been unsubscribed';
+$lng[30]='Incorrect username or password';
+$lng[31]='Login to Ysana';
+$lng[32]='E-mail address';
+$lng[33]='Password';
+$lng[34]='Login';
+$lng[35]='New in Ysana?';
+$lng[36]='Sign up now';
+$lng[37]='Forgot your password?';
+$lng[38]='Recover password';
 ?>

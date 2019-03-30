@@ -12,7 +12,7 @@ $contrasenya_usuario = '';
 
 $arr_err = array();
 $clubysana = (isset($_REQUEST['clubysana']) ? $_REQUEST['clubysana'] : '');
-$str_info = (isset($_REQUEST['str_info']) ? 'Te has registado correctamente' : '');
+$str_info = (isset($_REQUEST['str_info']) ? $lng[28] : '');
 $ruta_anterior = (isset($_REQUEST['ruta_anterior']) ? $_REQUEST['ruta_anterior'] : '/');
 
 //GET___________________________________________________________________________
@@ -27,7 +27,7 @@ if (isset($_POST['nombre_usuario'])) { //si viene de submit de login
     $nombre_usuario = $_POST['nombre_usuario'];
     $contrasenya_usuario = $_POST['contrasenya_usuario'];
     
-    $result_login = $uM->login_usuario($nombre_usuario, $contrasenya_usuario, $lng['index'][22], $lng['index'][23]);
+    $result_login = $uM->login_usuario($nombre_usuario, $contrasenya_usuario, $lng[29], $lng[30]);
     if (strlen($result_login) > 1) {
         $str_errores = $result_login;
     }
@@ -40,7 +40,7 @@ if (isset($_SESSION['id_tipo_usuario'])) { //si hay login
 }
 //CONTROL_______________________________________________________________________
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
 
 ?>
 <body>
@@ -51,19 +51,19 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
     <div class="max-ysana w-100">
         <div class="login-responsive">
             <div class="wrapper">
-                <h1 class="titulo<?php echo $clubysana; ?>">Inicia sesión en Ysana</h1>
+                <h1 class="titulo<?php echo $clubysana; ?>"><?php echo $lng[31]; ?></h1>
                 <?php if(isset($str_errores) && $str_errores) echo $hM->get_alert($str_errores,"alert-danger"); ?>
                 <?php if(isset($str_info) && $str_info) echo $hM->get_alert($str_info,"alert-success"); ?>
                 <form method="post" class="form-row">
-                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-6', '', 'Correo eléctronico', '', '', '', false, 'form-group w-100', false); ?>
-                    <?php echo $iM->get_input_text('contrasenya_usuario', '', 'form-control col-12 col-md-6', '', 'Password', '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('nombre_usuario', '', 'form-control col-12 col-md-6', '', $lng[32], '', '', '', false, 'form-group w-100', false); ?>
+                    <?php echo $iM->get_input_text('contrasenya_usuario', '', 'form-control col-12 col-md-6', '', $lng[33], '', '', '', false, 'form-group w-100', false); ?>
                     <?php echo '<input hidden type="text" name="cy" value="'.$clubysana.'">'; ?>
-                    <input type="submit" class="btn btn-bg-color-2 btn-bg-color-2<?php echo $clubysana; ?>" value="Iniciar Sesión">
+                    <input type="submit" class="btn btn-bg-color-2 btn-bg-color-2<?php echo $clubysana; ?>" value="<?php echo $lng[34]; ?>">
                 </form>
             </div>
             <div class="footer">
-                <p>¿Nuevo en Ysana? <a href="<?php echo $ruta_inicio; ?>registro">Regístrate ahora »</a></p>
-                <p>¿Has olvidado tu contraseña? <a href="<?php echo $ruta_inicio; ?>forgot-password">Recuperar contraseña »</a></p>
+                <p><?php echo $lng[35]; ?> <a href="<?php echo $ruta_inicio; ?>registro"><?php echo $lng[36]; ?> »</a></p>
+                <p><?php echo $lng[37]; ?> <a href="<?php echo $ruta_inicio; ?>forgot-password"><?php echo $lng[38]; ?> »</a></p>
             </div>
         </div>
     </div>
