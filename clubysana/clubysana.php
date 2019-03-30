@@ -153,7 +153,7 @@ if($id_usuario>0){
 //CONTROL_______________________________________________________________________
 
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 ?>
 
 <body>
