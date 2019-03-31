@@ -51,7 +51,7 @@ foreach ($arr_categorias as $key => $value) {
                             $outCatContenido .= '<h3 class="precio">'.$frgaa['precio'].'€</h3>';
                         $outCatContenido .= '</div>';
                         $outCatContenido .= '<div class="tarjeta-articulo__venta">';
-                            $outCatContenido .= '<a href="'.$ruta_inicio.'producto/'.$frgaa['urlseo'].'"><button class="btn btn-block btn-bg-color-2">Pídelo ahora</button></a>';
+                            $outCatContenido .= '<a href="'.$ruta_inicio.'producto/'.$frgaa['urlseo'].'"><button class="btn btn-block btn-bg-color-2">'.$lng[113].'</button></a>';
                         $outCatContenido .= '</div>';
                     $outCatContenido .= '</div>';
                 $outCatContenido .= '</article>';
@@ -61,7 +61,7 @@ foreach ($arr_categorias as $key => $value) {
     $outCatContenido .= '</div></div>';
 }
 
-echo $sM->add_cabecera($ruta_inicio, '');
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 
 ?>
 
@@ -75,7 +75,7 @@ echo $sM->add_cabecera($ruta_inicio, '');
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical">
                     <div class="contenedor">
-                        <h1 class="ttl">Recibe tus pack experiencia Ysana en casa</h1>
+                        <h1 class="ttl"><?php echo $lng[114]; ?></h1>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical der">
@@ -89,7 +89,7 @@ echo $sM->add_cabecera($ruta_inicio, '');
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical">
                         <div class="contenedor">
-                            <h1 class="ttl">Reserva tus productos Ysana y recogelos en tu farmacia más cercana</h1>
+                            <h1 class="ttl"><?php echo $lng[115]; ?></h1>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 centrar-vertical der"></div>
