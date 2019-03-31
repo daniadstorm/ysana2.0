@@ -6,20 +6,20 @@ $id_usuario = (isset($_SESSION['id_usuario'])) ? $_SESSION['id_usuario'] : '';
 $cM = load_model('carrito');
 $arrMenu = array(
     1 => array(
-        1 => array( 'txt'=>'Inicio', 'url'=>'' ),
-        2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
-        3 => array( 'txt'=>'Experiencias', 'url'=>'experiencia' ),
-        4 => array( 'txt'=>'Farmacias', 'url'=>'directo-farmacia' ),
-        5 => array( 'txt'=>'Club Ysana', 'url'=>'clubysana' ),
-        6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
+        1 => array( 'txt'=>$lng[135], 'url'=>'' ),
+        2 => array( 'txt'=>$lng[136], 'url'=>'productos-ysana' ),
+        3 => array( 'txt'=>$lng[137], 'url'=>'experiencia' ),
+        4 => array( 'txt'=>$lng[138], 'url'=>'directo-farmacia' ),
+        5 => array( 'txt'=>$lng[139], 'url'=>'clubysana' ),
+        6 => array( 'txt'=>$lng[140], 'url'=>'#form-contacto')
     ),
     2 => array(
-        1 => array( 'txt'=>'Inicio', 'url'=>'' ),
-        2 => array( 'txt'=>'Productos', 'url'=>'productos-ysana' ),
-        3 => array( 'txt'=>'Experiencias', 'url'=>'experiencia' ),
-        4 => array( 'txt'=>'Farmacias', 'url'=>'directo-farmacia' ),
-        5 => array( 'txt'=>'Club Ysana', 'url'=>'#' ),
-        6 => array( 'txt'=>'Contacto', 'url'=>'#form-contacto')
+        1 => array( 'txt'=>$lng[135], 'url'=>'' ),
+        2 => array( 'txt'=>$lng[136], 'url'=>'productos-ysana' ),
+        3 => array( 'txt'=>$lng[137], 'url'=>'experiencia' ),
+        4 => array( 'txt'=>$lng[138], 'url'=>'directo-farmacia' ),
+        5 => array( 'txt'=>$lng[139], 'url'=>'#' ),
+        6 => array( 'txt'=>$lng[140], 'url'=>'#form-contacto')
     )
 );
 foreach ($arrMenu[$_SESSION['id_lang']] as $key => $value) {
