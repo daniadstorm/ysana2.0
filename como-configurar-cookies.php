@@ -6,8 +6,8 @@ $hM = load_model('html');
 $iM = load_model('inputs');
 $sM = load_model('seo');
 
-include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]); 
+//include_once('inc/cabecera.inc.php'); //cargando cabecera
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 ?>
 <script type="text/javascript">
 

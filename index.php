@@ -26,7 +26,7 @@ $arr_opt_accept_advertising = array(
 
 //POST__________________________________________________________________________
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
 ?>
 
 <body>
@@ -38,22 +38,22 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         <div class="max-ysana">
             <div id="centrar-home1">
                 <img width="96px" src="<?php echo $ruta_inicio; ?>img/logos/logoy.svg" alt="">
-                <h1>Con Ysana</h1>
-                <h1>enlaza con la vida sana</h1>
+                <h1><?php echo $lng[116]; ?></h1>
+                <h1><?php echo $lng[117]; ?></h1>
             </div>
         </div>
     </div>
     <div class="texto-subhome">
-        <h1>La fórmula del éxito: ejercicio, comida sana e Ysana</h1>
+        <h1><?php echo $lng[118]; ?></h1>
     </div>
     <div class="parallax parallax-home2">
         <div id="paneles" class="max-ysana">
             <div class="row">
                 <div class="col-12 col-md-6 panel panel-izq">
                     <div class="p-3">
-                        <h1>¿Qué es Ysana Vida Sana?</h1>
-                        <p>Ysana® es una marca dedicada al bienestar de las personas. Nuestro equipo profesional y dinámico está comprometido con la innovación constante para incorporar extractos naturales a productos que ayuden a las personas a mantener un estilo de vida saludable.</p>
-                        <a href="#" class="btn btn-bg-color-2 mt-2">Nuestros productos</a>
+                        <h1><?php echo $lng[119]; ?></h1>
+                        <p><?php echo $lng[120]; ?></p>
+                        <a href="#" class="btn btn-bg-color-2 mt-2"><?php echo $lng[121]; ?></a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 panel panel-der">
@@ -69,13 +69,13 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         </div>
     </div>
     <div class="texto-subpolaroid">
-        <h1>Conoce más de ysana</h1>
-        <a href="#" class="btn btn-bg-color-white">Ir a Corporate</a>
+        <h1><?php echo $lng[122]; ?></h1>
+        <a href="#" class="btn btn-bg-color-white"><?php echo $lng[123]; ?></a>
     </div>
     <div class="parallax parallax-home3">
         <div id="redes-sociales">
-            <h1>Redes sociales</h1>
-            <p>Síguenos en nuestras redes sociales para estar al día de todas las novedades, recetas healthy, promociones y concursos.</p>
+            <h1><?php echo $lng[124]; ?></h1>
+            <p><?php echo $lng[125]; ?></p>
             <div class="img-redes">
                 <img src="<?php echo $ruta_inicio; ?>img/redes/3.svg" class="mx-1" width="40px" alt="">
                 <img src="<?php echo $ruta_inicio; ?>img/redes/4.svg" class="mx-1" width="40px" alt="">
@@ -89,10 +89,9 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
             <div class="panel panel-izq">
                 <div class="logo-ysana">
                     <img src="<?php echo $ruta_inicio; ?>img/logos/clubysana.svg" width="192px" alt="">
-
                 </div>
-                <p>Únete ahora al Club Ysana y enlaza con la vida sana. La primera comunidad online orientada al autocuidado y los hábitos de vida saludables, donde podrás compartir tus inquietudes, obtener consejos personalizados de farmacéuticos y coachs profesionales, obtener premios, acceder a muestras de producto en primicia, compartir experiencias y, por supuesto, mejorar tus hábitos de vida de manera constante.</p>
-                <a href="#" class="btn btn-bg-color-3 mt-2">Nuestros productos</a>
+                <p><?php echo $lng[126]; ?></p>
+                <a href="#" class="btn btn-bg-color-3 mt-2"><?php echo $lng[2]; ?></a>
             </div>
         </div>
     </div>
@@ -100,22 +99,22 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
         <div id="form-contacto" class="max-ysana">
             <div class="row w-100 align-items-center">
                 <div class="col-12 col-md-6 contacto-1">
-                    <h1>Contacta con Ysana</h1>
-                    <p>Si deseas más información sobre nuestro laboratorio o gama de productos naturales para el autocuidado, no dudes en contactarnos.</p>
+                    <h1><?php echo $lng[127]; ?></h1>
+                    <p><?php echo $lng[128]; ?></p>
                     <img src="<?php echo $ruta_inicio; ?>img/logos/skyline.svg" class="" alt="">
                 </div>
                 <form method="post" class="col-12 col-md-6 contacto-2">
-                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Nombre y Apellidos', '', '', '', '', false, 'form-group', false); ?>
-                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'E-mail', '', '', '', '', false, 'form-group', false); ?>
-                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Dirección', '', '', '', '', false, 'form-group', false); ?>
+                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', $lng[129], '', '', '', '', false, 'form-group', false); ?>
+                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', $lng[130], '', '', '', '', false, 'form-group', false); ?>
+                    <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', $lng[85], '', '', '', '', false, 'form-group', false); ?>
                     <div class="form-row">
-                        <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'CP', '', '', '', '', false, 'form-group col-6', false); ?>
-                        <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', 'Telf', '', '', '', '', false, 'form-group col-6', false); ?>
+                        <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', $lng[86], '', '', '', '', false, 'form-group col-6', false); ?>
+                        <?php echo $iM->get_input_text('frm_nombre', '', 'form-control', $lng[131], '', '', '', '', false, 'form-group col-6', false); ?>
                     </div>
-                    <?php echo $iM->get_input_textarea('frm_pregunta', '', 'form-control', 'Tu pregunta', '', 10, 5, 500, false, 5, 'form-group') ?>
-                    <a class="mb-0"><input id="" type="checkbox" name="" required><a href="#terminoos" class="ml-2 text-light">Acepto los terminos y condiciones</a></p>
+                    <?php echo $iM->get_input_textarea('frm_pregunta', '', 'form-control', $lng[132], '', 10, 5, 500, false, 5, 'form-group') ?>
+                    <a class="mb-0"><input id="" type="checkbox" name="" required><a href="#terminoos" class="ml-2 text-light"><?php echo $lng[133]; ?></a></p>
                     <div class="d-flex justify-content-end">
-                        <button id="btnEnviar" type="submit" class="btn btn-bg-color-3">Enviar</button>
+                        <button id="btnEnviar" type="submit" class="btn btn-bg-color-3"><?php echo $lng[134]; ?></button>
                     </div>
                 </form>
             </div>
