@@ -155,7 +155,7 @@ if($id_producto!=''){
 }
 //COMPROBACION______________________________________________
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]); 
+echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
 
 ?>
 <body>
@@ -190,7 +190,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                     <h1><?php echo $precio; ?>€</h1>
                                 </div>
                                 <div class="cantidad">
-                                    <p>Cantidad</p>
+                                    <p><?php echo $lng[71]; ?></p>
                                     <select name="cantidad_productos" id="cantidad_prod">
                                         <?php for ($i=1; $i <= 10; $i++) { 
                                             echo '<option value="'.$i.'">'.$i.'</option>';
@@ -200,7 +200,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                 <div class="cesta">
                                     <?php echo $iM->get_input_hidden('id_articulo', $id_articulo); ?>
                                     <?php echo $iM->get_input_hidden('tipo_tienda', $tipo_tienda); ?>
-                                    <button class="btn btn-add-cesta" name="addCesta">Añadir a la cesta</button>
+                                    <button class="btn btn-add-cesta" name="addCesta"><?php echo $lng[72]; ?></button>
                                 </div>
                             </div>
                         </form>
@@ -215,11 +215,11 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="usos-tab" data-toggle="tab" href="#usos" role="tab" aria-controls="usos"
-                            aria-selected="true">Usos</a>
+                            aria-selected="true"><?php echo $lng[73]; ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
-                            aria-selected="false">Información Adicional</a>
+                            aria-selected="false"><?php echo $lng[74]; ?></a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
