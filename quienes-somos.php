@@ -23,7 +23,7 @@ $terminos_condiciones = '';
 //POST__________________________________________________________________________
 
 include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]);
+echo $sM->add_cabecera($lng[0]);
 ?>
 <script type="text/javascript">
 

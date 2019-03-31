@@ -1,6 +1,26 @@
 <?php
 if (!isset($lng)) $lng = array();
 
+//quienes-somos.php___________________________________________________________________________________________
+$lng['quienes-somos'][0] = 'WHO IS YSANA® VIDA SANA?';
+$lng['quienes-somos'][1] = 'Our values';
+$lng['quienes-somos'][2] = 'The company';
+$lng['quienes-somos'][3] = 'Ysana® Commitment';
+$lng['quienes-somos'][4] = 'Our code of ethics';
+$lng['quienes-somos'][5] = 'Who is Ysana® Vida Sana?';
+$lng['quienes-somos'][6] = 'Ysana® is a Pharmalink Lab’s brand, committed to designing, developing and producing formulations for self-care and well-being. Driven by the innovation we combine technology and nature in all our products, incorporating natural extracts to food supplements and medical devices that contribute to a healthy lifestyle. <br>Ysana® thinks about the whole family, that’s why we&#39;ve developed a wide range of products that help everyone feel better thanks natural ingredients properties and the latest scientific innovation.';
+$lng['quienes-somos'][7] = 'Ysana® thinks about the whole family, that is why we have developed a wide range of products that help everyone feel better thanks to the properties of our natural ingredients and the latest scientific innovation.';
+$lng['quienes-somos'][8] = 'Our Values';
+$lng['quienes-somos'][9] = 'Innovation, Commitment, Integrity, Teamwork, and Trust';
+$lng['quienes-somos'][10] = 'The company';
+$lng['quienes-somos'][11] = 'Pharmalink is a worldwide company with over 10 years of experience, specialized in developing and manufacturing innovative liquid formulations, single-dose vials and oral spray food supplements, as well as medical devices for respiratory applications. Our technologically advanced products contribute to the whole family’s well-being through natural origin solutions.';
+$lng['quienes-somos'][12] = 'Based in Barcelona (Parc Tecnològic del Vallès), Pharmalink has an over 10.000m production plant in Vilabella, Tarragona, fully equipped with the most advanced technology to manufacture the following formats: single-dose vial food supplements, extemporaneous vials, Eficaps® technology, and oral sprays. Regarding Medical Devices, we count over specialized areas for paediatric nasal aspirators, pump sprays and bulk on valve nasal sprays developments.';
+$lng['quienes-somos'][13] = 'Ysana® Commitment';
+$lng['quienes-somos'][14] = 'At Ysana®, we base our work on quality commitment, constant innovation in our formulations, always based on natural principles, our own transparency and communication code, as well as a rigorous compliance towards legal standards.';
+$lng['quienes-somos'][15] = 'Our ethical code';
+$lng['quienes-somos'][16] = 'Ysana® Vida Sana is an endorsed brand by the value chain of the Pharmalink Lab, whose processes comply with a demanding code of quality and commitment.';
+//quienes-somos.php___________________________________________________________________________________________
+
 $lng[0]='Supplements for a healthy life – Ysana trustworthy brand';
 $lng[1]='Ysana® is a natural and innovative brand dedicated to people\'s well-being.';
 $lng[2]='Our products';

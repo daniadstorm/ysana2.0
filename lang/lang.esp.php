@@ -1,6 +1,26 @@
 <?php
 if (!isset($lng)) $lng = array();
 
+//quienes-somos.php___________________________________________________________________________________________
+$lng['quienes-somos'][0] = '¿Quiénes Somos?';
+$lng['quienes-somos'][1] = 'Nuestros Valores';
+$lng['quienes-somos'][2] = 'La Compañía';
+$lng['quienes-somos'][3] = 'Compromiso';
+$lng['quienes-somos'][4] = 'Código ético';
+$lng['quienes-somos'][5] = '¿Quién es Ysana® Vida Sana?';
+$lng['quienes-somos'][6] = 'Ysana® es una marca del laboratorio Pharmalink. Pharmalink es una empresa dedicada a diseñar, desarrollar y producir formulaciones para el  bienestar de las personas. Nos mueve la innovación por eso combinamos tecnología y naturaleza en todos nuestros productos, incorporando extractos naturales a complementos alimenticios y productos sanitarios que contribuyen a llevar un estilo de vida saludable.';
+$lng['quienes-somos'][7] = 'Ysana® piensa en toda la familia, por eso hemos desarrollado un amplio abanico de productos que ayuda a todos a sentirse mejor gracias a las propiedades de nuestros ingredientes naturales y de última innovación científica.';
+$lng['quienes-somos'][8] = 'Nuestros Valores';
+$lng['quienes-somos'][9] = 'Innovación, Compromiso, Integridad, Trabajo en Equipo y Confianza';
+$lng['quienes-somos'][10] = 'La Compañía';
+$lng['quienes-somos'][11] = 'Con más de 10 años de experiencia, Pharmalink es una compañía internacional especializada en el desarrollo y fabricación de formulaciones líquidas innovadoras, complementos alimenticios en viales monodosis o spray oral, así como productos sanitarios para uso respiratorio. Sus productos, tecnológicamente avanzados, contribuyen al bienestar de las personas a través de soluciones de origen natural.';
+$lng['quienes-somos'][12] = 'Con sede en Barcelona (Parc Tecnològic del Vallès), Pharmalink cuenta con una planta de producción en Vilabella (Tarragona) de más de 10.000 m2, completamente equipada con la más avanzada tecnología para la fabricación de los siguientes formatos: Complementos Alimenticios en viales monodosis, extemporáneos, tecnología Eficaps®, y spray oral; en cuanto a Dispositivos Médicos ofrece áreas especializadas de aspiradores nasales para bebés, spray de bomba y sprays "bulk on valve". <br> Los productos de Pharmalink están presentes en toda Europa, en el Norte de África, Oriente Medio, Asia y América Latina. El portafolio de Pharmalink está disponible a través de sus  colaboradores, que operan en más de 55 países de todo el mundo.';
+$lng['quienes-somos'][13] = 'Compromiso';
+$lng['quienes-somos'][14] = 'En Ysana® basamos nuestro trabajo en el compromiso por la calidad, una innovación constante de nuestros productos basados en principios activos naturales, un código ético de transparencia y comunicación, además de un riguroso cumplimiento de los estándares legales.';
+$lng['quienes-somos'][15] = 'Código ético';
+$lng['quienes-somos'][16] = 'Ysana® Vida Sana es una marca avalada por la cadena de valor del laboratorio Pharmalink, cuyos procesos cumplen con un exigente código de calidad y compromiso:';
+//quienes-somos.php___________________________________________________________________________________________
+
 $lng[0]='Complementos para una vida sana - Ysana marca de confianza';
 $lng[1]='Ysana® es una marca natural e innovadora dedicada al bienestar de las personas.';
 $lng[2]='Nuestros productos';
