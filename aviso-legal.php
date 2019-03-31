@@ -12,7 +12,7 @@ $sM = load_model('seo');
 //POST__________________________________________________________________________
 
 include_once('inc/cabecera.inc.php'); //cargando cabecera
-echo $sM->add_cabecera($lng['header'][0]);
+echo $sM->add_cabecera('');
 ?>
 
 <script type="text/javascript">

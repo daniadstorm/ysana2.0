@@ -27,6 +27,7 @@ $infoEditor = '';
 $str_info = '';
 $str_error = '';
 $tipo_tienda = '';
+$str_success = '';
 
 //VARIABLES_________________________________________________
 
@@ -51,6 +52,9 @@ if(isset($_POST['enviarazoho'])){
 if(isset($_POST['addCesta'])){
     if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
         $rsa = $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], $cantidad_prod);
+        if($rsa){
+            $str_success = "Producto añadido correctamente al carrito";
+        }
     }else{
         if($_POST['tipo_tienda']==1){
             $tipo_tienda = "exp";
@@ -58,6 +62,9 @@ if(isset($_POST['addCesta'])){
             $tipo_tienda = "df";
         }
         $raac = $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], $cantidad_prod, $tipo_tienda);
+        if($raac){
+            $str_success = "Producto añadido correctamente al carrito";
+        }
     }
 }
 if(isset($_POST['editorusos'])){
@@ -165,6 +172,9 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
     </div>
     <div class="marg-ysana">
         <div id="marg-producto" class="max-ysana">
+            <div class="max-alert-prod">
+                <?php echo ($str_success) ? $hM->get_alert_success($str_success) : ''; ?>
+            </div>
             <div id="ver-articulo" class="row">
                 <div class="col-md-5">
                     <div class="imagen">
@@ -185,11 +195,11 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                             </div>
                         </div>
                         <form method="post" action="">
-                            <div class="informacion-extra">
-                                <div class="precio">
+                            <div class="informacion-extra row">
+                                <div class="precio col-6 col-lg-4">
                                     <h1><?php echo $precio; ?>€</h1>
                                 </div>
-                                <div class="cantidad">
+                                <div class="cantidad col-6 col-lg-4">
                                     <p><?php echo $lng[71]; ?></p>
                                     <select name="cantidad_productos" id="cantidad_prod">
                                         <?php for ($i=1; $i <= 10; $i++) { 
@@ -197,10 +207,10 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                                         } ?>
                                     </select>
                                 </div>
-                                <div class="cesta">
+                                <div class="cesta mt-3 mt-lg-0 col-md-12 col-lg-4">
                                     <?php echo $iM->get_input_hidden('id_articulo', $id_articulo); ?>
                                     <?php echo $iM->get_input_hidden('tipo_tienda', $tipo_tienda); ?>
-                                    <button class="btn btn-add-cesta" name="addCesta"><?php echo $lng[72]; ?></button>
+                                    <button class="btn btn-block btn-add-cesta" name="addCesta"><?php echo $lng[72]; ?></button>
                                 </div>
                             </div>
                         </form>

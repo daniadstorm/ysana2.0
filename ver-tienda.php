@@ -29,7 +29,7 @@ if($rgbi){
 
 foreach ($arr_categorias as $key => $value) {
     $outCatNombres .= '<a class="nav-item nav-link '.($key==0 ? 'active' : '').'" id="nav-'.$key.'-tab" data-toggle="tab" href="#nav-'.$key.'" role="tab" aria-controls="nav-'.$key.'" aria-selected="true">'.$value['nombre_categoria'].'</a>';
-    $outCatMovil .= '<button class="dropdown-item '.($key==0 ? 'active show' : '').'" type="button"  data-toggle="tab" href="#nav-'.$key.'" role="tab" aria-controls="nav-'.$key.'" aria-selected="true">'.$value['nombre_categoria'].'</button>';
+    $outCatMovil .= '<button class="click-item dropdown-item '.($key==0 ? 'active show' : '').'" type="button" data-toggle="tab" href="#nav-'.$key.'" role="tab" aria-controls="nav-'.$key.'" aria-selected="true">'.$value['nombre_categoria'].'</button>';
     $outCatContenido .= '<div class="tab-pane fade '.($key==0 ? 'show active' : '').'" id="nav-'.$key.'" role="tabpanel" aria-labelledby="nav-'.$key.'-tab">';
     $outCatContenido .= '<div class="row">';
     if($key==0) $tit_dropdown = $value['nombre_categoria'];
@@ -117,6 +117,14 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
             <?php echo $outCatContenido; ?>
         </div>
     </div>
+    <script>
+    $(document).ready(function(){
+        $('.click-item').on('click', function(){
+            var valor = $(this).text();
+            $("#menuCategorias").text(valor);
+        })
+    });
+    </script>
     <?php include_once('inc/mapa.inc.php'); ?>
     <?php include_once('inc/footer.inc.php'); ?>
 </body>

@@ -47,6 +47,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 .parallax-home1{
     height: 100%;
+    background-attachment: fixed;
     /* background-attachment: inherit; */
     background-image: url("../img/home/1.jpg");
 }
@@ -1354,6 +1355,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     justify-content: space-between;
     align-items: baseline;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 .contenedor-info .informacion-extra div{
     display: flex;
@@ -1708,12 +1710,15 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     justify-content: center;
     max-width: 250px;
     flex-direction: column;
+    position: relative;
+    text-decoration: none;
 }
 #tuexp .contenedor-categoria .subcat .txt-subcat{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
     color: #575756;
+    text-decoration: none;
 }
 #tuexp .contenedor-categoria .subcat:hover .txt-subcat{
     font-weight: 600;
@@ -1731,7 +1736,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     background-color: transparent;
     z-index: -1;
     border-radius: 50%;
-    transition: 300ms;
+    transition: 350ms;
+    left: 50%;
+    transform: translate(-50%);
 }
 #tuexp .contenedor-categoria .subcat:hover .redonda{
     width: 64px;
@@ -1740,7 +1747,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     background-color: var(--ysana-color-7);
     z-index: -1;
     border-radius: 50%;
-    transition: 300ms;
+    transition: 350ms;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #slidertienda-1{
@@ -1779,12 +1788,29 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     position: relative;
 }
 
+#clubysana-articulo .titulo{
+    text-align: center;
+}
 
+#clubysana-articulo .art-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clubysana-articulo .art-slider.izq{
+    flex-direction: column;
+}
 
+.menu-movil{
+    display: block;
+    border-top: 2px solid var(--ysana-color-2);
+    margin-top: .5rem;
+}
 
-
-
-
+.max-alert-prod{
+    max-width: 400px;
+    margin: 0 auto;
+}
 
 
 
@@ -1960,6 +1986,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 
 
 @media (max-width: 462px){
+    .parallax-home3{
+        background-attachment: scroll;
+    }
+    .parallax-home1{
+        background-attachment: scroll;
+    }
     #carrito .ttl h1, #carrito2 .ttl h1{
         font-size: 1.5rem;
     }
@@ -2152,6 +2184,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     }
 }
 @media (max-width: 768px){
+    #slidertienda-2{
+        margin-bottom: 2rem;
+    }
+    #farmaciacercana{
+        max-height: 200px;
+    }
     #tuexp .contenedor-categoria .categoria{
         border-right: 1px solid transparent;
         border-bottom: 1px solid var(--ysana-color-7);
@@ -2263,6 +2301,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 
 @media (min-width: 768px) {
+    .menu-movil{
+        display: none;
+    }
     #tuexp .contenedor-categoria .txt-cat{
         font-size: 1.25rem;
     }
@@ -2333,6 +2374,13 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .max-alert-prod{
+        position: absolute;
+        top: 0rem;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 100;
+    }
     .total-carrito{
         margin-bottom: 0rem;
     }
@@ -2385,6 +2433,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     /* .parallax-home5 {
         height: 80%;
     } */
+    .max-alert-prod{
+        top: 1rem;
+    }
     #carrito .ttl h1, #carrito2 .ttl h1{
         font-size: 2rem;
     }

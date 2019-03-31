@@ -63,6 +63,22 @@ class clubysanaModel extends Model {
         return $this->execute_query($q);
     }
 
+    function get_datos_experiencias_urlseo($urlseo){
+        $q  = ' SELECT * FROM '.$this->pre.'datosexperiencias de ';
+        $q .= ' INNER JOIN '.$this->pre.'infoexperiencia ie ';
+        $q .= ' ON de.id_datoexperiencia=ie.id_exp ';
+        $q .= ' WHERE de.urlseo="'.$urlseo.'" ';
+        return $this->execute_query($q);
+    }
+
+    function get_sliders($urlseo){
+        $q  = ' SELECT * FROM '.$this->pre.'datosexperiencias de ';
+        $q .= ' INNER JOIN '.$this->pre.'infoexperiencia ie ';
+        $q .= ' ON de.id_datoexperiencia=ie.id_exp ';
+        $q .= ' WHERE de.urlseo="'.$urlseo.'" ';
+        return $this->execute_query($q);
+    }
+
     function get_datos_experiencias_idexp_idlang($id_exp, $id_lang){
         $q  = ' SELECT * FROM '.$this->pre.'datosexperiencias de ';
         $q .= ' WHERE de.id_experiencia='.$id_exp.' ';

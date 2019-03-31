@@ -33,7 +33,7 @@ $producto = array(
     'stock' => '',
     'precio' => '',
     'iva' => '',
-    'spa' => array(
+    'ESP' => array(
         'nombre' => '',
         'urlseo' => '',
         'visible' => '',
@@ -41,7 +41,7 @@ $producto = array(
         'descripcion' => '',
         'imagen' => array()
     ),
-    'eng' => array(
+    'ENG' => array(
         'nombre' => '',
         'urlseo' => '',
         'visible' => '',
@@ -67,7 +67,7 @@ if(isset($_POST['editArticulo'])){
     print_r($_POST);
     print_r($_FILES);
     echo '</pre>'; */
-    $rua = $aM->update_articulo($_POST['id_articulo_mod'], $_POST['stock'], $_POST['precio'], $_POST['activo'], $_POST['tipo_tienda'], $_POST['iva']);
+    $rua = $aM->update_articulo($id_articulo_mod, $_POST['stock'], $_POST['precio'], $_POST['activo'], $_POST['tipo_tienda'], $_POST['iva']);
     if($rua) array_push($str_info, "Tabla articulo OK");
     else array_push($str_error, "Tabla articulo KO");
     foreach ($arrlang as $key => $value) {
@@ -88,7 +88,7 @@ if(isset($_POST['editArticulo'])){
                 }
             }
         }
-        $rual = $aM->update_articulo_lang($_POST['id_articulo_mod'], $_POST['urlseo'][$value], $key, $_POST['nombre'][$value], $_POST['descripcion'][$value], $_POST['titulo'][$value], $img_temp);
+        $rual = $aM->update_articulo_lang($id_articulo_mod, $_POST['urlseo'][$value], $key, $_POST['nombre'][$value], $_POST['descripcion'][$value], $_POST['titulo'][$value], $img_temp);
         if($rual) array_push($str_info, "Tabla lang OK");
         else array_push($str_error, "Tabla lang KO");
     }
@@ -127,8 +127,8 @@ if(isset($_POST['addArticulo'])){
         array_push($str_error, "Error al añadir el articulo");
     }
 }
-if(isset($_POST['id_articulo_mod'])){
-    $rgaa = $aM->get_all_articulos(false, false, $_POST['id_tipo_tienda_mod'], $_POST['id_articulo_mod'], false);
+if(isset($_POST['id_tipo_tienda_mod'])){
+    $rgaa = $aM->get_all_articulos(false, false, $_POST['id_tipo_tienda_mod'], $id_articulo_mod, false);
     if($rgaa){
         while($frgaa = $rgaa->fetch_assoc()){
             foreach ($arrlang as $key => $value) {
@@ -142,7 +142,7 @@ if(isset($_POST['id_articulo_mod'])){
                 }
             }
             $producto['tipo_tienda'] = $frgaa['tipo_tienda'];
-            $producto['categoria'] = ($aM->get_cat_articulo($_POST['id_articulo_mod']))-1;
+            $producto['categoria'] = ($aM->get_cat_articulo($id_articulo_mod))-1;
             $producto['activo'] = $frgaa['activo'];
             $producto['stock'] = $frgaa['stock'];
             $producto['precio'] = $frgaa['precio'];
@@ -175,7 +175,7 @@ if(isset($arrlang)){
         /* $out2 .= $iM->get_input_radio('visible', $producto[$key]['visible'], $arrVisible, 'w-100 label-lg', 'Visible', false, false, 'form-group col-md-4', '['.$key.']'); */
         $out2 .= $iM->get_input_text('titulo', $producto[$key]['titulo'], 'form-control', 'Titulo', 'Titulo', '', false, false, false, 'form-group col-md-12', false, '['.$key.']');
         $out2 .= $iM->get_input_textarea('descripcion', $producto[$key]['descripcion'], 'form-control', 'Descripción', 'Descripción', '', false, false, false, 3, 'form-group col-md-12', '['.$key.']');
-        $out2 .= $iM->get_input_img('imagen'.$key, $producto[$key]['imagen'], $ruta_inicio, 'w-100', 'Imágen', 'required', false, false, '[]', $key, $_POST['id_articulo_mod']);
+        $out2 .= $iM->get_input_img('imagen'.$key, $producto[$key]['imagen'], $ruta_inicio, 'w-100', 'Imágen', 'required', false, false, '[]', $key, $id_articulo_mod);
         //$_SESSION['id_lang_mod'].';'.$_SESSION['id_articulo_mod'].';'.
         $out2 .= '</div></div>';
         $contout++;
@@ -186,7 +186,7 @@ if(isset($arrlang)){
 //POST-POST______________________________________________________________________
 
 //POST-POST______________________________________________________________________
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin');
+echo $sM->add_cabecera($ruta_inicio, '', 'admin');
 ?>
 
 <body>

@@ -49,6 +49,35 @@ if($id_usuario!='') $carritoTotal = $cM->get_total_carrito($id_usuario);
                         <img src="<?php echo $ruta_inicio; ?>img/svg/carrito-01.svg" width="32px" alt="">
                     </a>
                 </li>
+                <div class="menu-movil">
+                    <?php if(!isset($_SESSION['id_usuario'])){ ?>
+                        <li class="nav-item no-drop">
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>login?ruta_anterior=<?php echo $request_uri; ?>">Acceder</a>
+                        </li>
+                        <li class="nav-item no-drop">
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>registro?ruta_anterior=<?php echo $request_uri; ?>">Date de alta</a>
+                        </li>
+                    <?php }else{ ?>
+                        <?php if($_SESSION['id_tipo_usuario']==ADMIN){ ?>
+                            <li class="nav-item no-drop">
+                                <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>admin">Panel admin</a>
+                            </li>
+                        <?php } ?>
+                        <li class="nav-item no-drop">
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?><?php echo ($clubysana!='') ? 'clubysana/' : ''; ?>profile">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item no-drop">
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>login?unlogin">Cerrar sesión</a>
+                        </li>
+                    <?php } ?>
+                    <li id="dropdown-idioma" class="nav-item dropdown dropleft">
+                        <?php echo $outIdioma; ?>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <?php echo $outComodin; ?>
+                        </div>
+                        <?php echo $frmIdioma; ?>
+                    </li>
+                </div>
             </ul>
         </div>
     </nav>

@@ -5,7 +5,7 @@ $iM = load_model('inputs');
 $sM = load_model('seo');
 $uM->control_sesion($ruta_inicio, ADMIN);
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin'); 
+echo $sM->add_cabecera($ruta_inicio, '', 'admin'); 
 ?>
 
 <body>

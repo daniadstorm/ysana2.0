@@ -7,9 +7,10 @@ $uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $base = "http://" . $host . $uri . "/";
 /* $ruta_inicio = 'http://adstormcloud.ddns.net/ysana/';
 $ruta_archivos = 'http://adstormcloud.ddns.net/ysana/'; */
-$ruta_dominio = 'http://localhost';
-$ruta_inicio = 'http://localhost/ysana/';
-$ruta_archivos = 'http://localhost/ysana/';
+$ruta_dominio = 'http://192.168.1.2';
+$ruta_inicio = 'http://192.168.1.2/ysana/';
+$ruta_archivos = 'http://192.168.1.2/ysana/';
+$ruta_blog = 'http://blog.ysana.es/';
 $ruta_actual = '';
 $path = '/ysana/';
 //$ruta_actual = (isset($_SERVER['REDIRECT_URL']) ? $_SERVER['REDIRECT_URL'] : $_SERVER['HTTP_REFERER']);
@@ -18,7 +19,7 @@ $ruta_archivos = 'https://adstorm.es/ysana/'; */
 /* $ruta_inicio = 'https://ysana.es/';
 $ruta_archivos = 'https://ysana.es/'; */
 $document_root = $_SERVER['DOCUMENT_ROOT'].$path;
-error_reporting(0);
+//error_reporting(0);
 //if($_SERVER['REQUEST_SCHEME']=="http") header('Location: '.$ruta_inicio);
 //====================================================================================
 /* CONSTANTES */

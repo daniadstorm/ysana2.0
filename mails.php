@@ -101,7 +101,7 @@ if(isset($_POST['enviarEmailPrueba'])){
 }
 //POST-POST______________________________________________________________________
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin'); 
+echo $sM->add_cabecera($ruta_inicio, '', 'admin'); 
 
 echo '<script type="text/javascript">
 $(document).ready(function(){

@@ -72,7 +72,7 @@ if(isset($_POST['subirFichero'])){
 //POST-POST______________________________________________________________________
 
 //POST-POST______________________________________________________________________
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0], 'admin'); 
+echo $sM->add_cabecera($ruta_inicio, '', 'admin'); 
 
 ?>
 

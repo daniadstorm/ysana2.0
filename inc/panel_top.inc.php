@@ -50,10 +50,10 @@ foreach ($arrlang as $key => $value) {
                 <ul class="nav">
                     <li class="nav-item no-drop">
                         <div class="rrss-top">
-                            <img src="<?php echo $ruta_inicio; ?>img/redes/8.svg" class="mx-1" width="24px" alt="">
-                            <img src="<?php echo $ruta_inicio; ?>img/redes/7.svg" class="mx-1" width="24px" alt="">
-                            <img src="<?php echo $ruta_inicio; ?>img/redes/1.svg" class="mx-1" width="24px" alt="">
-                            <img src="<?php echo $ruta_inicio; ?>img/redes/2.svg" class="mx-1" width="24px" alt="">
+                            <a target="_blank" href="https://www.instagram.com/ysanavidasana/"><img src="<?php echo $ruta_inicio; ?>img/redes/8.svg" class="mx-1" width="24px" alt=""></a>
+                            <a target="_blank" href="https://es-es.facebook.com/YSanaVidaSana/"><img src="<?php echo $ruta_inicio; ?>img/redes/7.svg" class="mx-1" width="24px" alt=""></a>
+                            <a target="_blank" href="https://twitter.com/Ysana_Vida_Sana"><img src="<?php echo $ruta_inicio; ?>img/redes/1.svg" class="mx-1" width="24px" alt=""></a>
+                            <a href="<?php echo $ruta_blog; ?>"><img src="<?php echo $ruta_inicio; ?>img/redes/2.svg" class="mx-1" width="24px" alt=""></a>
                         </div>
                     </li>
                     <?php if(!isset($_SESSION['id_usuario'])){ ?>

@@ -13,10 +13,10 @@ $frm_pregunta = '';
 $terminos_condiciones = '';
 
 $frm_accept_advertising = '';
-$arr_opt_accept_advertising = array(
+/* $arr_opt_accept_advertising = array(
     1 => $lng['index'][19],
     2 => $lng['index'][20]
-);
+); */
 
 //GET___________________________________________________________________________
 
@@ -53,7 +53,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                     <div class="p-3">
                         <h1><?php echo $lng[119]; ?></h1>
                         <p><?php echo $lng[120]; ?></p>
-                        <a href="#" class="btn btn-bg-color-2 mt-2"><?php echo $lng[121]; ?></a>
+                        <a href="<?php echo $ruta_inicio; ?>productos-ysana" class="btn btn-bg-color-2 mt-2"><?php echo $lng[121]; ?></a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 panel panel-der">
@@ -70,17 +70,17 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
     </div>
     <div class="texto-subpolaroid">
         <h1><?php echo $lng[122]; ?></h1>
-        <a href="#" class="btn btn-bg-color-white"><?php echo $lng[123]; ?></a>
+        <a href="<?php echo $ruta_inicio; ?>sobre-ysana" class="btn btn-bg-color-white"><?php echo $lng[123]; ?></a>
     </div>
     <div class="parallax parallax-home3">
         <div id="redes-sociales">
             <h1><?php echo $lng[124]; ?></h1>
             <p><?php echo $lng[125]; ?></p>
             <div class="img-redes">
-                <img src="<?php echo $ruta_inicio; ?>img/redes/3.svg" class="mx-1" width="40px" alt="">
-                <img src="<?php echo $ruta_inicio; ?>img/redes/4.svg" class="mx-1" width="40px" alt="">
-                <img src="<?php echo $ruta_inicio; ?>img/redes/5.svg" class="mx-1" width="40px" alt="">
-                <img src="<?php echo $ruta_inicio; ?>img/redes/6.svg" class="mx-1" width="40px" alt="">
+                <a target="_blank" href="https://www.instagram.com/ysanavidasana/"><img src="<?php echo $ruta_inicio; ?>img/redes/3.svg" class="mx-1" width="40px" alt=""></a>
+                <a target="_blank" href="https://es-es.facebook.com/YSanaVidaSana/"><img src="<?php echo $ruta_inicio; ?>img/redes/4.svg" class="mx-1" width="40px" alt=""></a>
+                <a target="_blank" href="https://twitter.com/Ysana_Vida_Sana"><img src="<?php echo $ruta_inicio; ?>img/redes/5.svg" class="mx-1" width="40px" alt=""></a>
+                <a href="<?php echo $ruta_blog; ?>"><img src="<?php echo $ruta_inicio; ?>img/redes/6.svg" class="mx-1" width="40px" alt=""></a>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                     <img src="<?php echo $ruta_inicio; ?>img/logos/clubysana.svg" width="192px" alt="">
                 </div>
                 <p><?php echo $lng[126]; ?></p>
-                <a href="#" class="btn btn-bg-color-3 mt-2"><?php echo $lng[2]; ?></a>
+                <a href="<?php echo $ruta_inicio; ?>productos-ysana" class="btn btn-bg-color-3 mt-2"><?php echo $lng[2]; ?></a>
             </div>
         </div>
     </div>

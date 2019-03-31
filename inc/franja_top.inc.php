@@ -2,11 +2,11 @@
 $html_mmnu = '';
 $arr_mmnu = array(
     1 => array('txt'=>'Inicio admin', 'url'=>'admin'),
-    2 => array('txt'=>'Mails', 'url'=>'mails'),
-    3 => array('txt'=>'Ver Productos', 'url'=>'verproductos'),
-    4 => array('txt'=>'Añadir productos', 'url'=>'productos'),
-    5 => array('txt'=>'Farmacias', 'url'=>'importarfarmacias'),
-    6 => array('txt'=>'Club Ysana', 'url'=>'clubysana')
+    2 => array('txt'=>'Mails', 'url'=>'admin/mails'),
+    3 => array('txt'=>'Ver Productos', 'url'=>'admin/verproductos'),
+    4 => array('txt'=>'Añadir productos', 'url'=>'admin/productos'),
+    5 => array('txt'=>'Farmacias', 'url'=>'admin/importarfarmacias'),
+    6 => array('txt'=>'Club Ysana', 'url'=>'admin/clubysana')
 );
 
 
@@ -20,7 +20,7 @@ foreach ($arr_mmnu as $k => $v) {
     //</li>
     
     $html_mmnu .= '<li class="nav-item">';
-    $html_mmnu .=   '<a class="nav-link" href="'.$ruta_inicio.'admin/'.$v['url'].'">'.$v['txt'].'</a>';
+    $html_mmnu .=   '<a class="nav-link" href="'.$ruta_inicio.$v['url'].'">'.$v['txt'].'</a>';
     $html_mmnu .= '</li>';
 }
     /* $html_mmnu .= '<li class="nav-item d-block d-sm-none">';

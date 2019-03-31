@@ -6,9 +6,9 @@ $iM = load_model('inputs');
 $sM = load_model('seo');
 
 $arrImg = array(
-    "img/home/1.jpg",
-    "img/home/2.jpg",
-    "img/home/3.jpg"
+    "1.jpg",
+    "2.jpg",
+    "3.jpg"
 );
 
 echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
@@ -158,7 +158,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
     </div>
     <?php include_once('inc/footer.inc.php'); ?>
     <script>
-        var imgs = ["img/home/1.jpg", "img/home/2.jpg", "img/home/3.jpg"];
+        var imgs = ["1.jpg", "2.jpg", "3.jpg"];
         var i=0;
         $(document).ready(function() {
             $(function(){
@@ -169,15 +169,15 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
             });
         });
         function slide(){
-            $('.wrapper1').css("background-image", "url('"+imgs[i]+"')");
-            $('.wrapper2').css("background-image", "url('"+imgs[i]+"')");
+            $('.wrapper1').css("background-image", "url('../img/home/"+imgs[i]+"')");
+            $('.wrapper2').css("background-image", "url('../img/home/"+imgs[i]+"')");
             i++;
             if(i === imgs.length) i = 0;
         }
 
         function cambiarImgSlider(img, clase){
-            $('.wrapper1').css("background-image", "url('"+img+"')");
-            $('.wrapper2').css("background-image", "url('"+img+"')");
+            $('.wrapper1').css("background-image", "url('../img/home/"+img+"')");
+            $('.wrapper2').css("background-image", "url('../img/home/"+img+"')");
             $('.slider-redonda').removeClass("active");
             $('.'+clase).addClass("active");
             /* console.log($('.'+clase)); */

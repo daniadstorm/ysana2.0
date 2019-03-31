@@ -138,11 +138,11 @@ if($id_usuario>0){
                     /* echo '<pre>';
                     print_r($rfgdeii);
                     echo '</pre>'; */
-                    $outCategoria .= '<div class="subcat">
+                    $outCategoria .= '<a href="'.$ruta_inicio.'clubysana/miexperiencia/'.$rfgdeii['urlseo'].'" class="subcat">
                     <div class="redonda"></div>
                     <img src="'.$ruta_inicio.'img/clubysana/'.$rfgdeii['imagen'].'" class="img" alt="">
-                    <a href="#" class="txt-subcat">'.$lng[59].'</a>
-                </div>';
+                    <p class="txt-subcat">'.$rfgdeii['titulo'].'</p>
+                </a>';
                 }
             }
             $outCategoria .= '</div>
@@ -220,38 +220,6 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                 <div class="tab-pane fade <?php echo ($opcion=="experiencia") ? 'show active' : ''; ?>" id="experiencia" role="tabpanel" aria-labelledby="experiencia-tab">
                     <div id="tuexp" class="max-ysana">
                         <?php echo $outCategoria; ?>
-                        <!-- <div class="contenedor-categoria row">
-                            <div class="categoria col-4">
-                                <img class="img img-fluid" src="<?php echo $ruta_inicio; ?>img/clubysana/icono_neurologia.svg" alt="">
-                                <h1 class="txt-cat">Neurología 360º</h1>
-                            </div>
-                            <div class="subcategorias col-8">
-                                <div class="cont-general">
-                                    <div class="subcat">
-                                        <div class="redonda"></div>
-                                        <img src="<?php echo $ruta_inicio; ?>img/clubysana/icono_sueno.svg" class="img" alt="">
-                                        <a href="#" class="txt-subcat">Sueño</a>
-                                    </div>
-                                    <div class="subcat">
-                                        <div class="redonda"></div>
-                                        <img src="<?php echo $ruta_inicio; ?>img/clubysana/icono_sueno.svg" class="img" alt="">
-                                        <a href="#" class="txt-subcat">Sueño</a>
-                                    </div>
-                                    <div class="subcat">
-                                        <div class="redonda"></div>
-                                        <img src="<?php echo $ruta_inicio; ?>img/clubysana/icono_sueno.svg" class="img" alt="">
-                                        <a href="#" class="txt-subcat">Sueño</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contenedor-categoria row">
-                            <div class="categoria col-4">
-                                <img class="img img-fluid" src="<?php echo $ruta_inicio; ?>img/clubysana/icono_nutricion.svg" alt="">
-                                <h1>Nutrición</h1>
-                            </div>
-                            <div class="subcategorias col-8"></div>
-                        </div> -->
                     </div>
                 </div>
             </div>
