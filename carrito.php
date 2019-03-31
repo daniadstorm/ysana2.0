@@ -78,9 +78,9 @@ if(isset($_GET['opc'])){
         case "del":
             $rdd = $cM->delete_direccion($id_usuario, $_GET['direccion']);
             if($rdd){
-                $str_success = $lng['forms'][22];
+                $str_success = $lng[75];
             }else{
-                $str_error = $lng['forms'][23];
+                $str_error = $lng[76];
             }
             break;
         case "update":
@@ -88,7 +88,7 @@ if(isset($_GET['opc'])){
             if($rrdc){
                 $cM->update_predeterminada_carrito($id_usuario, $_GET['carrito']);
             }else{
-                $str_error = $lng['forms'][24];
+                $str_error = $lng[77];
             }
             break;
     }
@@ -136,15 +136,15 @@ if(isset($_POST['id_carrito'])){
                 $rade = $cM->add_direccion_envio($id_usuario, 0, $_POST['nombre_usuario'], $_POST['apellidos_usuario'], $_POST['direccion_usuario'], $_POST['cp_usuario'], $_POST['poblacion_usuario'], $_POST['movil_usuario']);
             }
             //$rade = $cM->add_direccion_envio($id_usuario, 1, $_POST['nombre_usuario'], $_POST['apellidos_usuario'], $_POST['direccion_usuario'], $_POST['cp_usuario'], $_POST['poblacion_usuario'], $_POST['movil_usuario']);
-            if($rade) $str_success = $lng['forms'][25];
-            else $str_error = $lng['forms'][26];
+            if($rade) $str_success = $lng[78];
+            else $str_error = $lng[79];
             break;
         default:
             $rude = $cM->update_direccion_envio($id_usuario, $_POST['nombre_usuario'], $_POST['apellidos_usuario'], $_POST['direccion_usuario'], $_POST['cp_usuario'], $_POST['poblacion_usuario'], $_POST['movil_usuario'], $_POST['id_carrito']);
             if($rude){
-                $str_success = $lng['forms'][27];
+                $str_success = $lng[80];
             }else{
-                $str_error = $lng['forms'][20];
+                $str_error = $lng[53];
             }
             break;
     }
@@ -154,9 +154,9 @@ if(isset($_POST['cestadf'])){
     if($rapd){
         $uM->user_pedido_mail_df($_SESSION['id_usuario'], $_SESSION['id_lang']);
         $cM->update_pedido_df($_SESSION['id_usuario'], "pendiente");
-        $str_success = $lng['experiencia-carrito'][26];
+        $str_success = $lng[81];
     }else{
-        $str_error = 'No se ha podido realizar el pedido';
+        $str_error = $lng[82];
     }
 }
 //POST_________________________________________________________________________
@@ -172,7 +172,7 @@ $rgd = $cM->get_direcciones($id_usuario, 1);
             $old .= '<p class="my-0">'.$frgd['poblacion'].', '.$frgd['codigo_postal'].'</p>';
             $old .= '<p class="my-0">'.$frgd['movil'].'</p>';
             $old .= '<hr><div class="d-flex justify-content-end text-right">';
-            $old .= '<p class="mb-1 mx-2 editarDireccion" data-toggle="modal" data-target="#modalDireccion'.$cont_direcciones.'">'.$lng['forms'][28].'</p><a class="delDireccion" href="?opc=del&direccion='.$frgd['id_carrito'].'"><p class="mb-1 mx-2">'.$lng['forms'][29].'</p></a>';
+            $old .= '<p class="mb-1 mx-2 editarDireccion" data-toggle="modal" data-target="#modalDireccion'.$cont_direcciones.'">'.$lng[83].'</p><a class="delDireccion" href="?opc=del&direccion='.$frgd['id_carrito'].'"><p class="mb-1 mx-2">'.$lng[84].'</p></a>';
             $old .= '</div></div>';
             $old .= '<div class="modal fade" id="modalDireccion'.$cont_direcciones.'" tabindex="-1" role="dialog" aria-labelledby="modalDireccion'.$cont_direcciones.'Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -183,15 +183,15 @@ $rgd = $cM->get_direcciones($id_usuario, 1);
             <span aria-hidden="true">&times;</span></button></div>
             <form action="" method="post"><div class="modal-body">';
             $old .= $iM->get_input_hidden('id_carrito', $frgd['id_carrito']);
-            $old .= $iM->get_input_text('nombre_usuario', $frgd['nombre'], 'form-control', '', $lng['forms'][4]);
-            $old .= $iM->get_input_text('apellidos_usuario', $frgd['apellidos'], 'form-control', '', $lng['forms'][5]);
-            $old .= $iM->get_input_text('direccion_usuario', $frgd['direccion'], 'form-control', '', $lng['forms'][31]);
-            $old .= $iM->get_input_text('cp_usuario', $frgd['codigo_postal'], 'form-control', '', $lng['forms'][32]);
-            $old .= $iM->get_input_text('poblacion_usuario', $frgd['poblacion'], 'form-control', '', $lng['forms'][33]);
-            $old .= $iM->get_input_text('movil_usuario', $frgd['movil'], 'form-control', '', $lng['forms'][34]);
+            $old .= $iM->get_input_text('nombre_usuario', $frgd['nombre'], 'form-control', '', $lng[40]);
+            $old .= $iM->get_input_text('apellidos_usuario', $frgd['apellidos'], 'form-control', '', $lng[41]);
+            $old .= $iM->get_input_text('direccion_usuario', $frgd['direccion'], 'form-control', '', $lng[85]);
+            $old .= $iM->get_input_text('cp_usuario', $frgd['codigo_postal'], 'form-control', '', $lng[86]);
+            $old .= $iM->get_input_text('poblacion_usuario', $frgd['poblacion'], 'form-control', '', $lng[87]);
+            $old .= $iM->get_input_text('movil_usuario', $frgd['movil'], 'form-control', '', $lng[88]);
             $old .= '</div><div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">'.$lng['forms'][36].'</button>
-            <button type="submit" class="btn btn-primary">'.$lng['forms'][35].'</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">'.$lng[89].'</button>
+            <button type="submit" class="btn btn-primary">'.$lng[90].'</button>
             </div></form></div></div></div>';
             $nombre = $frgd['nombre'];
             $apellidos = $frgd['apellidos'];
@@ -230,7 +230,7 @@ $rgt = $cM->get_transporte();
             $oldad .= '<p class="my-0">'.$frgd2['direccion'].'</p>';
             $oldad .= '<p class="my-0">'.$frgd2['poblacion'].', '.$frgd2['codigo_postal'].'</p>';
             $oldad .= '<p class="my-0">'.$frgd2['movil'].'</p>';
-            $oldad .= '<a href="?opc=update&carrito='.$frgd2['id_carrito'].'"><button type="button" class="btn mt-2 br-n-c btnAdddireccion">'.$lng['forms'][37].'</button></a>
+            $oldad .= '<a href="?opc=update&carrito='.$frgd2['id_carrito'].'"><button type="button" class="btn mt-2 br-n-c btnAdddireccion">'.$lng[91].'</button></a>
             </div><hr>';
         }
     }
@@ -343,7 +343,7 @@ if(isset($_POST['btnPedido']) && $sumaTotalexp>0){
 }
 //LISTADO______________________________________________________________________
 
-echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
+echo $sM->add_cabecera($ruta_inicio, $lng[0]);
 ?>
 
 <body>
@@ -356,17 +356,17 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
             <div class="contenedor">
                 <?php if($str_success) echo $hM->get_alert_success($str_success); ?>
                 <div class="ttl">
-                    <h1>Tu cesta de experiencias</h1>
+                    <h1><?php echo $lng[92]; ?></h1>
                 </div>
                 <div class="table-responsive-lg">
                     <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Artículo</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Unidades</th>
-                                <th scope="col">Total</th>
+                                <th scope="col"><?php echo $lng[93]; ?></th>
+                                <th scope="col"><?php echo $lng[94]; ?></th>
+                                <th scope="col"><?php echo $lng[95]; ?></th>
+                                <th scope="col"><?php echo $lng[96]; ?></th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -381,10 +381,10 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                     <div class="info-resumen">
                         <div class="d-flex justify-content-between">
                             <h5 class="ttl_direccion">
-                                Dirección de entrega
+                                <?php echo $lng[97]; ?>
                             </h5>
                             <a class="otraDireccion" data-toggle="modal" data-target="#modalDireccionSeleccionar">
-                                Seleccionar otra dirección
+                                <?php echo $lng[98]; ?>
                             </a>
                         </div>
                         <!-- Modal -->
@@ -394,7 +394,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                 <div class="modal-content">
                                     <div class="modal-header info-datos">
                                         <h5 class="modal-title" id="modalDireccionSeleccionarLabel">
-                                            <?php echo $lng['forms'][30]; ?>
+                                            <?php echo $lng[99]; ?>
                                         </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
@@ -406,7 +406,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btnAdddireccion" data-dismiss="modal">
-                                                <?php echo $lng['forms'][36]; ?></button>
+                                                <?php echo $lng[89]; ?></button>
                                         </div>
                                     </form>
                                 </div>
@@ -416,7 +416,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                             <?php echo $old; ?>
                         </div>
                         <div class="botones mt-3">
-                            <button id="btndireccion" class="btnAdddireccion btn btn-lg" data-toggle="modal" data-target="#modalDireccion">+ Añadir direccion de envio</button>
+                            <button id="btndireccion" class="btnAdddireccion btn btn-lg" data-toggle="modal" data-target="#modalDireccion">+ <?php echo $lng[100]; ?></button>
                         </div>
                         <!-- Modal -->
                         <div class="modal fade" id="modalDireccion" tabindex="-1" role="dialog" aria-labelledby="modalDireccionLabel"
@@ -424,7 +424,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header info-datos">
-                                        <h5 class="modal-title" id="modalDireccionLabel"><?php echo $lng['forms'][30]; ?></h5>
+                                        <h5 class="modal-title" id="modalDireccionLabel"><?php echo $lng[99]; ?></h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -433,12 +433,12 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                         <div class="modal-body">
                                             <?php
                                                 echo $iM->get_input_hidden('id_carrito', $id_carrito);
-                                                echo $iM->get_input_text('nombre_usuario', '', 'form-control', '', $lng['forms'][4]);
-                                                echo $iM->get_input_text('apellidos_usuario', '', 'form-control', '', $lng['forms'][5]);
-                                                echo $iM->get_input_text('direccion_usuario', '', 'form-control', '', $lng['forms'][31]);
-                                                echo $iM->get_input_text('cp_usuario', '', 'form-control', '', $lng['forms'][32]);
-                                                echo $iM->get_input_text('poblacion_usuario', '', 'form-control', '', $lng['forms'][33]);
-                                                echo $iM->get_input_text('movil_usuario', '', 'form-control', '', $lng['forms'][34]);
+                                                echo $iM->get_input_text('nombre_usuario', '', 'form-control', '', $lng[40]);
+                                                echo $iM->get_input_text('apellidos_usuario', '', 'form-control', '', $lng[41]);
+                                                echo $iM->get_input_text('direccion_usuario', '', 'form-control', '', $lng[85]);
+                                                echo $iM->get_input_text('cp_usuario', '', 'form-control', '', $lng[86]);
+                                                echo $iM->get_input_text('poblacion_usuario', '', 'form-control', '', $lng[87]);
+                                                echo $iM->get_input_text('movil_usuario', '', 'form-control', '', $lng[88]);
                                                 /* echo $iM->get_input_hidden('id_carrito', $id_carrito);
                                                 echo $iM->get_input_text('nombre_usuario', $nombre, 'form-control', '', $lng['forms'][4]);
                                                 echo $iM->get_input_text('apellidos_usuario', $apellidos, 'form-control', '', $lng['forms'][5]);
@@ -449,8 +449,8 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                             ?>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lng['forms'][36]; ?></button>
-                                            <button type="submit" class="btn btnAdddireccion"><?php echo $lng['forms'][35]; ?></button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lng[89]; ?></button>
+                                            <button type="submit" class="btn btnAdddireccion"><?php echo $lng[90]; ?></button>
                                         </div>
                                     </form>
                                 </div>
@@ -468,17 +468,17 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                 <div class="col-md-12 col-lg-7">
                     <div class="contenedor-farmacia">
                         <div class="ttl">
-                            <h1>Reserva en tu farmacia:</h1>
+                            <h1><?php echo $lng[101]; ?></h1>
                         </div>
                         <div class="table-responsive-xl">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Artículo</th>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col">Unidades</th>
-                                        <th scope="col">Total</th>
+                                        <th scope="col"><?php echo $lng[93]; ?></th>
+                                        <th scope="col"><?php echo $lng[94]; ?></th>
+                                        <th scope="col"><?php echo $lng[95]; ?></th>
+                                        <th scope="col"><?php echo $lng[96]; ?></th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -490,18 +490,18 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                         <form action="" class="mb-0" method="post">
                             <div class="row">
                                 <div class="col-12 col-lg-7 mb-2">
-                                    <?php echo $iM->get_input_text('buscarfarmacia', $buscarfarmacia, 'form-control', '', $lng['experiencia-carrito'][18], '', '', '', true); ?>
+                                    <?php echo $iM->get_input_text('buscarfarmacia', $buscarfarmacia, 'form-control', '', $lng[25], '', '', '', true); ?>
                                     <?php echo $iM->get_select('selectfarmacia', $selectfarmacia, $arrselectfarmacia, 'form-control', false, false, false, 'form-group mb-0'); ?>
                                 </div>
                                 <div class="col-12 col-lg-5 mb-2 d-flex">
-                                    <button type="button" name="btnPedidodf" <?php echo ($ttlDf==0 ? 'disabled' : ''); ?>  class="btn btn-block btn-bg-color-2 mt-auto" data-toggle="modal" data-target="#realizarPedido">Reservar</button>
+                                    <button type="button" name="btnPedidodf" <?php echo ($ttlDf==0 ? 'disabled' : ''); ?>  class="btn btn-block btn-bg-color-2 mt-auto" data-toggle="modal" data-target="#realizarPedido"><?php echo $lng[102]; ?></button>
                                 </div>
                                 <!-- MODAL -->
                                 <div class="modal fade" id="realizarPedido" tabindex="-1" role="dialog" aria-labelledby="realizarPedidoLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="realizarPedidoLabel">¿Cuándo te gustaría recoger tu orden?</h5>
+                                                <h5 class="modal-title" id="realizarPedidoLabel"><?php echo $lng[103]; ?></h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -509,16 +509,16 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <div>
-                                                        <label><?php echo $lng['experiencia-carrito'][21]; ?></label>
+                                                        <label><?php echo $lng[104]; ?></label>
                                                     </div>
                                                     <?php echo $iM->get_select('timecesta', $timecesta, $arrtimecesta, 'form-control'); ?>
                                                 </div>
-                                                <?php echo $iM->get_input_date('fechadia', $fechadia, 'form-control', $lng['experiencia-carrito'][23] , '', '', $hoy, '', false) ?>
-                                                <p class="font-italic"><?php echo $lng['experiencia-carrito'][25]; ?></p>
+                                                <?php echo $iM->get_input_date('fechadia', $fechadia, 'form-control', $lng[68], '', '', $hoy, '', false) ?>
+                                                <p class="font-italic"><?php echo $lng[105]; ?></p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lng['experiencia-carrito'][27]; ?></button>
-                                                <button type="submit" name="cestadf" class="btn bg-blue-ysana text-light"><?php echo $lng['experiencia-carrito'][24]; ?></button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lng[89]; ?></button>
+                                                <button type="submit" name="cestadf" class="btn bg-blue-ysana text-light"><?php echo $lng[106]; ?></button>
                                             </div>
                                         </div>
                                     </div>
@@ -531,23 +531,23 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                 <div class="col-md-12 col-lg-5">
                     <div class="total-carrito">
                         <div class="ttl">
-                            <h1>Total mi cesta experiencia</h1>
+                            <h1><?php echo $lng[107]; ?></h1>
                         </div>
                         <div id="totalexp">
                             <strong class="d-flex-jcb">
-                                <span>Base imp.</span>
+                                <span><?php echo $lng[108]?></span>
                                 <span>0€</span>
                             </strong>
                             <strong class="d-flex-jcb">
-                                <span>IVA</span>
+                                <span><?php echo $lng[109]; ?></span>
                                 <span>0€</span>
                             </strong>
                             <strong class="d-flex-jcb">
-                                <span>Gastos de envío</span>
+                                <span><?php echo $lng[110]; ?></span>
                                 <span>0€</span>
                             </strong>
                             <strong class="d-flex-jcb">
-                                <span>TOTAL</span>
+                                <span><?php echo $lng[111]; ?></span>
                                 <span><?php echo $ttlExp; ?>€</span>
                             </strong>
                         </div>
@@ -556,7 +556,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
                                 <?php echo $iM->get_input_text('totalprecio', $ttlExp, 'form-control', 'TOTAL', $ttlExp, '', false, false, false, 'form-group col-12 col-sm-6 mb-0 qmb', true); ?>
                                 <div class="form-group col-12 col-sm-6 mb-0 qmb">
                                     <label></label>
-                                    <button type="submit" name="btnPedido" class="btn btn-block btn-bg-color-2">Realizar pedido</button>
+                                    <button type="submit" name="btnPedido" class="btn btn-block btn-bg-color-2"><?php echo $lng[106]; ?></button>
                                 </div>
                                 <!-- MODAL -->
                                 <!-- <div class="modal fade" id="realizarPedidoexp" tabindex="-1" role="dialog" aria-labelledby="realizarPedidoexpLabel" aria-hidden="true">
@@ -598,7 +598,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng['header'][0]);
             <input type="hidden" name="Ds_SignatureVersion" value="<?php echo $Ds_version; ?>" />
             <input type="hidden" name="Ds_MerchantParameters" value="<?php echo $Ds_params; ?>" />
             <input type="hidden" name="Ds_Signature" value="<?php echo $Ds_signature; ?>" />
-            <input type="submit" class="btn_aceptar" style="padding:4px 22px;max-width:200px;margin-left:auto;margin-right:auto;" value="Aceptar" />
+            <input type="submit" class="btn_aceptar" style="padding:4px 22px;max-width:200px;margin-left:auto;margin-right:auto;" value="<?php echo $lng[112]; ?>" />
         </form>
     </div>
     
