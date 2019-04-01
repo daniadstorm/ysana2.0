@@ -19,7 +19,7 @@
             </div>
             <div class="col-12 col-sm-3">
                 <ul class="list-footer">
-                    <li class="list-footer-item titulo"><a href="<?php echo $ruta_inicio; ?>sobre-ysana"><?php $lng[148]; ?></a></li>
+                    <li class="list-footer-item titulo"><a href="<?php echo $ruta_inicio; ?>sobre-ysana"><?php echo $lng[148]; ?></a></li>
                     <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[149]; ?></a></li>
                     <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[3]; ?></a></li>
                     <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[150]; ?></a></li>
