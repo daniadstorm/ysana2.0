@@ -8,32 +8,32 @@
             </div>
             <div class="col-12 col-sm-3">
                 <ul class="list-footer">
-                    <li class="list-footer-item titulo">Mapa Web</li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Home</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Productos</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Experiencias</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Farmacia</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Club Ysana</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Contacto</a></li>
+                    <li class="list-footer-item titulo"><?php echo $lng[147]; ?></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[135]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[136]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[137]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[138]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[139]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[140]; ?></a></li>
                 </ul>
             </div>
             <div class="col-12 col-sm-3">
                 <ul class="list-footer">
-                    <li class="list-footer-item titulo"><a href="<?php echo $ruta_inicio; ?>sobre-ysana">Sobre ysana</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Corporate</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Valores</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Compañía</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Compromiso</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Código Etico</a></li>
+                    <li class="list-footer-item titulo"><a href="<?php echo $ruta_inicio; ?>sobre-ysana"><?php $lng[148]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[149]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[3]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[150]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[151]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[152]; ?></a></li>
                 </ul>
             </div>
             <div class="col-12 col-sm-3">
                 <ul class="list-footer">
-                    <li class="list-footer-item titulo">Políticas</li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Aviso Legal</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Política de privacidad</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Política de cookies</a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>">Política de ventas</a></li>
+                    <li class="list-footer-item titulo"><?php echo $lng[153]; ?></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[154]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[155]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[156]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[157]; ?></a></li>
                 </ul>
             </div>
         </div>
