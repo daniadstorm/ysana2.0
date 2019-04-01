@@ -63,6 +63,7 @@ $cargar=false;
 $gasto_envio = isset($_SESSION['transporte']) ? $_SESSION['transporte'] : '';
 $precioEnvio = 0;
 $id_carrito = 0;
+$iva_carrito = 0;
 /* new */
 /* echo '<pre>';
 print_r($_POST);
@@ -536,11 +537,11 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                         <div id="totalexp">
                             <strong class="d-flex-jcb">
                                 <span><?php echo $lng[108]?></span>
-                                <span>0€</span>
+                                <span><?php echo number_format($ttlExp-($ttlExp*0.21),2); ?>€</span>
                             </strong>
                             <strong class="d-flex-jcb">
                                 <span><?php echo $lng[109]; ?></span>
-                                <span>0€</span>
+                                <span><?php echo number_format(($ttlExp*0.21), 2); ?>€</span>
                             </strong>
                             <strong class="d-flex-jcb">
                                 <span><?php echo $lng[110]; ?></span>

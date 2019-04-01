@@ -1234,6 +1234,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     color: var(--ysana-color-2);
     transition: 250ms;
 }
+#carrito2 .modal-footer button[name="cestadf"]{
+    border-color: var(--ysana-color-2);
+    background-color: var(--ysana-color-2);
+    color: white;
+    transition: 250ms;
+}
 #carrito .modal-footer .btn-primary:hover{
     border-color: var(--ysana-color-2);
     background-color: var(--ysana-color-2);
