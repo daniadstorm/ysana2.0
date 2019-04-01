@@ -5,7 +5,8 @@
 $host  = $_SERVER['HTTP_HOST'];
 $uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $base = "http://" . $host . $uri . "/";
-/* $ruta_inicio = 'http://adstormcloud.ddns.net/ysana/';
+/* $ruta_dominio = 'http://adstormcloud.ddns.net';
+$ruta_inicio = 'http://adstormcloud.ddns.net/ysana/';
 $ruta_archivos = 'http://adstormcloud.ddns.net/ysana/'; */
 $ruta_dominio = 'http://192.168.1.2';
 $ruta_inicio = 'http://192.168.1.2/ysana/';

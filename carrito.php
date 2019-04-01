@@ -42,8 +42,8 @@ $ivatotalexp = 0;
 $ivatotaldf = 0;
 $timecesta = "mañana";
 $arrtimecesta = array(
-    'mañana' => $lng['experiencia-carrito'][22],
-    'tarde' => $lng['experiencia-carrito'][28]
+    'mañana' => $lng[142],
+    'tarde' => $lng[143]
 );
 /* new */
 $hoy = date("Y").'-'.date("m").'-'.(date("d")+1);
@@ -178,7 +178,7 @@ $rgd = $cM->get_direcciones($id_usuario, 1);
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header info-datos">
-            <h5 class="modal-title" id="modalDireccion'.$cont_direcciones.'Label">'.$lng['forms'][30].'</h5>
+            <h5 class="modal-title" id="modalDireccion'.$cont_direcciones.'Label">'.$lng[144].'</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button></div>
             <form action="" method="post"><div class="modal-body">';

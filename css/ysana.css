@@ -127,7 +127,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     text-align: right;
 }
 #menu-top .nav-item .nav-link{
-    padding-left: 1.3rem;
+    padding-left: 1rem;
     /* padding-right: 1.3rem; */
 }
 #menu-top .nav-item.active{
@@ -382,6 +382,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     text-align: center;
     width: 100%;
     overflow: hidden;
+    border-top: 2px solid var(--ysana-color-2);
 }
 #footer .list-footer{
     display: flex;
@@ -1159,7 +1160,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     margin-right: 2rem;
 } */
 #carrito{
-    margin-top: 2rem;
+    margin-top: 0rem;
     margin-bottom: 2rem;
 }
 #carrito .ttl, #carrito2 .ttl{
@@ -2301,6 +2302,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 
 @media (min-width: 768px) {
+    #carrito{
+        margin-top: 2rem;
+    }
     .menu-movil{
         display: none;
     }
@@ -2372,8 +2376,16 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     }
 }
 
+
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    /* #panel-top .nav .nav-item:nth-child(2){
+        display: none;
+    } */
+    .centrar-menu{
+        align-items: center;
+    }
     .max-alert-prod{
         position: absolute;
         top: 0rem;
@@ -2391,7 +2403,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         flex-direction: row;
     }
     #menu-top .nav-item .nav-link{
-        padding-right: 1.3rem;
+        padding-right: 1rem;
     }
     .parallax-home2 {
         min-height: 700px;

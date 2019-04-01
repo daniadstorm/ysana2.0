@@ -50,21 +50,25 @@ if(isset($_POST['enviarazoho'])){
     ));
 }
 if(isset($_POST['addCesta'])){
-    if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
-        $rsa = $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], $cantidad_prod);
-        if($rsa){
-            $str_success = "Producto añadido correctamente al carrito";
+    if($id_usuario>0){
+        if($cM->get_articulo_carrito($id_usuario, $_POST['id_articulo'])>0){
+            $rsa = $cM->sumarArticulo($id_usuario, $_POST['id_articulo'], $cantidad_prod);
+            if($rsa){
+                $str_success = "Producto añadido correctamente al carrito";
+            }
+        }else{
+            if($_POST['tipo_tienda']==1){
+                $tipo_tienda = "exp";
+            }else{
+                $tipo_tienda = "df";
+            }
+            $raac = $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], $cantidad_prod, $tipo_tienda);
+            if($raac){
+                $str_success = "Producto añadido correctamente al carrito";
+            }
         }
     }else{
-        if($_POST['tipo_tienda']==1){
-            $tipo_tienda = "exp";
-        }else{
-            $tipo_tienda = "df";
-        }
-        $raac = $cM->add_articulo_carrito($id_usuario, $_POST['id_articulo'], $cantidad_prod, $tipo_tienda);
-        if($raac){
-            $str_success = "Producto añadido correctamente al carrito";
-        }
+        header('Location: '.$ruta_inicio.'login/'.$new_url);
     }
 }
 if(isset($_POST['editorusos'])){

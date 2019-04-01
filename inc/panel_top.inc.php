@@ -37,7 +37,7 @@ foreach ($arrlang as $key => $value) {
     });
 </script>
 <div class="navbar-ad">
-    <div id="panel-top" class="max-ysana mt-2">
+    <div id="panel-top" class="max-ysana">
         <div class="ttl">
             <ul class="nav">
                 <li class="nav-item">
