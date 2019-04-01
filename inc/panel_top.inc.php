@@ -41,7 +41,7 @@ foreach ($arrlang as $key => $value) {
         <div class="ttl">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link bienvenidoysana -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>"><?php echo ($clubysana) ? 'Bienvenido a ClubYsana' : 'Bienvenido a Ysana Vida Sana' ?></a>
+                    <a class="nav-link bienvenidoysana -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>"><?php echo ($clubysana) ? $lng[141] : $lng[142] ?></a>
                 </li>
             </ul>
         </div>
@@ -58,10 +58,10 @@ foreach ($arrlang as $key => $value) {
                     </li>
                     <?php if(!isset($_SESSION['id_usuario'])){ ?>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>login?ruta_anterior=<?php echo $request_uri; ?>">Acceder</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>login?ruta_anterior=<?php echo $request_uri; ?>"><?php echo $lng[143]; ?></a>
                         </li>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>registro?ruta_anterior=<?php echo $request_uri; ?>">Date de alta</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio.$rutaysana; ?>registro?ruta_anterior=<?php echo $request_uri; ?>"><?php echo $lng[144]; ?></a>
                         </li>
                     <?php }else{ ?>
                         <?php if($_SESSION['id_tipo_usuario']==ADMIN){ ?>
@@ -70,10 +70,10 @@ foreach ($arrlang as $key => $value) {
                             </li>
                         <?php } ?>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?><?php echo ($clubysana!='') ? 'clubysana/' : ''; ?>profile">Mi Perfil</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?><?php echo ($clubysana!='') ? 'clubysana/' : ''; ?>profile"><?php echo $lng[145]; ?></a>
                         </li>
                         <li class="nav-item no-drop">
-                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>login?unlogin">Cerrar sesión</a>
+                            <a class="nav-link -<?php echo $clubysana; ?>" href="<?php echo $ruta_inicio; ?>login?unlogin"><?php echo $lng[146]; ?></a>
                         </li>
                     <?php } ?>
                     <li id="dropdown-idioma" class="nav-item dropdown dropleft">
