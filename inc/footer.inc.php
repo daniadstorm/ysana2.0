@@ -1,8 +1,8 @@
 <?php ?>
 
-<div id="footer" class="max-ysana">
+<div id="footer">
     <div class="max-ysana">
-        <div class="row my-4">
+        <div class="row px-2 my-4">
             <div class="col-12 col-sm-3">
                 <img src="<?php echo $ruta_inicio;?>img/logos/ysanacolor.svg" width="128px" alt="">
             </div>
@@ -20,11 +20,9 @@
             <div class="col-12 col-sm-3">
                 <ul class="list-footer">
                     <li class="list-footer-item titulo"><a href="<?php echo $ruta_inicio; ?>sobre-ysana"><?php echo $lng[148]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[149]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[3]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[150]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[151]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[152]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>sobre-ysana/#sobreysana"><?php echo $lng[3]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>sobre-ysana/#conocemas"><?php echo $lng[149]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>sobre-ysana/#garantia"><?php echo $lng[150]; ?></a></li>
                 </ul>
             </div>
             <div class="col-12 col-sm-3">

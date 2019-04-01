@@ -579,9 +579,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     background-color: #93b7c5;
 }
 #transparencia{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     margin-top: 5rem;
     width: 100%;
     background-image: url('../img/home/4.jpg');
+    background-size: cover;
 }
 #transparencia div{
     display: table;
@@ -693,6 +696,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     justify-content: center;
     min-height: 450px;
     align-items: center;
+    border-bottom: 1px solid var(--ysana-color-2);
 }
 .producto-caja{
     display: flex;
@@ -787,7 +791,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
-    border: 1px solid #d2d2d2;
+    /* border: 1px solid #d2d2d2; */
     transition: box-shadow 0.3s ease-in-out;
 }
 /* .article-block img{
@@ -1121,9 +1125,10 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     position: absolute;
     margin-bottom: 0;
     /* bottom: -1.75rem; */
-    bottom: -2rem;
+    bottom: -5rem;
     width: 100%;
     left: 50%;
+    height: 50px;
     transform: translate(-50%, -50%);
 }
 
@@ -1292,7 +1297,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     transition: 250ms;
 }
 .modal-body div{
-    background-color: #eaeaea;
+    background-color: #FFF;
 }
 #modalFarmacia .modal-body div{
     background-color: transparent;
@@ -1670,12 +1675,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 #bannerredes.redes-cy{
     background-color: var(--ysana-color-7);
 }
-#bannerredes .redes{
+/* #bannerredes .redes{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-}
+} */
 #bannerredes .redes h1{
     color: white;
     font-weight: 500;
@@ -2045,6 +2050,12 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 
 
 @media (max-width: 575px){
+    .parallax-home4 {
+        background-image: url("../img/home/66.jpg");
+    }
+    #bannerredes .redes h1{
+        font-size: 2rem;
+    }
     .marg-ysana{
         width: 100%;
         margin-top: 100px;
@@ -2204,6 +2215,22 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     }
 }
 @media (max-width: 768px){
+    #bannerredes{
+        height: 140px;
+    }
+    #bannerredes .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+    }
+    #bannerredes .imagenes a{
+        max-width: 48px;
+    }
+    #bannerredes .imagenes a img{
+        width: 48px;
+    }
     #slidertienda-2{
         margin-bottom: 2rem;
     }
@@ -2321,6 +2348,18 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
 }
 
 @media (min-width: 768px) {
+    #bannerredes .redes{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+    #bannerredes .imagenes a{
+        max-width: 64px;
+    }
+    #bannerredes .imagenes a img{
+        width: 64px;
+    }
     #carrito{
         margin-top: 2rem;
     }
@@ -2480,7 +2519,7 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
         height: 70%;
     }
     #sobreysanaimg .imagen .texto{
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
 

@@ -66,7 +66,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
     <div id="clubysana-articulo" class="max-ysana marg-ysana">
         <div class="margen-general">
             <div class="titulo">
-                <h1 class="ttl">Titulo muy largo, pero que muy muy muy largo eh, super largo!!</h1>
+                <h1 class="ttl"><?php echo $titulo; ?></h1>
             </div>
             <?php if(count($arr_sliders)>0){ ?>
             <div class="row art-col-1">

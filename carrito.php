@@ -42,8 +42,8 @@ $ivatotalexp = 0;
 $ivatotaldf = 0;
 $timecesta = "mañana";
 $arrtimecesta = array(
-    'mañana' => $lng[142],
-    'tarde' => $lng[143]
+    'mañana' => $lng[161],
+    'tarde' => $lng[162]
 );
 /* new */
 $hoy = date("Y").'-'.date("m").'-'.(date("d")+1);
@@ -462,7 +462,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
         </div>
     </div>
     
-    <div id="carrito2" class="max-ysana w-100">
+    <div id="carrito2" class="max-ysana w-100 mb-3">
         <div class="contenedor">
             <div class="row carrito-cart">
                 <div class="col-md-12 col-lg-7">

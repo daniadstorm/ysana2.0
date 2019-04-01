@@ -28,6 +28,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
             </div>
         </div>
     </div>
+    <div id="valores"></div>
     <div id="sobreysana" class="max-ysana">
         <div class="ttl">
             <h1><?php echo $lng[3]; ?></h1>
@@ -93,8 +94,8 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
             </div>
         </div>
     </div>
-    <div id="transparencia" class="max-ysana">
-        <div>
+    <div id="transparencia">
+        <div class="max-ysana">
             <h1><?php echo $lng[12]; ?></h1>
         </div>
     </div>

@@ -91,7 +91,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
                     <img src="<?php echo $ruta_inicio; ?>img/logos/clubysana.svg" width="192px" alt="">
                 </div>
                 <p><?php echo $lng[126]; ?></p>
-                <a href="<?php echo $ruta_inicio; ?>productos-ysana" class="btn btn-bg-color-3 mt-2"><?php echo $lng[2]; ?></a>
+                <a href="<?php echo $ruta_inicio; ?>productos-ysana" class="btn btn-bg-color-3 mt-2"><?php echo $lng[159]; ?></a>
             </div>
         </div>
     </div>
