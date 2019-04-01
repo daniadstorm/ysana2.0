@@ -88,7 +88,9 @@ if($id_usuario>0){
             $outPedidos .= '<tr class="sub-pedido">
                 <td class="p-row">'.$frgpu['id_pedido'].'</td>
                 <td>'.mysql_to_date($frgpu['fecha_compra']).'</td>
-                <td><a class="collapsed" data-toggle="collapse" href="#pedidon-'.$frgpu['id_pedido'].'" role="button" aria-expanded="false" aria-controls="pedidon-'.$frgpu['id_pedido'].'"><img class="rtt-img" src="'.$ruta_inicio.'img/list-down.png"></a></td>
+                <td><a class="collapsed" data-toggle="collapse" href="#pedidon-'.$frgpu['id_pedido'].'" role="button" aria-expanded="false" aria-controls="pedidon-'.$frgpu['id_pedido'].'"><img class="rtt-img" src="'.$ruta_inicio.'img/list-down.png"></a>
+                <a target="_blank" href="'.$ruta_inicio.'generar_factura.php?id_pedido='.$frgpu['id_pedido'].'"><img src="https://img.icons8.com/ultraviolet/32/000000/export-pdf.png"></a>
+                </td>
             </tr>';
             $outPedidos .= '<tr><td class="cs-4" colspan="4"><div class="collapse" id="pedidon-'.$frgpu['id_pedido'].'">
             <div class="card card-body">

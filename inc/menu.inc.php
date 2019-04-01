@@ -16,11 +16,7 @@ $arrMenu = array(
 foreach ($arrMenu as $key => $value) {
     $url_format = '/'.$value['url'].'/';
     $url_format = str_replace('//', '/', $url_format);
-    if($value['url']=='blog'){
-        $outMenu .= '<li class="nav-item '.($url_format==$url ? 'active' : '').'"><a class="nav-link" href="https://blog.ysana.es/">'.$value['txt'].'</a></li>';
-    }else{
-        $outMenu .= '<li class="nav-item '.($url_format==$url ? 'active' : '').'"><a class="nav-link" href="'.$ruta_inicio.$value['url'].'">'.$value['txt'].'</a></li>';
-    }
+    $outMenu .= '<li class="nav-item '.($url_format==$url ? 'active' : '').'"><a class="nav-link" href="'.$ruta_inicio.$value['url'].'">'.$value['txt'].'</a></li>';
 }
 if($id_usuario!='') $carritoTotal = $cM->get_total_carrito($id_usuario);
 ?>
