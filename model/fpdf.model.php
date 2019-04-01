@@ -18,8 +18,8 @@ class fpdfModel extends FPDF {
         $cM = load_model('carrito');
         //$dM = load_model('direcciones');
         //$pM = load_model('pedidos');
-
-        $aM = load_model('articulos');
+        $uM = load_model('usuario');
+        //$aM = load_model('articulos');
         $cM = load_model('carrito');
         
         define('EURO',chr(128));
@@ -34,14 +34,14 @@ class fpdfModel extends FPDF {
         
         //$d['fecha'] = 'fecha';
         //$d['fullname'] = 'fullname';
-        //$d['nombre_direccion'] = 'nombre direccion';
-        $d['dni'] = '';
-        $d['direccion'] = 'direccion';
+        $d['nombre_direccion'] = '';
+        $d['dni'] = 'dni';
+        //$d['direccion'] = 'direccion';
         //$d['telf'] = 'telf';
-        $d['poblacion'] = 'poblacion';
+        //$d['poblacion'] = 'poblacion';
         //$d['codigo_postal'] = '';
-        //$d['email'] = 'email';
-        $d['provincia'] = 'barcelona';
+        $d['email'] = 'email';
+        //$d['provincia'] = 'barcelona';
         
         $this->AddPage();
         $this->pw = $this->GetPageWidth();
@@ -66,6 +66,30 @@ class fpdfModel extends FPDF {
         //DIRECCION ENVIO_______________________________________________________
         
         //LISTADO ARTICULOS_____________________________________________________
+
+        $rgdp = $uM->get_detalles_pedido($num_factura);
+        $ind = 1;
+        if($rgdp){
+            while($frgdp = $rgdp->fetch_assoc()){
+                
+                $aux_nombre = utf8_decode(html_entity_decode($frgdp['nombre']));
+                
+                if (strlen($aux_nombre) > $mla) {
+                    $aux_nombre = substr($aux_nombre, 0, $mla).'...';
+                }
+                
+                $da[$ind]['descripcion'] = $aux_nombre;
+                $da[$ind]['uds'] = $frgdp['cantidad'];
+                $da[$ind]['pud'] = $cM->get_formatted_price($frgdp['precio']);
+                $da[$ind]['total_base'] = '';
+                $da[$ind]['total'] = $cM->get_formatted_price($frgdp['cantidad'] * $frgdp['precio']);
+                
+                $total_absoluto = $total_absoluto + $frgdp['cantidad'] * $frgdp['precio'];
+
+                $ind++;
+            }
+        }
+
         //detalle pedido
         /*
         $rgpbf = $pM->get_pedido_by_factura($num_factura);
@@ -164,28 +188,28 @@ class fpdfModel extends FPDF {
         //datos-emisor__________________________________________________________
         
         //datos-receptor________________________________________________________
-        $this->SetFont($this->ft,'',$this->fs-2);
+        //$this->SetFont($this->ft,'',$this->fs-2);
         $this->Cell($this->pw/2-10,$this->ch,'Datos cliente');
-        $this->Cell($this->pw/2-10,$this->ch,utf8_decode('Dirección de envío y facturación'));
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode(''));
         $this->Ln($this->ch);
         
         $this->SetFont($this->ft,'B',$this->fs);
-        $this->Cell($this->pw/2-10,$this->ch,$d['fullname'],'LT');
-        $this->Cell($this->pw/2-10,$this->ch,$d['nombre_direccion'],'RT');
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode($d['fullname']),'LT');
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode($d['nombre_direccion']),'RT');
         $this->Ln($this->ch-2);
         
         $this->SetFont($this->ft,'',$this->fs-1);
-        $this->Cell($this->pw/2-10,$this->ch,$d['dni'],'L');
-        $this->Cell($this->pw/2-10,$this->ch,$d['direccion'],'R');
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode($d['telf']),'L');
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode(''),'R');
         $this->Ln($this->ch-2);
         
         $this->SetFont($this->ft,'',$this->fs-1);
-        $this->Cell($this->pw/2-10,$this->ch,$d['telf'],'L');
-        $this->Cell($this->pw/2-10,$this->ch,$d['poblacion'].' ('.$d['codigo_postal'].')','R');
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode($d['direccion']),'L');
+        $this->Cell($this->pw/2-10,$this->ch,'','R');
         $this->Ln($this->ch-2);
         
         $this->SetFont($this->ft,'',$this->fs-1);
-        $this->Cell($this->pw/2-10,$this->ch,$d['email'],'LB');
+        $this->Cell($this->pw/2-10,$this->ch,utf8_decode($d['poblacion']).' ('.$d['codigo_postal'].')','LB');
         //$this->Cell($this->pw/2-10,$this->ch,$d['provincia'],'RB');
         $this->Cell($this->pw/2-10,$this->ch,'','RB');
         $this->Ln($this->ch-2);
@@ -201,8 +225,8 @@ class fpdfModel extends FPDF {
         
         $this->Cell(($this->pw/3)*2-10,$this->ch,utf8_decode('Descripción'),'L',0,'L',true);
         $this->Cell($this->pw/12-10,$this->ch,'Uds.',0,0,'R',true);
-        $this->Cell($this->pw/12,$this->ch,'P.Ud.',0,0,'R',true);
-        $this->Cell($this->pw/12,$this->ch,'Total Base',0,0,'R',true);
+        $this->Cell($this->pw/12,$this->ch,'',0,0,'R',true);
+        $this->Cell($this->pw/12,$this->ch,'',0,0,'R',true);
         $this->Cell($this->pw/12,$this->ch,'Total',0,0,'R',true);
         
         $this->Ln($this->ch);
@@ -210,22 +234,22 @@ class fpdfModel extends FPDF {
         //listado-body----------------------------------------------------------
         $this->SetTextColor(0,0,0);
         //for each producto...
-        /*
+        
         foreach ($da as $k => $v) {
             $this->SetFont($this->ft,'B',$this->fs-2);
             $this->Cell(($this->pw/3)*2-10,$this->ch,$v['descripcion'],'L');
             
             $this->SetFont($this->ft,'',$this->fs-2);
             $this->Cell($this->pw/12-10,$this->ch,$v['uds'],0,0,'R');
-            $this->Cell($this->pw/12,$this->ch,$v['pud'],0,0,'R');
-            $this->Cell($this->pw/12,$this->ch,$v['total_base'].' '.EURO,0,0,'R');
+            $this->Cell($this->pw/12,$this->ch,'',0,0,'R');
+            $this->Cell($this->pw/12,$this->ch,'',0,0,'R');
             
             $this->SetFont($this->ft,'B',$this->fs-2);
             $this->Cell($this->pw/12,$this->ch,$v['total'].' '.EURO,'R',0,'R');
             
             $this->Ln($this->ch);
         } 
-        */
+        
         $this->Cell($this->pw-20,$this->ch-2,'','LRB');
         $this->Ln($this->ch);
         //listado-body----------------------------------------------------------
@@ -249,6 +273,11 @@ class fpdfModel extends FPDF {
         
         $this->SetFont($this->ft,'',$this->fs-2);
         
+        
+        $total_iva = $total_absoluto * 0.21;
+        $base_imponible = $total_absoluto - $total_iva;
+        
+
         $this->Cell(($this->pw/2)/2-10,$this->ch,'Base imponible','T');
         $this->Cell(($this->pw/2)/2,$this->ch,$cM->get_formatted_price($base_imponible).' '.EURO,'RT',0,'R');
         
@@ -265,10 +294,8 @@ class fpdfModel extends FPDF {
         
         $this->Cell($this->pw/2-10,$this->ch,'','LR');
         
-        //$base_imponible
-        
-        $this->Cell(($this->pw/2)/2-10,$this->ch,utf8_decode('Envío'));
-        $this->Cell(($this->pw/2)/2,$this->ch,$cM->get_formatted_price($envio).' '.EURO,'R',0,'R');
+        $this->Cell(($this->pw/2)/2-10,$this->ch,utf8_decode(''));
+        $this->Cell(($this->pw/2)/2,$this->ch,'','R',0,'R');
         
         $this->Ln($this->ch-2);
         

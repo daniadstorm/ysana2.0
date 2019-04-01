@@ -47,12 +47,12 @@ if ($rgdpu) {
 
         $d['fecha'] = mysql_to_date($fgdpu['fecha_compra']);
         $d['fullname'] = $fgdpu['nombre'].' '.$fgdpu['apellidos'];
-        $d['nombre_direccion'] = $fgdpu['nombre_usuario'];
-        $d['direccion'] = $fgdpu['direccion_entrega'];
+        //$d['nombre_direccion'] = $fgdpu['nombre_usuario'];
+        $d['direccion'] = $fgdpu['direccion'];
         $d['telf'] = $fgdpu['movil'];
         $d['poblacion'] = $fgdpu['poblacion'];
         $d['codigo_postal'] = $fgdpu['codigo_postal'];
-        $d['email'] = $fgdpu['email_usuario'];
+        //$d['email'] = $fgdpu['email_usuario'];
         //$d['provincia'] = 
 
         //echo '<pre>'.print_r($d).'</pre><br>';

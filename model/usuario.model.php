@@ -208,12 +208,6 @@ class usuarioModel extends Model {
         return $this->execute_query($q);
     }
 
-    function get_datos_pedido($id_pedido) {
-        $q = ' SELECT * FROM '.$this->pre.'pedidos p ';
-        $q .= ' WHERE p.id_pedido='.$id_pedido.' ';
-        return $this->execute_query($q);
-    }
-
     function get_datos_usuario($id_usuario){
         $q  = ' SELECT u.* FROM '.$this->pre.'usuarios u ';
         $q .= ' WHERE u.id_usuario='.$id_usuario.'';
