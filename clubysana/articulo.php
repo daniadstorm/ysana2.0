@@ -64,29 +64,30 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
     </div>
 
     <div id="clubysana-articulo" class="max-ysana marg-ysana">
-        <div class="titulo">
-            <h1 class="ttl">Titulo muy largo, pero que muy muy muy largo eh, super largo!!</h1>
+        <div class="margen-general">
+            <div class="titulo">
+                <h1 class="ttl">Titulo muy largo, pero que muy muy muy largo eh, super largo!!</h1>
+            </div>
+            <?php if(count($arr_sliders)>0){ ?>
+            <div class="row art-col-1">
+                <div class="col-sm-6 art-slider izq">
+                    <h1 class="slider-titulo"><?php echo $arr_sliders[0]['titulo']; ?></h1>
+                    <p class="slider-descripcion"><?php echo $arr_sliders[0]['descripcion']; ?></p>
+                </div>
+                <div class="col-sm-6 art-slider der">
+                    <img src="<?php echo $ruta_inicio ?>img/clubysana/<?php echo $arr_sliders[0]['img']; ?>" alt="" class="img-fluid">
+                </div>
+            </div>
+            <?php } ?>
+            <div class="row art-col-2">
+                <div class="col-12 col-md-6">
+                    <p class="columna"><?php echo $texto_col1; ?></p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="columna"><?php echo $texto_col2; ?></p>
+                </div>
+            </div>
         </div>
-        <?php if(count($arr_sliders)>0){ ?>
-        <div class="row">
-            <div class="col-sm-6 art-slider izq">
-                <h1 class="slider-titulo"><?php echo $arr_sliders[0]['titulo']; ?></h1>
-                <p class="slider-descripcion"><?php echo $arr_sliders[0]['descripcion']; ?></p>
-            </div>
-            <div class="col-sm-6 art-slider der">
-                <img src="<?php echo $ruta_inicio ?>img/clubysana/<?php echo $arr_sliders[0]['img']; ?>" alt="" class="img-fluid">
-            </div>
-        </div>
-        <?php } ?>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <p class="columna"><?php echo $texto_col1; ?></p>
-            </div>
-            <div class="col-12 col-md-6">
-                <p class="columna"><?php echo $texto_col2; ?></p>
-            </div>
-        </div>
-
     </div>
     <?php include_once('../inc/banRedes.inc.php'); ?>
     <?php include_once('../inc/footer.inc.php'); ?>

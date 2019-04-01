@@ -1812,9 +1812,29 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     max-width: 400px;
     margin: 0 auto;
 }
-
-
-
+.margen-general{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#clubysana-articulo .titulo{
+    margin-top: 1rem;
+}
+#clubysana-articulo .titulo .ttl{
+    color: var(--ysana-color-7);
+}
+#clubysana-articulo .slider-titulo{
+    color: var(--ysana-color-7);
+}
+#clubysana-articulo .slider-descripcion{
+    color: var(--ysana-color-7);
+}
+#clubysana-articulo .art-col-1{
+    margin-top: 3rem;
+}
+#clubysana-articulo .art-col-2{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 
 
@@ -2445,6 +2465,9 @@ body { font-family: 'IBM Plex Sans', sans-serif; font-weight: normal!important; 
     /* .parallax-home5 {
         height: 80%;
     } */
+    #centrar-home1 h1{
+        font-size: 3rem;
+    }
     .max-alert-prod{
         top: 1rem;
     }
