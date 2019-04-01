@@ -208,12 +208,6 @@ class usuarioModel extends Model {
         return $this->execute_query($q);
     }
 
-    /* function get_datos_pedido($id_pedido) {
-        $q = ' SELECT * FROM '.$this->pre.'pedidos p ';
-        $q .= ' WHERE p.id_pedido='.$id_pedido.' ';
-        return $this->execute_query($q);
-    } */
-
     function get_datos_usuario($id_usuario){
         $q  = ' SELECT u.* FROM '.$this->pre.'usuarios u ';
         $q .= ' WHERE u.id_usuario='.$id_usuario.'';
@@ -790,7 +784,7 @@ class usuarioModel extends Model {
         $mail->CharSet = "UTF-8";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls"; //Tipo de cifrado, TLS, STARTTLS..
-        //$mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 2;
         $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
         $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
         $mail->Password = "Taz78446"; // La contraseña
@@ -801,7 +795,7 @@ class usuarioModel extends Model {
         $mail->IsHTML(true); // El correo se envía como HTML 
         $mail->Subject = $asuntoMail; // Este es el titulo del email. 
         $mail->Body = $op; // Mensaje a enviar.
-        //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
+        $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
         $exito = $mail->Send(); // Envía el correo. */
 
         return true;
