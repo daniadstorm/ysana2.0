@@ -6,9 +6,9 @@ $iM = load_model('inputs');
 $sM = load_model('seo');
 
 $arrImg = array(
-    "1.jpg",
-    "2.jpg",
-    "3.jpg"
+    "h1.jpg",
+    "h2.jpg",
+    "h3.jpg"
 );
 
 echo $sM->add_cabecera($ruta_inicio, $lng[0]); 
@@ -159,7 +159,7 @@ echo $sM->add_cabecera($ruta_inicio, $lng[0]);
     </div>
     <?php include_once('inc/footer.inc.php'); ?>
     <script>
-        var imgs = ["1.jpg", "2.jpg", "3.jpg"];
+        var imgs = ["h1.jpg", "h2.jpg", "h3.jpg"];
         var i=0;
         $(document).ready(function() {
             $(function(){

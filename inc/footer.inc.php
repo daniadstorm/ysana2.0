@@ -10,11 +10,11 @@
                 <ul class="list-footer">
                     <li class="list-footer-item titulo"><?php echo $lng[147]; ?></li>
                     <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[135]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[136]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[137]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[138]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[139]; ?></a></li>
-                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>"><?php echo $lng[140]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>productos-ysana"><?php echo $lng[136]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>experiencia"><?php echo $lng[137]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>directo-farmacia"><?php echo $lng[138]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>clubysana"><?php echo $lng[139]; ?></a></li>
+                    <li class="list-footer-item"><a href="<?php echo $ruta_inicio; ?>#form-contacto"><?php echo $lng[140]; ?></a></li>
                 </ul>
             </div>
             <div class="col-12 col-sm-3">

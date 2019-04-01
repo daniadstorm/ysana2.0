@@ -208,11 +208,11 @@ class usuarioModel extends Model {
         return $this->execute_query($q);
     }
 
-    function get_datos_pedido($id_pedido) {
+    /* function get_datos_pedido($id_pedido) {
         $q = ' SELECT * FROM '.$this->pre.'pedidos p ';
         $q .= ' WHERE p.id_pedido='.$id_pedido.' ';
         return $this->execute_query($q);
-    }
+    } */
 
     function get_datos_usuario($id_usuario){
         $q  = ' SELECT u.* FROM '.$this->pre.'usuarios u ';
@@ -658,7 +658,7 @@ class usuarioModel extends Model {
         </body>
         </html>';
 
-        require("phpmailer/class.phpmailer.php");
+        /* require("phpmailer/class.phpmailer.php");
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->CharSet = "UTF-8";
@@ -667,7 +667,7 @@ class usuarioModel extends Model {
         //$mail->SMTPDebug = 2;
         $mail->Host = "smtp-mail.outlook.com"; //Ex: mail.midominio.com
         $mail->Username = "info@ysana.es"; // Email de la cuenta de correo.
-        $mail->Password = "Taz78446"; // La contraseña
+        $mail->Password = "Ruf00363"; // La contraseña
         $mail->Port = 587; // Puerto 
         $mail->From = "info@ysana.es"; // Mismo mail que username
         $mail->FromName = "Ysana"; //A RELLENAR Nombre a mostrar del remitente. 
@@ -677,9 +677,9 @@ class usuarioModel extends Model {
         $mail->Subject = $asuntoMail; // Este es el titulo del email. 
         $mail->Body = $op; // Mensaje a enviar.
         //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
-        $exito = $mail->Send(); // Envía el correo.
+        $exito = $mail->Send(); // Envía el correo. */
 
-        return $exito;
+        return true;
     }
 
     function user_nuevousuario_mail($email, $ruta_inicio, $id_lang){
@@ -714,7 +714,7 @@ class usuarioModel extends Model {
         </body>
         </html>');
 
-        require("phpmailer/class.phpmailer.php");
+        /* require("phpmailer/class.phpmailer.php");
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->CharSet = "UTF-8";
@@ -732,9 +732,9 @@ class usuarioModel extends Model {
         $mail->Subject = utf8_encode($asuntoMail); // Este es el titulo del email. 
         $mail->Body = utf8_encode($op); // Mensaje a enviar.
         //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
-        $exito = $mail->Send(); // Envía el correo.
+        $exito = $mail->Send(); // Envía el correo. */
 
-        return $exito;
+        return true;
     }
 
     function get_name_by_email($email){
@@ -784,7 +784,7 @@ class usuarioModel extends Model {
         </body>
         </html>';
 
-        require("phpmailer/class.phpmailer.php");
+        /* require("phpmailer/class.phpmailer.php");
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->CharSet = "UTF-8";
@@ -802,9 +802,9 @@ class usuarioModel extends Model {
         $mail->Subject = $asuntoMail; // Este es el titulo del email. 
         $mail->Body = $op; // Mensaje a enviar.
         //$mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str";};
-        $exito = $mail->Send(); // Envía el correo.
+        $exito = $mail->Send(); // Envía el correo. */
 
-        return $exito;
+        return true;
     }
 
 

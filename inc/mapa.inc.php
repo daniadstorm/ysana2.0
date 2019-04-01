@@ -37,7 +37,7 @@
         consulta = $("#frm_buscar").val();
             $.ajax({
                 //url: "http://192.168.1.2/ysana/buscar-farmacia.php",
-                url: "https://adstorm.es/ysana/buscar-farmacia.php",
+                url: "http://ysana.adstorm.es/buscar-farmacia.php",
                 method: "POST",
                 data: { valorBusqueda: consulta },
                 dataType: "json",

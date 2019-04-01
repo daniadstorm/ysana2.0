@@ -295,11 +295,6 @@ echo $sM->add_cabecera($ruta_inicio, '', 'admin');
                                         </thead>
                                         <tbody>
                                             <?php echo $outExperiencias; ?>
-                                            <!-- <tr>
-                                                <td class="align-middle text-center">Ysana® 360º Neurología</td>
-                                                <td><img src="http://192.168.1.2/ysana/img/club-ysana-pictograma-usuario-mental.png" class="rounded mx-auto d-block mw-150"></td>
-                                                <td class="btn-opciones-cy"><button type="button" class="btn btn-outline-danger">Eliminar</button></td>
-                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
