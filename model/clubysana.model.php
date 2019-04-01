@@ -108,9 +108,9 @@ class clubysanaModel extends Model {
         return $this->execute_query($q);
     }
 
-    function add_sliderinfoexperiencia($id, $titulo, $descripcion, $img) {
-        $q  = ' INSERT INTO '.$this->pre.'slider_experiencia (id_slider, titulo, descripcion, img) VALUES ';
-        $q .= ' ("'.$id.'", "'.$titulo.'", "'.$descripcion.'", "'.$img.'")';
+    function add_sliderinfoexperiencia($id, $titulo, $descripcion, $img, $url_enlace) {
+        $q  = ' INSERT INTO '.$this->pre.'slider_experiencia (id_slider, titulo, descripcion, img, url_enlace) VALUES ';
+        $q .= ' ("'.$id.'", "'.$titulo.'", "'.$descripcion.'", "'.$img.'", "'.$url_enlace.'")';
         return $this->execute_query($q);
     }
 

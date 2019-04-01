@@ -1831,6 +1831,53 @@ div.dropdown>div.dropdown-menu.show{
 .modal-lg{
     max-width: 1280px!important;
 }
+.centrar-btn-absoluto{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .max-w20{
     width: 100%;
 } */

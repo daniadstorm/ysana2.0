@@ -24,7 +24,7 @@ $datosFijo = array(
     'titulo1' => '',
     'titulo2' => '',
     'col1' => '',
-    'col2' => '',
+    'col2' => ''
 );
 /* echo '<pre>';
 print_r($_POST);
@@ -51,7 +51,7 @@ if(isset($_POST['addInfoExp'])){
                 if ($imagenInfo['mime']=='image/png' || $imagenInfo['mime']=='image/jpeg') {//Si tiene una de las siguientes extensiones es que es imagen
                     $res = move_uploaded_file($_FILES['img']['tmp_name'][$i],$document_root.'img/clubysana/'.$_FILES['img']['name'][$i]);
                     if($res){
-                        $ras = $cyM->add_sliderinfoexperiencia($id_info ,$_POST['titulo-slider'][$i], $_POST['descripcion-slider'][$i], $_FILES['img']['name'][$i]);
+                        $ras = $cyM->add_sliderinfoexperiencia($id_info ,$_POST['titulo-slider'][$i], $_POST['descripcion-slider'][$i], $_FILES['img']['name'][$i], $_POST['url_enlace'][$i]);
                         if($ras){
                             array_push($str_info, "Experiencia insertada correctamente - ".$i);
                         } else array_push($str_error, "Experiencia no insertada");
@@ -389,17 +389,19 @@ echo $sM->add_cabecera($ruta_inicio, '', 'admin');
 <script>
 $("#addSlider").on('click', function(e){
     var fechaEnMiliseg = Date.now();
-    $("#sliders").append(`<div id="`+fechaEnMiliseg+`" class="row my-1">
-    <div class="col-3">
+    $("#sliders").append(`<div id="`+fechaEnMiliseg+`" class="row my-1 position-relative my-3">
+    <div class="col-6">
     <input type="text" name="titulo-slider[]" value="" class="form-control" placeholder="Nombre" required></div>
-    <div class="col-4">
+    <div class="col-6">
     <input type="text" name="descripcion-slider[]" value="" class="form-control" placeholder="Descripcion" required></div>
-    <div class="col-4">
+    <div class="col-6">
     <div class="custom-file">
     <input type="file" name="img[]" class="custom-file-input" id="customFile" required>
     <label class="custom-file-label" for="customFile">Seleccionar imágen</label>
     </div></div>
-    <div class="col-1"><span class="badge badge-danger crs-pointer del-slider" type-id="`+fechaEnMiliseg+`">X</span></div>
+    <div class="col-6">
+    <input type="text" name="url_enlace[]" value="" class="form-control" placeholder="URL Enlace" required></div>
+    <span class="badge badge-danger crs-pointer del-slider centrar-btn-absoluto" type-id="`+fechaEnMiliseg+`">X</span>
     </div>`);
 });
 $("#sliders").on('click', '.del-slider', function(e){

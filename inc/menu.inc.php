@@ -7,7 +7,7 @@ $cM = load_model('carrito');
 $arrMenu = array(
     1 => array( 'txt'=>$lng[135], 'url'=>'' ),
     2 => array( 'txt'=>$lng[136], 'url'=>'productos-ysana' ),
-    3 => array( 'txt'=>$lng[141], 'url'=>'blog' ),
+    3 => array( 'txt'=>$lng[158], 'url'=>'blog' ),
     4 => array( 'txt'=>$lng[137], 'url'=>'experiencia' ),
     5 => array( 'txt'=>$lng[138], 'url'=>'directo-farmacia' ),
     6 => array( 'txt'=>$lng[139], 'url'=>'clubysana' ),
